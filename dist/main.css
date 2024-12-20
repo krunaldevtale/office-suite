@@ -678,7 +678,9 @@ body {
   --primary-color: #87CEFA;
   --secondary-color: #FBFBFB;
   --textPrimary-color:#333333;
-  --gradient-color: linear-gradient(180deg, #01D7AB 0%, #0272D9 100%);
+  --textsecondary-color:#1D1D1F;
+  --primary-gradient-color: linear-gradient(180deg, #01D7AB 0%, #0272D9 100%);
+  --secondary-gradient-color: linear-gradient(180deg, rgba(2, 189, 183, 0.7) 0%, rgba(2, 126, 212, 0.7) 100%);
 }
 
 .primary-title {

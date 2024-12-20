@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+:root {
+  --primary-color: #87CEFA;
+  --secondary-color: #FBFBFB;
+  --textPrimary-color:#333333;
+  --gradient-color: linear-gradient(180deg, #01D7AB 0%, #0272D9 100%);
+
+}
+
+.primary-title {
+  @apply text-5xl font-medium;
+  color: var(--textPrimary-color);
+}
+
+.logo-title{
+  @apply text-4xl font-semibold;
+  color: var(--textPrimary-color);
+}
+
+/* For all Share Button */
+.share-btn {
+  @apply w-16 md:w-28 h-10 rounded-md flex items-center justify-center gap-3;
+  background: var(--secondary-color);
+  color: var(--textPrimary-color);
+}
+
+.search{
+  @apply text-sm font-normal w-[10rem] md:w-[18rem] lg:w-[25rem] h-10 rounded-lg pl-10 focus:!outline-none
+}

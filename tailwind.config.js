@@ -9,7 +9,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primaryColor: "#87CEFA",
+        'medium-aquamarine': '#01D7AB',
+        'royal-blue': '#0272D9',
+        'white-smoke': '#FBFBFB',
+        'dark-gray': '#333333',
+        'light-sky-blue': '#BBE2FA',
+        'red-orange': '#EE361C',
+        'olive': '#DBD77C',
+        'light-gray': '#EFEFEF',
+        'very-light-gray': '#F8F8F8',
       },
       backgroundImage: {
         'gradient-primary': 'linear-gradient(180deg, #01D7AB 0%, #0272D9 100%)',

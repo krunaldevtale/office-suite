@@ -5,14 +5,20 @@
 @layer base {
   body {
     font-family: 'Roboto', sans-serif;
+    color: var(--dark-gray);
   }
 }
 
 :root {
-  --primary-color: #87CEFA;
-  --secondary-color: #FBFBFB;
-  --textPrimary-color:#333333;
-  --textsecondary-color:#1D1D1F;
+  --medium-aquamarine: #01D7AB;
+  --royal-blue: #0272D9;
+  --white-smoke: #FBFBFB;
+  --dark-gray: #333333;
+  --light-sky-blue: #BBE2FA;
+  --red-orange: #EE361C;
+  --olive: #DBD77C;
+  --light-gray: #EFEFEF;
+  --very-light-gray: #F8F8F8;
   --primary-gradient-color: linear-gradient(180deg, #01D7AB 0%, #0272D9 100%);
   --secondary-gradient-color: linear-gradient(180deg, rgba(2, 189, 183, 0.7) 0%, rgba(2, 126, 212, 0.7) 100%);
 
@@ -21,21 +27,37 @@
 
 .primary-title {
   @apply text-5xl font-medium;
-  color: var(--textPrimary-color);
+}
+.small-title {
+  @apply text-sm font-normal;
 }
 
 .logo-title{
-  @apply text-4xl font-semibold;
-  color: var(--textPrimary-color);
+  @apply text-2xl md:text-4xl font-semibold;
 }
 
 /* For all Share Button */
 .share-btn {
-  @apply w-16 md:w-28 h-10 rounded-md flex items-center justify-center gap-3;
-  background: var(--secondary-color);
-  color: var(--textPrimary-color);
+  @apply px-2 py-1 md:px-3 md:py-2 rounded-md flex items-center justify-center gap-3;
+  background: var(--white-smoke);
 }
 
 .search{
   @apply text-sm font-normal w-[10rem] md:w-[18rem] lg:w-[25rem] h-10 rounded-lg pl-10 focus:!outline-none
+}
+
+/* sidebar icon background */
+.icon-background{
+  @apply rounded-lg px-1.5 py-2.5;
+  background: var(--primary-gradient-color);
+}
+
+/* scroll */
+.scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius: 5px;
 }

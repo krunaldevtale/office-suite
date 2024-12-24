@@ -5,7 +5,7 @@
 @layer base {
   body {
     font-family: 'Roboto', sans-serif;
-    color: var(--dark-gray);
+    color: var(--dark-charcoal);
   }
 }
 
@@ -13,7 +13,8 @@
   --medium-aquamarine: #01D7AB;
   --royal-blue: #0272D9;
   --white-smoke: #FBFBFB;
-  --dark-gray: #333333;
+  --dark-charcoal: #333333;
+  --dark-gray: #A9A9A9;
   --light-sky-blue: #BBE2FA;
   --red-orange: #EE361C;
   --olive: #DBD77C;
@@ -50,6 +51,7 @@
 .icon-background{
   @apply rounded-lg px-1.5 py-2.5;
   background: var(--primary-gradient-color);
+  color: var(--white-smoke);
 }
 
 /* scroll */
@@ -60,4 +62,13 @@
 .scroll::-webkit-scrollbar-thumb {
   background: lightgray;
   border-radius: 5px;
+}
+
+/* custom select arrow*/
+.select-arrow-active span:last-child {
+  transform: rotate(180deg);
+}
+
+.option{
+  @apply px-4 py-2 cursor-pointer hover:bg-light-sky-blue;
 }

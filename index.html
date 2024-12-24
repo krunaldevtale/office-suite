@@ -79,7 +79,7 @@
               </div>
             </div>
           </div>
-          <buttonclass="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
+          <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
             Copy link
           </button>
         </div> 
@@ -173,9 +173,9 @@
       </aside>
 
       <!-- Main content -->
-      <div class="flex-1 bg-white-smoke rounded-tl-3xl overflow-y-auto scroll">
+      <div class="flex-1 bg-white-smoke rounded-tl-3xl overflow-y-auto scroll main-content">
         <!-- Intro Section -->
-        <section class="flex flex-col items-center gap-10 py-5">
+        <section class="flex flex-col items-center gap-10 py-5 intro">
           <div class="flex justify-between w-full px-8 md:px-0 md:w-5/12 lg:w-1/4 text-sm md:text-lg font-medium">
             <p>Create</p>
             <p>Convert</p>
@@ -192,8 +192,8 @@
         </section>
 
         <!-- Features Section -->
-        <h3 class="px-10 py-5 font-medium text-xl">Home</h3>
-        <section class="bg-light-sky-blue p-6 md:p-10">
+        <h3 class="px-10 py-5 font-medium text-xl home">Home</h3>
+        <section class="bg-light-sky-blue p-6 md:p-10 feature">
           <div class="border-4 rounded-3xl">
             <div class="flex flex-col md:flex-row w-full">
               <div class="w-full md:w-1/2 p-4 flex items-start space-x-4 border rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none">
@@ -248,13 +248,15 @@
         </section>
 
         <!-- Table Section -->
-        <section class="min-w-full bg-white-smoke p-6 md:p-10">
+        <section class="min-w-full bg-white-smoke p-6 md:p-10 table-section relative">
           <div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-6 md:pb-10 space-y-4 md:space-y-0">
             <h2 class="text-lg md:text-2xl font-medium">Recent files</h2>
-            <button class="text-sm md:text-base p-2 border border-light-sky-blue rounded-lg flex gap-4 items-center px-3">More<i class="ri-arrow-right-s-line ri-lg"></i></button>
+            <button id="toggleTable" class="text-sm md:text-base p-2 border border-light-sky-blue rounded-lg flex gap-4 items-center px-3">
+              More<i class="ri-arrow-right-s-line ri-lg"></i>
+            </button>
           </div>
-          <div class="overflow-x-auto scroll" style="width:100%">
-            <table class="table-auto border-collapse relative w-full h-full">
+          <div id="tableContainer" class="overflow-x-auto scroll transition-all duration-300 ease-in-out" style="width:100%">
+            <table class="table-auto border-collapse w-full h-full">
               <thead>
                 <tr>
                   <th class="text-left text-sm md:text-xl font-medium underline text-nowrap">File name</th>
@@ -263,8 +265,8 @@
                   <th class="w-2/12"></th>
                 </tr>
               </thead>
-              <tbody>
-                <tr class="border-b-2 border-primaryColor">
+              <tbody id="tableRows">
+                <tr class="border-b-2 border-light-sky-blue">
                   <td class="py-4 md:py-5 flex items-center gap-3">
                     <div class="border border-mediumGray rounded-md p-2 flex flex-col justify-center items-center">
                       <p class="text-[5px] md:text-[6px] font-medium text-nowrap">Terms & Conditions</p>
@@ -274,11 +276,11 @@
                   </td>
                   <td class="py-4 md:py-5 text-xs md:text-base text-nowrap">Owned by me</td>
                   <td class="py-4 md:py-5 text-xs md:text-base text-nowrap">24 mins ago</td>
-                  <td class="py-4 md:py-5 relative">
-                    <button class="drop-button">
+                  <td class="py-4 md:py-5">
+                    <button class="more-button">
                       <i class="ri-more-fill ri-lg md:ri-xl"></i>
                     </button>
-                    <div class="dropdown hidden absolute left-0 mt-2 w-48 bg-dark-charcoal shadow-md rounded-lg z-50">
+                    <div class="moredropdown hidden absolute w-48 bg-dark-charcoal shadow-md rounded-lg z-[9999]">
                       <ul class="text-sm text-white-smoke">
                         <li><a href="#" class="block px-4 py-2">Open</a></li>
                         <li><a href="#" class="block px-4 py-2">Copy</a></li>
@@ -289,21 +291,21 @@
                     </div>
                   </td>
                 </tr>
-                <tr class="border-b-2 border-primaryColor">
+                <tr class="border-b-2 border-light-sky-blue">
                   <td class="py-4 md:py-5 flex items-center gap-3">
                     <div class="border border-mediumGray rounded-md p-2 flex flex-col justify-center items-center">
                       <p class="text-[5px] md:text-[6px] font-medium text-nowrap">Terms & Conditions</p>
                       <img class="w-6 h-6 md:w-8 md:h-8" src="/public/images/pdf.svg" alt="PDF Icon"/>
                     </div>
-                    <span class="text-xs md:text-base">Sizaf</span>
+                    <span class="text-xs md:text-base text-nowrap">Office Research</span>
                   </td>
-                  <td class="py-4 md:py-5 text-xs md:text-base text-nowrap">Rohan Verma</td>
-                  <td class="py-4 md:py-5 text-xs md:text-base text-nowrap">2 hours ago</td>
-                  <td class="py-4 md:py-5 relative">
-                    <button class="drop-button">
+                  <td class="py-4 md:py-5 text-xs md:text-base text-nowrap">Owned by me</td>
+                  <td class="py-4 md:py-5 text-xs md:text-base text-nowrap">24 mins ago</td>
+                  <td class="py-4 md:py-5">
+                    <button class="more-button">
                       <i class="ri-more-fill ri-lg md:ri-xl"></i>
                     </button>
-                    <div class="dropdown hidden absolute mt-2 w-48 bg-dark-charcoal shadow-md rounded-lg z-10">
+                    <div class="moredropdown hidden absolute w-48 bg-dark-charcoal shadow-md rounded-lg z-[9999]">
                       <ul class="text-sm text-white-smoke">
                         <li><a href="#" class="block px-4 py-2">Open</a></li>
                         <li><a href="#" class="block px-4 py-2">Copy</a></li>
@@ -314,15 +316,55 @@
                     </div>
                   </td>
                 </tr>
+                <!-- Additional rows here initially hidden, will show when more button is clicked -->
               </tbody>
             </table>
           </div>
-        </section>               
+        </section>            
       </div>
     </div>
   </main>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(document).on('click', '.more-button', function (e) {
+        var $dropdown = $(this).next('.moredropdown');
+        var mouseX = e.clientX; 
+        var mouseY = e.clientY;
+        $('.moredropdown').not($dropdown).addClass('hidden');
+        
+        // Clear previous inline styles before calculating new position
+        $dropdown.removeAttr('style');
+        
+        // Get the dropdown's height and the viewport height
+        var dropdownHeight = $dropdown.outerHeight();
+        var viewportHeight = $(window).height();
+    
+        // Check if the mouse is near the bottom of the page
+        if (mouseY + dropdownHeight > viewportHeight) {
+          // Position the dropdown above the button if near the bottom of the page
+          $dropdown.css('top', 'initial');
+          $dropdown.css('top', '26%'); 
+        } else {
+          // Position it below the button
+          $dropdown.css('right', '5rem');
+          $dropdown.css('bottom', 'initial');
+        }
+    
+        // Toggle the dropdown visibility
+        $dropdown.toggleClass('hidden');
+      });
+      
+      // Close all dropdowns when clicking outside
+      $(document).on('click', function (e) {
+        if (!$(e.target).closest('.more-button').length) {
+          $('.moredropdown').addClass('hidden');
+        }
+      });
+    });      
+  </script>
+  <script src="/public/js/table-animation.js"></script>
   <script src="/public/js/sidebar.js"></script>
   <script src="/public/js/dropdown.js"></script>
   <script src="/public/js/custom-select.js"></script>

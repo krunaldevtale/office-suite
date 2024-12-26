@@ -12,6 +12,7 @@ module.exports = {
         'medium-aquamarine': '#01D7AB',
         'royal-blue': '#0272D9',
         'white-smoke': '#FBFBFB',
+        'medium-gray': '#FBFBFB4D',
         'dark-gray': '#333333',
         'light-sky-blue': '#BBE2FA',
         'red-orange': '#EE361C',

@@ -108,38 +108,160 @@
         >
           <!-- Ribbon Section -->
           <section class="ribbon">
-            <div class="h-full flex separate gap">
+            <div class="h-full flex items-center separate gap">
               <div class="icon-containers">
                 <i class="ri-tools-line icon-size"></i>
                 <p class="font-bold">Tools & Metadata</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <i class="ri-bookmark-line small-icon-size"></i>
-                <i class="ri-movie-line small-icon-size"></i>
+                 <div
+                  class="group hover-div"
+                >
+                 <i class="ri-bookmark-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Bookmark</span
+                  >
+                </div>
+                 <div
+                  class="group hover-div"
+                >
+                 <i class="ri-movie-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Watermark</span
+                  >
+                </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <i class="ri-gallery-line small-icon-size"></i>
-                <i class="ri-window-2-line small-icon-size"></i>
+                 <div
+                  class="group hover-div"
+                >
+                 <i class="ri-gallery-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Crop</span
+                  >
+                </div>
+                 <div
+                  class="group hover-div"
+                >
+                  <i class="ri-window-2-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Watermark</span
+                  >
+                </div> 
               </div>
-              <div class="flex flex-col justify-center gap-2">
-                <i class="ri-align-right small-icon-size"></i>
-                <i class="ri-file-close-line small-icon-size"></i>
+              <div class="flex flex-col ite justify-center gap-2">
+                 <div
+                  class="group hover-div"
+                >
+                  <img class="small-icon-img" src="/public/images/metadata.svg" alt="Metadata">
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Metadata</span
+                  >
+                </div> 
+                 <div
+                  class="group hover-div"
+                >
+                  <img class="small-icon-img" src="/public/images/multiple-page.svg" alt="multiple-page">
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Multiple</span
+                  >
+                </div> 
               </div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col items-center justify-center gap-2">
                 <span class="mini-containers">Add Bates Numbering</span>
                 <span class="mini-containers">Convert to Grayscale</span>
               </div>
-               <div class="flex flex-col justify-center gap-2">
-                <i class="ri-file-3-line small-icon-size"></i>
-                <i class="ri-expand-diagonal-s-line small-icon-size"></i>
+              <div class="dashed-line">
+
               </div>
                <div class="flex flex-col justify-center gap-2">
-                <i class="ri-qr-scan-line small-icon-size"></i>
-                <i class="ri-loop-left-line small-icon-size"></i>
+                 <div
+                  class="group hover-div"
+                >
+                  <img class="small-icon-img" src="/public/images/page-number.svg" alt="Page Number">
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Page Number</span
+                  >
+                </div> 
+                 <div
+                  class="group hover-div"
+                >
+                  <i class="ri-expand-diagonal-s-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Metadata</span
+                  >
+                </div> 
               </div>
                <div class="flex flex-col justify-center gap-2">
-                <i class="ri-text small-icon-size"></i>
-                <i class="ri-close-line small-icon-size"></i>
+                 <div
+                    class="group hover-div"
+                  >
+                    <img class="small-icon-img" src="/public/images/scan.svg" alt="" />
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Rename</span
+                    >
+                  </div>
+                   <div
+                    class="group hover-div"
+                  >
+                    <i class="ri-loop-left-line small-icon-size"></i>
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Rename</span
+                    >
+                  </div>
+              </div>
+               <div class="flex flex-col justify-center gap-2">
+                 <div
+                    class="group hover-div"
+                  >
+                    <img class="small-icon-img" src="/public/images/text-repair.svg" alt="Text Repair">
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Repair</span
+                    >
+                  </div>
+                   <div
+                    class="group hover-div"
+                  >
+                    <i class="ri-close-line small-icon-size"></i>
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Rename</span
+                    >
+                  </div>
+              </div>
+               <div class="flex flex-col items-center justify-center gap-2">
+                <span class="mini-containers">Manage Workflows</span>
+              </div>
+               <div class="flex flex-col justify-center gap-2">
+                 <div
+                    class="group hover-div"
+                  >
+                    <img class="small-icon-img" src="/public/images/add-page.svg" alt="Add">
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Add</span
+                    >
+                  </div>
+                   <div
+                    class="group hover-div"
+                  >
+                    <img class="small-icon-img" src="/public/images/remove-page.svg" alt="Remove">
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Remove</span
+                    >
+                  </div>
               </div>
               
             </div>
@@ -150,14 +272,70 @@
                 <p class="font-bold">Help</p>
               </div>
              <div class="flex flex-col justify-center gap-2">
-                <div class="flex items-center gap-3">
-                  <i class="ri-customer-service-line small-icon-size"></i>
-                  <i class="ri-share-box-line small-icon-size"></i>
-                  <i class="ri-download-2-line small-icon-size"></i>
-                  <i class="ri-drag-move-2-fill small-icon-size"></i>
-                  <i class="ri-file-check-line small-icon-size"></i>
-                  <i class="ri-save-line small-icon-size"></i>
-                  <i class="ri-edit-line small-icon-size"></i>
+                <div class="flex items-center gap-0.5">
+                   <div
+                    class="group hover-div"
+                  >
+                     <i class="ri-customer-service-line small-icon-size"></i>
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Service</span
+                    >
+                  </div>
+                   <div
+                    class="group hover-div"
+                  >
+                    <img class="small-icon-img" src="/public/images/i-logo.svg" alt="I">
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Remove</span
+                    >
+                  </div> 
+                  <div
+                    class="group hover-div"
+                  >
+                    <img class="small-icon-img" src="/public/images/guide.svg" alt="guide">
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Guide</span
+                    >
+                  </div>
+                  <div
+                    class="group hover-div"
+                  >
+                    <img class="small-icon-img" src="/public/images/updates.svg" alt="Update">
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Updates</span
+                    >
+                  </div>
+                  <div
+                    class="group hover-div"
+                  >
+                    <img class="small-icon-img" src="/public/images/linear.svg" alt="Linear">
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Linear</span
+                    >
+                  </div>
+                  <div
+                    class="group hover-div"
+                  >
+                    <img class="small-icon-img" src="/public/images/account.svg" alt="account">
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Account</span
+                    >
+                  </div>
+                <div
+                    class="group hover-div"
+                  >
+                    <i class="ri-chat-quote-line small-icon-size"></i>
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Comment</span
+                    >
+                  </div>
                 </div>
                 <div class="flex gap-2">
                   <span class="mini-containers">Get Involved</span>
@@ -166,11 +344,53 @@
               </div>
             </div>
            
+             <div class="h-full flex pl-3 gap">
+             <div class="flex flex-col justify-center gap-2">
+                 <div
+                  class="group hover-div"
+                >
+                 <img class="small-icon-img" src="/public/images/donate.svg" alt="Donate">
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Donate</span
+                  >
+                </div>
+                 <div
+                  class="group hover-div"
+                >
+                 <img class="small-icon-img" src="/public/images/smartphone.svg" alt="smartphone">
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Smartphone</span
+                  >
+                </div>
+              </div>
+                <div class="flex flex-col justify-center gap-2">
+                 <div
+                  class="group hover-div"
+                >
+                 <img class="small-icon-img" src="/public/images/license.svg" alt="License">
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >license</span
+                  >
+                </div>
+                 <div
+                  class="group hover-div"
+                >
+                 <img class="small-icon-img" src="/public/images/roundabout.svg" alt="About">
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >About</span
+                  >
+                </div>
+              </div>
+            </div>
 
           </section>
 
           <!-- File Section -->
-          <section class="file-section ">
+          <section class="file-section scroll">
             <div class="box">
               <div
                 class="upload-section cursor-pointer"

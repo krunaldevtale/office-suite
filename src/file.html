@@ -75,19 +75,28 @@
                 </a>
               </li>
               <li>
-                <a href="/src/edit.html" class="flex flex-col items-center gap-2">
+                <a
+                  href="/src/edit.html"
+                  class="flex flex-col items-center gap-2"
+                >
                   <i class="ri-edit-line ri-xl"></i>
                   <span class="small-title">Edit</span>
                 </a>
               </li>
               <li>
-                <a href="/src/convert-protect.html" class="flex flex-col items-center gap-2">
+                <a
+                  href="/src/convert-protect.html"
+                  class="flex flex-col items-center gap-2"
+                >
                   <i class="ri-shield-keyhole-line ri-xl"></i>
                   <span class="small-title text-center">Convert & Protect</span>
                 </a>
               </li>
               <li>
-                <a href="/src/tools.html" class="flex flex-col items-center gap-2">
+                <a
+                  href="/src/tools.html"
+                  class="flex flex-col items-center gap-2"
+                >
                   <i class="ri-tools-line ri-xl"></i>
                   <span class="small-title text-center">Tools</span>
                 </a>
@@ -104,7 +113,8 @@
 
         <!-- Main content -->
         <div
-          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 overflow-hidden" style="overflow: hidden;"
+          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 overflow-hidden"
+          style="overflow: hidden"
         >
           <!-- Ribbon Section -->
           <section class="ribbon">
@@ -114,23 +124,87 @@
                 <p class="font-bold">File Operations</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div class="flex items-center gap-3">
-                  <i class="ri-file-add-line small-icon-size"></i>
-                  <i class="ri-share-box-line small-icon-size"></i>
-                  <i class="ri-download-2-line small-icon-size"></i>
-                  <i class="ri-drag-move-2-fill small-icon-size"></i>
-                  <i class="ri-file-check-line small-icon-size"></i>
-                  <i class="ri-save-line small-icon-size"></i>
-                  <i class="ri-edit-line small-icon-size"></i>
-                  <i class="ri-delete-bin-6-line small-icon-size"></i>
+                <div class="flex items-center gap-px">
+                  <div
+                    class="group hover-div"
+                  >
+                    <i class="ri-file-add-line small-icon-size"></i>
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Add File</span
+                    >
+                  </div>
+                  <div
+                    class="group hover-div"
+                  >
+                    <i class="ri-share-box-line small-icon-size"></i>
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Open Document</span
+                    >
+                  </div>
+                  <div
+                    class="group hover-div"
+                  >
+                    <i class="ri-download-2-line small-icon-size"></i>
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Import</span
+                    >
+                  </div>
+                  <div
+                    class="group hover-div"
+                  >
+                    <i class="ri-drag-move-2-fill small-icon-size"></i>
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Move</span
+                    >
+                  </div>
+                  <div
+                    class="group hover-div"
+                  >
+                    <i class="ri-file-check-line small-icon-size"></i>
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Save as</span
+                    >
+                  </div>
+                  <div
+                    class="group hover-div"
+                  >
+                    <i class="ri-save-line small-icon-size"></i>
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Save</span
+                    >
+                  </div>
+                  <div
+                    class="group hover-div"
+                  >
+                    <img src="/public/images/scan.svg" alt="" />
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Rename</span
+                    >
+                  </div>
+                  <div
+                    class="group hover-div"
+                  >
+                    <i class="ri-delete-bin-6-line small-icon-size"></i>
+                    <span
+                      class="tooltip group-hover:opacity-100"
+                      >Delete</span
+                    >
+                  </div>
                 </div>
-                <div class="flex gap-2">
+                <div class="flex gap-4">
                   <span class="mini-containers">Document detail</span>
                   <span class="mini-containers">Version history</span>
                   <span class="mini-containers">Publish content online</span>
                 </div>
               </div>
-            </div>  
+            </div>
 
             <div class="h-full flex separate gap">
               <div class="icon-containers">
@@ -138,23 +212,71 @@
                 <p class="font-bold">Share</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <i class="ri-share-fill small-icon-size"></i>
-                <i class="ri-mail-send-line small-icon-size"></i>
+                <div
+                  class="group hover-div"
+                >
+                  <i class="ri-share-fill small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Share</span
+                  >
+                </div>
+                <div
+                  class="group hover-div"
+                >
+                  <i class="ri-mail-send-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Email link</span
+                  >
+                </div>
               </div>
             </div>
 
             <div class="h-full flex separate gap">
               <div class="icon-containers">
                 <i class="ri-share-forward-2-fill icon-size"></i>
-                <p class="font-bold">Share</p>
+                <p class="font-bold">Export</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <i class="ri-file-pdf-2-line small-icon-size"></i>
-                <i class="ri-multi-image-line small-icon-size"></i>
+                <div
+                  class="group hover-div"
+                >
+                  <i class="ri-file-pdf-2-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >PDF</span
+                  >
+                </div>
+                <div
+                  class="group hover-div"
+                >
+                  <i class="ri-multi-image-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Image</span
+                  >
+                </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <i class="ri-links-line small-icon-size"></i>
-                <i class="ri-file-word-2-line small-icon-size"></i>
+                <div
+                  class="group hover-div"
+                >
+                  <img src="/public/images/epub.svg" alt="" />
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >EPUB</span
+                  >
+                </div>
+                <div
+                  class="group hover-div"
+                >
+                  <i class="ri-file-word-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Word</span
+                  >
+                </div>
               </div>
             </div>
 
@@ -164,16 +286,59 @@
                 <p class="font-bold">Upload</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <i class="ri-dropbox-line small-icon-size"></i>
-                <i class="ri-link small-icon-size"></i>
+                <div
+                  class="group hover-div"
+                >
+                  <i class="ri-dropbox-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Dropbox</span
+                  >
+                </div>
+                <div
+                  class="group hover-div"
+                >
+                   <i class="ri-link small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Web Address</span
+                  >
+                </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <i class="ri-drive-line small-icon-size"></i>
-                <i class="ri-file-copy-line small-icon-size"></i>
+                <div
+                  class="group hover-div"
+                >
+                  <i class="ri-drive-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Google Drive</span
+                  >
+                </div>
+                <div
+                  class="group hover-div"
+                >
+                  <img src="/public/images/recent-app.svg" alt="Recent Apps">
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Recent Files</span
+                  >
+                </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <i class="ri-cloud-windy-line small-icon-size"></i>
-                <span class="w-10 h-8 xl:h-10 "></span>
+                <div
+                  class="group hover-div"
+                >
+                 <i class="ri-cloud-windy-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >OneDrive</span
+                  >
+                </div>
+                <div
+                  class="relative group w-10 h-10 flex items-center justify-center"
+                >
+                </div>
               </div>
             </div>
 
@@ -183,8 +348,24 @@
                 <p class="font-bold">Scan</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <i class="ri-text-snippet small-icon-size"></i>
-                <i class="ri-mail-send-line small-icon-size"></i>
+                 <div
+                  class="group hover-div"
+                >
+                 <i class="ri-text-snippet small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Text Recognition</span
+                  >
+                </div>
+                 <div
+                  class="group hover-div"
+                >
+                 <img src="/public/images/vector-2.svg" alt="" />
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Straighten</span
+                  >
+                </div>
               </div>
             </div>
 
@@ -194,12 +375,48 @@
                 <p class="font-bold">Print</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <i class="ri-printer-line small-icon-size"></i>
-                <i class="ri-edit-2-line small-icon-size"></i>
+                <div
+                  class="group hover-div"
+                >
+                  <i class="ri-printer-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Print</span
+                  >
+                </div>
+                <div
+                  class="group hover-div"
+                >
+                  <img
+                  class="small-icon-size"
+                  src="/public/images/sign.svg"
+                  alt=""
+                />
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Electronic Signature</span
+                  >
+                </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <i class="ri-file-settings-line small-icon-size"></i>
-                <i class="ri-close-line small-icon-size"></i>
+                 <div
+                  class="group hover-div"
+                >
+                  <i class="ri-file-settings-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Printer Configuration</span
+                  >
+                </div>
+                 <div
+                  class="group hover-div"
+                >
+                  <i class="ri-close-line small-icon-size"></i>
+                  <span
+                    class="tooltip group-hover:opacity-100"
+                    >Close</span
+                  >
+                </div>
               </div>
             </div>
           </section>

@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    './src/**/*.html',
     './index.html', // Include your HTML file
     './dist/**/*.html', // Add your distribution files if applicable
     './styles/**/*.css', // Include your custom CSS
@@ -13,7 +14,6 @@ module.exports = {
         'royal-blue': '#0272D9',
         'white-smoke': '#FBFBFB',
         'medium-gray': '#FBFBFB4D',
-        'dark-gray': '#333333',
         'dark-charcoal': '#333333',
         'dark-gray': '#A9A9A9',
         'light-sky-blue': '#BBE2FA',

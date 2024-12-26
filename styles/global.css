@@ -13,6 +13,8 @@
   --medium-aquamarine: #01D7AB;
   --royal-blue: #0272D9;
   --white-smoke: #FBFBFB;
+  --medium-gray:#FBFBFB4D;
+  --dark-gray: #333333;
   --dark-charcoal: #333333;
   --dark-gray: #A9A9A9;
   --light-sky-blue: #BBE2FA;
@@ -22,8 +24,12 @@
   --very-light-gray: #F8F8F8;
   --primary-gradient-color: linear-gradient(180deg, #01D7AB 0%, #0272D9 100%);
   --secondary-gradient-color: linear-gradient(180deg, rgba(2, 189, 183, 0.7) 0%, rgba(2, 126, 212, 0.7) 100%);
-
-
+  --glass-shadow: 
+    4px 4px 6px 0px #015A9299 inset, 
+    -4px -4px 6px 0px #03D8CF80 inset;
+  --blur-effect: blur(35px);
+  --border-one:1px solid #33333399;
+ 
 }
 
 .primary-title {
@@ -65,9 +71,75 @@
   border-radius: 5px;
 }
 
+/* Ribbon */
+
+.ribbon{
+  @apply w-full h-auto xl:h-32 rounded-2xl px-2 py-4 flex flex-wrap xl:flex-nowrap;
+  background: var(--secondary-gradient-color);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: var(--blur-effect);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.icon-containers{
+  @apply w-14 xl:w-16 h-full rounded-lg text-center text-[9px] xl:text-[10px] flex flex-col justify-center gap-2 opacity-80;
+  background: var(--medium-gray);
+}
+
+.mini-containers{
+  @apply w-fit h-8 p-2 rounded-lg font-bold underline text-[0.5rem] xl:text-[0.6rem];
+  background: var(--medium-gray)
+}
+
+.second-mini-containers {
+  @apply w-24 text-center h-8 p-2 rounded-lg font-bold underline text-[0.5rem] xl:text-[0.7rem];
+  background: var(--medium-gray)
+}
+
+.icon-size{
+  @apply text-3xl xl:text-4xl cursor-pointer;
+}
+
+.small-icon-size{
+   @apply text-[23px] xl:text-[27px] font-light cursor-pointer;
+}
+
+.separate{
+  @apply border-r-2 px-2 xl:px-2 2xl:px-6;
+}
+
+.gap{
+@apply gap-1 xl:gap-1.5 2xl:gap-2;
+}
+
+/* File Section */
+
+.file-section{
+  @apply w-full flex flex-col items-center p-8;
+  overflow-y: auto;
+  max-height: calc(100vh - 8rem);
+  padding-bottom: 4rem;
+}
+
+.box{
+  @apply w-full min-h-[58rem] rounded-2xl flex items-center justify-center;
+  background: var(--very-light-gray);
+  border: var(--border-one);
+  max-width: 44rem;
+  flex-shrink: 0;
+  margin-bottom: 4rem;
+  
+}
+
+.upload-section{
+  @apply flex items-center justify-center gap-2 w-fit h-10 rounded-md px-4 cursor-pointer;
+  background: var(--light-sky-blue);
 /* custom select arrow*/
 .select-arrow-active span:last-child {
   transform: rotate(180deg);
+}
 }
 
 .option{

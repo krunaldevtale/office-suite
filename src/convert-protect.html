@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/main.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="flex flex-col h-screen bg-light-sky-blue">
+      <!-- Header -->
+      <header class="w-full py-4 px-6 pr-10 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden text-2xl menu-toggle">
+            <i class="ri-menu-line"></i>
+          </button>
+          <h1 class="logo-title">Logo</h1>
+        </div>
+        <input
+          type="text"
+          placeholder="Search your PDF library or documents..."
+          class="hidden md:block border rounded-lg px-4 py-2 w-full max-w-lg bg-white-smoke"
+        />
+        <div class="flex items-center gap-4">
+          <button class="share-btn hidden md:flex items-center gap-2">
+            <i class="ri-share-line"></i>
+            <span class="text-sm md:text-base">Share</span>
+          </button>
+          <img
+            src="/public/images/user.png"
+            alt="Profile"
+            class="rounded-full h-8 w-8"
+          />
+        </div>
+      </header>
+      <!-- Mobile search bar -->
+      <div class="md:hidden w-full pb-4 px-6">
+        <input
+          type="text"
+          placeholder="Search your PDF library or documents..."
+          class="border rounded-lg px-4 py-2 w-full bg-white-smoke text-sm"
+        />
+      </div>
+
+      <div class="flex" style="height: calc(100vh - 75px)">
+        <!-- Sidebar -->
+        <aside
+          id="sidebar"
+          class="fixed bg-light-sky-blue z-10 inset-y-0 left-0 w-32 transform -translate-x-full md:translate-x-0 md:relative md:w-24 shadow-lg md:shadow-none transition-transform duration-300"
+        >
+          <nav class="mt-4">
+            <ul class="space-y-6 px-6">
+              <li class="md:hidden flex justify-end">
+                <button class="menu-toggle">
+                  <i class="ri-close-circle-fill"></i>
+                </button>
+              </li>
+              <li>
+                <a href="/index.html" class="flex flex-col items-center gap-2">
+                  <i class="ri-home-5-line ri-xl"></i>
+                  <span class="small-title">Home</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/src/file.html"
+                  class="flex flex-col items-center gap-2"
+                >
+                  <i class="ri-file-line ri-xl"></i>
+                  <span class="small-title">File</span>
+                </a>
+              </li>
+              <li>
+                <a href="/src/edit.html" class="flex flex-col items-center gap-2">
+                  <i class="ri-edit-line ri-xl"></i>
+                  <span class="small-title">Edit</span>
+                </a>
+              </li>
+              <li>
+                <a href="/src/convert-protect.html" class="flex flex-col items-center gap-2">
+                  <i class="ri-shield-keyhole-line ri-xl"></i>
+                  <span class="small-title text-center">Convert & Protect</span>
+                </a>
+              </li>
+              <li>
+                <a href="/src/tools.html" class="flex flex-col items-center gap-2">
+                  <i class="ri-tools-line ri-xl"></i>
+                  <span class="small-title text-center">Tools</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex flex-col items-center gap-2">
+                  <i class="ri-question-line ri-xl"></i>
+                  <span class="small-title text-center">Help</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <!-- Main content -->
+        <div
+          class="flex-1 bg-white-smoke rounded-tl-3xl overflow-y-auto scroll p-6"
+        >
+          <!-- Ribbon Section -->
+          <section class="ribbon">
+            <div class="h-full flex separate gap">
+              <div class="icon-containers">
+                <i class="ri-merge-cells-horizontal icon-size"></i>
+                <p class="font-bold">Merge</p>
+              </div>
+             <div class="flex flex-col justify-center gap-2">
+                <div class="flex items-center gap-3">
+                  <i class="ri-file-copy-line small-icon-size"></i>
+                  <i class="ri-file-list-2-line small-icon-size"></i>
+                </div>
+                <div class="flex gap-2">
+                  <span class="mini-containers">Merge Pages</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="h-full flex separate gap">
+              <div class="icon-containers">
+                <i class="ri-split-cells-horizontal icon-size"></i>
+                <p class="font-bold">File Split</p>
+              </div>
+              <div class="flex flex-col justify-center gap-2">
+                <i class="ri-align-left small-icon-size"></i>
+                <i class="ri-align-item-top-line small-icon-size"></i>
+              </div>
+              <div class="flex flex-col justify-center gap-2">
+                <i class="ri-align-center small-icon-size"></i>
+                <i class="ri-align-item-vertical-center-line small-icon-size"></i>
+              </div>
+              <div class="flex flex-col justify-center gap-2">
+                <i class="ri-align-right small-icon-size"></i>
+                <i class="ri-align-item-bottom-line small-icon-size"></i>
+              </div>
+            </div>
+
+            <div class="h-full flex separate gap">
+              <div class="icon-containers">
+                <i class="ri-bill-line icon-size"></i>
+                <p class="font-bold">Document Signing</p>
+              </div>
+              <div class="flex flex-col justify-center gap-2">
+                <span class="second-mini-containers">Fill & Sign</span>
+                <span class="second-mini-containers">Create Forms</span>
+              </div>
+            </div>
+
+            <div class="h-full flex separate gap">
+              <div class="icon-containers">
+                <i class="ri-shape-2-fill icon-size"></i>
+                <p class="font-bold">PDF to Other Formats</p>
+              </div>
+              <div class="flex flex-col justify-center gap-2">
+                <i class="ri-file-word-line small-icon-size"></i>
+                <i class="ri-file-ppt-line small-icon-size"></i>
+              </div>
+              <div class="flex flex-col justify-center gap-2">
+                <i class="ri-file-excel-line small-icon-size"></i>
+                <i class="ri-text-snippet small-icon-size"></i>
+              </div>
+               <div class="flex flex-col justify-center gap-2">
+                <i class="ri-file-excel-line small-icon-size"></i>
+                 <span class="w-10 h-10"></span>
+              </div>
+               <div class="flex flex-col justify-center gap-2">
+                <i class="ri-html5-line small-icon-size"></i>
+                <i class="ri-text-snippet small-icon-size"></i>
+              </div>
+               <div class="flex flex-col justify-center gap-2">
+                <i class="ri-file-word-line small-icon-size"></i>
+                 <span class="w-10 h-10"></span>
+              </div>
+            </div>
+
+            <div class="h-full flex separate gap">
+              <div class="icon-containers">
+                <i class="ri-file-shield-2-line icon-size"></i>
+                <p class="font-bold">Document Protection</p>
+              </div>
+              <div class="flex flex-col justify-center gap-2">
+                <i class="ri-lock-line small-icon-size"></i>
+                <i class="ri-cast-fill small-icon-size"></i>
+              </div>
+              <div class="flex flex-col justify-center gap-2">
+                <i class="ri-lock-unlock-line small-icon-size"></i>
+                <i class="ri-download-line small-icon-size"></i>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- File Section -->
+          <section class="file-section">
+            <div class="box">
+              <div
+                class="upload-section cursor-pointer"
+                onclick="document.getElementById('fileUpload').click()"
+              >
+                <i class="ri-upload-cloud-2-fill ri-xl"></i>
+                <span>Drop a PDF file here, or click to upload</span>
+                <input
+                  type="file"
+                  id="fileUpload"
+                  class="hidden"
+                  accept=".pdf"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/public/js/sidebar.js"></script>
+    <script src="/public/js/dropdown.js"></script>
+  </body>
+</html>

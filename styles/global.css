@@ -5,7 +5,7 @@
 @layer base {
   body {
     font-family: 'Roboto', sans-serif;
-    color: var(--dark-gray);
+    color: var(--dark-charcoal);
   }
 }
 
@@ -15,6 +15,8 @@
   --white-smoke: #FBFBFB;
   --medium-gray:#FBFBFB4D;
   --dark-gray: #333333;
+  --dark-charcoal: #333333;
+  --dark-gray: #A9A9A9;
   --light-sky-blue: #BBE2FA;
   --red-orange: #EE361C;
   --olive: #DBD77C;
@@ -54,12 +56,14 @@
 /* sidebar icon background */
 .icon-background{
   @apply rounded-lg px-1.5 py-2.5;
-  background: var(--primary-gradient-color);  
+  background: var(--primary-gradient-color);
+  color: var(--white-smoke);
 }
 
 /* scroll */
 .scroll::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 
 .scroll::-webkit-scrollbar-thumb {
@@ -132,4 +136,39 @@
 .upload-section{
   @apply flex items-center justify-center gap-2 w-fit h-10 rounded-md px-4 cursor-pointer;
   background: var(--light-sky-blue);
+/* custom select arrow*/
+.select-arrow-active span:last-child {
+  transform: rotate(180deg);
+}
+}
+
+.option{
+  @apply px-4 py-2 cursor-pointer hover:bg-light-sky-blue;
+}
+
+/* table slide animation*/
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slideRight {
+  animation: slideRight 0.5s ease-in-out;
+}
+
+.slideLeft {
+  animation: slideLeft 0.5s ease-in-out;
 }

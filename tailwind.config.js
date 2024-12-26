@@ -14,6 +14,8 @@ module.exports = {
         'white-smoke': '#FBFBFB',
         'medium-gray': '#FBFBFB4D',
         'dark-gray': '#333333',
+        'dark-charcoal': '#333333',
+        'dark-gray': '#A9A9A9',
         'light-sky-blue': '#BBE2FA',
         'red-orange': '#EE361C',
         'olive': '#DBD77C',

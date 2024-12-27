@@ -44,7 +44,7 @@
           <i class="ri-share-line"></i> <span class="text-sm md:text-base">Share</span>
         </button>
         <!-- Share dropdown -->
-        <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4">
+        <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
           <h2 class="text-lg font-medium mb-4">Share your work</h2>
           <div class="mb-4">
             <label class="font-normal mb-1 block" for="people-input">
@@ -88,7 +88,7 @@
           <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
         </button>
         <!-- Profile dropdown -->
-        <div class="dropdown hidden absolute top-1/2 right-10 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4">
+        <div class="dropdown hidden absolute top-1/2 right-10 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
           <div class="flex items-center justify-start mb-5 gap-3">
             <div>
               <p class="font-medium text-lg">Hello Rachel!</p>
@@ -133,7 +133,7 @@
               </button>
             </li>
             <li>
-              <a href="/index.html" class="flex flex-col items-center gap-2">
+              <a href="/" class="flex flex-col items-center gap-2">
                 <i class="ri-home-5-line ri-xl"></i>
                 <span class="small-title">Home</span>
               </a>
@@ -326,44 +326,6 @@
   </main>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $(document).on('click', '.more-button', function (e) {
-        var $dropdown = $(this).next('.moredropdown');
-        var mouseX = e.clientX; 
-        var mouseY = e.clientY;
-        $('.moredropdown').not($dropdown).addClass('hidden');
-        
-        // Clear previous inline styles before calculating new position
-        $dropdown.removeAttr('style');
-        
-        // Get the dropdown's height and the viewport height
-        var dropdownHeight = $dropdown.outerHeight();
-        var viewportHeight = $(window).height();
-    
-        // Check if the mouse is near the bottom of the page
-        if (mouseY + dropdownHeight > viewportHeight) {
-          // Position the dropdown above the button if near the bottom of the page
-          $dropdown.css('top', 'initial');
-          $dropdown.css('top', '26%'); 
-        } else {
-          // Position it below the button
-          $dropdown.css('right', '5rem');
-          $dropdown.css('bottom', 'initial');
-        }
-    
-        // Toggle the dropdown visibility
-        $dropdown.toggleClass('hidden');
-      });
-      
-      // Close all dropdowns when clicking outside
-      $(document).on('click', function (e) {
-        if (!$(e.target).closest('.more-button').length) {
-          $('.moredropdown').addClass('hidden');
-        }
-      });
-    });      
-  </script>
   <script src="/public/js/table-animation.js"></script>
   <script src="/public/js/sidebar.js"></script>
   <script src="/public/js/dropdown.js"></script>

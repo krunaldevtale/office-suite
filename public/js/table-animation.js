@@ -68,5 +68,39 @@ $(document).ready(function () {
         isExpanded = false;
       }
     });
+
+    $(document).on('click', '.more-button', function (e) {
+      var $dropdown = $(this).next('.moredropdown');
+      var mouseY = e.clientY;
+      $('.moredropdown').not($dropdown).addClass('hidden');
+      
+      // Clear previous inline styles before calculating new position
+      $dropdown.removeAttr('style');
+      
+      // Get the dropdown's height and the viewport height
+      var dropdownHeight = $dropdown.outerHeight();
+      var viewportHeight = $(window).height();
+  
+      // Check if the mouse is near the bottom of the page
+      if (mouseY + dropdownHeight > viewportHeight) {
+        // Position the dropdown above the button if near the bottom of the page
+        $dropdown.css('top', 'initial');
+        $dropdown.css('top', '26%'); 
+      } else {
+        // Position it below the button
+        $dropdown.css('right', '5rem');
+        $dropdown.css('bottom', 'initial');
+      }
+  
+      // Toggle the dropdown visibility
+      $dropdown.toggleClass('hidden');
+    });
+    
+    // Close all dropdowns when clicking outside
+    $(document).on('click', function (e) {
+      if (!$(e.target).closest('.more-button').length) {
+        $('.moredropdown').addClass('hidden');
+      }
+    });
   });
   

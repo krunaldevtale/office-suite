@@ -84,34 +84,61 @@
 }
 
 .icon-containers{
-  @apply w-14 xl:w-16 h-full rounded-lg text-center text-[9px] xl:text-[10px] flex flex-col justify-center gap-2 opacity-80;
+  @apply w-10 xl:w-12 2xl:w-16 xl:h-full rounded-lg text-center text-[7px] xl:text-[8px] 2xl:text-[10px] flex flex-col items-center justify-center gap-2 opacity-80;
   background: var(--medium-gray);
 }
 
 .mini-containers{
-  @apply w-fit h-8 p-2 rounded-lg font-bold underline text-[0.5rem] xl:text-[0.6rem];
+  @apply w-fit h-8 p-2 rounded-lg font-bold underline text-[0.5rem] xl:text-[0.5rem] 2xl:text-[0.6rem];
   background: var(--medium-gray)
 }
 
 .second-mini-containers {
-  @apply w-24 text-center h-8 p-2 rounded-lg font-bold underline text-[0.5rem] xl:text-[0.7rem];
+  @apply w-fit text-center h-8 p-2 rounded-lg font-bold underline text-[0.5rem] xl:text-[0.7rem];
   background: var(--medium-gray)
 }
 
 .icon-size{
-  @apply text-3xl xl:text-4xl cursor-pointer;
+  @apply text-3xl xl:text-3xl 2xl:text-4xl cursor-pointer;
 }
 
 .small-icon-size{
-   @apply text-[23px] xl:text-[27px] font-light cursor-pointer;
+   @apply text-[23px] xl:text-[22px] 2xl:text-[27px] font-light cursor-pointer;
+}
+
+.small-icon-img{
+  @apply w-7 ;
+}
+
+.small-icon-size:hover{
+  @apply text-white;
 }
 
 .separate{
-  @apply border-r-2 px-2 xl:px-2 2xl:px-6;
+  @apply border-r-2 px-2 xl:px-2 2xl:px-3;
 }
 
 .gap{
-@apply gap-1 xl:gap-1.5 2xl:gap-2;
+@apply gap-0.5 xl:gap-0.5 2xl:gap-2;
+}
+
+.hover-div{
+  @apply relative w-10 h-10 flex items-center justify-center;
+}
+
+.hover-div:hover{
+  background: var(--royal-blue)
+}
+
+.tooltip{
+  @apply absolute bottom-full mb-0.5 text-[10px] w-fit text-center border-2 px-2.5 py-1 rounded opacity-0 transition-opacity pointer-events-none;
+  background: var(--white-smoke);
+  border-color: var(--royal-blue);
+}
+
+.dashed-line{
+  @apply border-l-2 border-dashed h-4/5;
+  border-color: var(--white-smoke)
 }
 
 /* File Section */

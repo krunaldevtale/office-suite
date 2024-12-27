@@ -12,7 +12,9 @@
   <body>
     <main class="flex flex-col h-screen bg-light-sky-blue">
       <!-- Header -->
-      <header class="w-full py-4 px-6 pr-10 flex justify-between items-center relative">
+      <header
+        class="w-full py-4 px-6 pr-10 flex justify-between items-center relative"
+      >
         <div class="flex items-center gap-4">
           <!-- Mobile Menu Button -->
           <button class="md:hidden text-2xl menu-toggle">
@@ -23,7 +25,9 @@
         </div>
         <!-- Search bar -->
         <div class="relative w-1/4 hidden md:block">
-          <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+          <span
+            class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+          >
             <i class="ri-search-line"></i>
           </span>
           <input
@@ -31,26 +35,43 @@
             placeholder="Search your PDF library or documents..."
             class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke"
           />
-          <div class="dropdown hidden absolute w-full mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
+          <div
+            class="dropdown hidden absolute w-full mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10"
+          >
             <ul class="text-sm">
-              <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-mail-add-line"></i>Attach Email</a></li>
-              <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-download-line"></i>Downloads</a></li>
+              <li>
+                <a href="#" class="px-4 py-2 flex items-center gap-3"
+                  ><i class="ri-mail-add-line"></i>Attach Email</a
+                >
+              </li>
+              <li>
+                <a href="#" class="px-4 py-2 flex items-center gap-3"
+                  ><i class="ri-download-line"></i>Downloads</a
+                >
+              </li>
             </ul>
           </div>
         </div>
         <!-- Share button -->
         <div class="flex items-center gap-4">
-          <button class="share-btn drop-button hidden md:flex items-center gap-2">
-            <i class="ri-share-line"></i> <span class="text-sm md:text-base">Share</span>
+          <button
+            class="share-btn drop-button hidden md:flex items-center gap-2"
+          >
+            <i class="ri-share-line"></i>
+            <span class="text-sm md:text-base">Share</span>
           </button>
           <!-- Share dropdown -->
-          <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
+          <div
+            class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10"
+          >
             <h2 class="text-lg font-medium mb-4">Share your work</h2>
             <div class="mb-4">
               <label class="font-normal mb-1 block" for="people-input">
                 People with access
               </label>
-              <div class="flex items-center gap-2 border border-dark-gray rounded-md p-2">
+              <div
+                class="flex items-center gap-2 border border-dark-gray rounded-md p-2"
+              >
                 <input
                   id="people-input"
                   type="text"
@@ -60,43 +81,69 @@
               </div>
             </div>
             <button class="flex items-center gap-2 mb-4">
-              <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
+              <img
+                src="/public/images/user.png"
+                alt="Profile"
+                class="rounded-full h-8 w-8"
+              />
               <i class="ri-add-fill"></i>
             </button>
             <div class="mb-4">
               <label class="mb-1 block" for="collaboration-link">
                 Collaboration link
               </label>
-              <div class="relative custom-select border border-dark-gray rounded-md">
-                <div id="selected-item" class="select-selected text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+              <div
+                class="relative custom-select border border-dark-gray rounded-md"
+              >
+                <div
+                  id="selected-item"
+                  class="select-selected text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2"
+                >
                   <span>Select access:</span>
                   <span><i class="ri-arrow-down-s-fill"></i></span>
                 </div>
-                <div id="select-options" class="select-items text-sm bg-white-smoke border border-dark-gray hidden absolute w-full mt-1 rounded shadow-lg z-10 overflow-auto scroll h-16">
+                <div
+                  id="select-options"
+                  class="select-items text-sm bg-white-smoke border border-dark-gray hidden absolute w-full mt-1 rounded shadow-lg z-10 overflow-auto scroll h-16"
+                >
                   <div class="option">Only you can access</div>
                   <div class="option">Anyone with the link</div>
                   <div class="option">Specific people</div>
                 </div>
               </div>
             </div>
-            <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
+            <button
+              class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition"
+            >
               Copy link
             </button>
-          </div> 
+          </div>
           <!-- Profile button -->
-          <button class="drop-button">       
-            <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
+          <button class="drop-button">
+            <img
+              src="/public/images/user.png"
+              alt="Profile"
+              class="rounded-full h-8 w-8"
+            />
           </button>
           <!-- Profile dropdown -->
-          <div class="dropdown hidden absolute top-1/2 right-10 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
+          <div
+            class="dropdown hidden absolute top-1/2 right-10 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10"
+          >
             <div class="flex items-center justify-start mb-5 gap-3">
               <div>
                 <p class="font-medium text-lg">Hello Rachel!</p>
                 <p class="text-sm">Rachelsaket@gmail.com</p>
               </div>
-              <img src="/public/images/user.png" alt="Profile" class="rounded-full h-12 w-12">
+              <img
+                src="/public/images/user.png"
+                alt="Profile"
+                class="rounded-full h-12 w-12"
+              />
             </div>
-            <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
+            <button
+              class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition"
+            >
               Log Out
             </button>
           </div>
@@ -104,26 +151,39 @@
       </header>
       <!-- Mobile search bar -->
       <div class="md:hidden relative w-full pb-4 px-6">
-          <span class="absolute left-10 top-1/4 mt-1.5 transform -translate-y-1/2 text-gray-400">
-            <i class="ri-search-line"></i>
-          </span>
-          <input
-            type="text"
-            placeholder="Search your PDF library or documents..."
-            class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke"
-          />
-          <div class="dropdown hidden absolute w-11/12 mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
-            <ul class="text-sm">
-              <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-mail-add-line"></i>Attach Email</a></li>
-              <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-download-line"></i>Downloads</a></li>
-            </ul>
-          </div>
+        <span
+          class="absolute left-10 top-1/4 mt-1.5 transform -translate-y-1/2 text-gray-400"
+        >
+          <i class="ri-search-line"></i>
+        </span>
+        <input
+          type="text"
+          placeholder="Search your PDF library or documents..."
+          class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke"
+        />
+        <div
+          class="dropdown hidden absolute w-11/12 mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10"
+        >
+          <ul class="text-sm">
+            <li>
+              <a href="#" class="px-4 py-2 flex items-center gap-3"
+                ><i class="ri-mail-add-line"></i>Attach Email</a
+              >
+            </li>
+            <li>
+              <a href="#" class="px-4 py-2 flex items-center gap-3"
+                ><i class="ri-download-line"></i>Downloads</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="flex" style="height: calc(100vh - 75px)">
         <!-- Sidebar -->
-        <aside id="sidebar"
-        class="fixed bg-light-sky-blue z-10 inset-y-0 left-0 w-32 transform -translate-x-full md:translate-x-0 md:relative md:w-28 shadow-lg md:shadow-none transition-transform duration-300"
+        <aside
+          id="sidebar"
+          class="fixed bg-light-sky-blue z-10 inset-y-0 left-0 w-32 transform -translate-x-full md:translate-x-0 md:relative md:w-28 shadow-lg md:shadow-none transition-transform duration-300"
         >
           <nav class="mt-4">
             <ul class="space-y-10 px-6">
@@ -139,73 +199,238 @@
                 </a>
               </li>
               <li>
-                <a href="/src/file.html" class="flex flex-col items-center gap-2">
+                <a
+                  href="/src/file.html"
+                  class="flex flex-col items-center gap-2"
+                >
                   <i class="ri-file-line ri-xl"></i>
                   <span class="small-title">File</span>
                 </a>
               </li>
               <li>
-                <a href="/src/edit.html" class="flex flex-col items-center gap-2 menu-button">
+                <a
+                  href="/src/edit.html"
+                  class="flex flex-col items-center gap-2 menu-button"
+                >
                   <i class="ri-edit-line ri-xl"></i>
                   <span class="small-title">Edit</span>
                 </a>
                 <div class="menu-dropdown hidden w-48">
                   <ul class="text-sm">
                     <li class="relative">
-                      <a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">Font formatting<i class="ri-arrow-right-s-fill ri-xl"></i></a>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:rounded-t-[10px]"
+                        >Font formatting<i
+                          class="ri-arrow-right-s-fill ri-xl"
+                        ></i
+                      ></a>
                       <div class="sub-dropdown left-full top-0 hidden w-60">
-                        <ul class="text-sm ">
-                          <li><a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">Cut text</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Copy text</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Paste text</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Bold text</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Italic text</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Underline text</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Strikethrough text</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Subscript</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Superscript</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Text colour</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Search And Replace</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Highlight/background color</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Undo</a></li>
-                          <li><a href="#" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Redo</a></li>
-                        </ul>
-                      </div>
-                    </li>                  
-                    <li class="relative">
-                      <a href="#" class="menu-dropdown-option">Text alignment<i class="ri-arrow-right-s-fill ri-xl"></i></a>
-                      <div class="sub-dropdown left-full top-0 hidden w-60">
-                        <ul class="text-sm ">
-                          <li><a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">Left align</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Center align</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Right align</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Top align</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Middle align</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Bottom align</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Merge text</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Unmerge text</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Wrap text</a></li>
-                          <li><a href="#" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Unwrap text</a></li>
+                        <ul class="text-sm">
+                          <li>
+                            <a
+                              href="#"
+                              class="menu-dropdown-option hover:rounded-t-[10px]"
+                              >Cut text</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Copy text</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Paste text</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Bold text</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Italic text</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Underline text</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Strikethrough text</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Subscript</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Superscript</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Text colour</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Search And Replace</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Highlight/background color</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option">Undo</a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="menu-dropdown-option hover:rounded-b-[10px]"
+                              style="border-bottom: none"
+                              >Redo</a
+                            >
+                          </li>
                         </ul>
                       </div>
                     </li>
                     <li class="relative">
-                      <a href="#" class="menu-dropdown-option">Text size and rotation<i class="ri-arrow-right-s-fill ri-xl"></i></a>
+                      <a href="#" class="menu-dropdown-option"
+                        >Text alignment<i
+                          class="ri-arrow-right-s-fill ri-xl"
+                        ></i
+                      ></a>
                       <div class="sub-dropdown left-full top-0 hidden w-60">
-                        <ul class="text-sm ">
-                          <li><a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">Font size</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Increase font size</a></li>
-                          <li><a href="#" class="menu-dropdown-option">Decrease font size</a></li>
-                          <li><a href="#" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Rotate text</a></li>
+                        <ul class="text-sm">
+                          <li>
+                            <a
+                              href="#"
+                              class="menu-dropdown-option hover:rounded-t-[10px]"
+                              >Left align</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Center align</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Right align</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Top align</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Middle align</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Bottom align</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Merge text</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Unmerge text</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Wrap text</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="menu-dropdown-option hover:rounded-b-[10px]"
+                              style="border-bottom: none"
+                              >Unwrap text</a
+                            >
+                          </li>
                         </ul>
                       </div>
                     </li>
                     <li class="relative">
-                      <a href="#" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Borders and styling<i class="ri-arrow-right-s-fill ri-xl"></i></a>
+                      <a href="#" class="menu-dropdown-option"
+                        >Text size and rotation<i
+                          class="ri-arrow-right-s-fill ri-xl"
+                        ></i
+                      ></a>
                       <div class="sub-dropdown left-full top-0 hidden w-60">
-                        <ul class="text-sm ">
-                          <li><a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">Add table borders</a></li>
-                          <li><a href="#" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Remove formatting</a></li>
+                        <ul class="text-sm">
+                          <li>
+                            <a
+                              href="#"
+                              class="menu-dropdown-option hover:rounded-t-[10px]"
+                              >Font size</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Increase font size</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="menu-dropdown-option"
+                              >Decrease font size</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="menu-dropdown-option hover:rounded-b-[10px]"
+                              style="border-bottom: none"
+                              >Rotate text</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="relative">
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:rounded-b-[10px]"
+                        style="border-bottom: none"
+                        >Borders and styling<i
+                          class="ri-arrow-right-s-fill ri-xl"
+                        ></i
+                      ></a>
+                      <div class="sub-dropdown left-full top-0 hidden w-60">
+                        <ul class="text-sm">
+                          <li>
+                            <a
+                              href="#"
+                              class="menu-dropdown-option hover:rounded-t-[10px]"
+                              >Add table borders</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="menu-dropdown-option hover:rounded-b-[10px]"
+                              style="border-bottom: none"
+                              >Remove formatting</a
+                            >
+                          </li>
                         </ul>
                       </div>
                     </li>
@@ -213,13 +438,19 @@
                 </div>
               </li>
               <li>
-                <a href="/src/convert-protect.html" class="flex flex-col items-center gap-2">
+                <a
+                  href="/src/convert-protect.html"
+                  class="flex flex-col items-center gap-2"
+                >
                   <i class="ri-shield-keyhole-line ri-xl"></i>
                   <span class="small-title text-center">Convert & Protect</span>
                 </a>
               </li>
               <li>
-                <a href="/src/tools.html" class="flex flex-col items-center gap-2">
+                <a
+                  href="/src/tools.html"
+                  class="flex flex-col items-center gap-2"
+                >
                   <i class="ri-tools-line ri-xl"></i>
                   <span class="small-title text-center">Tools</span>
                 </a>
@@ -246,143 +477,120 @@
                 <p class="font-bold">Font Formatting</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                 <div
-                  class="group hover-div"
-                >
+                <div class="group hover-div">
                   <i class="ri-scissors-2-line small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Cut</span
-                  >
+                  <span class="tooltip group-hover:opacity-100">Cut</span>
                 </div>
-                 <div
-                  class="group hover-div"
-                >
-                   <i class="ri-strikethrough small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
+                <div class="group hover-div">
+                  <i class="ri-strikethrough small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100"
                     >Strikethrough</span
                   >
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                 <div
-                  class="group hover-div"
-                >
-                 <i class="ri-file-copy-line small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Copy</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-file-copy-line small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Copy</span>
                 </div>
-                 <div
-                  class="group hover-div"
-                >
+                <div class="group hover-div">
                   <i class="ri-subscript-2 small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Subscript</span
-                  >
+                  <span class="tooltip group-hover:opacity-100">Subscript</span>
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                 <div
-                  class="group hover-div"
-                >
-                 <img src="/public/images/paste-line.svg" alt="Paste">
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Paste</span
+                <div class="group hover-div">
+                  <svg
+                    class="small-icon-size"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
+                    <g clip-path="url(#clip0_523_292)">
+                      <path
+                        d="M24.9993 10H21.666V11.6667H24.9993V13.3333H26.666V11.6667C26.666 11.2246 26.4904 10.8007 26.1779 10.4882C25.8653 10.1756 25.4414 10 24.9993 10Z"
+                        fill="currentColor"
+                      />
+                      <path d="M25 15H26.6667V20H25V15Z" fill="currentColor" />
+                      <path
+                        d="M25.0007 24.9993H23.334V26.666H25.0007C25.4427 26.666 25.8666 26.4904 26.1792 26.1779C26.4917 25.8653 26.6673 25.4414 26.6673 24.9993V21.666H25.0007V24.9993Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M20.0007 18.334V5.00065C20.0007 4.55862 19.8251 4.1347 19.5125 3.82214C19.1999 3.50958 18.776 3.33398 18.334 3.33398H5.00065C4.55862 3.33398 4.1347 3.50958 3.82214 3.82214C3.50958 4.1347 3.33398 4.55862 3.33398 5.00065V18.334C3.33398 18.776 3.50958 19.1999 3.82214 19.5125C4.1347 19.8251 4.55862 20.0007 5.00065 20.0007H18.334C18.776 20.0007 19.1999 19.8251 19.5125 19.5125C19.8251 19.1999 20.0007 18.776 20.0007 18.334ZM5.00065 5.00065H18.334V18.334H5.00065V5.00065Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M16.666 25H21.666V26.6667H16.666V25Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M11.6667 21.666H10V24.9993C10 25.4414 10.1756 25.8653 10.4882 26.1779C10.8007 26.4904 11.2246 26.666 11.6667 26.666H15V24.9993H11.6667V21.666Z"
+                        fill="currentColor"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_523_292">
+                        <rect width="30" height="30" fill="currentColor" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+
+                  <span class="tooltip group-hover:opacity-100">Paste</span>
                 </div>
-                 <div
-                  class="group hover-div"
-                >
-                 <i class="ri-superscript-2 small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
+                <div class="group hover-div">
+                  <i class="ri-superscript-2 small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100"
                     >Superscript</span
                   >
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div
-                  class="group hover-div"
-                >
-                 <i class="ri-bold small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Bold</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-bold small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Bold</span>
                 </div>
-                <div
-                  class="group hover-div"
-                >
-                 <i class="ri-font-color small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
+                <div class="group hover-div">
+                  <i class="ri-font-color small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100"
                     >Text Color</span
                   >
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div
-                  class="group hover-div"
-                >
-                 <i class="ri-underline small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Underline</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-underline small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Underline</span>
                 </div>
-                <div
-                  class="group hover-div"
-                >
-                 <i class="ri-paint-fill small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
+                <div class="group hover-div">
+                  <i class="ri-paint-fill small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100"
                     >Background Color</span
                   >
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div
-                  class="group hover-div"
-                >
-                 <i class="ri-italic small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Italic</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-italic small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Italic</span>
                 </div>
-                <div
-                  class="group hover-div"
-                >
-                 <i class="ri-search-eye-line small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
+                <div class="group hover-div">
+                  <i class="ri-search-eye-line small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100"
                     >Search & Replace</span
                   >
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div
-                  class="group hover-div"
-                >
-                 <i class="ri-arrow-go-back-line small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Undo</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-arrow-go-back-line small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Undo</span>
                 </div>
-                <div
-                  class="group hover-div"
-                >
-                 <i class="ri-arrow-go-forward-line small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Redo</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-arrow-go-forward-line small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Redo</span>
                 </div>
               </div>
             </div>
@@ -393,83 +601,58 @@
                 <p class="font-bold">Text Alignment</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                 <div
-                  class="group hover-div"
-                >
-                 <i class="ri-align-left small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Left</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-align-left small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Left</span>
                 </div>
-                 <div
-                  class="group hover-div"
-                >
-                 <i class="ri-align-item-top-line small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Top</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-align-item-top-line small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Top</span>
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div
-                  class="group hover-div"
-                >
-                 <i class="ri-align-center small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Center</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-align-center small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Center</span>
                 </div>
-                <div
-                  class="group hover-div"
-                >
-                <i class="ri-align-item-vertical-center-line small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Middle</span
-                  >
+                <div class="group hover-div">
+                  <i
+                    class="ri-align-item-vertical-center-line small-icon-size"
+                  ></i>
+                  <span class="tooltip group-hover:opacity-100">Middle</span>
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div
-                  class="group hover-div"
-                >
-                <i class="ri-align-right small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Right</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-align-right small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Right</span>
                 </div>
-                <div
-                  class="group hover-div"
-                >
-                <i class="ri-align-item-bottom-line small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Bottom</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-align-item-bottom-line small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Bottom</span>
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div
-                  class="group hover-div"
-                >
-                <i class="ri-text-wrap small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Wrap</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-text-wrap small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Wrap</span>
                 </div>
-                <div
-                  class="group hover-div"
-                >
-                <img src="/public/images/merge.svg" alt="Merge">
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Merge</span
+                <div class="group hover-div">
+                  <svg
+                    class="small-icon-size"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
+                    <path
+                      d="M8.0125 26.25L6.25 24.4875L12.2875 18.45C13.225 17.5125 13.75 16.2375 13.75 14.9125V8.5375L11.7625 10.5125L10 8.75L15 3.75L20 8.75L18.2375 10.5125L16.25 8.5375V14.9125C16.25 16.2375 16.775 17.5125 17.7125 18.45L23.75 24.4875L21.9875 26.25L15 19.2625L8.0125 26.25Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+
+                  <span class="tooltip group-hover:opacity-100">Merge</span>
                 </div>
               </div>
             </div>
@@ -484,23 +667,39 @@
                 <span class="second-mini-containers">Rotate Text</span>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                 <div
-                  class="group hover-div"
-                >
-                <img src="/public/images/increase.svg" alt="Merge">
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Increase</span
+                <div class="group hover-div">
+                  <svg
+                    class="small-icon-size"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
+                    <path
+                      d="M3.26245 23.75C3.86245 23.75 4.39995 23.375 4.58745 22.8125L5.84995 19.275H12.9125L14.15 22.8C14.35 23.375 14.8875 23.75 15.4875 23.75C16.475 23.75 17.15 22.7625 16.8 21.85L11.4875 7.7125C11.1625 6.8375 10.3125 6.25 9.37495 6.25C8.43745 6.25 7.58745 6.8375 7.26245 7.7125L1.94995 21.85C1.59995 22.7625 2.28745 23.75 3.26245 23.75ZM9.29995 9.5H9.44995L11.9875 16.7375H6.76245L9.29995 9.5ZM18.75 15C18.75 14.3125 19.3125 13.75 20 13.75H22.5V11.25C22.5 10.5625 23.0625 10 23.75 10C24.4375 10 25 10.5625 25 11.25V13.75H27.5C28.1875 13.75 28.75 14.3125 28.75 15C28.75 15.6875 28.1875 16.25 27.5 16.25H25V18.75C25 19.4375 24.4375 20 23.75 20C23.0625 20 22.5 19.4375 22.5 18.75V16.25H20C19.3125 16.25 18.75 15.6875 18.75 15Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+
+                  <span class="tooltip group-hover:opacity-100">Increase</span>
                 </div>
-                 <div
-                  class="group hover-div"
-                >
-                <img src="/public/images/decrease.svg" alt="Merge">
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Decrease</span
+                <div class="group hover-div">
+                  <svg
+                    class="small-icon-size"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
+                    <path
+                      d="M3.26245 23.75C3.86245 23.75 4.39995 23.375 4.58745 22.8125L5.84995 19.275H12.9125L14.15 22.8C14.35 23.375 14.8875 23.75 15.4875 23.75C16.475 23.75 17.15 22.7625 16.8 21.85L11.4875 7.7125C11.1625 6.8375 10.3125 6.25 9.37495 6.25C8.43745 6.25 7.58745 6.8375 7.26245 7.7125L1.94995 21.85C1.59995 22.7625 2.28745 23.75 3.26245 23.75ZM9.29995 9.5H9.44995L11.9875 16.7375H6.76245L9.29995 9.5ZM18.75 15C18.75 14.3125 19.3125 13.75 20 13.75H27.5C28.1875 13.75 28.75 14.3125 28.75 15C28.75 15.6875 28.1875 16.25 27.5 16.25H20C19.3125 16.25 18.75 15.6875 18.75 15Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+
+                  <span class="tooltip group-hover:opacity-100">Decrease</span>
                 </div>
               </div>
             </div>
@@ -511,23 +710,13 @@
                 <p class="font-bold">Border & Styling</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                 <div
-                  class="group hover-div"
-                >
-                <i class="ri-layout-grid-line small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Border</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-layout-grid-line small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Border</span>
                 </div>
-                 <div
-                  class="group hover-div"
-                >
-                <i class="ri-close-line small-icon-size"></i>
-                  <span
-                    class="tooltip group-hover:opacity-100"
-                    >Remove</span
-                  >
+                <div class="group hover-div">
+                  <i class="ri-close-line small-icon-size"></i>
+                  <span class="tooltip group-hover:opacity-100">Remove</span>
                 </div>
               </div>
             </div>

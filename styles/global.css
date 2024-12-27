@@ -110,7 +110,7 @@
   @apply w-7 ;
 }
 
-.small-icon-size:hover{
+.hover-div:hover .small-icon-size {
   @apply text-white;
 }
 

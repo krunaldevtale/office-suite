@@ -23,6 +23,7 @@
   --olive: #DBD77C;
   --light-gray: #EFEFEF;
   --very-light-gray: #F8F8F8;
+  --transparent-medium-gray: #9090901A;
   --primary-gradient-color: linear-gradient(180deg, #01D7AB 0%, #0272D9 100%);
   --secondary-gradient-color: linear-gradient(180deg, rgba(2, 189, 183, 0.7) 0%, rgba(2, 126, 212, 0.7) 100%);
   --glass-shadow: 
@@ -32,12 +33,23 @@
   --border-one:1px solid #33333399;
  
 }
-
-.primary-title {
-  @apply text-5xl font-medium;
+.headline {
+  font-size: 24px;
 }
-.small-title {
-  @apply text-sm font-normal;
+.subheading {
+  font-size: 20px;
+}
+.body-text {
+  font-size: 16px;
+}
+.secondary-text {
+  font-size: 14px;
+}
+.button-text {
+  font-size: 14px;
+}
+.tooltip-text {
+  font-size: 12px;
 }
 
 .logo-title{
@@ -56,7 +68,7 @@
 
 /* sidebar icon background */
 .icon-background{
-  @apply rounded-lg px-1.5 py-2.5;
+  @apply rounded-lg;
   background: var(--primary-gradient-color);
   color: var(--white-smoke);
 }
@@ -163,10 +175,11 @@
 .upload-section{
   @apply flex items-center justify-center gap-2 w-fit h-10 rounded-md px-4 cursor-pointer;
   background: var(--light-sky-blue);
+}
+
 /* custom select arrow*/
 .select-arrow-active span:last-child {
   transform: rotate(180deg);
-}
 }
 
 .option{
@@ -232,4 +245,15 @@
 }
 .sub-dropdown .menu-dropdown-option:hover {
   background-color: var(--transparent-light-sky-blue);
+}
+.feature{
+  background-image: url('/public/images/dots-bg.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+}
+.feature-list{
+  border-radius: 31px;
+  backdrop-filter: blur(35px);
+  background: rgba(212, 212, 212, 0.1);
 }

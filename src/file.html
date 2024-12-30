@@ -12,121 +12,122 @@
   <body>
     <main class="flex flex-col h-screen bg-light-sky-blue">
       <!-- Header -->
-      <header class="w-full py-4 px-6 pr-10 flex justify-between items-center relative">
-        <div class="flex items-center gap-4">
-          <!-- Mobile Menu Button -->
-          <button class="md:hidden text-2xl menu-toggle">
-            <i class="ri-menu-line"></i>
-          </button>
-          <!-- Logo -->
-          <h1 class="logo-title">Logo</h1>
-        </div>
-        <!-- Search bar -->
-        <div class="relative w-1/4 hidden md:block">
-          <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-            <i class="ri-search-line"></i>
-          </span>
-          <input
-            type="text"
-            placeholder="Search your PDF library or documents..."
-            class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke"
-          />
-          <div class="dropdown hidden absolute w-full mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
-            <ul class="text-sm">
-              <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-mail-add-line"></i>Attach Email</a></li>
-              <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-download-line"></i>Downloads</a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- Share button -->
-        <div class="flex items-center gap-4">
-          <button class="share-btn drop-button hidden md:flex items-center gap-2">
-            <i class="ri-share-line"></i> <span class="text-sm md:text-base">Share</span>
-          </button>
-          <!-- Share dropdown -->
-          <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
-            <h2 class="text-lg font-medium mb-4">Share your work</h2>
-            <div class="mb-4">
-              <label class="font-normal mb-1 block" for="people-input">
-                People with access
-              </label>
-              <div class="flex items-center gap-2 border border-dark-gray rounded-md p-2">
-                <input
-                  id="people-input"
-                  type="text"
-                  placeholder="Add people or your team"
-                  class="w-full text-sm bg-transparent outline-none placeholder:text-dark-charcoal"
-                />
-              </div>
-            </div>
-            <button class="flex items-center gap-2 mb-4">
-              <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
-              <i class="ri-add-fill"></i>
-            </button>
-            <div class="mb-4">
-              <label class="mb-1 block" for="collaboration-link">
-                Collaboration link
-              </label>
-              <div class="relative custom-select border border-dark-gray rounded-md">
-                <div id="selected-item" class="select-selected text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
-                  <span>Select access:</span>
-                  <span><i class="ri-arrow-down-s-fill"></i></span>
-                </div>
-                <div id="select-options" class="select-items text-sm bg-white-smoke border border-dark-gray hidden absolute w-full mt-1 rounded shadow-lg z-10 overflow-auto scroll h-16">
-                  <div class="option">Only you can access</div>
-                  <div class="option">Anyone with the link</div>
-                  <div class="option">Specific people</div>
-                </div>
-              </div>
-            </div>
-            <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
-              Copy link
-            </button>
-          </div> 
-          <!-- Profile button -->
-          <button class="drop-button">       
-            <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
-          </button>
-          <!-- Profile dropdown -->
-          <div class="dropdown hidden absolute top-1/2 right-10 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
-            <div class="flex items-center justify-start mb-5 gap-3">
-              <div>
-                <p class="font-medium text-lg">Hello Rachel!</p>
-                <p class="text-sm">Rachelsaket@gmail.com</p>
-              </div>
-              <img src="/public/images/user.png" alt="Profile" class="rounded-full h-12 w-12">
-            </div>
-            <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
-              Log Out
-            </button>
-          </div>
-        </div>
-      </header>
-      <!-- Mobile search bar -->
-      <div class="md:hidden relative w-full pb-4 px-6">
-          <span class="absolute left-10 top-1/4 mt-1.5 transform -translate-y-1/2 text-gray-400">
-            <i class="ri-search-line"></i>
-          </span>
-          <input
-            type="text"
-            placeholder="Search your PDF library or documents..."
-            class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke"
-          />
-          <div class="dropdown hidden absolute w-11/12 mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
-            <ul class="text-sm">
-              <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-mail-add-line"></i>Attach Email</a></li>
-              <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-download-line"></i>Downloads</a></li>
-            </ul>
-          </div>
+    <header class="w-full py-4 px-6 pr-10 flex justify-between items-center relative">
+      <div class="flex items-center gap-4">
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-2xl menu-toggle">
+          <i class="ri-menu-line"></i>
+        </button>
+        <!-- Logo -->
+        <h1 class="logo-title">Logo</h1>
       </div>
+      <!-- Search bar -->
+      <div class="relative w-[27%] hidden md:block">
+        <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
+          <i class="ri-search-line ri-lg"></i>
+        </span>
+        <input
+          type="text"
+          placeholder="Search your PDF library or PDF documents..."
+          class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke focus:outline-none placeholder:text-dark-charcoal placeholder:text-base"
+        />
+        <div class="dropdown hidden absolute w-full mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
+          <ul class="text-sm">
+            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-t-lg"><i class="ri-mail-add-line"></i>Attach Email</a></li>
+            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-b-lg"><i class="ri-download-line"></i>Downloads</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Share button -->
+      <div class="flex items-center gap-4">
+        <button class="share-btn drop-button hidden md:flex items-center gap-2">
+          <i class="ri-share-line"></i> <span class="text-sm md:text-base">Share</span>
+        </button>
+        <!-- Share dropdown -->
+        <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
+          <h2 class="text-lg font-medium mb-4">Share your work</h2>
+          <div class="mb-4">
+            <label class="font-normal mb-1 block" for="people-input">
+              People with access
+            </label>
+            <div class="flex items-center gap-2 border border-dark-gray rounded-md p-2">
+              <input
+                id="people-input"
+                type="text"
+                placeholder="Add people or your team"
+                class="w-full text-sm bg-transparent outline-none placeholder:text-dark-charcoal"
+                onclick="event.stopPropagation();"
+              />
+            </div>
+          </div>
+          <button class="flex items-center gap-2 mb-4">
+            <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
+            <i class="ri-add-fill"></i>
+          </button>
+          <div class="mb-4">
+            <label class="mb-1 block" for="collaboration-link">
+              Collaboration link
+            </label>
+            <div class="relative custom-select border border-dark-gray rounded-md">
+              <div id="selected-item" class="select-selected text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                <span>Select access:</span>
+                <span><i class="ri-arrow-down-s-fill"></i></span>
+              </div>
+              <div id="select-options" class="select-items text-sm bg-white-smoke border border-dark-gray hidden absolute w-full mt-1 rounded shadow-lg z-10 overflow-auto scroll h-16">
+                <div class="option">Only you can access</div>
+                <div class="option">Anyone with the link</div>
+                <div class="option">Specific people</div>
+              </div>
+            </div>
+          </div>
+          <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
+            Copy link
+          </button>
+        </div> 
+        <!-- Profile button -->
+        <button class="drop-button">       
+          <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
+        </button>
+        <!-- Profile dropdown -->
+        <div class="dropdown hidden absolute top-1/2 right-10 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
+          <div class="flex items-center justify-start mb-5 gap-3">
+            <div>
+              <p class="font-medium text-lg">Hello Rachel!</p>
+              <p class="text-sm">Rachelsaket@gmail.com</p>
+            </div>
+            <img src="/public/images/user.png" alt="Profile" class="rounded-full h-12 w-12">
+          </div>
+          <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
+            Log Out
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Mobile search bar -->
+    <div class="md:hidden relative w-full pb-4 px-6">
+        <span class="absolute left-10 top-1/4 mt-1.5 transform -translate-y-1/2">
+          <i class="ri-search-line"></i>
+        </span>
+        <input
+          type="text"
+          placeholder="Search your PDF library or documents..."
+          class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke"
+        />
+        <div class="dropdown hidden absolute w-11/12 mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
+          <ul class="text-sm">
+            <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-mail-add-line"></i>Attach Email</a></li>
+            <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-download-line"></i>Downloads</a></li>
+          </ul>
+        </div>
+    </div>
 
-      <div class="flex" style="height: calc(100vh - 75px)">
+    <div class="flex" style="height:calc(100vh - 74px)">
         <!-- Sidebar -->
       <aside id="sidebar"
-      class="fixed bg-light-sky-blue z-10 inset-y-0 left-0 w-32 transform -translate-x-full md:translate-x-0 md:relative md:w-28 shadow-lg md:shadow-none transition-transform duration-300"
+      class="fixed bg-light-sky-blue z-10 inset-y-0 left-0 w-32 transform -translate-x-full md:translate-x-0 md:relative md:w-24 shadow-lg md:shadow-none transition-transform duration-300"
       >
         <nav class="mt-4">
-          <ul class="space-y-10 px-6">
+          <ul class="space-y-5 px-6 overflow-auto scroll" style="height:calc(100vh - 5.8rem)">
             <li class="md:hidden flex justify-end">
               <button class="menu-toggle">
                 <i class="ri-close-circle-fill"></i>
@@ -134,14 +135,14 @@
             </li>
             <li>
               <a href="/" class="flex flex-col items-center gap-2">
-                <i class="ri-home-5-line ri-xl"></i>
-                <span class="small-title">Home</span>
+                <i class="ri-home-5-line text-[32px] px-1.5"></i>
+                <span class="secondary-text">Home</span>
               </a>
             </li>
             <li>
               <a href="/src/file.html" class="flex flex-col items-center gap-2 menu-button">
-                <i class="ri-file-line ri-xl"></i>
-                <span class="small-title">File</span>
+                <i class="ri-file-line text-[32px] px-1.5"></i>
+                <span class="secondary-text">File</span>
               </a>
               <div class="menu-dropdown hidden w-48">
                 <ul class="text-sm">
@@ -221,26 +222,26 @@
             </li>
             <li>
               <a href="/src/edit.html" class="flex flex-col items-center gap-2">
-                <i class="ri-edit-line ri-xl"></i>
-                <span class="small-title">Edit</span>
+                <i class="ri-edit-line text-[32px] px-1.5"></i>
+                <span class="secondary-text">Edit</span>
               </a>
             </li>
             <li>
               <a href="/src/convert-protect.html" class="flex flex-col items-center gap-2">
-                <i class="ri-shield-keyhole-line ri-xl"></i>
-                <span class="small-title text-center">Convert & Protect</span>
+                <i class="ri-shield-keyhole-line text-[32px] px-1.5"></i>
+                <span class="secondary-text text-center">Convert & Protect</span>
               </a>
             </li>
             <li>
               <a href="/src/tools.html" class="flex flex-col items-center gap-2">
-                <i class="ri-tools-line ri-xl"></i>
-                <span class="small-title text-center">Tools</span>
+                <i class="ri-tools-line text-[32px] px-1.5"></i>
+                <span class="secondary-text text-center">Tools</span>
               </a>
             </li>
             <li>
-              <a href="#" class="flex flex-col items-center gap-2">
-                <i class="ri-question-line ri-xl"></i>
-                <span class="small-title text-center">Help</span>
+              <a href="/src/help.html" class="flex flex-col items-center gap-2">
+                <i class="ri-question-line text-[32px] px-1.5"></i>
+                <span class="secondary-text text-center">Help</span>
               </a>
             </li>
           </ul>
@@ -250,7 +251,6 @@
         <!-- Main content -->
         <div
           class="flex-1 bg-white-smoke rounded-tl-3xl p-6 overflow-hidden"
-          style="overflow: hidden"
         >
           <!-- Ribbon Section -->
           <section class="ribbon">

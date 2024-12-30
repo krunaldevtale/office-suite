@@ -22,19 +22,19 @@
         <h1 class="logo-title">Logo</h1>
       </div>
       <!-- Search bar -->
-      <div class="relative w-1/4 hidden md:block">
-        <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-          <i class="ri-search-line"></i>
+      <div class="relative w-[27%] hidden md:block">
+        <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
+          <i class="ri-search-line ri-lg"></i>
         </span>
         <input
           type="text"
-          placeholder="Search your PDF library or documents..."
-          class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke"
+          placeholder="Search your PDF library or PDF documents..."
+          class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke focus:outline-none placeholder:text-dark-charcoal placeholder:text-base"
         />
         <div class="dropdown hidden absolute w-full mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
           <ul class="text-sm">
-            <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-mail-add-line"></i>Attach Email</a></li>
-            <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-download-line"></i>Downloads</a></li>
+            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-t-lg"><i class="ri-mail-add-line"></i>Attach Email</a></li>
+            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-b-lg"><i class="ri-download-line"></i>Downloads</a></li>
           </ul>
         </div>
       </div>
@@ -56,6 +56,7 @@
                 type="text"
                 placeholder="Add people or your team"
                 class="w-full text-sm bg-transparent outline-none placeholder:text-dark-charcoal"
+                onclick="event.stopPropagation();"
               />
             </div>
           </div>
@@ -104,7 +105,7 @@
     </header>
     <!-- Mobile search bar -->
     <div class="md:hidden relative w-full pb-4 px-6">
-        <span class="absolute left-10 top-1/4 mt-1.5 transform -translate-y-1/2 text-gray-400">
+        <span class="absolute left-10 top-1/4 mt-1.5 transform -translate-y-1/2">
           <i class="ri-search-line"></i>
         </span>
         <input
@@ -120,13 +121,13 @@
         </div>
     </div>
 
-    <div class="flex" style="height:calc(100vh - 75px)">
+    <div class="flex" style="height:calc(100vh - 74px)">
       <!-- Sidebar -->
       <aside id="sidebar"
-        class="fixed bg-light-sky-blue z-10 inset-y-0 left-0 w-32 transform -translate-x-full md:translate-x-0 md:relative md:w-28 shadow-lg md:shadow-none transition-transform duration-300"
+        class="fixed bg-light-sky-blue z-10 inset-y-0 left-0 w-32 transform -translate-x-full md:translate-x-0 md:relative md:w-24 shadow-lg md:shadow-none transition-transform duration-300"
       >
         <nav class="mt-4">
-          <ul class="space-y-10 px-6">
+          <ul class="space-y-5 px-6 overflow-auto scroll" style="height:calc(100vh - 5.8rem)">
             <li class="md:hidden flex justify-end">
               <button class="menu-toggle">
                 <i class="ri-close-circle-fill"></i>
@@ -134,38 +135,38 @@
             </li>
             <li>
               <a href="/" class="flex flex-col items-center gap-2">
-                <i class="ri-home-5-line ri-xl"></i>
-                <span class="small-title">Home</span>
+                <i class="ri-home-5-line text-[32px] px-1.5"></i>
+                <span class="secondary-text">Home</span>
               </a>
             </li>
             <li>
               <a href="/src/file.html" class="flex flex-col items-center gap-2">
-                <i class="ri-file-line ri-xl"></i>
-                <span class="small-title">File</span>
+                <i class="ri-file-line text-[32px] px-1.5"></i>
+                <span class="secondary-text">File</span>
               </a>
             </li>
             <li>
               <a href="/src/edit.html" class="flex flex-col items-center gap-2">
-                <i class="ri-edit-line ri-xl"></i>
-                <span class="small-title">Edit</span>
+                <i class="ri-edit-line text-[32px] px-1.5"></i>
+                <span class="secondary-text">Edit</span>
               </a>
             </li>
             <li>
               <a href="/src/convert-protect.html" class="flex flex-col items-center gap-2">
-                <i class="ri-shield-keyhole-line ri-xl"></i>
-                <span class="small-title text-center">Convert & Protect</span>
+                <i class="ri-shield-keyhole-line text-[32px] px-1.5"></i>
+                <span class="secondary-text text-center">Convert & Protect</span>
               </a>
             </li>
             <li>
               <a href="/src/tools.html" class="flex flex-col items-center gap-2">
-                <i class="ri-tools-line ri-xl"></i>
-                <span class="small-title text-center">Tools</span>
+                <i class="ri-tools-line text-[32px] px-1.5"></i>
+                <span class="secondary-text text-center">Tools</span>
               </a>
             </li>
             <li>
-              <a href="#" class="flex flex-col items-center gap-2">
-                <i class="ri-question-line ri-xl"></i>
-                <span class="small-title text-center">Help</span>
+              <a href="/src/help.html" class="flex flex-col items-center gap-2">
+                <i class="ri-question-line text-[32px] px-1.5"></i>
+                <span class="secondary-text text-center">Help</span>
               </a>
             </li>
           </ul>
@@ -176,16 +177,16 @@
       <div class="flex-1 bg-white-smoke rounded-tl-3xl overflow-y-auto scroll main-content">
         <!-- Intro Section -->
         <section class="flex flex-col items-center gap-10 py-5 intro">
-          <div class="flex justify-between w-full px-8 md:px-0 md:w-5/12 lg:w-1/4 text-sm md:text-lg font-medium">
+          <div class="flex justify-between w-full px-8 md:px-0 md:w-5/12 lg:w-1/4 text-sm md:text-xl font-medium">
             <p>Create</p>
             <p>Convert</p>
             <p>Help & Support</p>
           </div>
           <div class="flex flex-col items-center gap-3 text-center px-4 md:px-0">
-            <h2 class="text-xl md:text-4xl font-bold">
+            <h2 class="text-3xl md:text-4xl font-bold">
               Every Essential PDF Tool Consolidated for You
             </h2>
-            <p class="text-sm">
+            <p class="text-xl">
               From editing to merging, discover tools that make working with PDFs a breeze.
             </p>
           </div>
@@ -193,10 +194,10 @@
 
         <!-- Features Section -->
         <h3 class="px-10 py-5 font-medium text-xl home">Home</h3>
-        <section class="bg-light-sky-blue p-6 md:p-10 feature">
-          <div class="border-4 rounded-3xl">
+        <section class="p-6 md:p-10 feature">
+          <div class="border-4 rounded-3xl feature-list">
             <div class="flex flex-col md:flex-row w-full">
-              <div class="w-full md:w-1/2 p-4 flex items-start space-x-4 border rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none">
+              <div class="w-full md:w-1/2 p-5 flex items-start space-x-4 border rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none">
                 <i class="ri-file-line text-4xl md:text-5xl"></i>
                 <div>
                   <h3 class="font-bold text-lg md:text-xl">File</h3>
@@ -205,7 +206,7 @@
                   </p>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-4 flex items-start space-x-4 border rounded-none md:rounded-tr-3xl">
+              <div class="w-full md:w-1/2 p-5 flex items-start space-x-4 border rounded-none md:rounded-tr-3xl">
                 <i class="ri-edit-line text-4xl md:text-5xl"></i>
                 <div>
                   <h3 class="font-bold text-lg md:text-xl">Edit</h3>
@@ -235,7 +236,7 @@
                 </div>
               </div>
             </div>
-            <div class="p-4 flex flex-col items-start md:items-center justify-center space-x-4 border rounded-b-3xl">
+            <div class="p-5 flex flex-col items-start md:items-center justify-center space-x-4 border rounded-b-3xl">
               <div class="flex items-center gap-4">
                 <i class="ri-question-line text-4xl md:text-5xl"></i>
                 <h3 class="font-bold text-lg md:text-xl">Help</h3>

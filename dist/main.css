@@ -773,6 +773,10 @@ body {
   width: 10rem;
 }
 
+.w-\[27\%\] {
+  width: 27%;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -780,26 +784,6 @@ body {
 
 .w-full {
   width: 100%;
-}
-
-.w-4\/12 {
-  width: 33.333333%;
-}
-
-.w-3\/12 {
-  width: 25%;
-}
-
-.w-\[30\%\] {
-  width: 30%;
-}
-
-.w-\[28\%\] {
-  width: 28%;
-}
-
-.w-\[27\%\] {
-  width: 27%;
 }
 
 .min-w-full {
@@ -1047,12 +1031,12 @@ body {
   padding: 1rem;
 }
 
-.p-6 {
-  padding: 1.5rem;
-}
-
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-1\.5 {
@@ -1597,7 +1581,7 @@ body {
   width: 1.75rem;
 }
 
-.small-icon-size:hover {
+.hover-div:hover .small-icon-size {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }

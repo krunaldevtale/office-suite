@@ -299,7 +299,7 @@
 
         <!-- Main content -->
         <div
-          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 overflow-hidden"
+          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 overflow-hidden" id="main-content"
         >
           <!-- Ribbon Section -->
           <section class="ribbon">
@@ -727,84 +727,112 @@
                   >
                 </div>
               </div>
-              <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
-                  <svg
-                    class="small-icon-size"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_459_619)">
-                      <path
-                        d="M26.666 5H3.33268C2.89065 5 2.46673 5.17559 2.15417 5.48816C1.84161 5.80072 1.66602 6.22464 1.66602 6.66667V23.3333C1.66602 23.7754 1.84161 24.1993 2.15417 24.5118C2.46673 24.8244 2.89065 25 3.33268 25H15.8327L16.3077 24.4167L17.0827 23.4667L17.0077 23.3333H3.33268V6.66667H26.666V13.8C27.2992 14.2097 27.862 14.7191 28.3327 15.3083V6.66667C28.3327 6.22464 28.1571 5.80072 27.8445 5.48816C27.532 5.17559 27.108 5 26.666 5Z"
-                        fill="currentColor"
-                      />
-                      <path
-                        d="M5.83398 10H20.0007V11.3333H5.83398V10Z"
-                        fill="currentColor"
-                      />
-                      <path
-                        d="M5.83398 13.334H15.0007V14.6673H5.83398V13.334Z"
-                        fill="currentColor"
-                      />
-                      <path
-                        d="M5.83398 19.166H14.1673V20.4993H5.83398V19.166Z"
-                        fill="currentColor"
-                      />
-                      <path
-                        d="M22.8831 14.3576C21.8167 14.3491 20.7726 14.6625 19.8871 15.2569C19.0017 15.8513 18.3162 16.6989 17.9201 17.6891C17.524 18.6792 17.4359 19.7658 17.6672 20.8068C17.8984 21.8479 18.4384 22.7949 19.2164 23.5243L17.5998 25.4993L18.3498 28.5076L21.3998 24.7909C22.3652 25.0764 23.3926 25.0764 24.3581 24.7909L27.4081 28.5076L28.1581 25.4993L26.5414 23.5243C27.3195 22.7949 27.8594 21.8479 28.0907 20.8068C28.322 19.7658 28.2338 18.6792 27.8378 17.6891C27.4417 16.6989 26.7562 15.8513 25.8707 15.2569C24.9853 14.6625 23.9412 14.3491 22.8748 14.3576H22.8831ZM22.8831 23.2576C22.1749 23.2477 21.4855 23.0287 20.9015 22.6281C20.3175 22.2275 19.8649 21.6632 19.6007 21.0061C19.3365 20.349 19.2725 19.6285 19.4167 18.9351C19.5608 18.2417 19.9068 17.6064 20.411 17.1091C20.9153 16.6118 21.5553 16.2746 22.2506 16.14C22.9459 16.0055 23.6655 16.0795 24.3189 16.3527C24.9723 16.626 25.5303 17.0863 25.9228 17.6758C26.3153 18.2653 26.5247 18.9577 26.5248 19.6659C26.516 20.6244 26.1279 21.5404 25.4454 22.2135C24.7629 22.8866 23.8416 23.262 22.8831 23.2576Z"
-                        fill="currentColor"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_459_619">
-                        <rect width="30" height="30" fill="currentColor" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-
-                  <span class="tooltip group-hover:opacity-100">license</span>
-                </div>
-                <div class="group hover-div">
-                  <svg
-                    class="small-icon-size"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.4 10C16.8 6.45 13.7125 3.75 10 3.75C5.8625 3.75 2.5 7.1125 2.5 11.25C2.5 14.9625 5.2 18.05 8.75 18.65V26.25H11.25V18.6375C11.25 17.4125 10.3625 16.3875 9.1625 16.175C8.25793 16.022 7.41291 15.623 6.72001 15.0217C6.02711 14.4204 5.51305 13.64 5.23414 12.766C4.95522 11.892 4.92221 10.9581 5.13872 10.0666C5.35523 9.17508 5.81291 8.36034 6.46163 7.71163C7.11034 7.06291 7.92508 6.60523 8.81659 6.38872C9.7081 6.17221 10.642 6.20522 11.516 6.48414C12.39 6.76305 13.1704 7.27711 13.7717 7.97001C14.373 8.66291 14.772 9.50793 14.925 10.4125C15.1375 11.6125 16.1625 12.5 17.3875 12.5H22.7125L20.725 14.4875L22.5 16.25L27.5 11.25L22.5 6.25L20.7375 8.0125L22.7125 10H17.4Z"
+              <div class="flex flex-col gap-2">
+                <div class="flex justify-center gap-2">
+                  <div class="group hover-div">
+                    <svg
+                      class="small-icon-size"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
                       fill="currentColor"
-                    />
-                  </svg>
-
-                  <span class="tooltip group-hover:opacity-100">About</span>
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_459_619)">
+                        <path
+                          d="M26.666 5H3.33268C2.89065 5 2.46673 5.17559 2.15417 5.48816C1.84161 5.80072 1.66602 6.22464 1.66602 6.66667V23.3333C1.66602 23.7754 1.84161 24.1993 2.15417 24.5118C2.46673 24.8244 2.89065 25 3.33268 25H15.8327L16.3077 24.4167L17.0827 23.4667L17.0077 23.3333H3.33268V6.66667H26.666V13.8C27.2992 14.2097 27.862 14.7191 28.3327 15.3083V6.66667C28.3327 6.22464 28.1571 5.80072 27.8445 5.48816C27.532 5.17559 27.108 5 26.666 5Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M5.83398 10H20.0007V11.3333H5.83398V10Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M5.83398 13.334H15.0007V14.6673H5.83398V13.334Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M5.83398 19.166H14.1673V20.4993H5.83398V19.166Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M22.8831 14.3576C21.8167 14.3491 20.7726 14.6625 19.8871 15.2569C19.0017 15.8513 18.3162 16.6989 17.9201 17.6891C17.524 18.6792 17.4359 19.7658 17.6672 20.8068C17.8984 21.8479 18.4384 22.7949 19.2164 23.5243L17.5998 25.4993L18.3498 28.5076L21.3998 24.7909C22.3652 25.0764 23.3926 25.0764 24.3581 24.7909L27.4081 28.5076L28.1581 25.4993L26.5414 23.5243C27.3195 22.7949 27.8594 21.8479 28.0907 20.8068C28.322 19.7658 28.2338 18.6792 27.8378 17.6891C27.4417 16.6989 26.7562 15.8513 25.8707 15.2569C24.9853 14.6625 23.9412 14.3491 22.8748 14.3576H22.8831ZM22.8831 23.2576C22.1749 23.2477 21.4855 23.0287 20.9015 22.6281C20.3175 22.2275 19.8649 21.6632 19.6007 21.0061C19.3365 20.349 19.2725 19.6285 19.4167 18.9351C19.5608 18.2417 19.9068 17.6064 20.411 17.1091C20.9153 16.6118 21.5553 16.2746 22.2506 16.14C22.9459 16.0055 23.6655 16.0795 24.3189 16.3527C24.9723 16.626 25.5303 17.0863 25.9228 17.6758C26.3153 18.2653 26.5247 18.9577 26.5248 19.6659C26.516 20.6244 26.1279 21.5404 25.4454 22.2135C24.7629 22.8866 23.8416 23.262 22.8831 23.2576Z"
+                          fill="currentColor"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_459_619">
+                          <rect width="30" height="30" fill="currentColor" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="tooltip group-hover:opacity-100">license</span>
+                  </div>
+                  <div class="group hover-div" id="pin-button">
+                    <i class="ri-eye-line small-icon-size"></i>
+                    <span class="tooltip group-hover:opacity-100">Unpin</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="group hover-div">
+                    <svg
+                      class="small-icon-size"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.4 10C16.8 6.45 13.7125 3.75 10 3.75C5.8625 3.75 2.5 7.1125 2.5 11.25C2.5 14.9625 5.2 18.05 8.75 18.65V26.25H11.25V18.6375C11.25 17.4125 10.3625 16.3875 9.1625 16.175C8.25793 16.022 7.41291 15.623 6.72001 15.0217C6.02711 14.4204 5.51305 13.64 5.23414 12.766C4.95522 11.892 4.92221 10.9581 5.13872 10.0666C5.35523 9.17508 5.81291 8.36034 6.46163 7.71163C7.11034 7.06291 7.92508 6.60523 8.81659 6.38872C9.7081 6.17221 10.642 6.20522 11.516 6.48414C12.39 6.76305 13.1704 7.27711 13.7717 7.97001C14.373 8.66291 14.772 9.50793 14.925 10.4125C15.1375 11.6125 16.1625 12.5 17.3875 12.5H22.7125L20.725 14.4875L22.5 16.25L27.5 11.25L22.5 6.25L20.7375 8.0125L22.7125 10H17.4Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+  
+                    <span class="tooltip group-hover:opacity-100">About</span>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
           <!-- File Section -->
-          <section class="file-section scroll">
+          <section class="file-section file-scroll">
             <div class="box">
-              <div
-                class="upload-section cursor-pointer"
-                onclick="document.getElementById('fileUpload').click()"
-              >
-                <i class="ri-upload-cloud-2-fill ri-xl"></i>
-                <span>Drop a PDF file here, or click to upload</span>
-                <input
-                  type="file"
-                  id="fileUpload"
-                  class="hidden"
-                  accept=".pdf"
-                />
+              <div class="upload-section cursor-pointer" onclick="document.getElementById('fileUpload').click()">
+                  <i class="ri-upload-cloud-2-fill ri-xl"></i>
+                  <span>Drop a PDF file here, or click to upload</span>
+                  <input type="file" id="fileUpload" class="hidden" accept=".pdf"/>
               </div>
+            </div>
+          </section>
+
+          <!-- Pagination & Zoom controls -->
+          <section class="absolute bottom-2 flex items-center justify-between bg-light-sky-blue py-1 px-10 rounded-2xl w-[90%] sm:w-[93%] md:w-[85%] lg:w-[88%] xl:w-[90%]">
+            <!-- Pagination controls -->
+            <div class="flex flex-col items-center justify-center">
+              <div class="flex items-center space-x-2">
+                  <button class="p-1 rounded-full focus:outline-none">
+                    <i class="ri-arrow-left-s-line ri-xl"></i>
+                  </button>
+                  <span class="py-1 rounded-full">1</span>
+                  <button class="p-1 rounded-full focus:outline-none">
+                    <i class="ri-arrow-right-s-line ri-xl"></i>
+                  </button>
+              </div>
+              <span class="">View page</span>
+            </div>
+            
+            <!-- Horizontal scroll -->
+            <div class="scroll-x" style="overflow-x: auto; max-width: 100%;">
+            </div>
+
+            <!-- Zoom controls -->
+            <div class="flex items-center space-x-2">
+              <i class="ri-zoom-out-line text-lg cursor-pointer"></i>
+              <input type="range" id="zoomSlider" min="12" max="200" value="100" class="w-full h-0.5 bg-white-smoke slider-thumb"/>
+              <i class="ri-zoom-in-line text-lg cursor-pointer"></i>
+              <span id="zoomPercentage" class="text-sm font-medium">100%</span>
             </div>
           </section>
         </div>
@@ -812,6 +840,8 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/public/js/zoom.js"></script>
+    <script src="/public/js/ribbon.js"></script>
     <script src="/public/js/sidebar.js"></script>
     <script src="/public/js/menu-dropdown.js"></script>
     <script src="/public/js/dropdown.js"></script>

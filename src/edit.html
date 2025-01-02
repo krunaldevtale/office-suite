@@ -225,6 +225,9 @@
                             >
                           </li>
                           <li>
+                            <a href="#" class="menu-dropdown-option">Style</a>
+                          </li>
+                          <li>
                             <a href="#" class="menu-dropdown-option">Undo</a>
                           </li>
                           <li>
@@ -396,7 +399,7 @@
 
         <!-- Main content -->
         <div
-          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 overflow-hidden"
+          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 overflow-hidden" id="main-content"
         >
           <!-- Ribbon Section -->
           <section class="ribbon">
@@ -512,14 +515,28 @@
                   >
                 </div>
               </div>
-              <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
-                  <i class="ri-arrow-go-back-line small-icon-size"></i>
-                  <span class="tooltip group-hover:opacity-100">Undo</span>
+              <div class="flex flex-col gap-2">
+                <div class="flex justify-center gap-2">
+                  <div class="group hover-div">
+                    <i class="ri-arrow-go-back-line small-icon-size"></i>
+                    <span class="tooltip group-hover:opacity-100">Undo</span>
+                  </div>
+                  <div class="group hover-div">
+                    <i class="ri-arrow-go-forward-line small-icon-size"></i>
+                    <span class="tooltip group-hover:opacity-100">Redo</span>
+                  </div>
                 </div>
-                <div class="group hover-div">
-                  <i class="ri-arrow-go-forward-line small-icon-size"></i>
-                  <span class="tooltip group-hover:opacity-100">Redo</span>
+                <div>
+                  <div class="group hover-div">
+                    <svg class="small-icon-size" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.5 26.25L5.58824 18.75M5.58824 18.75L6.875 15.625L11.25 5L15.625 15.625L16.9117 18.75M5.58824 18.75H16.9117M20 26.25L16.9117 18.75" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M17.5 6.25H27.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M20 12.5H27.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M22.5 18.75H27.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M25 25H27.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                      
+                    <span class="tooltip group-hover:opacity-100">Style</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -638,35 +655,64 @@
                 <i class="ri-shape-2-fill icon-size"></i>
                 <p class="font-bold">Border & Styling</p>
               </div>
-              <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
-                  <i class="ri-layout-grid-line small-icon-size"></i>
-                  <span class="tooltip group-hover:opacity-100">Border</span>
+              <div class="flex flex-col gap-2">
+                <div class="flex justify-center gap-2">
+                  <div class="group hover-div">
+                    <i class="ri-layout-grid-line small-icon-size"></i>
+                    <span class="tooltip group-hover:opacity-100">Border</span>
+                  </div>
+                  <div class="group hover-div" id="pin-button">
+                    <i class="ri-eye-line small-icon-size"></i>
+                    <span class="tooltip group-hover:opacity-100">Unpin</span>
+                  </div>
                 </div>
-                <div class="group hover-div">
-                  <i class="ri-close-line small-icon-size"></i>
-                  <span class="tooltip group-hover:opacity-100">Remove</span>
+                <div>
+                  <div class="group hover-div">
+                    <i class="ri-close-line small-icon-size"></i>
+                    <span class="tooltip group-hover:opacity-100">Remove</span>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
           <!-- File Section -->
-          <section class="file-section scroll">
+          <section class="file-section file-scroll">
             <div class="box">
-              <div
-                class="upload-section cursor-pointer"
-                onclick="document.getElementById('fileUpload').click()"
-              >
-                <i class="ri-upload-cloud-2-fill ri-xl"></i>
-                <span>Drop a PDF file here, or click to upload</span>
-                <input
-                  type="file"
-                  id="fileUpload"
-                  class="hidden"
-                  accept=".pdf"
-                />
+              <div class="upload-section cursor-pointer" onclick="document.getElementById('fileUpload').click()">
+                  <i class="ri-upload-cloud-2-fill ri-xl"></i>
+                  <span>Drop a PDF file here, or click to upload</span>
+                  <input type="file" id="fileUpload" class="hidden" accept=".pdf"/>
               </div>
+            </div>
+          </section>
+
+          <!-- Pagination & Zoom controls -->
+          <section class="absolute bottom-2 flex items-center justify-between bg-light-sky-blue py-1 px-10 rounded-2xl w-[90%] sm:w-[93%] md:w-[85%] lg:w-[88%] xl:w-[90%]">
+            <!-- Pagination controls -->
+            <div class="flex flex-col items-center justify-center">
+              <div class="flex items-center space-x-2">
+                  <button class="p-1 rounded-full focus:outline-none">
+                    <i class="ri-arrow-left-s-line ri-xl"></i>
+                  </button>
+                  <span class="py-1 rounded-full">1</span>
+                  <button class="p-1 rounded-full focus:outline-none">
+                    <i class="ri-arrow-right-s-line ri-xl"></i>
+                  </button>
+              </div>
+              <span class="">View page</span>
+            </div>
+            
+            <!-- Horizontal scroll -->
+            <div class="scroll-x" style="overflow-x: auto; max-width: 100%;">
+            </div>
+
+            <!-- Zoom controls -->
+            <div class="flex items-center space-x-2">
+              <i class="ri-zoom-out-line text-lg cursor-pointer"></i>
+              <input type="range" id="zoomSlider" min="12" max="200" value="100" class="w-full h-0.5 bg-white-smoke slider-thumb"/>
+              <i class="ri-zoom-in-line text-lg cursor-pointer"></i>
+              <span id="zoomPercentage" class="text-sm font-medium">100%</span>
             </div>
           </section>
         </div>
@@ -674,6 +720,8 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/public/js/zoom.js"></script>
+    <script src="/public/js/ribbon.js"></script>
     <script src="/public/js/sidebar.js"></script>
     <script src="/public/js/menu-dropdown.js"></script>
     <script src="/public/js/dropdown.js"></script>

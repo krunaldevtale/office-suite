@@ -143,7 +143,7 @@
 }
 
 .tooltip{
-  @apply absolute bottom-full mb-0.5 text-[10px] w-fit text-center border-2 px-2.5 py-1 rounded opacity-0 transition-opacity pointer-events-none;
+  @apply absolute bottom-full mb-0.5 text-[12px] w-fit text-center border-2 px-2.5 py-1 rounded opacity-0 transition-opacity pointer-events-none;
   background: var(--white-smoke);
   border-color: var(--royal-blue);
 }
@@ -158,18 +158,18 @@
 .file-section{
   @apply w-full flex flex-col items-center p-8;
   overflow-y: auto;
-  max-height: calc(100vh - 8rem);
+  overflow-x: auto;
+  max-height: calc(100vh - 19rem);
   padding-bottom: 4rem;
+  scroll-behavior: smooth;
 }
 
 .box{
   @apply w-full min-h-[58rem] rounded-2xl flex items-center justify-center;
   background: var(--very-light-gray);
   border: var(--border-one);
-  max-width: 44rem;
+  width: 44rem;
   flex-shrink: 0;
-  margin-bottom: 4rem;
-  
 }
 
 .upload-section{
@@ -246,6 +246,7 @@
 .sub-dropdown .menu-dropdown-option:hover {
   background-color: var(--transparent-light-sky-blue);
 }
+/* Feature section of home page */
 .feature{
   background-image: url('/public/images/dots-bg.jpg'); 
   background-size: cover; 
@@ -253,7 +254,61 @@
   background-position: center;
 }
 .feature-list{
+  border: 4px solid #ffffff1a;
   border-radius: 31px;
   backdrop-filter: blur(35px);
   background: rgba(212, 212, 212, 0.1);
+}
+/* File scroll bar */
+.file-scroll::-webkit-scrollbar {
+  width: 12px;
+}
+.file-scroll::-webkit-scrollbar-track {
+  background: var(--transparent-medium-gray);
+}
+.file-scroll::-webkit-scrollbar-thumb {
+  background: var(--white-smoke);
+  border-radius: 6px;
+}
+.file-scroll::-webkit-scrollbar-button {
+  height: 20px;
+  display: block;
+  background-color: var(--transparent-medium-gray);
+  border: none;
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.file-scroll::-webkit-scrollbar-button:single-button:decrement {
+  background-image: url("/public/images/up.svg");
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.file-scroll::-webkit-scrollbar-button:single-button:increment {
+  background-image: url("/public/images/down.svg");
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+/* zoom slider */
+.slider-thumb {
+  appearance: none;
+  width: 100px;
+}
+.slider-thumb::-webkit-slider-thumb {
+  appearance: none;
+  width: 6px; 
+  height: 20px;
+  background-color: #000000; 
+  border: none;
+  border-radius: 2px; 
+  cursor: pointer;
+}
+.slider-thumb::-moz-range-thumb {
+  width: 1px; 
+  height: 20px;
+  background-color: #000000; 
+  border: none;
+  border-radius: 2px; 
+  cursor: pointer;
 }

@@ -20,7 +20,7 @@ $(document).ready(function () {
                 <button class="more-button">
                     <i class="ri-more-fill ri-lg md:ri-xl"></i>
                 </button>
-                <div class="moredropdown hidden absolute w-48 bg-dark-charcoal shadow-md rounded-lg z-[9999]">
+                <div class="moredropdown hidden absolute md:w-2/12 lg:w-48 bg-dark-charcoal shadow-md rounded-lg z-[9999]">
                     <ul class="text-sm text-white-smoke">
                     <li><a href="#" class="block px-4 py-2">Open</a></li>
                     <li><a href="#" class="block px-4 py-2">Copy</a></li>

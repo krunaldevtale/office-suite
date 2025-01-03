@@ -399,7 +399,7 @@
 
         <!-- Main content -->
         <div
-          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 overflow-hidden" id="main-content"
+          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 pt-2 overflow-hidden" id="main-content"
         >
           <!-- Ribbon Section -->
           <section class="ribbon">
@@ -677,12 +677,14 @@
           </section>
 
           <!-- File Section -->
-          <section class="file-section file-scroll">
-            <div class="box">
-              <div class="upload-section cursor-pointer" onclick="document.getElementById('fileUpload').click()">
-                  <i class="ri-upload-cloud-2-fill ri-xl"></i>
-                  <span>Drop a PDF file here, or click to upload</span>
-                  <input type="file" id="fileUpload" class="hidden" accept=".pdf"/>
+          <section class="flex file-section gap-4 mt-4" style="max-height: calc(100vh - 20.3rem);">
+            <div class="file file-scroll">
+              <div class="box">
+                <div class="upload-section cursor-pointer" onclick="document.getElementById('fileUpload').click()">
+                    <i class="ri-upload-cloud-2-fill ri-xl"></i>
+                    <span>Drop a PDF file here, or click to upload</span>
+                    <input type="file" id="fileUpload" class="hidden" accept=".pdf"/>
+                </div>
               </div>
             </div>
           </section>

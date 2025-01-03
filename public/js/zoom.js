@@ -9,7 +9,7 @@ $(document).ready(function () {
         if(percentage<30){
             $(".upload-section").css({
             transform: "scale(" + percentage/30 + ")",
-            "transform-origin": "center center", // Ensure scaling is relative to the top
+            "transform-origin": "center center",
             });
             $(".upload-section span").hide();
         }else{
@@ -32,7 +32,7 @@ $(document).ready(function () {
     $(".ri-zoom-out-line").click(function () {
       let currentZoom = parseInt($("#zoomSlider").val());
       if (currentZoom > 12) {
-        currentZoom -= 10; // Decrease zoom by 10%
+        currentZoom -= 10;
         $("#zoomSlider").val(currentZoom);
         updateZoom(currentZoom);
       }
@@ -42,12 +42,13 @@ $(document).ready(function () {
     $(".ri-zoom-in-line").click(function () {
       let currentZoom = parseInt($("#zoomSlider").val());
       if (currentZoom < 200) {
-        currentZoom += 10; // Increase zoom by 10%
+        currentZoom += 10;
         $("#zoomSlider").val(currentZoom);
         updateZoom(currentZoom);
       }
     });
 
-     $('.scroll-x').on('scroll', function() { var scrollPos = $(this).scrollLeft(); $('.file-section').scrollLeft(scrollPos); }); $('.file-section').on('scroll', function() { var scrollPos = $(this).scrollLeft(); $('.scroll-x').scrollLeft(scrollPos); });  var contentWidth = $('.file-section')[0].scrollWidth; var containerWidth = $('.file-section').width(); if (contentWidth > containerWidth) { $('.file-section').css('overflow-x', 'hidden'); $('.scroll-x').css('overflow-x', 'auto'); } else { $('.file-section').css('overflow-x', 'auto'); $('.scroll-x').css('overflow-x', 'hidden')};
+    $('.file').css('overflow-x', 'hidden');
+
   });
   

@@ -19,6 +19,7 @@
   --transparent-charcoal: #3333334D;
   --black: #000000;
   --charcoal-black: #1D1D1F;
+  --shadow-black: #00000033;
   --dark-gray: #A9A9A9;
   --frosted-gray: #D4D4D41A;
   --light-sky-blue: #BBE2FA;
@@ -111,6 +112,10 @@
 .mini-containers{
   @apply w-fit h-8 p-2 rounded-lg font-bold underline text-[0.5rem] xl:text-[0.5rem] 2xl:text-[0.6rem];
   background: var(--medium-gray)
+}
+.mini-containers:hover{
+  background-color: var(--royal-blue);
+  color: var(--white-smoke);
 }
 
 .second-mini-containers {

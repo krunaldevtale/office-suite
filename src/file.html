@@ -69,16 +69,16 @@
               Collaboration link
             </label>
             <div class="relative custom-select border border-dark-gray rounded-md">
-              <div id="selected-item" class="select-selected text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+              <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
                 <span>Select access:</span>
                 <span><i class="ri-arrow-down-s-fill"></i></span>
               </div>
-              <div id="select-options" class="select-items text-sm bg-white-smoke border border-dark-gray hidden absolute w-full mt-1 rounded shadow-lg z-10 overflow-auto scroll h-16">
+              <div class="select-options text-sm bg-white-smoke border border-dark-gray hidden absolute w-full mt-1 rounded shadow-lg z-10 overflow-auto scroll h-16">
                 <div class="option">Only you can access</div>
                 <div class="option">Anyone with the link</div>
                 <div class="option">Specific people</div>
               </div>
-            </div>
+            </div>  
           </div>
           <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
             Copy link
@@ -151,16 +151,16 @@
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
                         <li><a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">New document</a></li>
-                        <li><button onclick="rightPanel('open-document')" class="menu-dropdown-option">Open document (PDF only)</button></li>
-                        <li><button onclick="rightPanel('import-document')" class="menu-dropdown-option">Import (PDF only)</button></li>
+                        <li><button onclick="rightPanel('file-operation','file-open','open-document')" class="menu-dropdown-option">Open document (PDF only)</button></li>
+                        <li><button onclick="rightPanel('file-operation','file-open','import-document')" class="menu-dropdown-option">Import (PDF only)</button></li>
                         <li><button class="menu-dropdown-option">Save document</button></li>
-                        <li><button onclick="rightPanel('save-as')" class="menu-dropdown-option">Save as (PDF only)</button></li>
-                        <li><button onclick="rightPanel('rename-document')" class="menu-dropdown-option">Rename</button></li>
-                        <li><button onclick="rightPanel('move-document')" class="menu-dropdown-option">Move document</button></li>
+                        <li><button onclick="rightPanel('file-operation','file-open','save-as')" class="menu-dropdown-option">Save as (PDF only)</button></li>
+                        <li><button onclick="rightPanel('file-operation','file-open','rename-document')" class="menu-dropdown-option">Rename</button></li>
+                        <li><button onclick="rightPanel('file-operation','file-open','move-document')" class="menu-dropdown-option">Move document</button></li>
                         <li><a href="#" class="menu-dropdown-option">Move to bin</a></li>
-                        <li><a href="#" class="menu-dropdown-option">Document details</a></li>
-                        <li><a href="#" class="menu-dropdown-option">History of versions</a></li>
-                        <li><a href="#" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Publish content online</a></li>
+                        <li><button onclick="rightPanel('file-operation','file-detail','document-detail')" class="menu-dropdown-option">Document details</button></li>
+                        <li><button onclick="rightPanel('file-operation','file-detail','history')" class="menu-dropdown-option">History of versions</button></li>
+                        <li><button onclick="rightPanel('file-operation','file-open','publish')" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Publish content online</button></li>
                       </ul>
                     </div>
                   </li>                  
@@ -168,8 +168,8 @@
                     <a href="#" class="menu-dropdown-option">File sharing<i class="ri-arrow-right-s-fill ri-xl"></i></a>
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
-                        <li><a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">Share with users (via email)</a></li>
-                        <li><a href="#" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Email as attachment</a></li>
+                        <li><button onclick="rightPanel('file-share','null','share')" class="menu-dropdown-option hover:rounded-t-[10px]">Share with users (via email)</button></li>
+                        <li><button onclick="rightPanel('file-share','null','attach-email')" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Email as attachment</button></li>
                       </ul>
                     </div>
                   </li>
@@ -267,19 +267,19 @@
                       >Add File</span
                     >
                   </div>
-                  <button class="group hover-div" onclick="rightPanel('open-document')">
+                  <button class="group hover-div" onclick="rightPanel('file-operation','file-open','open-document')">
                     <i class="ri-share-box-line small-icon-size"></i>
                     <span class="tooltip group-hover:opacity-100">Open Document</span>
                   </button>
-                  <button class="group hover-div" onclick="rightPanel('import-document')">
+                  <button class="group hover-div" onclick="rightPanel('file-operation','file-open','import-document')">
                     <i class="ri-download-2-line small-icon-size"></i>
                     <span class="tooltip group-hover:opacity-100">Import</span>
                   </button>
-                  <buton class="group hover-div" onclick="rightPanel('move-document')">
+                  <buton class="group hover-div" onclick="rightPanel('file-operation','file-open','move-document')">
                     <i class="ri-drag-move-2-fill small-icon-size"></i>
                     <span class="tooltip group-hover:opacity-100">Move</span>
                   </buton>
-                  <button class="group hover-div" onclick="rightPanel('save-as')">
+                  <button class="group hover-div" onclick="rightPanel('file-operation','file-open','save-as')">
                     <i class="ri-file-check-line small-icon-size"></i>
                     <span class="tooltip group-hover:opacity-100">Save as</span>
                   </button>
@@ -287,7 +287,7 @@
                     <i class="ri-save-line small-icon-size"></i>
                     <span class="tooltip group-hover:opacity-100">Save</span>
                   </div>
-                  <button class="group hover-div"  onclick="rightPanel('rename-document')">
+                  <button class="group hover-div"  onclick="rightPanel('file-operation','file-open','rename-document')">
                     <svg
                       class="small-icon-size"
                       width="30"
@@ -309,9 +309,9 @@
                   </div>
                 </div>
                 <div class="flex gap-4">
-                  <span class="mini-containers">Document detail</span>
-                  <span class="mini-containers">Version history</span>
-                  <span class="mini-containers">Publish content online</span>
+                  <button onclick="rightPanel('file-operation','file-detail','document-detail')" class="mini-containers">Document detail</button>
+                  <button onclick="rightPanel('file-operation','file-detail','history')" class="mini-containers">Version history</button>
+                  <button onclick="rightPanel('file-operation','file-open','publish')" class="mini-containers">Publish content online</button>
                 </div>
               </div>
             </div>
@@ -322,16 +322,16 @@
                 <p class="font-bold">Share</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
+                <button onclick="rightPanel('file-share','null','share')" class="group hover-div">
                   <i class="ri-share-fill small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100">Share</span>
-                </div>
-                <div class="group hover-div">
+                </button>
+                <button onclick="rightPanel('file-share','null','attach-email')" class="group hover-div">
                   <i class="ri-mail-send-line small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100"
                     >Email link</span
                   >
-                </div>
+                </button>
               </div>
             </div>
 
@@ -341,10 +341,10 @@
                 <p class="font-bold">Export</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
+                <button onclick="exportPDF()" class="group hover-div">
                   <i class="ri-file-pdf-2-line small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100">PDF</span>
-                </div>
+                </button>
                 <div class="group hover-div">
                   <i class="ri-multi-image-line small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100">Image</span>
@@ -519,7 +519,15 @@
           <!-- File Section -->
           <section class="flex file-section gap-4 mt-4" style="max-height: calc(100vh - 20.3rem);">
             <div class="file file-scroll">
-              <div class="box">
+              <div class="box relative">
+                <!-- loader -->
+                <div class="loader flex flex-col items-center gap-2 justify-center absolute w-full h-full bg-shadow-black rounded-xl hidden">
+                  <div class="relative w-10 h-10 gap-4">
+                    <div class="absolute inset-0 w-full h-full border-4 border-white-smoke rounded-full"></div>
+                    <div class="absolute inset-0 w-full h-full border-4 border-royal-blue rounded-full border-t-transparent animate-spin"></div>
+                  </div>
+                  <p class="font-bold p-2 text-royal-blue bg-white-smoke rounded-xl">Exporting..<p>
+                </div>
                 <div class="upload-section cursor-pointer" onclick="document.getElementById('fileUpload').click()">
                     <i class="ri-upload-cloud-2-fill ri-xl"></i>
                     <span>Drop a PDF file here, or click to upload</span>
@@ -528,133 +536,320 @@
               </div>
             </div>
             <div class="right-panel hidden">
-              <!-- Header -->
-              <div class="border-b border-white-smoke flex justify-center items-center">
-                <div class="right-panel-title">
-                  File Operations
-                  <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
+              <div class="file-operation hidden">
+                <!-- Header -->
+                <div class="border-b border-white-smoke flex justify-center items-center">
+                  <div class="right-panel-title">File Operations
+                    <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
+                  </div>
+                </div>
+                <div class="overflow-y-auto scroll right-panel-content" style="max-height:calc(100vh - 25rem)">
+                  <div class="file-open hidden">
+                    <!-- Open Document -->
+                    <div class="border-b border-white-smoke p-4 open-document">
+                      <label class="text-sm font-bold">Open document</label>
+                      <div class="flex items-center gap-2 mt-2">
+                        <input 
+                          type="text" 
+                          class="input-active" 
+                          placeholder="My folder - docs - ui ux"
+                        >
+                        <button class="button-active"><i class="ri-share-box-line ri-lg"></i>Open</button>
+                      </div>
+                    </div>
+                    <!-- Import Document -->
+                    <div class="border-b border-white-smoke p-4 import-document">
+                      <label class="text-sm font-bold">Import document</label>
+                      <div class="flex items-center gap-2 mt-2">
+                        <input 
+                          type="text" 
+                          class="input-active" 
+                          placeholder="Type path..."
+                        >
+                        <button class="button-active"><i class="ri-download-2-line ri-lg"></i>Import</button>
+                      </div>
+                    </div>
+                
+                    <!-- Save As -->
+                    <div class="border-b border-white-smoke p-4 save-as">
+                      <label class="text-sm font-bold">Save as</label>
+                      <div class="flex items-center gap-2 mt-2">
+                        <input 
+                          type="text" 
+                          class="input-active" 
+                          placeholder="Type path..."
+                        >
+                        <button class="button-active"><i class="ri-save-line ri-lg"></i>Save</button>
+                      </div>
+                    </div>
+                
+                    <!-- Move Document -->
+                    <div class="border-b border-white-smoke p-4 move-document">
+                      <label class="text-sm font-bold">Move document</label>
+                      <div class="flex items-end space-x-2 mt-2">
+                        <div class="flex flex-col gap-2">
+                          <p class="text-xs">Current location</p>
+                          <input 
+                          type="text" 
+                          class="input-active" 
+                          placeholder="My folder"
+                          >
+                        </div>
+                        <div class="flex flex-col gap-2">
+                          <p class="text-xs">New location</p>
+                          <input 
+                          type="text" 
+                          class="input-active placeholder:text-transparent-charcoal" 
+                          placeholder="Type text..."
+                          >
+                        </div>
+                        <button class="button-active"><i class="ri-drag-move-2-fill ri-lg"></i>Move</button>
+                      </div>
+                    </div>
+                    <!-- Rename Document -->
+                    <div class="border-b border-white-smoke p-4 rename-document">
+                      <label class="text-sm font-bold">Rename document</label>
+                      <div class="flex items-end space-x-2 mt-2">
+                        <div class="flex flex-col gap-2">
+                          <p class="text-xs">Current name</p>
+                          <input 
+                          type="text" 
+                          class="input-active" 
+                          placeholder="figma.pdf"
+                          >
+                        </div>
+                        <div class="flex flex-col gap-2">
+                          <p class="text-xs">New name</p>
+                          <input 
+                          type="text" 
+                          class="input-active placeholder:text-transparent-charcoal" 
+                          placeholder="Type text..."
+                          >
+                        </div>
+                        <button class="button-active">
+                          <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 -2 25 30"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10.1875 0.5H15.185C15.4225 0.500073 15.6512 0.590306 15.8247 0.752466C15.9983 0.914626 16.1038 1.13662 16.12 1.3736C16.1362 1.61058 16.0619 1.84486 15.912 2.02912C15.7621 2.21338 15.5478 2.33387 15.3125 2.36625L15.185 2.375H13.625V23.625H15.1812C15.4078 23.625 15.6267 23.7071 15.7974 23.856C15.9681 24.0049 16.0792 24.2106 16.11 24.435L16.1187 24.5625C16.1187 24.789 16.0367 25.0079 15.8878 25.1787C15.7389 25.3494 15.5332 25.4604 15.3088 25.4912L15.1812 25.5H10.1875C9.94997 25.4999 9.72132 25.4097 9.54776 25.2475C9.3742 25.0854 9.26866 24.8634 9.25247 24.6264C9.23628 24.3894 9.31064 24.1551 9.46054 23.9709C9.61044 23.7866 9.82469 23.6661 10.06 23.6338L10.1875 23.625H11.75V2.375H10.1875C9.96095 2.37499 9.74207 2.29295 9.57134 2.14404C9.4006 1.99514 9.28956 1.78944 9.25875 1.565L9.25 1.4375C9.25001 1.21095 9.33205 0.992072 9.48096 0.821337C9.62986 0.650601 9.83556 0.53956 10.06 0.50875L10.1875 0.5ZM20.8075 4.24625C21.8846 4.24724 22.9174 4.67557 23.679 5.43723C24.4407 6.19888 24.869 7.23161 24.87 8.30875L24.875 17.6888C24.8754 18.7262 24.4789 19.7246 23.7668 20.479C23.0546 21.2335 22.0808 21.6869 21.045 21.7463L20.8125 21.7525H14.8813V19.8775H20.885C21.4527 19.8587 21.9909 19.6198 22.3856 19.2113C22.7803 18.8028 23.0006 18.2568 23 17.6888L22.9963 8.3075C22.9953 7.72721 22.7641 7.17101 22.3536 6.76092C21.943 6.35082 21.3865 6.12033 20.8063 6.12H14.8813V4.245L20.8075 4.24625ZM10.5 4.24625V6.12125H4.5625C3.98234 6.12125 3.42594 6.35172 3.0157 6.76195C2.60547 7.17219 2.375 7.72859 2.375 8.30875V17.6888C2.375 18.8975 3.355 19.8762 4.5625 19.8762H10.4937V21.7512H4.5625C3.48506 21.7512 2.45175 21.3232 1.68988 20.5614C0.928012 19.7995 0.5 18.7662 0.5 17.6888V8.30875C0.5 7.23131 0.928012 6.198 1.68988 5.43613C2.45175 4.67426 3.48506 4.24625 4.5625 4.24625H10.5Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                          Save
+                        </button>
+                      </div>
+                    </div>
+                
+                    <!-- Publish Online -->
+                    <div class="p-4 publish">
+                      <label class="text-sm font-bold">Publish content online</label>
+                      <div class="flex items-center justify-between mt-2">
+                        <button class="bg-white-smoke hover:bg-royal-blue hover:text-white-smoke h-10 w-10 justify-center" style="border-radius:100%;padding:0">
+                          <i class="ri-share-fill text-xl"></i>
+                        </button>
+                        <button class="button-active h-10 w-10 justify-center" style="border-radius:100%;padding:0">
+                          <i class="ri-whatsapp-line text-xl"></i>
+                        </button>
+                        <button class="bg-white-smoke hover:bg-royal-blue hover:text-white-smoke h-10 w-10 justify-center" style="border-radius:100%;padding:0">
+                          <i class="ri-facebook-circle-line text-xl"></i>
+                        </button>
+                        <button class="bg-white-smoke hover:bg-royal-blue hover:text-white-smoke h-10 w-10 justify-center" style="border-radius:100%;padding:0">
+                          <i class="ri-instagram-line text-xl"></i>
+                        </button
+                        ><button class="bg-white-smoke hover:bg-royal-blue hover:text-white-smoke h-10 w-10 justify-center" style="border-radius:100%;padding:0">
+                          <i class="ri-twitter-line text-xl"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="file-detail hidden">
+                    <!-- Document Details -->
+                    <div class="border-b border-white-smoke p-4 document-detail">
+                      <label class="text-sm font-bold">Document details</label>
+                      <div class="flex gap-2 mt-2 text-sm">
+                        <div class="grid grid-cols-1 gap-2 input-active">
+                          <div class="flex items-center space-x-2">
+                            <i class="ri-file-line"></i>
+                            <span class="font-medium">File name</span>
+                          </div>
+                          <div class="flex items-center space-x-2">
+                            <i class="ri-user-line"></i>
+                            <span class="font-medium">Owner</span>
+                          </div>
+                          <div class="flex items-center space-x-2">
+                            <i class="ri-user-add-line"></i>
+                            <span class="font-medium">Creator</span>
+                          </div>
+                          <div class="flex items-center space-x-2">
+                            <i class="ri-calendar-line"></i>
+                            <span class="font-medium">Created date</span>
+                          </div>
+                          <div class="flex items-center space-x-2">
+                            <i class="ri-calendar-event-line"></i>
+                            <span class="font-medium">Last updated</span>
+                          </div>
+                          <div class="flex items-center space-x-2">
+                            <i class="ri-price-tag-3-line"></i>
+                            <span class="font-medium">Keywords</span>
+                          </div>
+                          <div class="flex items-center space-x-2">
+                            <i class="ri-file-text-line"></i>
+                            <span class="font-medium">Subject</span>
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-1 gap-2 input-active">
+                          <div>MyDocument.pdf</div>
+                          <div>John Doe</div>
+                          <div>Jane Smith</div>
+                          <div>14/03/2023</div>
+                          <div>20/12/2024</div>
+                          <div>Tag1, Tag2, Tag3</div>
+                          <div>Business Report</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- History of Versions -->
+                    <div class="p-4 history">
+                      <label class="text-sm font-bold">History of versions (auto save)</label>
+                      <ul class="space-y-2 mt-2 text-sm">
+                        <li class="flex items-center justify-between input-active">
+                          <div class="flex items-center gap-2">
+                            <i class="ri-user-line button-active" style="border-radius:100%;padding:0.25rem 0.5rem"></i>
+                            <span>John Doe</span>
+                          </div>
+                          <span>Dec 19, 6:35 PM</span>
+                        </li>
+                        <li class="flex items-center justify-between bg-medium-gray px-3 py-1.5 rounded-[10px] group hover:bg-white-smoke cursor-pointer">
+                          <div class="flex items-center gap-2">
+                            <i class="ri-user-line bg-white-smoke group-hover:bg-royal-blue group-hover:text-white-smoke" style="border-radius:100%;padding:0.25rem 0.5rem"></i>
+                            <span>John Doe</span>
+                          </div>
+                          <span>Dec 19, 6:35 PM</span>
+                        </li>                        
+                        <li class="flex items-center justify-between bg-medium-gray px-3 py-1.5 rounded-[10px] group hover:bg-white-smoke cursor-pointer">
+                          <div class="flex items-center gap-2">
+                            <i class="ri-user-line bg-white-smoke group-hover:bg-royal-blue group-hover:text-white-smoke" style="border-radius:100%;padding:0.25rem 0.5rem"></i>
+                            <span>John Doe</span>
+                          </div>
+                          <span>Dec 19, 6:35 PM</span>
+                        </li>  
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="overflow-y-auto scroll right-panel-content" style="max-height:calc(100vh - 25rem)">
-                <!-- Open Document -->
-                <div class="border-b border-white-smoke p-4 open-document">
-                  <label class="text-sm font-bold">Open document</label>
-                  <div class="flex items-center gap-2 mt-2">
-                    <input 
-                      type="text" 
-                      class="input-active" 
-                      placeholder="My folder - docs - ui ux"
-                    >
-                    <button class="button-active"><i class="ri-share-box-line ri-lg"></i>Open</button>
+              <div class="file-share hidden">
+                <!-- Header -->
+                <div class="border-b border-white-smoke flex justify-center items-center">
+                  <div class="right-panel-title">Share
+                    <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
                   </div>
                 </div>
-                <!-- Import Document -->
-                <div class="border-b border-white-smoke p-4 import-document">
-                  <label class="text-sm font-bold">Import document</label>
-                  <div class="flex items-center gap-2 mt-2">
-                    <input 
-                      type="text" 
-                      class="input-active" 
-                      placeholder="Type path..."
-                    >
-                    <button class="button-active"><i class="ri-download-2-line ri-lg"></i>Import</button>
-                  </div>
-                </div>
-            
-                <!-- Save As -->
-                <div class="border-b border-white-smoke p-4 save-as">
-                  <label class="text-sm font-bold">Save as</label>
-                  <div class="flex items-center gap-2 mt-2">
-                    <input 
-                      type="text" 
-                      class="input-active" 
-                      placeholder="Type path..."
-                    >
-                    <button class="button-active"><i class="ri-save-line ri-lg"></i>Save</button>
-                  </div>
-                </div>
-            
-                <!-- Move Document -->
-                <div class="border-b border-white-smoke p-4 move-document">
-                  <label class="text-sm font-bold">Move document</label>
-                  <div class="flex items-end space-x-2 mt-2">
-                    <div class="flex flex-col gap-2">
-                      <p class="text-xs">Current location</p>
-                      <input 
-                      type="text" 
-                      class="input-active" 
-                      placeholder="My folder"
-                      >
+                <div class="overflow-y-auto scroll right-panel-content" style="max-height:calc(100vh - 25rem)">
+                  <div class="border-b border-white-smoke p-4 share">
+                    <!-- Direct Link -->
+                    <div class="mb-5">
+                      <div class="flex items-center justify-between">
+                        <div class="flex flex-col">
+                          <label class="text-sm font-bold">Direct link</label>
+                          <p class="text-xs">Anyone with the link can access</p>
+                        </div>
+                        <div class="relative custom-select input-active" style="width:5rem;height:2rem;padding:0">
+                          <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                            <span>Select access:</span>
+                            <span><i class="ri-arrow-down-s-line"></i></span>
+                          </div>
+                          <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                            <div class="option !pl-1.5">Editor</div>
+                            <div class="option !pl-1.5">Viewer</div>
+                            <div class="option !pl-1.5">Commenter</div>
+                          </div>
+                        </div>                      
+                      </div>
+                      <div class="flex items-center justify-between input-active text-sm p-2 mt-1">
+                        <div class="flex items-center space-x-2">
+                          <i class="ri-link-m ri-lg"></i>
+                          <span>mydocument.com/pdf</span>
+                        </div>
+                        <button>Copy link</button>
+                      </div>
                     </div>
-                    <div class="flex flex-col gap-2">
-                      <p class="text-xs">New location</p>
-                      <input 
-                      type="text" 
-                      class="input-active placeholder:text-transparent-charcoal" 
-                      placeholder="Type text..."
-                      >
+                  
+                    <!-- Invite via Email -->
+                    <div>
+                      <label class="text-sm font-bold">Invite via email</label>
+                      <div class="flex items-center gap-2 mt-2">
+                        <input 
+                          type="text" 
+                          class="input-active placeholder:text-transparent-charcoal" 
+                          placeholder="xyz@gmail.com"
+                        >
+                        <button class="bg-medium-gray text-transparent-charcoal px-3 py-1.5 rounded-[10px]">Invite</button>
+                      </div>
                     </div>
-                    <button class="button-active"><i class="ri-drag-move-2-fill ri-lg"></i>Move</button>
-                  </div>
-                </div>
-                <!-- Rename Document -->
-                <div class="border-b border-white-smoke p-4 rename-document">
-                  <label class="text-sm font-bold">Rename document</label>
-                  <div class="flex items-end space-x-2 mt-2">
-                    <div class="flex flex-col gap-2">
-                      <p class="text-xs">Current name</p>
-                      <input 
-                      type="text" 
-                      class="input-active" 
-                      placeholder="figma.pdf"
-                      >
+                  
+                    <!-- Already in Project -->
+                    <div class="space-y-2 mt-4">
+                      <label class="text-sm font-bold">Already in project</label>
+                      <ul class="space-y-2 mt-2 text-sm">
+                        <li class="flex items-center justify-between input-active">
+                          <div class="flex items-center gap-2">
+                            <i class="ri-user-line button-active" style="border-radius:100%;padding:0.25rem 0.5rem"></i>
+                            <span>John Doe</span>
+                          </div>
+                          <span class="pr-8">Owner</span>
+                        </li>
+                        <li class="flex items-center justify-between input-active">
+                          <div class="flex items-center gap-2">
+                            <i class="ri-user-line button-active" style="border-radius:100%;padding:0.25rem 0.5rem"></i>
+                            <span>James bond</span>
+                          </div>
+                          <span>
+                            <div class="relative custom-select input-active" style="width:5rem;height:2rem;padding:0">
+                              <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                                <span>Select access:</span>
+                                <span><i class="ri-arrow-down-s-line"></i></span>
+                              </div>
+                              <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                                <div class="option !pl-1.5">Editor</div>
+                                <div class="option !pl-1.5">Viewer</div>
+                                <div class="option !pl-1.5">Commenter</div>
+                              </div>
+                            </div>
+                          </span>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="flex flex-col gap-2">
-                      <p class="text-xs">New name</p>
+                  </div>
+                  <!-- Email as Attachment -->
+                  <div class="border-b border-white-smoke p-4 attach-email">
+                    <label class="text-sm font-bold">Email as Attachment</label>
+                    <div class="flex items-center gap-2 mt-2">
                       <input 
-                      type="text" 
-                      class="input-active placeholder:text-transparent-charcoal" 
-                      placeholder="Type text..."
+                        type="text" 
+                        class="input-active placeholder:text-transparent-charcoal" 
+                        placeholder="xyz@gmail.com"
                       >
+                      <button class="bg-medium-gray text-transparent-charcoal px-3 py-1.5 rounded-[10px]">Send</button>
                     </div>
-                    <button class="button-active">
-                      <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 -2 25 30"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
+                  </div>
+                  
+                  <!-- Upload from URL -->
+                  <div class="p-4 upload-url">
+                    <label class="text-sm font-bold">Upload from URL</label>
+                    <div class="flex items-center gap-2 mt-2">
+                      <input 
+                        type="text" 
+                        class="input-active" 
+                        placeholder="Paste here"
                       >
-                        <path
-                          d="M10.1875 0.5H15.185C15.4225 0.500073 15.6512 0.590306 15.8247 0.752466C15.9983 0.914626 16.1038 1.13662 16.12 1.3736C16.1362 1.61058 16.0619 1.84486 15.912 2.02912C15.7621 2.21338 15.5478 2.33387 15.3125 2.36625L15.185 2.375H13.625V23.625H15.1812C15.4078 23.625 15.6267 23.7071 15.7974 23.856C15.9681 24.0049 16.0792 24.2106 16.11 24.435L16.1187 24.5625C16.1187 24.789 16.0367 25.0079 15.8878 25.1787C15.7389 25.3494 15.5332 25.4604 15.3088 25.4912L15.1812 25.5H10.1875C9.94997 25.4999 9.72132 25.4097 9.54776 25.2475C9.3742 25.0854 9.26866 24.8634 9.25247 24.6264C9.23628 24.3894 9.31064 24.1551 9.46054 23.9709C9.61044 23.7866 9.82469 23.6661 10.06 23.6338L10.1875 23.625H11.75V2.375H10.1875C9.96095 2.37499 9.74207 2.29295 9.57134 2.14404C9.4006 1.99514 9.28956 1.78944 9.25875 1.565L9.25 1.4375C9.25001 1.21095 9.33205 0.992072 9.48096 0.821337C9.62986 0.650601 9.83556 0.53956 10.06 0.50875L10.1875 0.5ZM20.8075 4.24625C21.8846 4.24724 22.9174 4.67557 23.679 5.43723C24.4407 6.19888 24.869 7.23161 24.87 8.30875L24.875 17.6888C24.8754 18.7262 24.4789 19.7246 23.7668 20.479C23.0546 21.2335 22.0808 21.6869 21.045 21.7463L20.8125 21.7525H14.8813V19.8775H20.885C21.4527 19.8587 21.9909 19.6198 22.3856 19.2113C22.7803 18.8028 23.0006 18.2568 23 17.6888L22.9963 8.3075C22.9953 7.72721 22.7641 7.17101 22.3536 6.76092C21.943 6.35082 21.3865 6.12033 20.8063 6.12H14.8813V4.245L20.8075 4.24625ZM10.5 4.24625V6.12125H4.5625C3.98234 6.12125 3.42594 6.35172 3.0157 6.76195C2.60547 7.17219 2.375 7.72859 2.375 8.30875V17.6888C2.375 18.8975 3.355 19.8762 4.5625 19.8762H10.4937V21.7512H4.5625C3.48506 21.7512 2.45175 21.3232 1.68988 20.5614C0.928012 19.7995 0.5 18.7662 0.5 17.6888V8.30875C0.5 7.23131 0.928012 6.198 1.68988 5.43613C2.45175 4.67426 3.48506 4.24625 4.5625 4.24625H10.5Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      Save
-                    </button>
-                  </div>
-                </div>
-            
-                <!-- Publish Online -->
-                <div class="p-4">
-                  <label class="text-sm font-bold">Publish content online</label>
-                  <div class="flex items-center justify-between mt-2">
-                    <button class="button-active h-10 w-10 justify-center share" style="border-radius:100%;padding:0">
-                      <i class="ri-share-fill text-xl"></i>
-                    </button>
-                    <button class="button-active h-10 w-10 justify-center whatsapp" style="border-radius:100%;padding:0">
-                      <i class="ri-whatsapp-line text-xl"></i>
-                    </button>
-                    <button class="button-active h-10 w-10 justify-center facebook" style="border-radius:100%;padding:0">
-                      <i class="ri-facebook-circle-line text-xl"></i>
-                    </button>
-                    <button class="button-active h-10 w-10 justify-center instagram" style="border-radius:100%;padding:0">
-                      <i class="ri-instagram-line text-xl"></i>
-                    </button
-                    ><button class="button-active h-10 w-10 justify-center twitter" style="border-radius:100%;padding:0">
-                      <i class="ri-twitter-line text-xl"></i>
-                    </button>
-                  </div>
+                      <button class="button-active">Upload</button>
+                    </div>
+                  </div>                 
                 </div>
               </div>
             </div>
@@ -699,5 +894,6 @@
     <script src="/public/js/sidebar.js"></script>
     <script src="/public/js/menu-dropdown.js"></script>
     <script src="/public/js/dropdown.js"></script>
+    <script src="/public/js/custom-select.js"></script>
   </body>
 </html>

@@ -48,7 +48,5 @@ $(document).ready(function () {
       }
     });
 
-    $('.file').css('overflow-x', 'hidden');
-
   });
   

@@ -10,13 +10,13 @@ $(document).ready(function () {
             // If mouse is near the top edge, show the ribbon and adjust panel heights
             if (e.pageY - topEdge <= hoverThreshold) {
                 $('.ribbon').show(); 
-                $('.file-section').css('max-height', 'calc(100vh - 20.3rem)'); 
+                $('.file-section').css('max-height', 'calc(100vh - 17.5rem)'); 
                 $('.right-panel-content').css('max-height', 'calc(100vh - 25rem)');
             } 
             // If mouse moves below the ribbon height, hide the ribbon and adjust panel heights
             else if (e.pageY > (topEdge + ribbonHeight)) {
                 $('.ribbon').hide(); 
-                $('.file-section').css('max-height', 'calc(100vh - 11.5rem)'); 
+                $('.file-section').css('max-height', 'calc(100vh - 9.5rem)'); 
                 $('.right-panel-content').css('max-height', 'calc(100vh - 16rem)'); 
             }
         }
@@ -32,17 +32,17 @@ $(document).ready(function () {
         if (icon.hasClass('ri-eye-line')) {
             ribbon.hide();
             icon.removeClass('ri-eye-line').addClass('ri-eye-off-line'); 
-            $('.file-section').css('max-height', 'calc(100vh - 11.5rem)'); 
+            $('.file-section').css('max-height', 'calc(100vh - 9.5rem)'); 
             $('.right-panel-content').css('max-height', 'calc(100vh - 16rem)'); 
-            tooltip.text('Pin'); 
+            tooltip.text('View'); 
         } 
         // If the 'eye-off-line' icon is active, show the ribbon and reset the heights
         else if (icon.hasClass('ri-eye-off-line')) {
             ribbon.show(); 
             icon.removeClass('ri-eye-off-line').addClass('ri-eye-line'); 
-            $('.file-section').css('max-height', 'calc(100vh - 20.3rem)');
+            $('.file-section').css('max-height', 'calc(100vh - 17.5rem)');
             $('.right-panel-content').css('max-height', 'calc(100vh - 25rem)');
-            tooltip.text('Unpin'); 
+            tooltip.text('Hide'); 
         }
     });
 });

@@ -127,45 +127,45 @@
         class="fixed bg-light-sky-blue z-10 inset-y-0 left-0 w-32 transform -translate-x-full md:translate-x-0 md:relative md:w-24 shadow-lg md:shadow-none transition-transform duration-300"
         >
           <nav class="mt-4">
-            <ul class="space-y-5 px-6 overflow-auto scroll" style="height:calc(100vh - 5.8rem)">
+            <ul class="flex flex-col gap-5 px-6 overflow-auto scroll" style="height:calc(100vh - 5.8rem)">
               <li class="md:hidden flex justify-end">
                 <button class="menu-toggle">
                   <i class="ri-close-circle-fill"></i>
                 </button>
               </li>
               <li>
-                <a href="/" class="flex flex-col items-center gap-2">
-                  <i class="ri-home-5-line text-[32px] px-1.5"></i>
+                <a href="/" class="flex flex-col items-center">
+                  <i class="ri-home-5-line text-[32px] px-1.5 menu-hover"></i>
                   <span class="secondary-text">Home</span>
                 </a>
               </li>
               <li>
-                <a href="/src/file.html" class="flex flex-col items-center gap-2">
-                  <i class="ri-file-line text-[32px] px-1.5"></i>
+                <a href="/src/file.html" class="flex flex-col items-center">
+                  <i class="ri-file-line text-[32px] px-1.5 menu-hover"></i>
                   <span class="secondary-text">File</span>
                 </a>
               </li>
               <li>
-                <a href="/src/edit.html" class="flex flex-col items-center gap-2">
-                  <i class="ri-edit-line text-[32px] px-1.5"></i>
+                <a href="/src/edit.html" class="flex flex-col items-center">
+                  <i class="ri-edit-line text-[32px] px-1.5 menu-hover"></i>
                   <span class="secondary-text">Edit</span>
                 </a>
               </li>
               <li>
-                <a href="/src/convert-protect.html" class="flex flex-col items-center gap-2">
-                  <i class="ri-shield-keyhole-line text-[32px] px-1.5"></i>
-                  <span class="secondary-text text-center">Convert & Protect</span>
+                <a href="/src/convert-protect.html" class="flex flex-col items-center">
+                  <i class="ri-shield-keyhole-line text-[32px] px-1.5 menu-hover"></i>
+                  <span class="secondary-text text-center">Preserve</span>
                 </a>
               </li>
               <li>
-                <a href="/src/tools.html" class="flex flex-col items-center gap-2 menu-button">
-                  <i class="ri-tools-line text-[32px] px-1.5"></i>
+                <a href="/src/tools.html" class="flex flex-col items-center menu-button">
+                  <i class="ri-tools-line text-[32px] px-1.5 menu-hover"></i>
                   <span class="secondary-text text-center">Tools</span>
                 </a>
               </li>
               <li>
-                <a href="/src/help.html" class="flex flex-col items-center gap-2 menu-button">
-                  <i class="ri-question-line text-[32px] px-1.5"></i>
+                <a href="/src/help.html" class="flex flex-col items-center menu-button">
+                  <i class="ri-question-line text-[32px] px-1.5 menu-hover"></i>
                   <span class="secondary-text text-center">Help</span>
                 </a>
                 <div class="menu-dropdown hidden w-60">
@@ -663,7 +663,7 @@
                   </div>
                   <div class="group hover-div" id="pin-button">
                     <i class="ri-eye-line small-icon-size"></i>
-                    <span class="tooltip group-hover:opacity-100">Unpin</span>
+                    <span class="tooltip group-hover:opacity-100">Hide</span>
                   </div>
                 </div>
                 <div>
@@ -690,8 +690,8 @@
           </section>
 
           <!-- File Section -->
-          <section class="flex file-section gap-4 mt-4" style="max-height: calc(100vh - 20.3rem);">
-            <div class="file file-scroll">
+          <section class="flex file-section gap-4 mt-4" style="max-height: calc(100vh - 17.5rem);">
+            <div class="file scroll">
               <div class="box">
                 <div class="upload-section cursor-pointer" onclick="document.getElementById('fileUpload').click()">
                     <i class="ri-upload-cloud-2-fill ri-xl"></i>
@@ -715,7 +715,6 @@
                     <i class="ri-arrow-right-s-line ri-xl"></i>
                   </button>
               </div>
-              <span class="">View page</span>
             </div>
             
             <!-- Horizontal scroll -->

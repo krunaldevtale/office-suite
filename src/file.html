@@ -127,20 +127,20 @@
       class="fixed bg-light-sky-blue z-10 inset-y-0 left-0 w-32 transform -translate-x-full md:translate-x-0 md:relative md:w-24 shadow-lg md:shadow-none transition-transform duration-300"
       >
         <nav class="mt-4">
-          <ul class="space-y-5 px-6 overflow-auto scroll" style="height:calc(100vh - 5.8rem)">
+          <ul class="flex flex-col gap-5 px-6 overflow-auto scroll" style="height:calc(100vh - 5.8rem)">
             <li class="md:hidden flex justify-end">
               <button class="menu-toggle">
                 <i class="ri-close-circle-fill"></i>
               </button>
             </li>
             <li>
-              <a href="/" class="flex flex-col items-center gap-2">
-                <i class="ri-home-5-line text-[32px] px-1.5"></i>
+              <a href="/" class="flex flex-col items-center">
+                <i class="ri-home-5-line text-[32px] px-1.5 menu-hover"></i>
                 <span class="secondary-text">Home</span>
               </a>
             </li>
             <li>
-              <a href="/src/file.html" class="flex flex-col items-center gap-2 menu-button">
+              <a href="/src/file.html" class="flex flex-col items-center menu-button">
                 <i class="ri-file-line text-[32px] px-1.5"></i>
                 <span class="secondary-text">File</span>
               </a>
@@ -177,7 +177,7 @@
                     <a href="#" class="menu-dropdown-option">Export<i class="ri-arrow-right-s-fill ri-xl"></i></a>
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
-                        <li><a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">Export as PDF</a></li>
+                        <li><button onclick="exporting('Exporting..')" class="menu-dropdown-option hover:rounded-t-[10px]">Export as PDF</button></li>
                         <li><a href="#" class="menu-dropdown-option">Export as word</a></li>
                         <li><a href="#" class="menu-dropdown-option">Export as EPUB</a></li>
                         <li><a href="#" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Export as image (jpg)</a></li>
@@ -188,9 +188,9 @@
                     <a href="#" class="menu-dropdown-option">Upload<i class="ri-arrow-right-s-fill ri-xl"></i></a>
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
-                        <li><a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">Dropbox</a></li>
-                        <li><a href="#" class="menu-dropdown-option">Google Drive</a></li>
-                        <li><a href="#" class="menu-dropdown-option">OneDrive</a></li>
+                        <li><button onclick="exporting('Uploading..')" class="menu-dropdown-option hover:rounded-t-[10px]">Dropbox</button></li>
+                        <li><button onclick="exporting('Uploading..')" class="menu-dropdown-option">Google Drive</button></li>
+                        <li><button onclick="exporting('Uploading..')" class="menu-dropdown-option">OneDrive</button></li>
                         <li><a href="#" class="menu-dropdown-option">Web Address (URL)</a></li>
                         <li><a href="#" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Recent files</a></li>
                       </ul>
@@ -212,8 +212,8 @@
                     <a href="#" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Scan<i class="ri-arrow-right-s-fill ri-xl"></i></a>
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
-                        <li><a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">Straighten</a></li>
-                        <li><a href="#" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Text Recognition</a></li>
+                        <li><button onclick="rightPanel('scan','null','straighten')" class="menu-dropdown-option hover:rounded-t-[10px]">Straighten</button></li>
+                        <li><button onclick="rightPanel('scan','null','text-recognition')" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Text Recognition</button></li>
                       </ul>
                     </div>
                   </li>
@@ -221,26 +221,26 @@
               </div>
             </li>
             <li>
-              <a href="/src/edit.html" class="flex flex-col items-center gap-2">
-                <i class="ri-edit-line text-[32px] px-1.5"></i>
+              <a href="/src/edit.html" class="flex flex-col items-center">
+                <i class="ri-edit-line text-[32px] px-1.5 menu-hover"></i>
                 <span class="secondary-text">Edit</span>
               </a>
             </li>
             <li>
-              <a href="/src/convert-protect.html" class="flex flex-col items-center gap-2">
-                <i class="ri-shield-keyhole-line text-[32px] px-1.5"></i>
-                <span class="secondary-text text-center">Convert & Protect</span>
+              <a href="/src/convert-protect.html" class="flex flex-col items-center">
+                <i class="ri-shield-keyhole-line text-[32px] px-1.5 menu-hover"></i>
+                <span class="secondary-text text-center">Preserve</span>
               </a>
             </li>
             <li>
-              <a href="/src/tools.html" class="flex flex-col items-center gap-2">
-                <i class="ri-tools-line text-[32px] px-1.5"></i>
+              <a href="/src/tools.html" class="flex flex-col items-center">
+                <i class="ri-tools-line text-[32px] px-1.5 menu-hover"></i>
                 <span class="secondary-text text-center">Tools</span>
               </a>
             </li>
             <li>
-              <a href="/src/help.html" class="flex flex-col items-center gap-2">
-                <i class="ri-question-line text-[32px] px-1.5"></i>
+              <a href="/src/help.html" class="flex flex-col items-center">
+                <i class="ri-question-line text-[32px] px-1.5 menu-hover"></i>
                 <span class="secondary-text text-center">Help</span>
               </a>
             </li>
@@ -250,7 +250,7 @@
 
         <!-- Main content -->
         <div
-          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 pt-2 overflow-hidden" id="main-content"
+          class="flex-1 bg-white-smoke rounded-tl-3xl p-3 pt-2 overflow-hidden relative" id="main-content"
         >
           <!-- Ribbon Section -->
           <section class="ribbon">
@@ -341,7 +341,7 @@
                 <p class="font-bold">Export</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <button onclick="exportPDF()" class="group hover-div">
+                <button onclick="exporting('Exporting..')" class="group hover-div">
                   <i class="ri-file-pdf-2-line small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100">PDF</span>
                 </button>
@@ -380,10 +380,10 @@
                 <p class="font-bold">Upload</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
+                <button onclick="rightPanel('upload','null','drive-upload')" class="group hover-div">
                   <i class="ri-dropbox-line small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100">Dropbox</span>
-                </div>
+                </button>
                 <div class="group hover-div">
                   <i class="ri-link small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100"
@@ -392,12 +392,12 @@
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
+                <button onclick="rightPanel('upload','null','drive-upload')" class="group hover-div">
                   <i class="ri-drive-line small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100"
                     >Google Drive</span
                   >
-                </div>
+                </button>
                 <div class="group hover-div">
                   <svg
                     class="small-icon-size"
@@ -419,10 +419,10 @@
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
+                <button onclick="rightPanel('upload','null','drive-upload')" class="group hover-div">
                   <i class="ri-cloud-windy-line small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100">OneDrive</span>
-                </div>
+                </button>
                 <div
                   class="relative group w-10 h-10 flex items-center justify-center"
                 ></div>
@@ -435,13 +435,13 @@
                 <p class="font-bold">Scan</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
+                <button onclick="rightPanel('scan','null','text-recognition')" class="group hover-div">
                   <i class="ri-text-snippet small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100"
                     >Text Recognition</span
                   >
-                </div>
-                <div class="group hover-div">
+                </button>
+                <button onclick="rightPanel('scan','null','straighten')" class="group hover-div">
                   <svg
                     class="small-icon-size"
                     width="30"
@@ -459,7 +459,7 @@
                   <span class="tooltip group-hover:opacity-100"
                     >Straighten</span
                   >
-                </div>
+                </button>
               </div>
             </div>
 
@@ -503,7 +503,7 @@
                   </div>
                   <div class="group hover-div" id="pin-button">
                     <i class="ri-eye-line small-icon-size"></i>
-                    <span class="tooltip group-hover:opacity-100">Unpin</span>
+                    <span class="tooltip group-hover:opacity-100">Hide</span>
                   </div>
                 </div>
                 <div>
@@ -517,8 +517,8 @@
           </section>
 
           <!-- File Section -->
-          <section class="flex file-section gap-4 mt-4" style="max-height: calc(100vh - 20.3rem);">
-            <div class="file file-scroll">
+          <section class="flex file-section gap-4 mt-4" style="max-height: calc(100vh - 17.5rem);">
+            <div class="file scroll">
               <div class="box relative">
                 <!-- loader -->
                 <div class="loader flex flex-col items-center gap-2 justify-center absolute w-full h-full bg-shadow-black rounded-xl hidden">
@@ -526,7 +526,7 @@
                     <div class="absolute inset-0 w-full h-full border-4 border-white-smoke rounded-full"></div>
                     <div class="absolute inset-0 w-full h-full border-4 border-royal-blue rounded-full border-t-transparent animate-spin"></div>
                   </div>
-                  <p class="font-bold p-2 text-royal-blue bg-white-smoke rounded-xl">Exporting..<p>
+                  <p class="font-bold p-2 text-royal-blue bg-white-smoke rounded-xl loader-text">Exporting..<p>
                 </div>
                 <div class="upload-section cursor-pointer" onclick="document.getElementById('fileUpload').click()">
                     <i class="ri-upload-cloud-2-fill ri-xl"></i>
@@ -539,7 +539,8 @@
               <div class="file-operation hidden">
                 <!-- Header -->
                 <div class="border-b border-white-smoke flex justify-center items-center">
-                  <div class="right-panel-title">File Operations
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">File Operations</span>
                     <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
                   </div>
                 </div>
@@ -745,7 +746,8 @@
               <div class="file-share hidden">
                 <!-- Header -->
                 <div class="border-b border-white-smoke flex justify-center items-center">
-                  <div class="right-panel-title">Share
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Share</span>
                     <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
                   </div>
                 </div>
@@ -852,11 +854,75 @@
                   </div>                 
                 </div>
               </div>
+              <div class="upload hidden">
+                <!-- Header -->
+                <div class="border-b border-white-smoke flex justify-center items-center">
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Upload</span>
+                    <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
+                  </div>
+                </div>
+                <div class="overflow-y-auto scroll right-panel-content" style="max-height:calc(100vh - 25rem)">
+                  <div class="p-4 drive-upload">
+                    <label class="text-sm">You'll be redirected to particular site to select a file to upload</label>
+                    <div class="flex items-center justify-end gap-2 mt-2">
+                      <button class="button-active" onclick="exporting('Uploading..')">Continue</button>
+                      <button class="px-3 py-2 rounded-[10px] text-red-orange border border-red-orange text-sm">Cancel</button>
+                    </div>
+                  </div>                   
+                </div>
+              </div>
+              <div class="scan hidden">
+                <!-- Header -->
+                <div class="border-b border-white-smoke flex justify-center items-center">
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Scan</span>
+                    <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
+                  </div>
+                </div>
+                <div class="overflow-y-auto scroll right-panel-content" style="max-height:calc(100vh - 25rem)">
+                    <!-- Email as Attachment -->
+                  <div class="border-b border-white-smoke p-4 straighten">
+                    <div class="bg-white-smoke h-32 rounded-[10px] mb-5 white-button-active"></div>
+                    <label class="text-sm font-bold">Straighten</label>
+                    <div class="flex items-end gap-2 mt-2">
+                      <div class="flex flex-col gap-2">
+                        <p class="text-transparent-dark-gray text-xs">Angle slider</p>
+                        <div class="rect-slider-container white-button-active">
+                          <input type="range" class="rect-slider" min="0" max="100" value="50" />
+                        </div>
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <p class="text-transparent-dark-gray text-xs">Rotate</p>
+                        <button class="white-button-active"><i class="ri-anticlockwise-2-line ri-lg -mt-1"></i>Rotate</button>
+                      </div>
+                      <button class="white-button-active"><i class="ri-reset-left-line ri-lg -mt-1"></i>Reset</button>
+                      <button class="bg-medium-gray text-transparent-charcoal px-3 py-1.5 rounded-[10px] text-sm">Save</button>
+                    </div>
+                  </div>
+                  <div class="border-b border-white-smoke p-4 text-recognition">
+                    <label class="text-sm font-bold">Text recognition</label>
+                    <p class="text-transparent-dark-gray text-xs">Select an area in your document to extract text.</p>
+                    <div class="flex items-center gap-2 mt-2">
+                      <button class="white-button-active !w-10 !py-3"><i class="ri-file-copy-line ri-xl"></i></button>
+                      <span class="text-nowrap text-sm">Copy to clipboard</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-2">
+                      <button class="white-button-active !w-10 !py-3"><i class="ri-file-text-line ri-xl"></i></button>
+                      <span class="text-nowrap text-sm">Extract/append text</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-2">
+                      <button class="white-button-active !w-10 !py-3"><i class="ri-pencil-line ri-xl"></i></button>
+                      <span class="text-nowrap text-sm">Edit text</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
           <!-- Pagination & Zoom controls -->
-          <section class="absolute bottom-2 flex items-center justify-between bg-light-sky-blue py-1 px-10 rounded-2xl w-[90%] sm:w-[93%] md:w-[85%] lg:w-[88%] xl:w-[90%]">
+          <section class="absolute bottom-2 inset-x-0 flex items-center justify-between bg-light-sky-blue py-1 px-4 rounded-2xl mx-3">
             <!-- Pagination controls -->
             <div class="flex flex-col items-center justify-center">
               <div class="flex items-center space-x-2">
@@ -868,7 +934,6 @@
                     <i class="ri-arrow-right-s-line ri-xl"></i>
                   </button>
               </div>
-              <span class="">View page</span>
             </div>
             
             <!-- Horizontal scroll -->

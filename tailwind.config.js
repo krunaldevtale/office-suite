@@ -21,6 +21,7 @@ module.exports = {
         'charcoal-black': '#1D1D1F',
         'shadow-black': '#00000033',
         'dark-gray': '#A9A9A9',
+        'transparent-dark-gray': '#33333399',
         'frosted-gray': '#D4D4D41A',
         'light-sky-blue': '#BBE2FA',
         'transparent-light-sky-blue': '#87CEFA8C',

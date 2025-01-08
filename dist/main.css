@@ -579,6 +579,11 @@ body {
   inset: 0px;
 }
 
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
 .inset-y-0 {
   top: 0px;
   bottom: 0px;
@@ -636,9 +641,18 @@ body {
   z-index: 9999;
 }
 
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.-mt-1 {
+  margin-top: -0.25rem;
 }
 
 .mb-0\.5 {
@@ -717,6 +731,10 @@ body {
   height: 4rem;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
 .h-40 {
   height: 10rem;
 }
@@ -759,6 +777,10 @@ body {
 
 .min-h-\[58rem\] {
   min-height: 58rem;
+}
+
+.\!w-10 {
+  width: 2.5rem !important;
 }
 
 .w-10 {
@@ -958,6 +980,10 @@ body {
   gap: 1rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-px {
   gap: 1px;
 }
@@ -984,12 +1010,6 @@ body {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
-.space-y-5 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
 .overflow-auto {
@@ -1094,6 +1114,11 @@ body {
   border-color: rgb(187 226 250 / var(--tw-border-opacity, 1));
 }
 
+.border-red-orange {
+  --tw-border-opacity: 1;
+  border-color: rgb(238 54 28 / var(--tw-border-opacity, 1));
+}
+
 .border-royal-blue {
   --tw-border-opacity: 1;
   border-color: rgb(2 114 217 / var(--tw-border-opacity, 1));
@@ -1106,6 +1131,10 @@ body {
 
 .border-t-transparent {
   border-top-color: transparent;
+}
+
+.\!bg-medium-gray {
+  background-color: #FBFBFB4D !important;
 }
 
 .bg-dark-charcoal {
@@ -1152,6 +1181,10 @@ body {
   padding: 0.5rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -1162,6 +1195,11 @@ body {
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.\!py-3 {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
 }
 
 .px-1\.5 {
@@ -1232,6 +1270,11 @@ body {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-\[0\.93rem\] {
+  padding-top: 0.93rem;
+  padding-bottom: 0.93rem;
 }
 
 .\!pl-1\.5 {
@@ -1377,6 +1420,16 @@ body {
   font-weight: 600;
 }
 
+.text-dark-charcoal {
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity, 1));
+}
+
+.text-red-orange {
+  --tw-text-opacity: 1;
+  color: rgb(238 54 28 / var(--tw-text-opacity, 1));
+}
+
 .text-royal-blue {
   --tw-text-opacity: 1;
   color: rgb(2 114 217 / var(--tw-text-opacity, 1));
@@ -1384,6 +1437,10 @@ body {
 
 .text-transparent-charcoal {
   color: #3333334D;
+}
+
+.text-transparent-dark-gray {
+  color: #33333399;
 }
 
 .text-white-smoke {
@@ -1472,6 +1529,7 @@ body {
   --charcoal-black: #1D1D1F;
   --shadow-black: #00000033;
   --dark-gray: #A9A9A9;
+  --transparent-dark-gray: #33333399;
   --frosted-gray: #D4D4D41A;
   --light-sky-blue: #BBE2FA;
   --transparent-light-sky-blue: #87CEFA8C;
@@ -1507,7 +1565,8 @@ body {
 }
 
 .secondary-text {
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .button-text {
@@ -1593,22 +1652,28 @@ body {
   color: var(--white-smoke);
 }
 
+.menu-hover:hover {
+  border-radius: 0.5rem;
+  background: var(--primary-gradient-color);
+  color: var(--white-smoke);
+}
+
 /* scroll */
 
 .scroll::-webkit-scrollbar {
-  width: 4px;
+  width: 8px;
   height: 4px;
 }
 
 .scroll::-webkit-scrollbar-thumb {
-  background: lightgray;
-  border-radius: 2px;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px var(--dark-charcoal) solid;
 }
 
 /* Ribbon */
 
 .ribbon {
-  margin-top: 1rem;
   display: flex;
   height: auto;
   width: 100%;
@@ -2031,7 +2096,7 @@ body {
   justify-content: space-between;
   width: 100%;
   margin: 1rem;
-  padding: 0.5rem 1rem 0.5rem 5rem;
+  padding: 0.5rem 1rem;
   border-radius: 10px;
   color: var(--white-smoke);
   font-weight: 700;
@@ -2069,6 +2134,25 @@ body {
   outline-offset: 2px;
 }
 
+.white-button-active {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border-radius: 10px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 251 251 / var(--tw-bg-opacity, 1));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity, 1));
+}
+
 .button-active {
   display: flex;
   align-items: center;
@@ -2087,7 +2171,7 @@ body {
 }
 
 .inactive {
-  background-color: #FBFBFB4D;
+  background-color: #FBFBFB4D !important;
   color: #3333334D;
 }
 
@@ -2282,6 +2366,68 @@ input[type="checkbox"].c-checkbox:checked::after {
   padding-right: 0.5rem;
   background: transparent;
   border-color: var(--white-smoke);
+}
+
+/* Container for the slider */
+
+.rect-slider-container {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.93rem;
+  padding-bottom: 0.93rem;
+  background-color: var(--white-smoke);
+  /* Light blue background */
+  border-radius: 10px;
+  /* Rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Slider styling */
+
+.rect-slider {
+  -webkit-appearance: none;
+  /* Removes default styling for range input */
+  -moz-appearance: none;
+       appearance: none;
+  width: 60px;
+  height: 2px;
+  /* Line thickness */
+  background: var(--dark-charcoal);
+  /* Line color */
+  position: relative;
+}
+
+/* Slider thumb (rectangle handle) */
+
+.rect-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Removes default styling */
+  appearance: none;
+  width: 5px;
+  /* Handle width */
+  height: 20px;
+  /* Handle height */
+  background-color: black;
+  /* Handle color */
+  cursor: pointer;
+  /* Adds a pointer cursor on hover */
+}
+
+.rect-slider::-moz-range-thumb {
+  width: 10px;
+  height: 20px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.rect-slider::-ms-thumb {
+  width: 5px;
+  height: 10px;
+  background-color: black;
+  cursor: pointer;
 }
 
 .placeholder\:text-base::-moz-placeholder {

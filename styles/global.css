@@ -21,6 +21,7 @@
   --charcoal-black: #1D1D1F;
   --shadow-black: #00000033;
   --dark-gray: #A9A9A9;
+  --transparent-dark-gray: #33333399;
   --frosted-gray: #D4D4D41A;
   --light-sky-blue: #BBE2FA;
   --transparent-light-sky-blue: #87CEFA8C;
@@ -52,7 +53,8 @@
   font-size: 16px;
 }
 .secondary-text {
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 700;
 }
 .button-text {
   font-size: 14px;
@@ -82,21 +84,28 @@
   color: var(--white-smoke);
 }
 
+.menu-hover:hover{
+  @apply rounded-lg;
+  background: var(--primary-gradient-color);
+  color: var(--white-smoke);
+}
+
 /* scroll */
 .scroll::-webkit-scrollbar {
-  width: 4px;
+  width: 8px;
   height: 4px;
 }
 
 .scroll::-webkit-scrollbar-thumb {
-  background: lightgray;
-  border-radius: 2px;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px var(--dark-charcoal) solid;
 }
 
 /* Ribbon */
 
 .ribbon{
-  @apply w-full h-auto xl:h-32 rounded-2xl px-2 py-4 mt-4 flex flex-wrap xl:flex-nowrap;
+  @apply w-full h-auto xl:h-32 rounded-2xl px-2 py-4 flex flex-wrap xl:flex-nowrap;
   background: var(--secondary-gradient-color);
   box-shadow: var(--glass-shadow);
   backdrop-filter: var(--blur-effect);
@@ -299,7 +308,7 @@
   justify-content: space-between;
   width: 100%;
   margin: 1rem;
-  padding: 0.5rem 1rem 0.5rem 5rem;
+  padding: 0.5rem 1rem;
   border-radius: 10px;
   color: var(--white-smoke);
   font-weight: 700;
@@ -307,12 +316,14 @@
 .input-active {
   @apply w-full px-3 py-1.5 border bg-white-smoke rounded-[10px] border-none focus:outline-none placeholder:text-sm placeholder:text-dark-charcoal;
 }
-
+.white-button-active{
+  @apply w-full px-3 py-1.5 bg-white-smoke rounded-[10px] text-dark-charcoal text-sm flex gap-1 items-center justify-center;
+}
 .button-active {
   @apply flex bg-royal-blue text-white-smoke px-3 rounded-[10px] py-2 text-sm gap-2 items-center;
 }
 .inactive{
-  @apply bg-medium-gray text-transparent-charcoal placeholder:text-transparent-charcoal;
+  @apply !bg-medium-gray text-transparent-charcoal placeholder:text-transparent-charcoal;
 }
 /* table slide animation of home page*/
 @keyframes slideRight {
@@ -427,4 +438,48 @@ input[type="checkbox"].c-checkbox:checked::after {
   @apply w-full px-2 h-10 border rounded-[10px] flex items-center justify-between;
   background: transparent;
   border-color: var(--white-smoke);
+}
+/* Container for the slider */
+.rect-slider-container {
+  @apply px-3 py-[0.93rem];
+  background-color: var(--white-smoke); /* Light blue background */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Slider styling */
+.rect-slider {
+  -webkit-appearance: none; /* Removes default styling for range input */
+  appearance: none;
+  width: 60px;
+  height: 2px; /* Line thickness */
+  background: var(--dark-charcoal); /* Line color */
+  position: relative;
+}
+
+/* Slider thumb (rectangle handle) */
+.rect-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Removes default styling */
+  appearance: none;
+  width: 5px; /* Handle width */
+  height: 20px; /* Handle height */
+  background-color: black; /* Handle color */
+  cursor: pointer; /* Adds a pointer cursor on hover */
+}
+
+.rect-slider::-moz-range-thumb {
+  width: 10px;
+  height: 20px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.rect-slider::-ms-thumb {
+  width: 5px;
+  height: 10px;
+  background-color: black;
+  cursor: pointer;
 }

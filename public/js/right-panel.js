@@ -38,6 +38,15 @@ function rightPanel(title, subTitle, targetClass) {
             $(this).addClass("inactive");
         });
 
+        if ($(`.${targetClass} .white-button-active`).length > 0) {
+            $(".white-button-active").removeClass("inactive");
+            $(".white-button-active").prop('disabled', true);
+            $('.white-button-active').not(`.${targetClass} .white-button-active, .${targetClass} .white-button-active`).each(function () {
+                $(this).addClass("inactive");
+                $(this).prop('disabled', true);
+            });
+        }
+
         // Scroll the target class into view smoothly
         $(`.${targetClass}`).get(0).scrollIntoView({
             behavior: 'smooth',
@@ -52,8 +61,9 @@ function hideRightPanel() {
 }
 
 // Function to simulate PDF export with a loader
-function exportPDF() {
+function exporting(name) {
     // Show the loader animation inside the box
+    $('.loader-text').html(name);
     $('.box .loader').css('display', 'flex');
     
     // Hide the loader after 5 seconds (simulating PDF export time)

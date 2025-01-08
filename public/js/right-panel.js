@@ -22,7 +22,13 @@ function rightPanel(title, subTitle, targetClass) {
         } else if(subTitle == "file-open") {
             $(`.${title} .file-open`).show();
             $(`.${title} .file-detail`).hide();
-        }
+        } else if (subTitle == "color-picker") {
+            $(`.${title} .color-picker`).show();
+            $(`.${title} .search-replace`).hide();
+        } else if (subTitle == "search-replace") {
+            $(`.${title} .color-picker`).hide();
+            $(`.${title} .search-replace`).show();
+        } 
 
         // Enable buttons and inputs in the target class
         $(`.${targetClass} .button-active, .${targetClass} .input-active`).prop('disabled', false);

@@ -3,13 +3,14 @@ $(document).ready(function () {
     $(".custom-select").each(function () {
         const customSelect = $(this);
 
-        // Set the default selected item to the first option dynamically
-        const firstOption = customSelect.find(".select-options .option:first").text();
-        customSelect.find(".selected-item span:first").text(firstOption);
-
         // Handle the dropdown toggle
         customSelect.find(".selected-item").on("click", function (event) {
             event.stopPropagation();
+            // Close all other dropdowns
+            $(".custom-select .select-options").addClass("hidden");
+            $(".custom-select .selected-item").removeClass("select-arrow-active");
+            
+            // Toggle the current dropdown
             customSelect.find(".select-options").toggleClass("hidden");
             $(this).toggleClass("select-arrow-active");
         });
@@ -18,6 +19,7 @@ $(document).ready(function () {
         customSelect.find(".option").on("click", function (event) {
             const selectedText = $(this).text();
             customSelect.find(".selected-item span:first").text(selectedText);
+            customSelect.find(".selected-item span:first").addClass("text-royal-blue");
             customSelect.find(".select-options").addClass("hidden");
             event.stopPropagation();
         });

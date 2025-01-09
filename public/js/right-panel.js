@@ -1,25 +1,20 @@
-// Function to show and manage right panel content
 function rightPanel(title, subTitle, targetClass) {
-    // Check if the right panel is hidden
+    // Check if the right panel is currently hidden
     if ($(".right-panel").hasClass("hidden")) {
         // Show the right panel
         $(".right-panel").show();
         
-        // Enable and disable certain input and button elements
-        $(".button-active, .input-active").removeClass("inactive");
-        $(".button-active,.input-active").prop('disabled', true);
-
         // Hide all child elements of the right panel
         $('.right-panel').children().hide(); 
         
-        // Show the specific content based on the title
+        // Show the section corresponding to the given `title`
         $(`.${title}`).show();
 
-        // Check the subTitle and toggle visibility of the file details or open file views
-        if(subTitle == "file-detail") {
+        // Handle visibility of `file-detail` and `file-open` based on the `subTitle` parameter
+        if (subTitle == "file-detail") {
             $(`.${title} .file-detail`).show();
             $(`.${title} .file-open`).hide();
-        } else if(subTitle == "file-open") {
+        } else if (subTitle == "file-open") {
             $(`.${title} .file-open`).show();
             $(`.${title} .file-detail`).hide();
         } else if (subTitle == "color-picker") {
@@ -36,24 +31,53 @@ function rightPanel(title, subTitle, targetClass) {
             $(`.${title} .style`).show();
         } 
 
-        // Enable buttons and inputs in the target class
-        $(`.${targetClass} .button-active, .${targetClass} .input-active`).prop('disabled', false);
-
-        // Add 'inactive' class to all buttons and inputs except those in the target class
+        // Disable and add `inactive` class to all elements with the `button-active` and `input-active` classes
+        $(".button-active, .input-active").removeClass("inactive").prop('disabled', true);
+        
+        // Enable the active buttons and inputs only for the specific `targetClass`
         $('.button-active, .input-active').not(`.${targetClass} .button-active, .${targetClass} .input-active`).each(function() {
             $(this).addClass("inactive");
+            $(`.${targetClass} .button-active`).addClass("inactive");
+        });
+        $(`.${targetClass} .input-active`).prop('disabled', false);
+
+        // Add a keyup listener to handle activation of buttons based on input value
+        $(`.${targetClass} .input-active`).on('keyup', function() {
+            const inputValue = $(this).val();
+            if (inputValue.trim().length > 0) {
+                $(`.${targetClass} .button-active`).removeClass("inactive");
+            } else {
+                $(`.${targetClass} .button-active`).addClass("inactive");
+            }
         });
 
+        // Set title for the upload URL section
+        if (targetClass == "upload-url") {
+            $(".file-share .right-panel-title span").text("Upload");
+        }
+
+        // Manage activation state for social media-related buttons
+        $(".social-media").addClass("inactive").prop('disabled', true);
+        if (targetClass == "publish") {
+            $(".social-media").removeClass("inactive").prop('disabled', false);
+        }
+
+        // Manage activation state for version-related elements
+        $(".version,.version-icon").addClass("inactive").prop('disabled', true);
+        if (targetClass == "history") {
+            $(".version,.version-icon").removeClass("inactive").prop('disabled', false);
+        }
+
+        // Handle `white-button-active` elements for specific target class
         if ($(`.${targetClass} .white-button-active`).length > 0) {
-            $(".white-button-active").removeClass("inactive");
-            $(".white-button-active").prop('disabled', true);
+            $(".white-button-active").removeClass("inactive").prop('disabled', true);
             $('.white-button-active').not(`.${targetClass} .white-button-active, .${targetClass} .white-button-active`).each(function () {
                 $(this).addClass("inactive");
                 $(this).prop('disabled', true);
             });
         }
 
-        // Scroll the target class into view smoothly
+        // Smoothly scroll to the target section within the right panel
         $(`.${targetClass}`).get(0).scrollIntoView({
             behavior: 'smooth',
             block: 'center'

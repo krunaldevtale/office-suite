@@ -92,14 +92,14 @@
 
 /* scroll */
 .scroll::-webkit-scrollbar {
-  width: 8px;
+  margin-right: 10px;
+  width: 4px;
   height: 4px;
 }
 
 .scroll::-webkit-scrollbar-thumb {
-  background: transparent;
+  background: var(--dark-gray);
   border-radius: 4px;
-  border: 1px var(--dark-charcoal) solid;
 }
 
 /* Ribbon */
@@ -122,7 +122,7 @@
   @apply w-fit h-8 p-2 rounded-lg font-bold underline text-[0.5rem] xl:text-[0.5rem] 2xl:text-[0.6rem];
   background: var(--medium-gray)
 }
-.mini-containers:hover{
+.mini-containers:hover,.mini-containers:focus{
   background-color: var(--royal-blue);
   color: var(--white-smoke);
 }
@@ -160,12 +160,12 @@
   @apply relative w-10 h-10 flex items-center justify-center;
 }
 
-.hover-div:hover{
-  background: var(--royal-blue)
+.hover-div:hover,.hover-div:focus{
+  background: var(--royal-blue);
 }
 
 .tooltip{
-  @apply absolute bottom-full mb-0.5 text-[12px] w-fit text-center border-2 px-2.5 py-1 rounded opacity-0 transition-opacity pointer-events-none;
+  @apply absolute bottom-full mb-0.5 text-[12px] w-fit text-center border-2 px-2.5 py-1 rounded opacity-0 transition-opacity pointer-events-none text-nowrap z-50;
   background: var(--white-smoke);
   border-color: var(--royal-blue);
 }
@@ -203,7 +203,7 @@
 }
 
 .option{
-  @apply px-4 py-2 cursor-pointer hover:bg-light-sky-blue;
+  @apply px-4 py-2 cursor-pointer hover:text-royal-blue text-nowrap;
 }
 
 /* sidebar menu */
@@ -319,7 +319,7 @@
 }
 
 .input-active {
-  @apply w-full px-3 py-1.5 border bg-white-smoke rounded-[10px] border-none focus:outline-none placeholder:text-sm placeholder:text-dark-charcoal;
+  @apply w-full px-3 py-1.5 border bg-white-smoke rounded-[10px] border-none focus:outline-none placeholder:text-sm placeholder:text-dark-charcoal placeholder:opacity-30;
 }
 .white-button-active{
   @apply w-full px-3 py-1.5 bg-white-smoke rounded-[10px] text-dark-charcoal text-sm flex gap-1 items-center justify-center;
@@ -330,6 +330,16 @@
 .inactive{
   @apply !bg-medium-gray text-transparent-charcoal placeholder:text-transparent-charcoal;
 }
+.social-media{
+  @apply bg-white-smoke hover:bg-royal-blue hover:text-white-smoke focus:bg-royal-blue focus:text-white-smoke h-10 w-10 justify-center rounded-full;
+}
+.version{
+  @apply flex items-center justify-between bg-medium-gray px-3 py-1.5 rounded-[10px] hover:bg-white-smoke focus:bg-white-smoke w-full;
+}
+.version-icon{
+  @apply flex items-center justify-center bg-white-smoke group-hover:bg-royal-blue group-hover:text-white-smoke group-focus:bg-royal-blue group-focus:text-white-smoke h-8 w-8 rounded-full;
+}
+
 /* table slide animation of home page*/
 @keyframes slideRight {
   0% {

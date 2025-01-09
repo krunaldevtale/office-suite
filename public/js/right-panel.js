@@ -25,9 +25,15 @@ function rightPanel(title, subTitle, targetClass) {
         } else if (subTitle == "color-picker") {
             $(`.${title} .color-picker`).show();
             $(`.${title} .search-replace`).hide();
+            $(`.${title} .style`).hide();
         } else if (subTitle == "search-replace") {
             $(`.${title} .color-picker`).hide();
             $(`.${title} .search-replace`).show();
+            $(`.${title} .style`).hide();
+        } else if (subTitle == "style") {
+            $(`.${title} .color-picker`).hide();
+            $(`.${title} .search-replace`).hide();
+            $(`.${title} .style`).show();
         } 
 
         // Enable buttons and inputs in the target class

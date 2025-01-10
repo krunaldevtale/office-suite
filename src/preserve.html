@@ -174,8 +174,8 @@
                             >
                           </li>
                           <li>
-                            <a href="#" class="menu-dropdown-option"
-                              >Combine pages</a
+                            <button onclick="rightPanel('merge','null','combine-pages')" class="menu-dropdown-option"
+                              >Combine pages</button
                             >
                           </li>
                           <li>
@@ -203,13 +203,13 @@
                             >
                           </li>
                           <li>
-                            <a href="#" class="menu-dropdown-option"
-                              >Extract pages</a
+                            <button onclick="rightPanel('split','null','extract-pages')" class="menu-dropdown-option"
+                              >Extract pages</button
                             >
                           </li>
                           <li>
-                            <a href="#" class="menu-dropdown-option"
-                              >Split by bookmarks</a
+                            <button onclick="rightPanel('split','null','split-bookmark')" class="menu-dropdown-option"
+                              >Split by bookmarks</button
                             >
                           </li>
                           <li>
@@ -218,16 +218,15 @@
                             >
                           </li>
                           <li>
-                            <a href="#" class="menu-dropdown-option"
-                              >Split in size</a
+                            <button onclick="rightPanel('split','null','split-size')" class="menu-dropdown-option"
+                              >Split in size</button
                             >
                           </li>
                           <li>
-                            <a
-                              href="#"
+                            <button onclick="rightPanel('split','null','split-text')"
                               class="menu-dropdown-option hover:rounded-b-[10px]"
                               style="border-bottom: none"
-                              >Split by text</a
+                              >Split by text</button
                             >
                           </li>
                         </ul>
@@ -242,18 +241,16 @@
                       <div class="sub-dropdown left-full top-0 hidden w-60">
                         <ul class="text-sm">
                           <li>
-                            <a
-                              href="#"
+                            <button onclick="rightPanel('sign','null','fill-sign')"
                               class="menu-dropdown-option hover:rounded-t-[10px]"
-                              >Fill and sign</a
+                              >Fill and sign</button
                             >
                           </li>
                           <li>
-                            <a
-                              href="#"
+                            <button onclick="rightPanel('sign','null','create-forms')"
                               class="menu-dropdown-option hover:rounded-b-[10px]"
                               style="border-bottom: none"
-                              >Create forms</a
+                              >Create forms</button
                             >
                           </li>
                         </ul>
@@ -268,48 +265,46 @@
                       <div class="sub-dropdown left-full top-0 hidden w-60">
                         <ul class="text-sm">
                           <li>
-                            <a
-                              href="#"
+                            <button onclick="exporting('Converting..')"
                               class="menu-dropdown-option hover:rounded-t-[10px]"
-                              >Convert PDF to excel</a
+                              >Convert PDF to excel</
                             >
                           </li>
                           <li>
-                            <a href="#" class="menu-dropdown-option"
-                              >Convert PDF to image</a
+                            <button onclick="exporting('Converting..')" class="menu-dropdown-option"
+                              >Convert PDF to image</button
                             >
                           </li>
                           <li>
-                            <a href="#" class="menu-dropdown-option"
-                              >Convert PDF to PPT</a
+                            <button onclick="exporting('Converting..')" class="menu-dropdown-option"
+                              >Convert PDF to PPT</button
                             >
                           </li>
                           <li>
-                            <a href="#" class="menu-dropdown-option"
-                              >Convert PDF to text</a
+                            <button onclick="exporting('Converting..')" class="menu-dropdown-option"
+                              >Convert PDF to text</button
                             >
                           </li>
                           <li>
-                            <a href="#" class="menu-dropdown-option"
-                              >Convert PDF to word</a
+                            <button onclick="exporting('Converting..')" class="menu-dropdown-option"
+                              >Convert PDF to word</button
                             >
                           </li>
                           <li>
-                            <a href="#" class="menu-dropdown-option"
-                              >Convert HTML to PDF</a
+                            <button onclick="exporting('Converting..')" class="menu-dropdown-option"
+                              >Convert HTML to PDF</button
                             >
                           </li>
                           <li>
-                            <a href="#" class="menu-dropdown-option"
-                              >Convert JPG to PDF</a
+                            <button onclick="exporting('Converting..')" class="menu-dropdown-option"
+                              >Convert JPG to PDF</button
                             >
                           </li>
                           <li>
-                            <a
-                              href="#"
+                            <button onclick="exporting('Converting..')"
                               class="menu-dropdown-option hover:rounded-b-[10px]"
                               style="border-bottom: none"
-                              >Convert word to PDF</a
+                              >Convert word to PDF</button
                             >
                           </li>
                         </ul>
@@ -327,15 +322,14 @@
                       <div class="sub-dropdown left-full top-0 hidden w-60">
                         <ul class="text-sm">
                           <li>
-                            <a
-                              href="#"
+                            <button onclick="rightPanel('protection','null','protect')"
                               class="menu-dropdown-option hover:rounded-t-[10px]"
-                              >Protect document</a
+                              >Protect document</
                             >
                           </li>
                           <li>
-                            <a href="#" class="menu-dropdown-option"
-                              >Unlock document</a
+                            <button onclick="rightPanel('protection','null','remove-security')" class="menu-dropdown-option"
+                              >Unlock document</button
                             >
                           </li>
                           <li>
@@ -387,13 +381,13 @@
               <div class="flex flex-col justify-center gap-2">
                 <div class="flex items-center gap-0.5">
                   <button onclick="rightPanel('merge','null','combine-pages')" class="group hover-div">
-                    <i class="ri-file-copy-line small-icon-size"></i>
-                    <span class="tooltip group-hover:opacity-100">Combine</span>
+                    <i class="ri-file-copy-line small-icon-size group-focus:text-white-smoke"></i>
+                    <span class="tooltip group-hover:opacity-100">Combine Pages</span>
                   </button>
                   <div class="group hover-div">
-                    <i class="ri-file-list-2-line small-icon-size"></i>
+                    <i class="ri-file-list-2-line small-icon-size group-focus:text-white-smoke"></i>
                     <span class="tooltip group-hover:opacity-100"
-                      >Organize</span
+                      >Organize Pages</span
                     >
                   </div>
                 </div>
@@ -412,10 +406,10 @@
                 />
                 <p class="font-bold">File Split</p>
               </div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -434,7 +428,7 @@
                 </div>
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -448,14 +442,14 @@
                   </svg>
 
                   <span class="tooltip group-hover:opacity-100"
-                    >Split Half</span
+                    >Split in Half</span
                   >
                 </div>
               </div>
-              <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
+              <div class="flex flex-col justify-center">
+                <button onclick="rightPanel('split','null','split-size')" class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -468,11 +462,11 @@
                     />
                   </svg>
 
-                  <span class="tooltip group-hover:opacity-100">Extract</span>
-                </div>
-                <div class="group hover-div">
+                  <span class="tooltip group-hover:opacity-100">Split by Size</span>
+                </button>
+                <button onclick="rightPanel('split','null','split-text')" class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -498,12 +492,12 @@
                   <span class="tooltip group-hover:opacity-100"
                     >Split in Size</span
                   >
-                </div>
+                </button>
               </div>
-              <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
+              <div class="flex flex-col justify-center">
+                <button onclick="rightPanel('split','null','split-bookmark')" class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -520,11 +514,11 @@
                     />
                   </svg>
 
-                  <span class="tooltip group-hover:opacity-100">Bookmark</span>
-                </div>
-                <div class="group hover-div">
+                  <span class="tooltip group-hover:opacity-100">Split by Bookmarks</span>
+                </button>
+                <button onclick="rightPanel('split','null','extract-pages')" class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -538,9 +532,9 @@
                   </svg>
 
                   <span class="tooltip group-hover:opacity-100"
-                    >Split in Text</span
+                    >Extract Pages</span
                   >
-                </div>
+                </button>
               </div>
             </div>
 
@@ -550,8 +544,8 @@
                 <p class="font-bold">Document Signing</p>
               </div>
               <div class="flex flex-col items-center pl-2 justify-center gap-2">
-                <span class="second-mini-containers">Fill & Sign</span>
-                <span class="second-mini-containers">Create Forms</span>
+                <button onclick="rightPanel('sign','null','fill-sign')" class="mini-containers">Fill & Sign</button>
+                <button onclick="rightPanel('sign','null','create-forms')" class="mini-containers">Create Forms</button>
               </div>
             </div>
 
@@ -560,34 +554,34 @@
                 <img src="/public/images/other-format.svg" alt="Other Format" />
                 <p class="font-bold">PDF to Other Formats</p>
               </div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
+                <button onclick="exporting('Converting..');" class="group hover-div">
+                  <i class="ri-file-word-line small-icon-size group-focus:text-white-smoke"></i>
+                  <span class="tooltip group-hover:opacity-100">Convert PDF to Word</span>
+                </button>
                 <div class="group hover-div">
-                  <i class="ri-file-word-line small-icon-size"></i>
-                  <span class="tooltip group-hover:opacity-100">Word</span>
-                </div>
-                <div class="group hover-div">
-                  <i class="ri-file-ppt-line small-icon-size"></i>
+                  <i class="ri-file-ppt-line small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100"
-                    >Powerpoint</span
+                    >Convert PDF to PPT</span
                   >
                 </div>
               </div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
                 <div class="group hover-div">
-                  <i class="ri-file-excel-line small-icon-size"></i>
-                  <span class="tooltip group-hover:opacity-100">Text</span>
+                  <i class="ri-file-excel-line small-icon-size group-focus:text-white-smoke"></i>
+                  <span class="tooltip group-hover:opacity-100">Convert PDF to Excel</span>
                 </div>
                 <div class="group hover-div">
-                  <i class="ri-text-snippet small-icon-size"></i>
+                  <i class="ri-text-snippet small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100"
-                    >Powerpoint</span
+                    >Convert PDF to Text</span
                   >
                 </div>
               </div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -610,17 +604,17 @@
                     />
                   </svg>
 
-                  <span class="tooltip group-hover:opacity-100">JPG</span>
+                  <span class="tooltip group-hover:opacity-100">Convert PDF to Image</span>
                 </div>
                 <div
                   class="relative group w-10 h-10 flex items-center justify-center"
                 ></div>
               </div>
               <div class="dashed-line"></div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -637,11 +631,11 @@
                     />
                   </svg>
 
-                  <span class="tooltip group-hover:opacity-100">Html</span>
+                  <span class="tooltip group-hover:opacity-100">Convert HTML to PDF</span>
                 </div>
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -658,13 +652,13 @@
                     />
                   </svg>
 
-                  <span class="tooltip group-hover:opacity-100">JPG</span>
+                  <span class="tooltip group-hover:opacity-100">Convert JPG to PDF</span>
                 </div>
               </div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -681,7 +675,7 @@
                     />
                   </svg>
 
-                  <span class="tooltip group-hover:opacity-100">Word</span>
+                  <span class="tooltip group-hover:opacity-100">Convert Word to PDF</span>
                 </div>
                 <div
                   class="relative group w-10 h-10 flex items-center justify-center"
@@ -694,14 +688,14 @@
                 <i class="ri-file-shield-2-line icon-size"></i>
                 <p class="font-bold">Document Protection</p>
               </div>
-              <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
-                  <i class="ri-lock-line small-icon-size"></i>
-                  <span class="tooltip group-hover:opacity-100">Protect</span>
-                </div>
+              <div class="flex flex-col justify-center">
+                <button onclick="rightPanel('protection','null','protect')" class="group hover-div">
+                  <i class="ri-lock-line small-icon-size group-focus:text-white-smoke"></i>
+                  <span class="tooltip group-hover:opacity-100">Protect Document</span>
+                </button>
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -714,24 +708,24 @@
                     />
                   </svg>
 
-                  <span class="tooltip group-hover:opacity-100">Watermark</span>
+                  <span class="tooltip group-hover:opacity-100">Add Watermark</span>
                 </div>
               </div>
-              <div class="flex flex-col gap-2">
-                <div class="flex justify-center gap-2">
-                  <div class="group hover-div">
-                    <i class="ri-lock-unlock-line small-icon-size"></i>
-                    <span class="tooltip group-hover:opacity-100">Unlock</span>
-                  </div>
+              <div class="flex flex-col mt-2">
+                <div class="flex justify-center">
+                  <button onclick="rightPanel('protection','null','remove-security')" class="group hover-div">
+                    <i class="ri-lock-unlock-line small-icon-size group-focus:text-white-smoke"></i>
+                    <span class="tooltip group-hover:opacity-100">Unlock Document</span>
+                  </button>
                   <div class="group hover-div" id="pin-button">
-                    <i class="ri-eye-line small-icon-size"></i>
+                    <i class="ri-eye-line small-icon-size group-focus:text-white-smoke"></i>
                     <span class="tooltip group-hover:opacity-100">Hide</span>
                   </div>
                 </div>
                 <div>
                   <div class="group hover-div">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -747,7 +741,7 @@
                       />
                     </svg>
   
-                    <span class="tooltip group-hover:opacity-100">Flatten</span>
+                    <span class="tooltip group-hover:opacity-100">Flatten Document</span>
                   </div>
                 </div>
               </div>
@@ -757,7 +751,15 @@
           <!-- File Section -->
           <section class="flex file-section gap-4 mt-4" style="max-height: calc(100vh - 17.5rem);">
             <div class="file scroll">
-              <div class="box">
+              <div class="box relative">
+                <!-- loader -->
+                <div class="loader flex flex-col items-center gap-2 justify-center absolute w-full h-full bg-shadow-black rounded-xl hidden">
+                  <div class="relative w-10 h-10 gap-4">
+                    <div class="absolute inset-0 w-full h-full border-4 border-white-smoke rounded-full"></div>
+                    <div class="absolute inset-0 w-full h-full border-4 border-royal-blue rounded-full border-t-transparent animate-spin"></div>
+                  </div>
+                  <p class="font-bold p-2 text-royal-blue bg-white-smoke rounded-xl loader-text">Exporting..<p>
+                </div>
                 <div class="upload-section cursor-pointer" onclick="document.getElementById('fileUpload').click()">
                     <i class="ri-upload-cloud-2-fill ri-xl"></i>
                     <span>Drop a PDF file here, or click to upload</span>
@@ -827,7 +829,7 @@
                     <button class="button-active mt-4">Merge</button>
                   </div> 
                   <!-- Combine organize pages -->
-                  <div class="border-b border-white-smoke p-4 combine-pages">
+                  <div class="p-4 combine-pages">
                     <div class="mb-5">
                       <label class="text-sm font-bold">Organize/combine pages</label>
                       <p class="text-xs">hold and drag page to organize</p>
@@ -878,6 +880,242 @@
                   </div>                
                 </div>
               </div>
+              <!-- split -->
+              <div class="split hidden">
+                <!-- Header -->
+                <div class="border-b border-white-smoke flex justify-center items-center">
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Split Selection</span>
+                    <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
+                  </div>
+                </div>
+                <div class="overflow-y-auto scroll right-panel-content">
+                  <!-- Split by size -->
+                  <div class="border-b border-white-smoke p-4 split-size">
+                    <div class="mb-3">
+                      <label class="text-sm font-bold">Split by size</label>
+                      <p class="text-xs">To preserve original formatting click on checkbox</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <input 
+                        type="text" 
+                        class="input-active" 
+                        placeholder="Maximum size per file (MB or KB)"
+                      >
+                      <label class="relative flex items-center justify-center w-12 h-8 border border-white-smoke rounded-[10px]">
+                        <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                        <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                        <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                      </label>                      
+                      <button class="button-active">Spilt</button>
+                    </div>
+                  </div>  
+                  <!-- Split by bookmark -->
+                  <div class="border-b border-white-smoke p-4 split-bookmark">
+                    <div class="mb-3">
+                      <label class="text-sm font-bold">Split by bookmark</label>
+                      <p class="text-xs">Include bookmark names in filenames</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <input 
+                        type="text" 
+                        class="input-active" 
+                        placeholder="Level 1, Level 2"
+                      >
+                      <label class="relative flex items-center justify-center w-12 h-8 border border-white-smoke rounded-[10px]">
+                        <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                        <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                        <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                      </label>                      
+                      <button class="button-active">Spilt</button>
+                    </div>
+                  </div> 
+                  <!-- Split by text -->
+                  <div class="border-b border-white-smoke p-4 split-text">
+                    <div class="mb-3">
+                      <label class="text-sm font-bold">Split by text</label>
+                      <p class="text-xs">The split happens where the exact text is found</p>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                      <input 
+                        type="text" 
+                        class="input-active" 
+                        placeholder="Level 1, Level 2"
+                      >
+                      <div class="relative custom-select input-active" style="width:8rem;height:2rem;padding:0">
+                        <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                          <span>Split by</span>
+                          <span><i class="ri-arrow-down-s-line"></i></span>
+                        </div>
+                        <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                          <div class="option !pl-1.5">After Text</div>
+                          <div class="option !pl-1.5">Before Text</div>
+                          <div class="option !pl-1.5">On All</div>
+                        </div>
+                      </div>                       
+                    </div>
+                    <div class="flex gap-4">
+                      <label class="relative flex items-center space-x-2">
+                        <div class="relative flex items-center justify-center w-8 h-8 border border-white-smoke rounded-[10px]">
+                          <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                          <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                          <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                        </div>
+                        <span class="text-xs">Case Sensitive</span>
+                      </label>                      
+                      <label class="relative flex items-center space-x-2">
+                        <div class="relative flex items-center justify-center w-8 h-8 border border-white-smoke rounded-[10px]">
+                          <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                          <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                          <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                        </div>
+                        <span class="text-xs">Whole Word Only</span>
+                      </label> 
+                    </div>
+                  </div> 
+                  <!-- Extract pages -->
+                  <div class="extract-pages p-4">
+                    <div class="mb-3">
+                      <label class="text-sm font-bold">Extract pages</label>
+                      <p class="text-xs">Enter page numbers</p>
+                    </div>
+                    <div class="flex items-center gap-2 mb-3">
+                      <input 
+                        type="text" 
+                        class="input-active" 
+                        placeholder="e.g., 1, 3, 5-7"
+                      >
+                      <button class="button-active">Spilt</button>                     
+                    </div>
+                    <div class="flex gap-4">
+                      <label class="relative flex items-center space-x-2">
+                        <div class="relative flex items-center justify-center w-12 h-8 border border-white-smoke rounded-[10px]">
+                          <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                          <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                          <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                        </div>
+                        <span class="text-xs">Extract as new document</span>
+                      </label>                      
+                      <label class="relative flex items-center space-x-2">
+                        <div class="relative flex items-center justify-center w-12 h-8 border border-white-smoke rounded-[10px]">
+                          <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                          <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                          <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                        </div>
+                        <span class="text-xs">Delete extracted pages from the original document</span>
+                      </label> 
+                    </div>
+                  </div>               
+                </div>
+              </div>
+              <!-- Document signing -->
+              <div class="sign hidden">
+                <!-- Header -->
+                <div class="border-b border-white-smoke flex justify-center items-center">
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Document signing</span>
+                    <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
+                  </div>
+                </div>
+                <div class="overflow-y-auto scroll right-panel-content">
+                  <!-- Fill and sign -->
+                  <div class="border-b border-white-smoke p-4 fill-sign">
+                    <div class="mb-3">
+                      <label class="text-sm font-bold">Fill and sign</label>
+                      <p class="text-xs">Click on fillable field to type</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <input 
+                        type="text" 
+                        class="input-active" 
+                        placeholder="Upload or use pen tool to add signature"
+                      >
+                      <button class="white-button-active !w-10 !py-3"><i class="ri-pencil-line ri-xl"></i></button>
+                    </div>
+                  </div> 
+                  <!-- Create forms -->
+                  <div class="p-4 create-forms">
+                    <label class="text-sm font-bold">Create forms</label>
+                    <p class="text-transparent-dark-gray text-xs">Add Field Buttons</p>
+                    <div class="flex items-center gap-2 mt-2">
+                      <button class="white-button-active !w-10 !py-3"><i class="ri-align-justify ri-xl"></i></button>
+                      <span class="text-nowrap text-sm">Add Text Field</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-2">
+                      <button class="white-button-active !w-10 !py-3"><i class="ri-checkbox-line ri-xl"></i></button>
+                      <span class="text-nowrap text-sm">Add Checkbox</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-2">
+                      <button class="white-button-active !w-10 !py-3"><i class="ri-radio-button-line ri-xl"></i></button>
+                      <span class="text-nowrap text-sm">Add Radio Button</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-2">
+                      <button class="white-button-active !w-10 !py-3"><i class="ri-dropdown-list ri-xl"></i></button>
+                      <span class="text-nowrap text-sm">Add Dropdown</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-2">
+                      <button class="white-button-active !w-10 !py-3"><i class="ri-calendar-2-line ri-xl"></i></button>
+                      <span class="text-nowrap text-sm">Add Date Picker</span>
+                    </div>
+                  </div>                
+                </div>
+              </div>
+              <!-- Document protection -->
+              <div class="protection hidden">
+                <!-- Header -->
+                <div class="border-b border-white-smoke flex justify-center items-center">
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Document protection</span>
+                    <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
+                  </div>
+                </div>
+                <div class="overflow-y-auto scroll right-panel-content">
+                  <!-- Protect -->
+                  <div class="border-b border-white-smoke p-4 protect">
+                    <label class="text-sm font-bold">Protect</label>
+                    <div class="flex items-center gap-2 mt-2">
+                      <input 
+                        type="password" 
+                        class="input-active" 
+                        placeholder="Type password"
+                      >
+                      <button class="button-active">Save</button>
+                    </div>
+                  </div> 
+                  <!-- Remove security -->
+                  <div class="p-4 remove-security">
+                    <label class="text-sm font-bold">Remove security</label>
+                    <div class="flex items-center gap-2 mt-2">
+                      <input 
+                        type="password" 
+                        class="input-active" 
+                        placeholder="Type password"
+                      >
+                      <button class="button-active">Remove</button>
+                    </div>
+                    <div class="relative">
+                      <button 
+                        class="text-xs mt-2 peer disabled:text-transparent-charcoal focus:text-red-orange hover:text-red-orange forget-password"
+                      >
+                        *forget password
+                      </button>
+                      <div class="mt-2 hidden password-container">
+                        <input 
+                          type="password" 
+                          class="password-input" 
+                          placeholder="New password"
+                        > 
+                        <input 
+                          type="password" 
+                          class="password-input mt-2" 
+                          placeholder="Confirm password"
+                        > 
+                        <button class="button-active mt-2">Save</button>
+                      </div>
+                    </div>                    
+                  </div>              
+                </div>
+              </div>
             </div>
           </section>
 
@@ -919,5 +1157,6 @@
     <script src="/public/js/sidebar.js"></script>
     <script src="/public/js/menu-dropdown.js"></script>
     <script src="/public/js/dropdown.js"></script>
+    <script src="/public/js/custom-select.js"></script>
   </body>
 </html>

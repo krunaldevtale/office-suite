@@ -102,6 +102,10 @@
   border-radius: 4px;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+
 /* Ribbon */
 
 .ribbon{
@@ -315,7 +319,7 @@
 }
 
 .right-panel-content{
-  height:calc(100vh - 22rem);
+  height:calc(100vh - 22.2rem);
 }
 
 .input-active {
@@ -326,6 +330,9 @@
 }
 .button-active {
   @apply flex bg-royal-blue text-white-smoke px-3 rounded-[10px] py-2 text-sm gap-2 items-center;
+}
+.page-active{
+  @apply h-24 w-16 rounded-[10px] bg-white-smoke border focus:border-royal-blue;
 }
 .inactive{
   @apply !bg-medium-gray text-transparent-charcoal placeholder:text-transparent-charcoal;
@@ -338,6 +345,9 @@
 }
 .version-icon{
   @apply flex items-center justify-center bg-white-smoke group-hover:bg-royal-blue group-hover:text-white-smoke group-focus:bg-royal-blue group-focus:text-white-smoke h-8 w-8 rounded-full;
+}
+.password-input{
+  @apply w-full px-3 py-1.5 border border-white-smoke bg-transparent rounded-[10px] focus:outline-none placeholder:text-sm placeholder:text-dark-charcoal placeholder:opacity-30;
 }
 
 /* table slide animation of home page*/

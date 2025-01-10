@@ -11,13 +11,13 @@ $(document).ready(function () {
             if (e.pageY - topEdge <= hoverThreshold) {
                 $('.ribbon').show(); 
                 $('.file-section').css('max-height', 'calc(100vh - 17.5rem)'); 
-                $('.right-panel-content').css('max-height', 'calc(100vh - 25rem)');
+                $('.right-panel-content').css('height', 'calc(100vh - 22.2rem)');
             } 
             // If mouse moves below the ribbon height, hide the ribbon and adjust panel heights
             else if (e.pageY > (topEdge + ribbonHeight)) {
                 $('.ribbon').hide(); 
                 $('.file-section').css('max-height', 'calc(100vh - 9.5rem)'); 
-                $('.right-panel-content').css('max-height', 'calc(100vh - 16rem)'); 
+                $('.right-panel-content').css('height', 'calc(100vh - 14rem)'); 
             }
         }
     });
@@ -33,7 +33,7 @@ $(document).ready(function () {
             ribbon.hide();
             icon.removeClass('ri-eye-line').addClass('ri-eye-off-line'); 
             $('.file-section').css('max-height', 'calc(100vh - 9.5rem)'); 
-            $('.right-panel-content').css('max-height', 'calc(100vh - 16rem)'); 
+            $('.right-panel-content').css('height', 'calc(100vh - 14rem)'); 
             tooltip.text('View'); 
         } 
         // If the 'eye-off-line' icon is active, show the ribbon and reset the heights
@@ -41,7 +41,7 @@ $(document).ready(function () {
             ribbon.show(); 
             icon.removeClass('ri-eye-off-line').addClass('ri-eye-line'); 
             $('.file-section').css('max-height', 'calc(100vh - 17.5rem)');
-            $('.right-panel-content').css('max-height', 'calc(100vh - 25rem)');
+            $('.right-panel-content').css('height', 'calc(100vh - 22.2rem)');
             tooltip.text('Hide'); 
         }
     });

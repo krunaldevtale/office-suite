@@ -735,6 +735,10 @@ body {
   height: 4rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .h-32 {
   height: 8rem;
 }
@@ -779,6 +783,10 @@ body {
   width: 3rem;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
 .w-2\/12 {
   width: 16.666667%;
 }
@@ -813,6 +821,10 @@ body {
 
 .w-\[10rem\] {
   width: 10rem;
+}
+
+.w-\[23rem\] {
+  width: 23rem;
 }
 
 .w-\[27\%\] {
@@ -1643,6 +1655,11 @@ body {
   border-radius: 4px;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+
 /* Ribbon */
 
 .ribbon {
@@ -2145,6 +2162,20 @@ body {
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(251 251 251 / var(--tw-text-opacity, 1));
+}
+
+.page-active {
+  height: 6rem;
+  width: 4rem;
+  border-radius: 10px;
+  border-width: 1px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 251 251 / var(--tw-bg-opacity, 1));
+}
+
+.page-active:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(2 114 217 / var(--tw-border-opacity, 1));
 }
 
 .inactive {

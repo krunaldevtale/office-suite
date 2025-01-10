@@ -25,8 +25,8 @@ function rightPanel(title, subTitle, targetClass) {
         // Enable the active buttons and inputs only for the specific `targetClass`
         $('.button-active, .input-active').not(`.${targetClass} .button-active, .${targetClass} .input-active`).each(function() {
             $(this).addClass("inactive");
-            $(`.${targetClass} .button-active`).addClass("inactive");
         });
+        $(`.${targetClass} .button-active`).addClass("inactive").prop('disabled', false);
         $(`.${targetClass} .input-active`).prop('disabled', false);
 
         // Add a keyup listener to handle activation of buttons based on input value
@@ -55,13 +55,18 @@ function rightPanel(title, subTitle, targetClass) {
         if (targetClass == "history") {
             $(".version,.version-icon").removeClass("inactive").prop('disabled', false);
         }
+        if (targetClass == "merge-page"|| targetClass == "combine-page") {
+            $(".page-active").removeClass("inactive").prop('disabled', true);
+            $('.page-active').not(`.${targetClass} .page-active`).each(function () {
+                $(this).addClass("inactive").prop('disabled', true);
+            });
+        }
 
         // Handle `white-button-active` elements for specific target class
         if ($(`.${targetClass} .white-button-active`).length > 0) {
             $(".white-button-active").removeClass("inactive").prop('disabled', true);
             $('.white-button-active').not(`.${targetClass} .white-button-active, .${targetClass} .white-button-active`).each(function () {
-                $(this).addClass("inactive");
-                $(this).prop('disabled', true);
+                $(this).addClass("inactive").prop('disabled', true);
             });
         }
 

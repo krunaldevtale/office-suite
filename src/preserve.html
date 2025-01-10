@@ -152,7 +152,7 @@
                 </a>
               </li>
               <li>
-                <a href="/src/convert-protect.html" class="flex flex-col items-center menu-button">
+                <a href="/src/preserve.html" class="flex flex-col items-center menu-button">
                   <i class="ri-shield-keyhole-line text-[32px] px-1.5 menu-hover"></i>
                   <span class="secondary-text text-center">Preserve</span>
                 </a>
@@ -167,10 +167,10 @@
                       <div class="sub-dropdown left-full top-0 hidden w-60">
                         <ul class="text-sm">
                           <li>
-                            <a
-                              href="#"
+                            <button
+                              onclick="rightPanel('merge','null','merge-pages')"
                               class="menu-dropdown-option hover:rounded-t-[10px]"
-                              >Merge pages</a
+                              >Merge pages</
                             >
                           </li>
                           <li>
@@ -386,10 +386,10 @@
               </div>
               <div class="flex flex-col justify-center gap-2">
                 <div class="flex items-center gap-0.5">
-                  <div class="group hover-div">
+                  <button onclick="rightPanel('merge','null','combine-pages')" class="group hover-div">
                     <i class="ri-file-copy-line small-icon-size"></i>
                     <span class="tooltip group-hover:opacity-100">Combine</span>
-                  </div>
+                  </button>
                   <div class="group hover-div">
                     <i class="ri-file-list-2-line small-icon-size"></i>
                     <span class="tooltip group-hover:opacity-100"
@@ -398,7 +398,7 @@
                   </div>
                 </div>
                 <div class="flex gap-2">
-                  <span class="mini-containers">Merge Pages</span>
+                  <button onclick="rightPanel('merge','null','merge-pages')" class="mini-containers">Merge Pages</button>
                 </div>
               </div>
             </div>
@@ -765,6 +765,120 @@
                 </div>
               </div>
             </div>
+            <div class="right-panel hidden">
+              <!-- merge -->
+              <div class="merge hidden">
+                <!-- Header -->
+                <div class="border-b border-white-smoke flex justify-center items-center">
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Merge selection</span>
+                    <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
+                  </div>
+                </div>
+                <div class="overflow-y-auto scroll right-panel-content">
+                  <!-- Merge pages -->
+                  <div class="border-b border-white-smoke p-4 merge-pages">
+                    <div class="mb-5">
+                      <label class="text-sm font-bold">Merge Pages/Text</label>
+                      <p class="text-xs">To merge text, hold shift and select text</p>
+                    </div>
+                    <div class="flex gap-2 overflow-x-auto w-[23rem] no-scrollbar">
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page1</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page2</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page3</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page4</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page5</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page6</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page7</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page8</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page9</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page10</p>
+                      </div>
+                    </div>
+                    <button class="button-active mt-4">Merge</button>
+                  </div> 
+                  <!-- Combine organize pages -->
+                  <div class="border-b border-white-smoke p-4 combine-pages">
+                    <div class="mb-5">
+                      <label class="text-sm font-bold">Organize/combine pages</label>
+                      <p class="text-xs">hold and drag page to organize</p>
+                    </div>
+                    <div class="flex gap-2 overflow-x-auto w-[23rem] no-scrollbar">
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page1</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page2</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page3</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page4</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page5</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page6</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page7</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page8</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page9</p>
+                      </div>
+                      <div class="flex flex-col justify-center items-center gap-2">
+                        <button class="page-active"></button>
+                        <p class="text-xs">page10</p>
+                      </div>
+                    </div>
+                    <button class="button-active mt-4">Combine</button>
+                  </div>                
+                </div>
+              </div>
+            </div>
           </section>
 
           <!-- Pagination & Zoom controls -->
@@ -799,6 +913,7 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/public/js/right-panel.js"></script>
     <script src="/public/js/zoom.js"></script>
     <script src="/public/js/ribbon.js"></script>
     <script src="/public/js/sidebar.js"></script>

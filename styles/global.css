@@ -102,6 +102,10 @@
   border-radius: 4px;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+
 /* Ribbon */
 
 .ribbon{
@@ -321,6 +325,9 @@
 }
 .button-active {
   @apply flex bg-royal-blue text-white-smoke px-3 rounded-[10px] py-2 text-sm gap-2 items-center;
+}
+.page-active{
+  @apply h-24 w-16 rounded-[10px] bg-white-smoke border focus:border-royal-blue;
 }
 .inactive{
   @apply !bg-medium-gray text-transparent-charcoal placeholder:text-transparent-charcoal;

@@ -17,7 +17,19 @@ function rightPanel(title, subTitle, targetClass) {
         } else if (subTitle == "file-open") {
             $(`.${title} .file-open`).show();
             $(`.${title} .file-detail`).hide();
-        }
+        } else if (subTitle == "color-picker") {
+            $(`.${title} .color-picker`).show();
+            $(`.${title} .search-replace`).hide();
+            $(`.${title} .style`).hide();
+        } else if (subTitle == "search-replace") {
+            $(`.${title} .color-picker`).hide();
+            $(`.${title} .search-replace`).show();
+            $(`.${title} .style`).hide();
+        } else if (subTitle == "style") {
+            $(`.${title} .color-picker`).hide();
+            $(`.${title} .search-replace`).hide();
+            $(`.${title} .style`).show();
+        } 
 
         // Disable and add `inactive` class to all elements with the `button-active` and `input-active` classes
         $(".button-active, .input-active").removeClass("inactive").prop('disabled', true);

@@ -319,17 +319,17 @@
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
+                <button onclick="rightPanel('tools-metadata','process-media','crop')" class="group hover-div">
                   <i class="ri-gallery-line small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100">Crop</span>
-                </div>
+                </button>
                 <div class="group hover-div">
                   <i class="ri-window-2-line small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100">Watermark</span>
                 </div>
               </div>
               <div class="flex flex-col ite justify-center gap-2">
-                <div class="group hover-div">
+                <button onclick="rightPanel('tools-metadata','process-media','edit-metadata')" class="group hover-div">
                   <svg
                     class="small-icon-size"
                     width="30"
@@ -358,8 +358,8 @@
                   </svg>
 
                   <span class="tooltip group-hover:opacity-100">Metadata</span>
-                </div>
-                <div class="group hover-div">
+                </button>
+                <button onclick="rightPanel('tools-metadata','repair-merge','merge')" class="group hover-div">
                   <svg
                     class="small-icon-size"
                     width="30"
@@ -392,7 +392,7 @@
                   </svg>
 
                   <span class="tooltip group-hover:opacity-100">Multiple</span>
-                </div>
+                </button>
               </div>
               <div class="flex flex-col items-center justify-center gap-2">
                 <span class="mini-containers">Add Bates Numbering</span>
@@ -452,7 +452,7 @@
                 </div>
               </div>
               <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
+                <button onclick="rightPanel('tools-metadata','repair-merge','repair')" class="group hover-div">
                   <svg
                     class="small-icon-size"
                     width="30"
@@ -479,7 +479,7 @@
                   </svg>
 
                   <span class="tooltip group-hover:opacity-100">Repair</span>
-                </div>
+                </button>
                 <div class="group hover-div">
                   <i class="ri-close-line small-icon-size"></i>
                   <span class="tooltip group-hover:opacity-100">Rename</span>
@@ -807,6 +807,164 @@
                 </div>
               </div>
             </div>
+            <div class="right-panel hidden">
+              <!-- Tools & metadata -->
+              <div class="tools-metadata hidden">
+                <!-- Header -->
+                <div class="border-b border-white-smoke flex justify-center items-center">
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Tools & metadata</span>
+                    <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
+                  </div>
+                </div>
+                <div class="overflow-y-auto scroll right-panel-content">
+                  <!-- Process Media -->
+                  <div class="process-media hidden">
+                    <!-- Crop image/text -->
+                    <div class="border-b border-white-smoke p-4 crop">
+                      <div class="bg-white-smoke h-32 rounded-[10px] mb-5 white-button-active"></div>
+                      <label class="text-sm font-bold">Crop image/text</label>
+                      <div class="flex items-end gap-2 mt-2">
+                        <div class="flex flex-col gap-2">
+                          <p class="text-transparent-dark-gray text-xs">Aspect ratio</p>
+                          <div class="relative custom-select input-active" style="width:6rem;height:2rem;padding:0">
+                            <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                              <span>Ratio</span>
+                              <span><i class="ri-arrow-down-s-line"></i></span>
+                            </div>
+                            <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                              <div class="option !pl-1.5">1:1</div>
+                              <div class="option !pl-1.5">16:9</div>
+                            </div>
+                          </div> 
+                        </div>
+                        <div class="flex flex-col gap-2">
+                          <p class="text-transparent-dark-gray text-xs">Rotate</p>
+                          <button class="white-button-active"><i class="ri-anticlockwise-2-line ri-lg -mt-1"></i>Rotate</button>
+                        </div>
+                        <button class="white-button-active"><i class="ri-reset-left-line ri-lg -mt-1"></i>Reset</button>
+                        <button class="bg-medium-gray text-transparent-charcoal px-3 py-1.5 rounded-[10px] text-sm">Apply</button>
+                      </div>
+                    </div>   
+                    <!-- Edit metadata -->
+                    <div class="p-4 edit-metadata">
+                      <label class="text-sm font-bold">Edit metadata</label>
+                      <div class="flex gap-2 mt-2 text-sm">
+                        <div class="grid grid-cols-1 gap-2 input-active">
+                          <div class="flex items-center gap-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 9C13.933 9 15.5 7.433 15.5 5.5C15.5 3.567 13.933 2 12 2C10.067 2 8.5 3.567 8.5 5.5C8.5 7.433 10.067 9 12 9Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M2 20.5C2 16.0815 6.0295 12.5 11 12.5M15.5 21L20.5 16L18.5 14L13.5 19V21H15.5Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                                            
+                            <span class="font-medium">File name</span>
+                          </div>
+                          <div class="flex items-center gap-3">
+                            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 18.75C16.2652 18.75 16.5196 18.6446 16.7071 18.4571C16.8946 18.2696 17 18.0152 17 17.75V16.504C17.004 13.698 13.026 11.5 9 11.5C4.974 11.5 1 13.698 1 16.504V17.75C1 18.0152 1.10536 18.2696 1.29289 18.4571C1.48043 18.6446 1.73478 18.75 2 18.75H16ZM12.604 4.854C12.604 5.32728 12.5108 5.79593 12.3297 6.23319C12.1485 6.67045 11.8831 7.06775 11.5484 7.40241C11.2138 7.73707 10.8164 8.00254 10.3792 8.18366C9.94193 8.36478 9.47328 8.458 9 8.458C8.52672 8.458 8.05807 8.36478 7.62081 8.18366C7.18355 8.00254 6.78625 7.73707 6.45159 7.40241C6.11692 7.06775 5.85146 6.67045 5.67034 6.23319C5.48922 5.79593 5.396 5.32728 5.396 4.854C5.396 3.89816 5.77571 2.98147 6.45159 2.30559C7.12747 1.62971 8.04416 1.25 9 1.25C9.95584 1.25 10.8725 1.62971 11.5484 2.30559C12.2243 2.98147 12.604 3.89816 12.604 4.854Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                              
+                            <span class="font-medium pl-1">Owner</span>
+                          </div>
+                          <div class="flex items-center gap-3">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.2957 19.6023L7.6597 13.2383M15.6737 10.4083L13.7687 16.1233C13.7383 16.2149 13.6862 16.2979 13.617 16.3651C13.5477 16.4323 13.4632 16.4817 13.3707 16.5093L1.6927 19.9803C1.58749 20.0116 1.47572 20.0134 1.36957 19.9855C1.26341 19.9576 1.16693 19.9012 1.09062 19.8223C1.01432 19.7434 0.961109 19.6451 0.93679 19.5381C0.912471 19.4311 0.917973 19.3194 0.952696 19.2153L4.7447 7.84133C4.77187 7.75966 4.8163 7.6848 4.87497 7.62182C4.93363 7.55884 5.00516 7.50922 5.0847 7.47633L10.4717 5.25833C10.5812 5.21309 10.7017 5.2013 10.8179 5.22444C10.9341 5.24757 11.0409 5.3046 11.1247 5.38833L15.5287 9.79433C15.6075 9.87311 15.6628 9.97228 15.6884 10.0807C15.714 10.1892 15.7089 10.3026 15.6737 10.4083Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M15.7904 10.0565L18.6184 7.22748C18.9933 6.85242 19.2039 6.34381 19.2039 5.81348C19.2039 5.28315 18.9933 4.77453 18.6184 4.39948L16.4984 2.27748C16.3126 2.09168 16.0921 1.94428 15.8494 1.84372C15.6067 1.74316 15.3466 1.69141 15.0839 1.69141C14.8212 1.69141 14.561 1.74316 14.3183 1.84372C14.0756 1.94428 13.8551 2.09168 13.6694 2.27748L10.8414 5.10648M9.77938 11.1165C9.64004 10.9772 9.47465 10.8668 9.29262 10.7914C9.1106 10.7161 8.91552 10.6773 8.71852 10.6774C8.52152 10.6774 8.32646 10.7162 8.14448 10.7917C7.96249 10.8671 7.79714 10.9776 7.65788 11.117C7.51861 11.2563 7.40815 11.4217 7.3328 11.6037C7.25746 11.7858 7.2187 11.9808 7.21875 12.1778C7.2188 12.3748 7.25764 12.5699 7.33308 12.7519C7.40851 12.9339 7.51904 13.0992 7.65838 13.2385C7.93977 13.5197 8.32137 13.6777 8.71923 13.6776C9.11709 13.6775 9.49861 13.5194 9.77988 13.238C10.0611 12.9566 10.2191 12.575 10.219 12.1771C10.2189 11.7793 10.0608 11.3977 9.77938 11.1165Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                                           
+                            <span class="font-medium pl-1">Creator</span>
+                          </div>
+                          <div class="flex items-center gap-4">
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0.5C4.13261 0.5 4.25979 0.552679 4.35355 0.646447C4.44732 0.740215 4.5 0.867392 4.5 1V2H11.5V1C11.5 0.867392 11.5527 0.740215 11.6464 0.646447C11.7402 0.552679 11.8674 0.5 12 0.5C12.1326 0.5 12.2598 0.552679 12.3536 0.646447C12.4473 0.740215 12.5 0.867392 12.5 1V2.003C12.7447 2.005 12.9627 2.01367 13.154 2.029C13.519 2.059 13.839 2.122 14.135 2.272C14.6053 2.51189 14.9875 2.89451 15.227 3.365C15.378 3.661 15.441 3.981 15.471 4.345C15.5 4.7 15.5 5.137 15.5 5.679V13.321C15.5 13.863 15.5 14.301 15.471 14.654C15.441 15.019 15.378 15.339 15.227 15.635C14.9874 16.1051 14.6051 16.4874 14.135 16.727C13.839 16.878 13.519 16.941 13.155 16.971C12.8 17 12.363 17 11.822 17H4.179C3.637 17 3.199 17 2.846 16.971C2.481 16.941 2.161 16.878 1.865 16.727C1.39451 16.4875 1.01189 16.1053 0.772 15.635C0.622 15.339 0.559 15.019 0.529 14.655C0.5 14.3 0.5 13.862 0.5 13.32V5.68C0.5 5.205 0.5 4.812 0.52 4.483L0.529 4.347C0.559 3.982 0.622 3.662 0.772 3.366C1.01173 2.89535 1.39435 2.51272 1.865 2.273C2.161 2.123 2.481 2.06 2.845 2.03C3.03767 2.01467 3.256 2.006 3.5 2.004V1C3.5 0.867392 3.55268 0.740215 3.64645 0.646447C3.74021 0.552679 3.86739 0.5 4 0.5ZM3.5 3.5V3.003C3.3088 3.00458 3.11771 3.01225 2.927 3.026C2.625 3.05 2.451 3.096 2.319 3.163C2.03651 3.30685 1.80685 3.53651 1.663 3.819C1.596 3.951 1.55 4.125 1.526 4.427C1.5 4.736 1.5 5.132 1.5 5.7V6.25H14.5V5.7C14.5 5.132 14.5 4.736 14.474 4.427C14.45 4.125 14.404 3.951 14.337 3.819C14.1931 3.53651 13.9635 3.30685 13.681 3.163C13.549 3.096 13.375 3.05 13.073 3.026C12.8823 3.01225 12.6912 3.00458 12.5 3.003V3.5C12.5 3.63261 12.4473 3.75979 12.3536 3.85355C12.2598 3.94732 12.1326 4 12 4C11.8674 4 11.7402 3.94732 11.6464 3.85355C11.5527 3.75979 11.5 3.63261 11.5 3.5V3H4.5V3.5C4.5 3.63261 4.44732 3.75979 4.35355 3.85355C4.25979 3.94732 4.13261 4 4 4C3.86739 4 3.74021 3.94732 3.64645 3.85355C3.55268 3.75979 3.5 3.63261 3.5 3.5ZM14.5 7.25H1.5V13.3C1.5 13.868 1.5 14.265 1.526 14.573C1.55 14.875 1.596 15.049 1.663 15.181C1.80685 15.4635 2.03651 15.6931 2.319 15.837C2.451 15.904 2.625 15.95 2.927 15.974C3.236 16 3.632 16 4.2 16H11.8C12.368 16 12.765 16 13.073 15.974C13.375 15.95 13.549 15.904 13.681 15.837C13.9635 15.6931 14.1931 15.4635 14.337 15.181C14.404 15.049 14.45 14.875 14.474 14.573C14.5 14.265 14.5 13.868 14.5 13.3V7.25Z" fill="#333333"/>
+                            </svg>                                                           
+                            <span class="font-medium pl-1">Created date</span>
+                          </div>
+                          <div class="flex items-center gap-3">
+                            <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M20 11.6367C20.4688 11.957 20.8867 12.3203 21.2539 12.7266C21.6211 13.1328 21.9375 13.5781 22.2031 14.0625C22.4688 14.5469 22.6641 15.0586 22.7891 15.5977C22.9141 16.1367 22.9844 16.6875 23 17.25C23 18.1797 22.8242 19.0547 22.4727 19.875C22.1211 20.6953 21.6367 21.4102 21.0195 22.0195C20.4023 22.6289 19.6875 23.1094 18.875 23.4609C18.0625 23.8125 17.1875 23.9922 16.25 24C15.5391 24 14.8516 23.8945 14.1875 23.6836C13.5234 23.4727 12.9141 23.168 12.3594 22.7695C11.8047 22.3711 11.3125 21.8945 10.8828 21.3398C10.4531 20.7852 10.1211 20.1719 9.88672 19.5H0.5V1.5H3.5V0H5V1.5H15.5V0H17V1.5H20V11.6367ZM2 3V6H18.5V3H17V4.5H15.5V3H5V4.5H3.5V3H2ZM9.53516 18C9.51172 17.7578 9.5 17.5078 9.5 17.25C9.5 16.5781 9.59375 15.9258 9.78125 15.293C9.96875 14.6602 10.2539 14.0625 10.6367 13.5H9.5V12H11V13.0078C11.3203 12.6094 11.6758 12.2578 12.0664 11.9531C12.457 11.6484 12.8789 11.3867 13.332 11.168C13.7852 10.9492 14.2578 10.7852 14.75 10.6758C15.2422 10.5664 15.7422 10.5078 16.25 10.5C17.0312 10.5 17.7812 10.6289 18.5 10.8867V7.5H2V18H9.53516ZM16.25 22.5C16.9766 22.5 17.6562 22.3633 18.2891 22.0898C18.9219 21.8164 19.4766 21.4414 19.9531 20.9648C20.4297 20.4883 20.8047 19.9336 21.0781 19.3008C21.3516 18.668 21.4922 17.9844 21.5 17.25C21.5 16.5234 21.3633 15.8438 21.0898 15.2109C20.8164 14.5781 20.4414 14.0234 19.9648 13.5469C19.4883 13.0703 18.9336 12.6953 18.3008 12.4219C17.668 12.1484 16.9844 12.0078 16.25 12C15.5234 12 14.8438 12.1367 14.2109 12.4102C13.5781 12.6836 13.0234 13.0586 12.5469 13.5352C12.0703 14.0117 11.6953 14.5664 11.4219 15.1992C11.1484 15.832 11.0078 16.5156 11 17.25C11 17.9766 11.1367 18.6562 11.4102 19.2891C11.6836 19.9219 12.0586 20.4766 12.5352 20.9531C13.0117 21.4297 13.5664 21.8047 14.1992 22.0781C14.832 22.3516 15.5156 22.4922 16.25 22.5ZM17 16.5H19.25V18H15.5V13.5H17V16.5ZM3.5 12H5V13.5H3.5V12ZM6.5 12H8V13.5H6.5V12ZM6.5 9H8V10.5H6.5V9ZM3.5 15H5V16.5H3.5V15ZM6.5 15H8V16.5H6.5V15ZM11 10.5H9.5V9H11V10.5ZM14 10.5H12.5V9H14V10.5ZM17 10.5H15.5V9H17V10.5Z" fill="#333333"/>
+                            </svg>                                                           
+                            <span class="font-medium">Last updated</span>
+                          </div>
+                          <div class="flex items-center gap-5">
+                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 1.5C0.5 1.10218 0.658035 0.720645 0.93934 0.43934C1.22064 0.158036 1.60218 0 2 0H10.9835C11.2274 0.000189019 11.4676 0.0598491 11.6832 0.17381C11.8988 0.287771 12.0834 0.452595 12.221 0.654L15.296 5.154C15.4663 5.40328 15.5573 5.69813 15.5573 6C15.5573 6.30187 15.4663 6.59672 15.296 6.846L12.221 11.346C12.0836 11.5472 11.8992 11.7119 11.6839 11.8258C11.4685 11.9398 11.2286 11.9996 10.985 12H2C1.60218 12 1.22064 11.842 0.93934 11.5607C0.658035 11.2794 0.5 10.8978 0.5 10.5V1.5ZM2.375 2.625C2.375 2.42609 2.45402 2.23532 2.59467 2.09467C2.73532 1.95402 2.92609 1.875 3.125 1.875H10.2425C10.361 1.87487 10.4778 1.9028 10.5834 1.95651C10.689 2.01022 10.7803 2.08818 10.85 2.184L13.304 5.559C13.3972 5.68717 13.4474 5.84155 13.4474 6C13.4474 6.15845 13.3972 6.31283 13.304 6.441L10.85 9.816C10.7803 9.91182 10.689 9.98978 10.5834 10.0435C10.4778 10.0972 10.361 10.1251 10.2425 10.125H3.125C2.92609 10.125 2.73532 10.046 2.59467 9.90533C2.45402 9.76468 2.375 9.57391 2.375 9.375V2.625Z" fill="#333333"/>
+                            </svg>                              
+                            <span class="font-medium">Keywords</span>
+                          </div>
+                          <div class="flex items-center gap-5">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 13.2295V11.9995H8V12.9995L0 13.2295ZM0 9.44153V8.44153H14V9.44153H0ZM0 5.55753V4.55753H14V5.55753H0ZM0 1.99953V0.769531H14V1.99953H0Z" fill="#333333"/>
+                            </svg>                              
+                            <span class="font-medium">Subject</span>
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-1 gap-2 input-active">
+                          <div>MyDocument.pdf</div>
+                          <div>John Doe</div>
+                          <div>Jane Smith</div>
+                          <div>14/03/2023</div>
+                          <div>20/12/2024</div>
+                          <div>Tag1, Tag2, Tag3</div>
+                          <div>Business Report</div>
+                        </div>
+                      </div>
+                      <button class="bg-medium-gray text-transparent-charcoal px-3 py-1.5 rounded-[10px] text-sm mt-4">Save</button>
+                    </div>   
+                  </div> 
+                  <!-- Repair and Merge -->
+                  <div class="repair-merge hidden">
+                    <!-- Crop image/text -->
+                    <div class="border-b border-white-smoke p-4 merge">
+                      <label class="text-sm font-bold">Multiple Pages on One</label>
+                      <div class="flex items-end gap-2 mt-2">
+                        <div class="flex flex-col gap-2">
+                          <p class="text-transparent-dark-gray text-xs">pages per sheet</p>
+                          <div class="relative custom-select input-active" style="width:6rem;height:2rem;padding:0">
+                            <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                              <span>Pages</span>
+                              <span><i class="ri-arrow-down-s-line"></i></span>
+                            </div>
+                            <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                              <div class="option !pl-1.5">2 - up</div>
+                              <div class="option !pl-1.5">4 - up</div>
+                              <div class="option !pl-1.5">6 - up</div>
+                            </div>
+                          </div> 
+                        </div>
+                        <div class="flex flex-col gap-2">
+                          <p class="text-transparent-dark-gray text-xs">Fit to Page</p>
+                          <label class="relative flex items-center justify-center w-10 h-8 border border-white-smoke rounded-[10px]">
+                            <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                            <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                            <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                          </label> 
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <button class="white-button-active !w-10 !py-1">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 7C1 4.172 1 2.757 1.879 1.879C2.757 1 4.172 1 7 1H8C10.828 1 12.243 1 13.121 1.879C14 2.757 14 4.172 14 7V15C14 17.828 14 19.243 13.121 20.121C12.243 21 10.828 21 8 21H7C4.172 21 2.757 21 1.879 20.121C1 19.243 1 17.828 1 15V7Z" stroke="#333333" stroke-width="1.5"/>
+                              <path d="M16.5 9.007C18.36 9.034 19.414 9.172 20.121 9.879C21 10.758 21 12.172 21 15C21 17.828 21 19.243 20.121 20.122C19.414 20.829 18.36 20.967 16.5 20.994M10 4H5M18 17V13" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/>
+                              <path d="M9 16.5C9 16.8978 8.84196 17.2794 8.56066 17.5607C8.27936 17.842 7.89782 18 7.5 18C7.10218 18 6.72064 17.842 6.43934 17.5607C6.15804 17.2794 6 16.8978 6 16.5C6 16.1022 6.15804 15.7206 6.43934 15.4393C6.72064 15.158 7.10218 15 7.5 15C7.89782 15 8.27936 15.158 8.56066 15.4393C8.84196 15.7206 9 16.1022 9 16.5Z" stroke="#333333" stroke-width="1.5"/>
+                              <path d="M19.5 5.986L21 7C21 3.985 18.838 1.483 16 1" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>                            
+                          </button>
+                          <div class="relative custom-select w-full px-2 bg-transparent rounded-[10px] border border-white-smoke focus:outline-none placeholder:text-sm placeholder:text-transparent-charcoal placeholder:opacity-30">
+                            <div class="selected-item text-sm p-1.5 rounded cursor-pointer flex justify-between items-center">
+                              <span>Orientation</span>
+                              <span><i class="ri-arrow-down-s-line"></i></span>
+                            </div>
+                            <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full inset-x-0 rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                              <div class="option !pl-1.5">Portrait</div>
+                              <div class="option !pl-1.5">Landscape</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="bg-medium-gray text-transparent-charcoal px-3 py-1.5 rounded-[10px] text-sm mt-4">Apply</button>
+                    </div>   
+                      
+                  </div>   
+                </div>
+              </div>
+            </div>
           </section>
 
           <!-- Pagination & Zoom controls -->
@@ -841,6 +999,8 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/public/js/right-panel.js"></script>
+    <script src="/public/js/custom-select.js"></script>
     <script src="/public/js/zoom.js"></script>
     <script src="/public/js/ribbon.js"></script>
     <script src="/public/js/sidebar.js"></script>

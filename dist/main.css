@@ -667,12 +667,20 @@ body {
   margin-top: -0.25rem;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .mb-0\.5 {
   margin-bottom: 0.125rem;
 }
 
 .mb-1 {
   margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .mb-3 {
@@ -689,6 +697,14 @@ body {
 
 .ml-2 {
   margin-left: 0.5rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
 }
 
 .mt-1 {
@@ -751,8 +767,16 @@ body {
   height: 4rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-24 {
   height: 6rem;
+}
+
+.h-3 {
+  height: 0.75rem;
 }
 
 .h-32 {
@@ -797,6 +821,10 @@ body {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-9 {
+  height: 2.25rem;
 }
 
 .max-h-32 {
@@ -881,6 +909,10 @@ body {
 
 .w-60 {
   width: 15rem;
+}
+
+.w-64 {
+  width: 16rem;
 }
 
 .w-7 {
@@ -974,6 +1006,14 @@ body {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.resize {
+  resize: both;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .appearance-none {
@@ -1545,6 +1585,11 @@ body {
   color: rgb(51 51 51 / var(--tw-text-opacity, 1));
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+
 .text-red-orange {
   --tw-text-opacity: 1;
   color: rgb(238 54 28 / var(--tw-text-opacity, 1));
@@ -1591,6 +1636,10 @@ body {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.outline {
+  outline-style: solid;
 }
 
 .blur {
@@ -1885,7 +1934,71 @@ body {
   background: var(--medium-gray)
 }
 
+.mini-containers-2 {
+  display: flex;
+  height: 2rem;
+  width: 8rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.5rem;
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
+@media (min-width: 1280px) {
+  .mini-containers-2 {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .mini-containers-2 {
+    font-size: 0.6rem;
+  }
+}
+
+.mini-containers-2{
+  background: var(--medium-gray)
+}
+
+.max-containers {
+  display: flex;
+  height: 5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.5rem;
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
+@media (min-width: 1280px) {
+  .max-containers {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .max-containers {
+    font-size: 0.6rem;
+  }
+}
+
+.max-containers{
+  background: var(--medium-gray)
+}
+
 .mini-containers:hover,.mini-containers:focus{
+  background-color: var(--royal-blue);
+  color: var(--white-smoke);
+}
+
+.mini-containers-2:hover,.mini-containers-2:focus{
   background-color: var(--royal-blue);
   color: var(--white-smoke);
 }
@@ -2292,7 +2405,42 @@ body {
   color: rgb(51 51 51 / var(--tw-text-opacity, 1));
 }
 
+.white-button-active-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border-radius: 10px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 251 251 / var(--tw-bg-opacity, 1));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity, 1));
+}
+
 .button-active {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 10px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 114 217 / var(--tw-bg-opacity, 1));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(251 251 251 / var(--tw-text-opacity, 1));
+}
+
+.button-blue {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -2333,6 +2481,27 @@ body {
 }
 
 .inactive::placeholder {
+  color: #3333334D;
+}
+
+.inactive-one {
+  gap: 0.5rem;
+  border-radius: 10px;
+  background-color: #FBFBFB4D !important;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #3333334D;
+}
+
+.inactive-one::-moz-placeholder {
+  color: #3333334D;
+}
+
+.inactive-one::placeholder {
   color: #3333334D;
 }
 
@@ -3152,3 +3321,4 @@ input[type="checkbox"].c-checkbox:checked::after {
     font-size: 27px;
   }
 }
+

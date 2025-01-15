@@ -223,6 +223,9 @@
 }
 
 /* sidebar menu */
+.menu-dropdown {
+  position: relative; /* Ensure this is relative for absolute positioning */
+}
 .menu-dropdown,.sub-dropdown{
   position: absolute;
   background-color: var(--light-gray);

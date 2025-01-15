@@ -384,12 +384,12 @@
                     <i class="ri-file-copy-line small-icon-size group-focus:text-white-smoke"></i>
                     <span class="tooltip group-hover:opacity-100">Combine Pages</span>
                   </button>
-                  <div class="group hover-div">
+                  <button onclick="rightPanel('merge','organize','combine-pages')" class="group hover-div">
                     <i class="ri-file-list-2-line small-icon-size group-focus:text-white-smoke"></i>
                     <span class="tooltip group-hover:opacity-100"
                       >Organize Pages</span
                     >
-                  </div>
+                  </button>
                 </div>
                 <div class="flex gap-2">
                   <button onclick="rightPanel('merge','null','merge-pages')" class="mini-containers">Merge Pages</button>
@@ -426,7 +426,7 @@
                     >Split Pages</span
                   >
                 </div>
-                <div class="group hover-div">
+                <button onclick="border()" class="group hover-div">
                   <svg
                     class="small-icon-size group-focus:text-white-smoke"
                     width="30"
@@ -444,7 +444,7 @@
                   <span class="tooltip group-hover:opacity-100"
                     >Split in Half</span
                   >
-                </div>
+                </button>
               </div>
               <div class="flex flex-col justify-center">
                 <button onclick="rightPanel('split','null','split-size')" class="group hover-div">
@@ -760,6 +760,7 @@
                   </div>
                   <p class="font-bold p-2 text-royal-blue bg-white-smoke rounded-xl loader-text">Exporting..<p>
                 </div>
+                <div class="dotted-border flex justify-center flex-center absolute w-full border-2 border-dashed border-royal-blue hidden"></div>
                 <div class="upload-section cursor-pointer" onclick="document.getElementById('fileUpload').click()">
                     <i class="ri-upload-cloud-2-fill ri-xl"></i>
                     <span>Drop a PDF file here, or click to upload</span>
@@ -838,42 +839,52 @@
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page1</p>
+                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
                       </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page2</p>
+                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
                       </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page3</p>
+                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
                       </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page4</p>
+                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
                       </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page5</p>
+                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
                       </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page6</p>
+                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
                       </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page7</p>
+                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
                       </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page8</p>
+                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
                       </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page9</p>
+                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
                       </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page10</p>
+                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
                       </div>
                     </div>
                     <button class="button-active mt-4">Combine</button>

@@ -29,6 +29,12 @@ function rightPanel(title, subTitle, targetClass) {
             $(`.${title} .color-picker`).hide();
             $(`.${title} .search-replace`).hide();
             $(`.${title} .style`).show();
+        }else if (subTitle == "process-media") {
+            $(`.${title} .process-media`).show();
+            $(`.${title} .repair-merge`).hide();
+        } else if (subTitle == "repair-merge") {
+            $(`.${title} .repair-merge`).show();
+            $(`.${title} .process-media`).hide();
         } 
 
         // Disable and add `inactive` class to all elements with the `button-active` and `input-active` classes
@@ -79,10 +85,15 @@ function rightPanel(title, subTitle, targetClass) {
         }
 
         // Handle `white-button-active` elements for specific target class
-        if ($(`.${targetClass} .white-button-active`).length > 0) {
             $(".white-button-active").removeClass("inactive").prop('disabled', true);
             $('.white-button-active').not(`.${targetClass} .white-button-active, .${targetClass} .white-button-active`).each(function () {
                 $(this).addClass("inactive").prop('disabled', true);
+            });
+
+        if(subTitle=="organize"){
+            $(".page-active").click(function () {
+                $(".delete-button").addClass("hidden");
+                $(this).siblings(".delete-button").removeClass("hidden");
             });
         }
 
@@ -123,3 +134,6 @@ $('.forget-password').on('click', function() {
       $('.password-container').addClass("hidden");
     }
   });
+function border() {
+    $(".dotted-border").removeClass("hidden");
+}

@@ -22,15 +22,18 @@ $(document).ready(function () {
     
         // Check if the dropdown will overflow vertically
         if (spaceBelow < dropdownHeight) {
+            let maxHeight = dropdownHeight > 378 ? '378px' : dropdownHeight+"px";
             // Position the dropdown above the button if near the bottom of the page
             $dropdown.css({
                 'bottom': '0',
                 'left': '5.5rem',
-                'max-height': "35vh",
-                'overflow-y': 'auto',
+                'height': maxHeight,
                 'margin-bottom': '1rem'
             });
-            $dropdown.addClass("scroll");
+            if (maxHeight === '378px') {
+                $dropdown.css('overflow-y', 'auto');
+                $dropdown.addClass("scroll");
+            }
         } else {
             // Position it below the button
             $dropdown.css('top', 'initial');

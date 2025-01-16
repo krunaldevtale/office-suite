@@ -12,100 +12,149 @@
   <body>
     <main class="flex flex-col h-screen bg-light-sky-blue">
       <!-- Header -->
-    <header class="w-full py-4 px-6 pr-10 flex justify-between items-center relative">
-      <div class="flex items-center gap-4">
-        <!-- Mobile Menu Button -->
-        <button class="md:hidden text-2xl menu-toggle">
-          <i class="ri-menu-line"></i>
-        </button>
-        <!-- Logo -->
-        <h1 class="logo-title">Logo</h1>
-      </div>
-      <!-- Search bar -->
-      <div class="relative w-[27%] hidden md:block">
-        <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
-          <i class="ri-search-line ri-lg"></i>
-        </span>
-        <input
-          type="text"
-          placeholder="Search your PDF library or PDF documents..."
-          class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke focus:outline-none placeholder:text-dark-charcoal placeholder:text-base"
-        />
-        <div class="dropdown hidden absolute w-full mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
-          <ul class="text-sm">
-            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-t-lg"><i class="ri-mail-add-line"></i>Attach Email</a></li>
-            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-b-lg"><i class="ri-download-line"></i>Downloads</a></li>
-          </ul>
+      <header
+        class="w-full py-4 px-6 pr-10 flex justify-between items-center relative"
+      >
+        <div class="flex items-center gap-4">
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden text-2xl menu-toggle">
+            <i class="ri-menu-line"></i>
+          </button>
+          <!-- Logo -->
+          <h1 class="logo-title">Logo</h1>
         </div>
-      </div>
-      <!-- Share button -->
-      <div class="flex items-center gap-4">
-        <button class="share-btn drop-button hidden md:flex items-center gap-2">
-          <i class="ri-share-line"></i> <span class="text-sm md:text-base">Share</span>
-        </button>
-        <!-- Share dropdown -->
-        <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
-          <h2 class="text-lg font-medium mb-4">Share your work</h2>
-          <div class="mb-4">
-            <label class="font-normal mb-1 block" for="people-input">
-              People with access
-            </label>
-            <div class="flex items-center gap-2 border border-dark-gray rounded-md p-2">
-              <input
-                id="people-input"
-                type="text"
-                placeholder="Add people or your team"
-                class="w-full text-sm bg-transparent outline-none placeholder:text-dark-charcoal"
-                onclick="event.stopPropagation();"
+        <!-- Search bar -->
+        <div class="relative w-[27%] hidden md:block">
+          <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
+            <i class="ri-search-line ri-lg"></i>
+          </span>
+          <input
+            type="text"
+            placeholder="Search your PDF library or PDF documents..."
+            class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke focus:outline-none placeholder:text-dark-charcoal placeholder:text-base"
+          />
+          <div
+            class="dropdown hidden absolute w-full mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10"
+          >
+            <ul class="text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-t-lg"
+                  ><i class="ri-mail-add-line"></i>Attach Email</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-b-lg"
+                  ><i class="ri-download-line"></i>Downloads</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Share button -->
+        <div class="flex items-center gap-4">
+          <button
+            class="share-btn drop-button hidden md:flex items-center gap-2"
+          >
+            <i class="ri-share-line"></i>
+            <span class="text-sm md:text-base">Share</span>
+          </button>
+          <!-- Share dropdown -->
+          <div
+            class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10"
+          >
+            <h2 class="text-lg font-medium mb-4">Share your work</h2>
+            <div class="mb-4">
+              <label class="font-normal mb-1 block" for="people-input">
+                People with access
+              </label>
+              <div
+                class="flex items-center gap-2 border border-dark-gray rounded-md p-2"
+              >
+                <input
+                  id="people-input"
+                  type="text"
+                  placeholder="Add people or your team"
+                  class="w-full text-sm bg-transparent outline-none placeholder:text-dark-charcoal"
+                  onclick="event.stopPropagation();"
+                />
+              </div>
+            </div>
+            <button class="flex items-center gap-2 mb-4">
+              <img
+                src="/public/images/user.png"
+                alt="Profile"
+                class="rounded-full h-8 w-8"
+              />
+              <i class="ri-add-fill"></i>
+            </button>
+            <div class="mb-4">
+              <label class="mb-1 block" for="collaboration-link">
+                Collaboration link
+              </label>
+              <div
+                class="relative custom-select border border-dark-gray rounded-md"
+              >
+                <div
+                  class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2"
+                >
+                  <span>Select access:</span>
+                  <span><i class="ri-arrow-down-s-fill"></i></span>
+                </div>
+                <div
+                  class="select-options text-sm bg-white-smoke border border-dark-gray hidden absolute w-full mt-1 rounded shadow-lg z-10 overflow-auto scroll h-16"
+                >
+                  <div class="option">Only you can access</div>
+                  <div class="option">Anyone with the link</div>
+                  <div class="option">Specific people</div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition"
+            >
+              Copy link
+            </button>
+          </div>
+          <!-- Profile button -->
+          <button class="drop-button">
+            <img
+              src="/public/images/user.png"
+              alt="Profile"
+              class="rounded-full h-8 w-8"
+            />
+          </button>
+          <!-- Profile dropdown -->
+          <div
+            class="dropdown hidden absolute top-1/2 right-10 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10"
+          >
+            <div class="flex items-center justify-start mb-5 gap-3">
+              <div>
+                <p class="font-medium text-lg">Hello Rachel!</p>
+                <p class="text-sm">Rachelsaket@gmail.com</p>
+              </div>
+              <img
+                src="/public/images/user.png"
+                alt="Profile"
+                class="rounded-full h-12 w-12"
               />
             </div>
+            <button
+              class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition"
+            >
+              Log Out
+            </button>
           </div>
-          <button class="flex items-center gap-2 mb-4">
-            <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
-            <i class="ri-add-fill"></i>
-          </button>
-          <div class="mb-4">
-            <label class="mb-1 block" for="collaboration-link">
-              Collaboration link
-            </label>
-            <div class="relative custom-select border border-dark-gray rounded-md">
-              <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
-                <span>Select access:</span>
-                <span><i class="ri-arrow-down-s-fill"></i></span>
-              </div>
-              <div class="select-options text-sm bg-white-smoke border border-dark-gray hidden absolute w-full mt-1 rounded shadow-lg z-10 overflow-auto scroll h-16">
-                <div class="option">Only you can access</div>
-                <div class="option">Anyone with the link</div>
-                <div class="option">Specific people</div>
-              </div>
-            </div>  
-          </div>
-          <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
-            Copy link
-          </button>
-        </div> 
-        <!-- Profile button -->
-        <button class="drop-button">       
-          <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
-        </button>
-        <!-- Profile dropdown -->
-        <div class="dropdown hidden absolute top-1/2 right-10 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
-          <div class="flex items-center justify-start mb-5 gap-3">
-            <div>
-              <p class="font-medium text-lg">Hello Rachel!</p>
-              <p class="text-sm">Rachelsaket@gmail.com</p>
-            </div>
-            <img src="/public/images/user.png" alt="Profile" class="rounded-full h-12 w-12">
-          </div>
-          <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
-            Log Out
-          </button>
         </div>
-      </div>
-    </header>
-    <!-- Mobile search bar -->
-    <div class="md:hidden relative w-full pb-4 px-6">
-        <span class="absolute left-10 top-1/4 mt-1.5 transform -translate-y-1/2">
+      </header>
+      <!-- Mobile search bar -->
+      <div class="md:hidden relative w-full pb-4 px-6">
+        <span
+          class="absolute left-10 top-1/4 mt-1.5 transform -translate-y-1/2"
+        >
           <i class="ri-search-line"></i>
         </span>
         <input
@@ -113,21 +162,35 @@
           placeholder="Search your PDF library or documents..."
           class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke"
         />
-        <div class="dropdown hidden absolute w-11/12 mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
+        <div
+          class="dropdown hidden absolute w-11/12 mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10"
+        >
           <ul class="text-sm">
-            <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-mail-add-line"></i>Attach Email</a></li>
-            <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-download-line"></i>Downloads</a></li>
+            <li>
+              <a href="#" class="px-4 py-2 flex items-center gap-3"
+                ><i class="ri-mail-add-line"></i>Attach Email</a
+              >
+            </li>
+            <li>
+              <a href="#" class="px-4 py-2 flex items-center gap-3"
+                ><i class="ri-download-line"></i>Downloads</a
+              >
+            </li>
           </ul>
         </div>
-    </div>
+      </div>
 
-    <div class="flex" style="height:calc(100vh - 74px)">
+      <div class="flex" style="height: calc(100vh - 74px)">
         <!-- Sidebar -->
-        <aside id="sidebar"
-        class="fixed bg-light-sky-blue z-10 inset-y-0 left-0 w-32 transform -translate-x-full md:translate-x-0 md:relative md:w-24 shadow-lg md:shadow-none transition-transform duration-300"
+        <aside
+          id="sidebar"
+          class="fixed bg-light-sky-blue z-10 inset-y-0 left-0 w-32 transform -translate-x-full md:translate-x-0 md:relative md:w-24 shadow-lg md:shadow-none transition-transform duration-300"
         >
           <nav class="mt-4">
-            <ul class="flex flex-col gap-5 px-6 overflow-auto scroll" style="height:calc(100vh - 5.8rem)">
+            <ul
+              class="flex flex-col gap-5 px-6 overflow-auto scroll"
+              style="height: calc(100vh - 5.8rem)"
+            >
               <li class="md:hidden flex justify-end">
                 <button class="menu-toggle">
                   <i class="ri-close-circle-fill"></i>
@@ -152,37 +215,127 @@
                 </a>
               </li>
               <li>
-                <a href="/src/preserve.html" class="flex flex-col items-center">
-                  <i class="ri-shield-keyhole-line text-[32px] px-1.5 menu-hover"></i>
+                <a
+                  href="/src/convert-protect.html"
+                  class="flex flex-col items-center"
+                >
+                  <i
+                    class="ri-shield-keyhole-line text-[32px] px-1.5 menu-hover"
+                  ></i>
                   <span class="secondary-text text-center">Preserve</span>
                 </a>
               </li>
               <li>
-                <a href="/src/tools.html" class="flex flex-col items-center menu-button">
+                <a
+                  href="/src/tools.html"
+                  class="flex flex-col items-center menu-button"
+                >
                   <i class="ri-tools-line text-[32px] px-1.5 menu-hover"></i>
                   <span class="secondary-text text-center">Tools</span>
                 </a>
               </li>
               <li>
-                <a href="/src/help.html" class="flex flex-col items-center menu-button">
+                <a
+                  href="/src/help.html"
+                  class="flex flex-col items-center menu-button"
+                >
                   <i class="ri-question-line text-[32px] px-1.5 menu-hover"></i>
                   <span class="secondary-text text-center">Help</span>
                 </a>
                 <div class="menu-dropdown hidden w-60">
                   <ul class="text-sm">
-                    <li><a href="#" class="menu-dropdown-option hover:rounded-t-[10px] hover:bg-transparent-light-sky-blue">AI Baze help</a></li>                  
-                    <li><a href="#" class="menu-dropdown-option hover:bg-transparent-light-sky-blue">What’s this?</a></li>
-                    <li><a href="#" class="menu-dropdown-option hover:bg-transparent-light-sky-blue">User guides</a></li>
-                    <li><a href="#" class="menu-dropdown-option hover:bg-transparent-light-sky-blue">Show tip of the day</a></li>
-                    <li><a href="#" class="menu-dropdown-option hover:bg-transparent-light-sky-blue">Search commands</a></li>
-                    <li><a href="#" class="menu-dropdown-option hover:bg-transparent-light-sky-blue">Get help online</a></li>
-                    <li><a href="#" class="menu-dropdown-option hover:bg-transparent-light-sky-blue">Send feedback</a></li>
-                    <li><a href="#" class="menu-dropdown-option hover:bg-transparent-light-sky-blue">Restart in safe mode</a></li>
-                    <li><a href="#" class="menu-dropdown-option hover:bg-transparent-light-sky-blue">Get involved</a></li>
-                    <li><a href="#" class="menu-dropdown-option hover:bg-transparent-light-sky-blue">Donate to AI Baze</a></li>
-                    <li><a href="#" class="menu-dropdown-option hover:bg-transparent-light-sky-blue">License information</a></li>
-                    <li><a href="#" class="menu-dropdown-option hover:bg-transparent-light-sky-blue">Check for updates</a></li>
-                    <li><a href="#" class="menu-dropdown-option hover:rounded-b-[10px] hover:bg-transparent-light-sky-blue" style="border-bottom:none">About AI Baze</a></li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:rounded-t-[10px] hover:bg-transparent-light-sky-blue"
+                        >AI Baze help</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
+                        >What’s this?</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
+                        >User guides</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
+                        >Show tip of the day</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
+                        >Search commands</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
+                        >Get help online</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
+                        >Send feedback</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
+                        >Restart in safe mode</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
+                        >Get involved</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
+                        >Donate to AI Baze</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
+                        >License information</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
+                        >Check for updates</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="menu-dropdown-option hover:rounded-b-[10px] hover:bg-transparent-light-sky-blue"
+                        style="border-bottom: none"
+                        >About AI Baze</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </li>
@@ -192,7 +345,8 @@
 
         <!-- Main content -->
         <div
-          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 pt-2 overflow-hidden" id="main-content"
+          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 pt-2 overflow-hidden"
+          id="main-content"
         >
           <!-- Ribbon Section -->
           <section class="ribbon">
@@ -379,7 +533,12 @@
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center gap-2">
-                <span class="mini-containers">Manage Workflows</span>
+                <span
+                  class="max-containers"
+                  >
+                  Manage Workflows
+                  </span
+                >
               </div>
               <div class="flex flex-col justify-center gap-2">
                 <div class="group hover-div">
@@ -428,11 +587,11 @@
               </div>
               <div class="flex flex-col justify-center gap-2">
                 <div class="flex items-center gap-0.5">
-                  <div class="group hover-div">
+                  <div class="group hover-div" onclick="rightPanel('service')">
                     <i class="ri-customer-service-line small-icon-size"></i>
                     <span class="tooltip group-hover:opacity-100">Service</span>
                   </div>
-                  <div class="group hover-div">
+                  <div class="group hover-div" onclick="rightPanel('remove')">
                     <svg
                       class="small-icon-size"
                       width="30"
@@ -464,7 +623,7 @@
 
                     <span class="tooltip group-hover:opacity-100">Remove</span>
                   </div>
-                  <div class="group hover-div">
+                  <div class="group hover-div" onclick="rightPanel('guide')">
                     <svg
                       class="small-icon-size"
                       width="30"
@@ -485,7 +644,7 @@
 
                     <span class="tooltip group-hover:opacity-100">Guide</span>
                   </div>
-                  <div class="group hover-div">
+                  <div class="group hover-div" onclick="rightPanel('update')">
                     <svg
                       class="small-icon-size"
                       width="30"
@@ -502,7 +661,7 @@
 
                     <span class="tooltip group-hover:opacity-100">Updates</span>
                   </div>
-                  <div class="group hover-div">
+                  <div class="group hover-div" onclick="rightPanel('linear')" >
                     <svg
                       class="small-icon-size"
                       width="30"
@@ -520,7 +679,7 @@
 
                     <span class="tooltip group-hover:opacity-100">Linear</span>
                   </div>
-                  <div class="group hover-div">
+                  <div class="group hover-div" onclick="rightPanel('account')">
                     <svg
                       class="small-icon-size"
                       width="30"
@@ -537,21 +696,30 @@
 
                     <span class="tooltip group-hover:opacity-100">Account</span>
                   </div>
-                  <div class="group hover-div">
+                  <div class="group hover-div" onclick="rightPanel('comment')">
                     <i class="ri-chat-quote-line small-icon-size"></i>
                     <span class="tooltip group-hover:opacity-100">Comment</span>
                   </div>
                 </div>
-                <div class="flex gap-2">
-                  <span class="mini-containers">Get Involved</span>
-                  <span class="mini-containers">Rest in Safe Mode</span>
+                <div class="flex gap-2 px-2">
+                  <span
+                    class="mini-containers-2"
+                    
+                    onclick="rightPanel('getinvoled')"
+                    >Get Involved</span
+                  >
+                  <span class="mini-containers-2"
+                  
+                  onclick="rightPanel('savemode')"
+                    >Rest in Safe Mode</span
+                  >
                 </div>
               </div>
             </div>
 
             <div class="h-full flex pl-3 gap">
               <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div">
+                <div class="group hover-div" onclick="rightPanel('Donate')">
                   <svg
                     class="small-icon-size"
                     width="30"
@@ -568,7 +736,7 @@
 
                   <span class="tooltip group-hover:opacity-100">Donate</span>
                 </div>
-                <div class="group hover-div">
+                <div class="group hover-div" onclick="rightPanel('smartphone')">
                   <svg
                     class="small-icon-size"
                     width="30"
@@ -621,7 +789,10 @@
                 </div>
               </div>
               <div class="flex flex-col gap-2">
-                <div class="flex justify-center gap-2">
+                <div
+                  class="flex justify-center gap-2"
+                  onclick="rightPanel('License')"
+                >
                   <div class="group hover-div">
                     <svg
                       class="small-icon-size"
@@ -667,7 +838,7 @@
                   </div>
                 </div>
                 <div>
-                  <div class="group hover-div">
+                  <div class="group hover-div" onclick="rightPanel('about')">
                     <svg
                       class="small-icon-size"
                       width="30"
@@ -681,7 +852,7 @@
                         fill="currentColor"
                       />
                     </svg>
-  
+
                     <span class="tooltip group-hover:opacity-100">About</span>
                   </div>
                 </div>
@@ -690,41 +861,680 @@
           </section>
 
           <!-- File Section -->
-          <section class="flex file-section gap-4 mt-4" style="max-height: calc(100vh - 17.5rem);">
+          <section
+            class="flex file-section gap-4 mt-4"
+            style="max-height: calc(100vh - 17.5rem)"
+          >
             <div class="file scroll">
               <div class="box">
-                <div class="upload-section cursor-pointer" onclick="document.getElementById('fileUpload').click()">
-                    <i class="ri-upload-cloud-2-fill ri-xl"></i>
-                    <span>Drop a PDF file here, or click to upload</span>
-                    <input type="file" id="fileUpload" class="hidden" accept=".pdf"/>
+                <div
+                  class="upload-section cursor-pointer"
+                  onclick="document.getElementById('fileUpload').click()"
+                >
+                  <i class="ri-upload-cloud-2-fill ri-xl"></i>
+                  <span>Drop a PDF file here, or click to upload</span>
+                  <input
+                    type="file"
+                    id="fileUpload"
+                    class="hidden"
+                    accept=".pdf"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="right-panel hidden">
+              <div class="service hidden">
+                <!-- service sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                  <div class="p-4">
+                    <div class="font-bold">Aibaze Help</div>
+                    <label class="text-sm"
+                      >Welcome to Aibaze Help! Explore guides and tips to
+                      maximize your experience</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="remove hidden">
+                <!--remove sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                  <div class="p-4">
+                    <div class="font-bold">What’s This?</div>
+                    <label class="text-sm"
+                      >Hover over any tool to see a brief description of its
+                      purpose and functionality</label
+                    >
+                  </div>
+                  <div class="p-4">
+                    <svg
+                      width="320"
+                      height="167"
+                      viewBox="0 0 401 167"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <rect
+                        width="401"
+                        height="167"
+                        fill="url(#pattern0_952_14188)"
+                      />
+                      <defs>
+                        <pattern
+                          id="pattern0_952_14188"
+                          patternContentUnits="objectBoundingBox"
+                          width="1"
+                          height="1"
+                        >
+                          <use
+                            xlink:href="#image0_952_14188"
+                            transform="matrix(0.00218041 0 0 0.0052356 -0.00258516 0)"
+                          />
+                        </pattern>
+                        <image
+                          id="image0_952_14188"
+                          width="461"
+                          height="191"
+                          xlink:href="data:image/jpeg;base64,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"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="guide hidden">
+                <!--guide sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                  <div class="p-4">
+                    <div class="font-bold">User Guides</div>
+                    <label class="text-sm"
+                      >Find step-by-step instructions for features in
+                      Aibaze</label
+                    >
+                    <div class="w-full py-4">
+                      <button
+                        class="white-button-active-one w-32 h-10"
+                        
+                      >
+                        Getting started
+                      </button>
+                    </div>
+
+                    <div class="">
+                      <label class="text-sm"
+                        >Step 1: Click on 'Open File' from the Ribbon
+                        Bar.</label
+                      >
+                      <br />
+                      <label class="text-sm"
+                        >Step 2: Choose a PDF or document to work on.</label
+                      >
+                      <br />
+                      <label class="text-sm"
+                        >Step 3: Use tools from the ribbon to edit or organize
+                        the document.</label
+                      >
+                      <br />
+                      <label class="text-sm"
+                        >Step 4: Once done click on “Save as” button to save
+                        your file.</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="linear hidden">
+                <!--guide sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                <div class="p-4">
+                  <div class="font-bold mb-2">Search Command</div>
+                  <div class="py-2 h-3 ">
+                    <div class=" bg-white-smoke rounded-lg flex items-center justify-center">
+                      <i class="ri-search-line text-gray-500 text-lg ml-3 px-2"></i>
+                      <input
+                        type="text"
+                        class="h-10 rounded-lg mb-0 bg-transparent w-full px-3 border-none outline-none"
+                      />
+                    </div>
+                  </div>
+                </div>
+                
+                  
+                  
+                </div>
+              </div>
+              <div class="update hidden">
+                <!--sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                  <div class="p-4">
+                    <div class="font-bold text-">Tip of the Day</div>
+                    <label class="text-sm"
+                      >Today's Tip: Use the 'Split Pages' tool to separate
+                      sections of a long document</label
+                    >
+
+                    <div class="flex items-center gap-2 py-4">
+                      <svg
+                        width="25"
+                        height="25"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="0.5"
+                          y="0.5"
+                          width="39"
+                          height="39"
+                          rx="9.5"
+                          stroke="#FBFBFB"
+                        />
+                      </svg>
+                      <label class="text-sm">Show tips on startup</label>
+                      <svg
+                        width="25"
+                        height="25"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width="40" height="40" rx="10" fill="#FBFBFB" />
+                        <path
+                          d="M12 13.0002V27.0002M16.065 20.6262C16.319 21.8372 17.673 22.7082 20.38 24.4482C23.325 26.3412 24.797 27.2882 25.99 26.9232C26.3962 26.7969 26.7683 26.5797 27.078 26.2882C28 25.4182 28 23.6122 28 20.0002C28 16.3882 28 14.5822 27.078 13.7122C26.768 13.4205 26.3955 13.2033 25.989 13.0772C24.797 12.7122 23.325 13.6592 20.38 15.5522C17.673 17.2922 16.32 18.1622 16.065 19.3742C15.978 19.7862 15.978 20.2142 16.065 20.6262Z"
+                          stroke="#333333"
+                          stroke-opacity="0.3"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <label class="text-sm">Previous</label>
+                      <svg
+                        width="25"
+                        height="25"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width="40" height="40" rx="10" fill="#FBFBFB" />
+                        <path
+                          d="M28 13.0002V27.0002M23.935 20.6262C23.681 21.8372 22.327 22.7082 19.62 24.4482C16.675 26.3412 15.203 27.2882 14.01 26.9232C13.6038 26.7969 13.2317 26.5797 12.922 26.2882C12 25.4182 12 23.6122 12 20.0002C12 16.3882 12 14.5822 12.922 13.7122C13.232 13.4205 13.6045 13.2033 14.011 13.0772C15.203 12.7122 16.675 13.6592 19.62 15.5522C22.327 17.2922 23.68 18.1622 23.935 19.3742C24.022 19.7862 24.022 20.2142 23.935 20.6262Z"
+                          stroke="#333333"
+                          stroke-opacity="0.3"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <label class="text-sm">Next</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="account hidden">
+                <!-- account sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                  <div class="p-4">
+                    <div class="font-bold">Get Help Online</div>
+                    <label class="text-sm"
+                      >Visit our support page for FAQs, forums, and
+                      tutorials.</label
+                    >
+                    <br />
+                    <span  class="text-sm text-royal-blue"
+                      >www.aibaze.com</span
+                    >
+                  </div>
+                  <div class="p-4">
+                    <div class="p-2">
+                      <div class="text-sm">Live chat with us</div>
+                      <div class="flex justify-end p-2">
+                        <span class="button-blue">Hello how r u</span>
+                      </div>
+                      <div>
+                        <label class="text-sm">Assistant</label>
+                        <span
+                          class="white-button-active-one w-64"
+                          >
+                          Hello I’m good, how may i help you
+                        </span>
+                      </div>
+                      <div class="flex justify-end p-2">
+                        <span class="button-blue">what’s merge</span>
+                      </div>
+                      <div>
+                        <label class="text-sm">Assistant</label>
+                        <span
+                          class="white-button-active-one"
+                          >
+                          Merge tools help’s to merge two different element’s
+                          from the document
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <div class="white-button-active-one">
+                      
+                      <input
+                        type="text"
+                        class="h-8 rounded-lg mb-0 bg-transparent w-full px-3 border-none outline-none"
+                        placeholder="Ask anything..."
+                      />
+                      <button><i class="ri-send-plane-fill text-2xl"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="comment hidden">
+                <!--comment sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                  <div class="p-4">
+                    <div class="font-bold">Send Feedback</div>
+                    <label class="text-sm"
+                      >We value your feedback to improve Aibaze!</label
+                    >
+                  </div>
+                  <div class="p-4">
+                    <div class="flex gap-4">
+                      <div
+                        class="relative custom-select white-button-active"
+                        style="width: 9rem; height: 2rem; padding: 0"
+                      >
+                        <div
+                          class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2"
+                        >
+                          <span>Feedback type</span>
+                          <span><i class="ri-arrow-down-s-line"></i></span>
+                        </div>
+                        <div
+                          class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16"
+                        >
+                          <div class="option !pl-1.5">Viewer</div>
+                          <div class="option !pl-1.5">Commenter</div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="relative custom-select white-button-active"
+                        style="width: 9rem; height: 2rem; padding: 0"
+                      >
+                        <div
+                          class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2"
+                        >
+                          <span>Bugs</span>
+                          <span><i class="ri-arrow-down-s-line"></i></span>
+                        </div>
+                        <div
+                          class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16"
+                        >
+                          <div class="option !pl-1.5">Feature Request</div>
+                          <div class="option !pl-1.5">General Feedback</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <label>Description</label>
+                    <textarea
+                      class="bg-white-smoke h-32 rounded-[10px] mb-5 white-button-active"
+                      style="width: 100%; resize: none; padding: 10px; border: none; outline: none;"
+                      placeholder="Write your description here..."
+                    ></textarea>
+                    <button class="inactive-one rounded-lg w-36 h-10" >Submit</button>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="getinvoled hidden">
+                <!-- getinvoled sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                  <div class="p-4">
+                    <div class="font-bold">Get Involved</div>
+                    <label class="text-sm"
+                      >Join the Aibaze community to help improve the
+                      software</label
+                    >
+                  </div>
+                  <div class="p-4">
+                    <ul class="list-disc ml-5">
+                      <li>
+                        </i
+                        >Ways to Contribute:
+                        <ul class="list-disc ml-5">
+                          <li>
+                            </i
+                            >Translate Aibaze
+                          </li>
+                          <li>
+                            </i
+                            >Test New Features
+                          </li>
+                          <li>
+                            </i
+                            >Submit Bug Reports
+                          </li>
+                        </ul>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="savemode hidden">
+                <!-- savemode sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                  <div class="p-4">
+                    <div class="font-bold">Restart in Safe Mode</div>
+                    <label class="text-sm"
+                      >Restart Aibaze with default settings to resolve
+                      issues</label
+                    >
+                  </div>
+                  <div class="p-4">
+                    <button class="white-button-active">
+                      This temporarily disables extensions and custom settings
+                    </button>
+                    <div class="py-4">
+                      <button
+                        class="inactive-one w-32 h-10"
+                        >
+                        Restart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="Donate hidden">
+                <!-- savemode sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                  <div class="p-4">
+                    <div class="font-bold">Donate to Aibaze</div>
+                    <label class="text-sm"
+                      >Support Aibaze development and get access to premium
+                      content.</label
+                    >
+                  </div>
+                  <div class="p-4">
+                    <label class="text-sm"
+                      >Your donations help us maintain and enhance Aibaze. Thank
+                      you for your support!</label
+                    >
+                  </div>
+                  <div class="p-4">
+                    <button class="inactive-one w-36 h-8">Donate</button>
+                  </div>
+                </div>
+              </div>
+              <div class="License hidden">
+                <!-- savemode sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                  <div class="p-4">
+                    <div class="font-bold">License Information</div>
+                    <label class="text-sm"
+                      >AIBaze office is made available subject to Google public
+                      license v.2.0 copy of GPL can be obtained at
+                      <a href="#"><span style="color: royalblue;">https:/google.com.</span></a></label
+                    >
+                  </div>
+                  <div class="p-4">
+                    <label class="text-sm"
+                      >Copyright license for an office suite ensures the
+                      software's intellectual property is protected while
+                      granting the user specific, limited rights to use the
+                      software. Always read the End User License Agreement
+                      (EULA) or Terms of Service for exact details.</label
+                    >
+                    <div class="py-4">
+                      <label class="text-sm">All rights reserved.</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="smartphone hidden">
+                <!-- savemode sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                  <div class="p-4">
+                    <div class="font-bold">Updates</div>
+                    <label class="font-semibold text-sm"
+                      >AI Baze office 23.2 is up to date.</label
+                    >
+                  </div>
+                  <div class="p-4">
+                    <label class="text-sm">Download the latest version</label>
+                    <div class="py-2">
+                      <button class="inactive-one h-9 w-32" >Install</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="about hidden">
+                <!-- savemode sider -->
+                <div
+                  class="border-b border-white-smoke flex justify-center items-center"
+                >
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Help</span>
+                    <button onclick="hideRightPanel()">
+                      <i class="ri-close-large-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="overflow-y-auto scroll right-panel-content"
+                  style="max-height: calc(100vh - 25rem)"
+                >
+                  <div class="p-4">
+                    <div class="font-bold">About Aibaze</div>
+                    <label class="text-sm"
+                      >Aibaze is designed to simplify document management and
+                      editing.</label
+                    >
+                    <br />
+                  </div>
+                  <div class="p-4">
+                    <label class="text-sm"> Version Info: Version 1.2.3</label>
+                  </div>
+                  <div class="p-4">
+                    <label class="text-sm"
+                      >Developed and maintained by the Aibaze team</label
+                    >
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
           <!-- Pagination & Zoom controls -->
-          <section class="absolute bottom-2 flex items-center justify-between bg-light-sky-blue py-1 px-10 rounded-2xl w-[90%] sm:w-[93%] md:w-[85%] lg:w-[88%] xl:w-[90%]">
+          <section
+            class="absolute bottom-2 flex items-center justify-between bg-light-sky-blue py-1 px-10 rounded-2xl w-[90%] sm:w-[93%] md:w-[85%] lg:w-[88%] xl:w-[90%]"
+          >
             <!-- Pagination controls -->
             <div class="flex flex-col items-center justify-center">
               <div class="flex items-center space-x-2">
-                  <button class="p-1 rounded-full focus:outline-none">
-                    <i class="ri-arrow-left-s-line ri-xl"></i>
-                  </button>
-                  <span class="py-1 rounded-full">1</span>
-                  <button class="p-1 rounded-full focus:outline-none">
-                    <i class="ri-arrow-right-s-line ri-xl"></i>
-                  </button>
+                <button class="p-1 rounded-full focus:outline-none">
+                  <i class="ri-arrow-left-s-line ri-xl"></i>
+                </button>
+                <span class="py-1 rounded-full">1</span>
+                <button class="p-1 rounded-full focus:outline-none">
+                  <i class="ri-arrow-right-s-line ri-xl"></i>
+                </button>
               </div>
             </div>
-            
+
             <!-- Horizontal scroll -->
-            <div class="scroll-x" style="overflow-x: auto; max-width: 100%;">
-            </div>
+            <div
+              class="scroll-x"
+              style="overflow-x: auto; max-width: 100%"
+            ></div>
 
             <!-- Zoom controls -->
             <div class="flex items-center space-x-2">
               <i class="ri-zoom-out-line text-lg cursor-pointer"></i>
-              <input type="range" id="zoomSlider" min="12" max="200" value="100" class="w-full h-0.5 bg-white-smoke slider-thumb"/>
+              <input
+                type="range"
+                id="zoomSlider"
+                min="12"
+                max="200"
+                value="100"
+                class="w-full h-0.5 bg-white-smoke slider-thumb"
+              />
               <i class="ri-zoom-in-line text-lg cursor-pointer"></i>
               <span id="zoomPercentage" class="text-sm font-medium">100%</span>
             </div>
@@ -735,9 +1545,11 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/public/js/zoom.js"></script>
+    <script src="/public/js/right-panel.js"></script>
     <script src="/public/js/ribbon.js"></script>
     <script src="/public/js/sidebar.js"></script>
     <script src="/public/js/menu-dropdown.js"></script>
     <script src="/public/js/dropdown.js"></script>
+    <script src="/public/js/custom-select.js"></script>
   </body>
 </html>

@@ -168,8 +168,8 @@
                     <a href="#" class="menu-dropdown-option">File sharing<i class="ri-arrow-right-s-fill ri-xl"></i></a>
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
-                        <li><button onclick="rightPanel('file-share','null','share')" class="menu-dropdown-option hover:rounded-t-[10px]">Share with users (via email)</button></li>
-                        <li><button onclick="rightPanel('file-share','null','attach-email')" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Email as attachment</button></li>
+                        <li><button onclick="rightPanel('file-share','','share')" class="menu-dropdown-option hover:rounded-t-[10px]">Share with users (via email)</button></li>
+                        <li><button onclick="rightPanel('file-share','','attach-email')" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Email as attachment</button></li>
                       </ul>
                     </div>
                   </li>
@@ -191,7 +191,7 @@
                         <li><button onclick="exporting('Uploading..')" class="menu-dropdown-option hover:rounded-t-[10px]">Dropbox</button></li>
                         <li><button onclick="exporting('Uploading..')" class="menu-dropdown-option">Google Drive</button></li>
                         <li><button onclick="exporting('Uploading..')" class="menu-dropdown-option">OneDrive</button></li>
-                        <li><button onclick="rightPanel('share','null','upload-url')" class="menu-dropdown-option">Web Address (URL)</button></li>
+                        <li><button onclick="rightPanel('share','','upload-url')" class="menu-dropdown-option">Web Address (URL)</button></li>
                         <li><a href="/" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Recent files</a></li>
                       </ul>
                     </div>
@@ -200,9 +200,9 @@
                     <a href="#" class="menu-dropdown-option">Print<i class="ri-arrow-right-s-fill ri-xl"></i></a>
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
-                        <li><button onclick="rightPanel('print','null','print')" class="menu-dropdown-option hover:rounded-t-[10px]">Print</button></li>
+                        <li><button onclick="rightPanel('print','','print')" class="menu-dropdown-option hover:rounded-t-[10px]">Print</button></li>
                         <li><button onclick="window.print()" class="menu-dropdown-option">Printer Configuration</button></li>
-                        <li><button onclick="rightPanel('print','null','null')" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Close</button></li>
+                        <li><button onclick="rightPanel('print','','')" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Close</button></li>
                       </ul>
                     </div>
                   </li>
@@ -210,8 +210,8 @@
                     <a href="#" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Scan<i class="ri-arrow-right-s-fill ri-xl"></i></a>
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
-                        <li><button onclick="rightPanel('scan','null','straighten')" class="menu-dropdown-option hover:rounded-t-[10px]">Straighten</button></li>
-                        <li><button onclick="rightPanel('scan','null','text-recognition')" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Text Recognition</button></li>
+                        <li><button onclick="rightPanel('scan','','straighten')" class="menu-dropdown-option hover:rounded-t-[10px]">Straighten</button></li>
+                        <li><button onclick="rightPanel('scan','','text-recognition')" class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Text Recognition</button></li>
                       </ul>
                     </div>
                   </li>
@@ -240,6 +240,12 @@
               <a href="/src/help.html" class="flex flex-col items-center">
                 <i class="ri-question-line text-[32px] px-1.5 menu-hover"></i>
                 <span class="secondary-text text-center">Help</span>
+              </a>
+            </li>
+            <li>
+              <a href="/src/ai.html" class="flex flex-col items-center">
+                <i class="ri-file-line text-[32px] px-1.5 menu-hover"></i>
+                <span class="secondary-text text-center">AI</span>
               </a>
             </li>
           </ul>
@@ -320,11 +326,11 @@
                 <p class="font-bold">Share</p>
               </div>
               <div class="flex flex-col justify-center">
-                <button onclick="rightPanel('file-share','null','share')" class="group hover-div">
+                <button onclick="rightPanel('file-share','','share')" class="group hover-div">
                   <i class="ri-share-fill small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100">Share with Users (via Email)</span>
                 </button>
-                <button onclick="rightPanel('file-share','null','attach-email')" class="group hover-div">
+                <button onclick="rightPanel('file-share','','attach-email')" class="group hover-div">
                   <i class="ri-mail-send-line small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100"
                     >Email as Attachment</span
@@ -378,11 +384,11 @@
                 <p class="font-bold">Upload</p>
               </div>
               <div class="flex flex-col justify-center">
-                <button onclick="rightPanel('upload','null','drive-upload')" class="group hover-div">
+                <button onclick="rightPanel('upload','','drive-upload')" class="group hover-div">
                   <i class="ri-dropbox-line small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100">Upload to Dropbox</span>
                 </button>
-                <button onclick="rightPanel('file-share','null','upload-url')" class="group hover-div">
+                <button onclick="rightPanel('file-share','','upload-url')" class="group hover-div">
                   <i class="ri-link small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100"
                     >Upload from URL</span
@@ -390,7 +396,7 @@
                 </button>
               </div>
               <div class="flex flex-col justify-center">
-                <button onclick="rightPanel('upload','null','drive-upload')" class="group hover-div">
+                <button onclick="rightPanel('upload','','drive-upload')" class="group hover-div">
                   <i class="ri-drive-line small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100"
                     >Upload to Google Drive</span
@@ -417,7 +423,7 @@
                 </a>
               </div>
               <div class="flex flex-col justify-center">
-                <button onclick="rightPanel('upload','null','drive-upload')" class="group hover-div">
+                <button onclick="rightPanel('upload','','drive-upload')" class="group hover-div">
                   <i class="ri-cloud-windy-line small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100">Upload to OneDrive</span>
                 </button>
@@ -433,13 +439,13 @@
                 <p class="font-bold">Scan</p>
               </div>
               <div class="flex flex-col justify-center">
-                <button onclick="rightPanel('scan','null','text-recognition')" class="group hover-div">
+                <button onclick="rightPanel('scan','','text-recognition')" class="group hover-div">
                   <i class="ri-text-snippet small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100"
                     >Text Recognition</span
                   >
                 </button>
-                <button onclick="rightPanel('scan','null','straighten')" class="group hover-div">
+                <button onclick="rightPanel('scan','','straighten')" class="group hover-div">
                   <svg
                     class="small-icon-size group-focus:text-white-smoke"
                     width="30"
@@ -467,11 +473,11 @@
                 <p class="font-bold">Print</p>
               </div>
               <div class="flex flex-col justify-center">
-                <button onclick="rightPanel('print','null','print')" class="group hover-div">
+                <button onclick="rightPanel('print','','print')" class="group hover-div">
                   <i class="ri-printer-line small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100">Print</span>
                 </button>
-                <button onclick="rightPanel('close','null','null')" class="group hover-div">
+                <button onclick="rightPanel('close','','')" class="group hover-div">
                   <i class="ri-close-line small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100">Close</span>
                 </button>

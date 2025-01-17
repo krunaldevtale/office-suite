@@ -62,7 +62,9 @@
 .tooltip-text {
   font-size: 12px;
 }
-
+.border-royal-blue{
+  border: 1px solid var("--royal-blue");
+}
 .logo-title{
   @apply text-2xl md:text-4xl font-semibold;
 }

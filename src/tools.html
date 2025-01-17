@@ -165,10 +165,9 @@
                 <div class="menu-dropdown hidden w-60">
                   <ul class="text-sm">
                     <li>
-                      <a
-                        href="#"
+                      <button onclick="rightPanel('tools-metadata','header-bates','bates')"
                         class="menu-dropdown-option hover:rounded-t-[10px] hover:bg-transparent-light-sky-blue"
-                        >Add bates numbering</a
+                        >Add bates numbering</button
                       >
                     </li>
                     <li>
@@ -179,17 +178,15 @@
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button onclick="rightPanel('tools-metadata','process-media','crop')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Crop Image/Text</a
+                        >Crop Image/Text</button
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button onclick="rightPanel('tools-metadata','process-media','edit-metadata')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Edit Metadata</a
+                        >Edit Metadata</button
                       >
                     </li>
                     <li>
@@ -207,17 +204,15 @@
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button onclick="rightPanel('tools-metadata','header-bates','header')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Add Header & Footer</a
+                        >Add Header & Footer</button
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button onclick="rightPanel('tools-metadata','repair-merge','merge')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Multiple Pages on One (N-up)</a
+                        >Multiple Pages on One (N-up)</button
                       >
                     </li>
                     <li>
@@ -235,17 +230,15 @@
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button onclick="rightPanel('tools-metadata','repair-merge','repair')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Repair Document (fix errors)</a
+                        >Repair Document (fix errors)</button
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button onclick="rightPanel('tools-metadata','workflow-manager','resize')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Resize Document/Text</a
+                        >Resize Document/Text</button
                       >
                     </li>
                     <li>
@@ -263,10 +256,9 @@
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button onclick="rightPanel('tools-metadata','workflow-manager','manage-workflow')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Manage Workflows</a
+                        >Manage Workflows</button
                       >
                     </li>
                     <li>
@@ -299,7 +291,7 @@
 
         <!-- Main content -->
         <div
-          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 pt-2 overflow-hidden" id="main-content"
+          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 pt-2 overflow-hidden relative" id="main-content"
         >
           <!-- Ribbon Section -->
           <section class="ribbon">
@@ -308,30 +300,30 @@
                 <i class="ri-tools-line icon-size"></i>
                 <p class="font-bold">Tools & Metadata</p>
               </div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
                 <div class="group hover-div">
-                  <i class="ri-bookmark-line small-icon-size"></i>
-                  <span class="tooltip group-hover:opacity-100">Bookmark</span>
+                  <i class="ri-bookmark-line small-icon-size group-focus:text-white-smoke"></i>
+                  <span class="tooltip group-hover:opacity-100">Create Bookmarks</span>
                 </div>
                 <div class="group hover-div">
-                  <i class="ri-movie-line small-icon-size"></i>
+                  <i class="ri-movie-line small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100">Watermark</span>
                 </div>
               </div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
                 <button onclick="rightPanel('tools-metadata','process-media','crop')" class="group hover-div">
-                  <i class="ri-gallery-line small-icon-size"></i>
-                  <span class="tooltip group-hover:opacity-100">Crop</span>
+                  <i class="ri-gallery-line small-icon-size group-focus:text-white-smoke"></i>
+                  <span class="tooltip group-hover:opacity-100">Crop Image/Text</span>
                 </button>
-                <div class="group hover-div">
-                  <i class="ri-window-2-line small-icon-size"></i>
-                  <span class="tooltip group-hover:opacity-100">Watermark</span>
-                </div>
+                <button onclick="rightPanel('tools-metadata','header-bates','header')" class="group hover-div">
+                  <i class="ri-window-2-line small-icon-size group-focus:text-white-smoke"></i>
+                  <span class="tooltip group-hover:opacity-100">Add Header & Footer</span>
+                </button>
               </div>
-              <div class="flex flex-col ite justify-center gap-2">
+              <div class="flex flex-col ite justify-center">
                 <button onclick="rightPanel('tools-metadata','process-media','edit-metadata')" class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -357,7 +349,7 @@
                     />
                   </svg>
 
-                  <span class="tooltip group-hover:opacity-100">Metadata</span>
+                  <span class="tooltip group-hover:opacity-100">Edit Metadata</span>
                 </button>
                 <button onclick="rightPanel('tools-metadata','repair-merge','merge')" class="group hover-div">
                   <svg
@@ -391,18 +383,18 @@
                     />
                   </svg>
 
-                  <span class="tooltip group-hover:opacity-100">Multiple</span>
+                  <span class="tooltip group-hover:opacity-100">Multiple Pages on One (N-up)</span>
                 </button>
               </div>
               <div class="flex flex-col items-center justify-center gap-2">
-                <span class="mini-containers">Add Bates Numbering</span>
+                <button onclick="rightPanel('tools-metadata','header-bates','bates')" class="mini-containers">Add Bates Numbering</button>
                 <span class="mini-containers">Convert to Grayscale</span>
               </div>
               <div class="dashed-line"></div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -423,15 +415,15 @@
                     >Page Number</span
                   >
                 </div>
-                <div class="group hover-div">
-                  <i class="ri-expand-diagonal-s-line small-icon-size"></i>
-                  <span class="tooltip group-hover:opacity-100">Metadata</span>
-                </div>
+                <button onclick="rightPanel('tools-metadata','workflow-manager','resize')" class="group hover-div">
+                  <i class="ri-expand-diagonal-s-line small-icon-size group-focus:text-white-smoke"></i>
+                  <span class="tooltip group-hover:opacity-100">Resize Document/Text</span>
+                </button>
               </div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 -2 25 30"
@@ -447,14 +439,14 @@
                   <span class="tooltip group-hover:opacity-100">Rename</span>
                 </div>
                 <div class="group hover-div">
-                  <i class="ri-loop-left-line small-icon-size"></i>
+                  <i class="ri-loop-left-line small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100">Rename</span>
                 </div>
               </div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
                 <button onclick="rightPanel('tools-metadata','repair-merge','repair')" class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -478,20 +470,20 @@
                     />
                   </svg>
 
-                  <span class="tooltip group-hover:opacity-100">Repair</span>
+                  <span class="tooltip group-hover:opacity-100">Repair Document (fix errors)</span>
                 </button>
                 <div class="group hover-div">
-                  <i class="ri-close-line small-icon-size"></i>
+                  <i class="ri-close-line small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100">Rename</span>
                 </div>
               </div>
               <div class="flex flex-col items-center justify-center gap-2">
-                <span class="mini-containers">Manage Workflows</span>
+                <button onclick="rightPanel('tools-metadata','workflow-manager','manage-workflow')" class="mini-containers">Manage Workflows</button>
               </div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -508,7 +500,7 @@
                 </div>
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -530,13 +522,13 @@
 
             <div class="h-full flex separate gap">
               <div class="icon-containers">
-                <i class="ri-questionnaire-line icon-size"></i>
+                <i class="ri-questionnaire-line icon-size group-focus:text-white-smoke"></i>
                 <p class="font-bold">Help</p>
               </div>
-              <div class="flex flex-col justify-center gap-2">
+              <div class="flex flex-col justify-center">
                 <div class="flex items-center gap-0.5">
                   <div class="group hover-div">
-                    <i class="ri-customer-service-line small-icon-size"></i>
+                    <i class="ri-customer-service-line small-icon-size group-focus:text-white-smoke"></i>
                     <span class="tooltip group-hover:opacity-100">Service</span>
                   </div>
                   <div class="group hover-div">
@@ -573,7 +565,7 @@
                   </div>
                   <div class="group hover-div">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -594,7 +586,7 @@
                   </div>
                   <div class="group hover-div">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -611,7 +603,7 @@
                   </div>
                   <div class="group hover-div">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -629,7 +621,7 @@
                   </div>
                   <div class="group hover-div">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -645,7 +637,7 @@
                     <span class="tooltip group-hover:opacity-100">Account</span>
                   </div>
                   <div class="group hover-div">
-                    <i class="ri-chat-quote-line small-icon-size"></i>
+                    <i class="ri-chat-quote-line small-icon-size group-focus:text-white-smoke"></i>
                     <span class="tooltip group-hover:opacity-100">Comment</span>
                   </div>
                 </div>
@@ -656,11 +648,11 @@
               </div>
             </div>
 
-            <div class="h-full flex pl-3 gap">
-              <div class="flex flex-col justify-center gap-2">
+            <div class="h-full flex pl-3">
+              <div class="flex flex-col justify-center">
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -677,7 +669,7 @@
                 </div>
                 <div class="group hover-div">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -727,11 +719,11 @@
                   >
                 </div>
               </div>
-              <div class="flex flex-col gap-2">
-                <div class="flex justify-center gap-2">
+              <div class="flex flex-col">
+                <div class="flex justify-center mt-2">
                   <div class="group hover-div">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -769,14 +761,14 @@
                     <span class="tooltip group-hover:opacity-100">license</span>
                   </div>
                   <div class="group hover-div" id="pin-button">
-                    <i class="ri-eye-line small-icon-size"></i>
+                    <i class="ri-eye-line small-icon-size group-focus:text-white-smoke"></i>
                     <span class="tooltip group-hover:opacity-100">Hide</span>
                   </div>
                 </div>
                 <div>
                   <div class="group hover-div">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -960,15 +952,236 @@
                       </div>
                       <button class="bg-medium-gray text-transparent-charcoal px-3 py-1.5 rounded-[10px] text-sm mt-4">Apply</button>
                     </div>   
-                      
-                  </div>   
+                    <!-- Repair document -->
+                    <div class="p-4 repair">
+                      <div class="mb-3">
+                        <label class="text-sm font-bold">Repair document</label>
+                        <p class="text-xs">List of errors</p>
+                      </div>
+                      <div class="flex flex-col p-4 gap-2 mt-2 bg-medium-gray rounded-[10px]">
+                        <div class="flex justify-between items-center">
+                          <p>corrupt fonts</p>
+                          <label class="relative flex items-center justify-center w-8 h-8 border border-white-smoke rounded-[10px]">
+                            <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                            <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                            <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                          </label> 
+                        </div>
+                        <div class="flex justify-between items-center">
+                          <p>Missing fonts</p>
+                          <label class="relative flex items-center justify-center w-8 h-8 border border-white-smoke rounded-[10px]">
+                            <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                            <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                            <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                          </label> 
+                        </div>
+                      </div>
+                      <div class="flex items-end gap-2 mt-2">
+                        <div class="relative custom-select input-active" style="width:6rem;height:2rem;padding:0">
+                          <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                            <span>Repair</span>
+                            <span><i class="ri-arrow-down-s-line"></i></span>
+                          </div>
+                          <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                            <div class="option !pl-1.5">Auto fix</div>
+                            <div class="option !pl-1.5">Manual fix</div>
+                          </div>
+                        </div>
+                        <button class="bg-medium-gray text-transparent-charcoal px-3 py-1.5 rounded-[10px] text-sm mt-4">Start</button>
+                      </div>
+                    </div>  
+                  </div>
+                  <!-- Workflow Manager -->
+                  <div class="workflow-manager hidden">
+                    <!-- Resize -->
+                    <div class="border-b border-white-smoke p-4 resize">
+                      <div class="bg-white-smoke h-32 rounded-[10px] mb-5 white-button-active"></div>
+                      <label class="text-sm font-bold">Resize</label>
+                      <div class="flex items-end gap-2 mt-2">
+                        <div class="flex flex-col gap-2">
+                          <p class="text-transparent-dark-gray text-xs">Predefined</p>
+                          <div class="relative custom-select input-active" style="width:6rem;height:2rem;padding:0">
+                            <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                              <span>Sizes</span>
+                              <span><i class="ri-arrow-down-s-line"></i></span>
+                            </div>
+                            <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                              <div class="option !pl-1.5">A4</div>
+                              <div class="option !pl-1.5">Letter</div>
+                              <div class="option !pl-1.5">Etc</div>
+                            </div>
+                          </div> 
+                        </div>
+                        <div class="w-full text-sm py-1.5 px-3 bg-transparent rounded-[10px] border border-white-smoke flex justify-between items-center">
+                          <span>W</span>
+                          <span>21px</span>
+                        </div>
+                        <div class="w-full text-sm py-1.5 px-3 bg-transparent rounded-[10px] border border-white-smoke flex justify-between items-center">
+                          <span>H</span>
+                          <span>21px</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                          <p class="text-transparent-dark-gray text-xs">Slider</p>
+                          <div class="rect-slider-container white-button-active">
+                            <input type="range" class="rect-slider" min="0" max="100" value="50" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-2 mt-3">
+                        <label class="relative flex items-center justify-center w-8 h-8 border border-white-smoke rounded-[10px]">
+                          <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                          <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                          <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                        </label> 
+                        <p class="text-sm">Apply to all pages</p>
+                        <button class="bg-medium-gray text-transparent-charcoal px-3 py-1.5 rounded-[10px] text-sm">Apply</button>
+                      </div>
+                    </div>
+                    <!-- Manage workflow -->
+                    <div class="p-4 manage-workflow">
+                      <label class="text-sm font-bold">Manage workflow</label>
+                      <div class="flex flex-col gap-2 w-full mt-2">
+                        <p class="text-transparent-dark-gray text-xs">Task list</p>
+                        <div class="flex items-center justify-between gap-2">
+                          <div class="input-active !justify-between !flex !items-center">
+                            <div class="flex justify-center items-center gap-2">
+                              <div class="relative w-5 h-5 gap-4">
+                                <div class="absolute inset-0 w-full h-full border-4 border-white-smoke rounded-full"></div>
+                                <div class="absolute inset-0 w-full h-full border-4 border-charcoal-black rounded-full border-t-transparent animate-spin"></div>
+                              </div>
+                              <p class="text-sm">Add signature</p>
+                            </div>
+                            <div class="relative custom-select input-active" style="width:6rem;height:2rem;padding:0">
+                              <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                                <span>Assign</span>
+                                <span><i class="ri-arrow-down-s-line"></i></span>
+                              </div>
+                              <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                                <div class="option !pl-1.5">James</div>
+                                <div class="option !pl-1.5">Siri</div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="white-button-active !w-10 !py-3"><i class="ri-pencil-line ri-xl"></i></button>
+                        </div> 
+                      </div>
+                      <div class="flex justify-between">
+                        <div class="flex flex-col gap-2 w-3/4 mt-2">
+                          <p class="text-transparent-dark-gray text-xs">Deadline</p>
+                          <div class="flex items-center justify-between gap-2">
+                            <input 
+                              type="date" 
+                              class="input-active placeholder:text-transparent-charcoal" 
+                              value="2024-06-10"
+                            >
+                            <input 
+                              type="text" 
+                              class="input-active" 
+                              placeholder="9:41 AM"
+                            >
+                          </div> 
+                        </div>
+                        <div class="flex items-end gap-2 pb-1">
+                          <button><i class="ri-delete-bin-line text-red-orange ri-xl"></i><button>
+                          <button><i class="ri-add-box-line text-royal-blue ri-xl"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+                  <div class="header-bates hidden">
+                    <!-- Add bates numbering -->
+                    <div class="border-b border-white-smoke p-4 bates">
+                      <label class="text-sm font-bold">Add bates numbering</label>
+                      <div class="flex items-end gap-2 mt-2">
+                        <div class="flex flex-col gap-2">
+                          <p class="text-transparent-dark-gray text-xs">Starting number</p>
+                          <input
+                            type="number"
+                            class="!w-24 text-center input-active"
+                            placeholder="0"
+                          />
+                        </div>
+                        <div class="w-1/4 text-sm py-1.5 px-3 bg-transparent rounded-[10px] border border-white-smoke">
+                          Case__
+                        </div>
+                        <div class="w-1/4 text-sm py-1.5 px-3 bg-transparent rounded-[10px] border border-white-smoke">
+                          __2024
+                        </div>
+                        <div class="relative custom-select input-active" style="width:8rem;height:2rem;padding:0">
+                          <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                            <span>All Pages</span>
+                            <span><i class="ri-arrow-down-s-line"></i></span>
+                          </div>
+                          <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                            <div class="option !pl-1.5">All Pages</div>
+                            <div class="option !pl-1.5">Page 1</div>
+                            <div class="option !pl-1.5">Page 2</div>
+                          </div>
+                        </div> 
+                      </div>
+                      <button class="bg-medium-gray text-transparent-charcoal px-3 py-1.5 rounded-[10px] text-sm mt-2">Apply</button>
+                    </div>
+                    <!-- Header/footer -->
+                    <div class="border-b border-white-smoke p-4 header">
+                      <label class="text-sm font-bold">Header/footer</label>
+                      <div class="flex items-center justify-between gap-2 mt-2">
+                        <div class="flex flex-col gap-2">
+                          <p class="text-transparent-dark-gray text-xs">Add header text</p>
+                          <input 
+                            type="text" 
+                            class="input-active" 
+                            placeholder="Title..."
+                          >
+                        </div>
+                        <div class="flex flex-col gap-2">
+                          <p class="text-transparent-dark-gray text-xs">Page range</p>
+                          <div class="relative custom-select input-active" style="width:8rem;height:2.25rem;padding:0">
+                            <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                              <span>All Pages</span>
+                              <span><i class="ri-arrow-down-s-line"></i></span>
+                            </div>
+                            <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                              <div class="option !pl-1.5">All Pages</div>
+                              <div class="option !pl-1.5">Page 1</div>
+                              <div class="option !pl-1.5">Page 2</div>
+                            </div>
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="flex items-center justify-between gap-2 mt-2">
+                        <div class="flex flex-col gap-2">
+                          <p class="text-transparent-dark-gray text-xs">Add header text</p>
+                          <input 
+                            type="text" 
+                            class="input-active" 
+                            placeholder="Title..."
+                          >
+                        </div>
+                        <div class="flex flex-col gap-2">
+                          <p class="text-transparent-dark-gray text-xs">Page range</p>
+                          <div class="relative custom-select input-active" style="width:8rem;height:2.25rem;padding:0">
+                            <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                              <span>All Pages</span>
+                              <span><i class="ri-arrow-down-s-line"></i></span>
+                            </div>
+                            <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                              <div class="option !pl-1.5">All Pages</div>
+                              <div class="option !pl-1.5">Page 1</div>
+                              <div class="option !pl-1.5">Page 2</div>
+                            </div>
+                          </div>
+                        </div> 
+                      </div>
+                      <button class="bg-medium-gray text-transparent-charcoal px-3 py-1.5 rounded-[10px] text-sm mt-2">Apply</button>
+                    </div>
+                  </div>  
                 </div>
               </div>
             </div>
           </section>
 
           <!-- Pagination & Zoom controls -->
-          <section class="absolute bottom-2 flex items-center justify-between bg-light-sky-blue py-1 px-10 rounded-2xl w-[90%] sm:w-[93%] md:w-[85%] lg:w-[88%] xl:w-[90%]">
+          <section class="absolute bottom-2 inset-x-0 flex items-center justify-between bg-light-sky-blue py-1 px-4 rounded-2xl mx-3">
             <!-- Pagination controls -->
             <div class="flex flex-col items-center justify-center">
               <div class="flex items-center space-x-2">

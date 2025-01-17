@@ -245,95 +245,95 @@
                 <div class="menu-dropdown hidden w-60">
                   <ul class="text-sm">
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('service')"
                         class="menu-dropdown-option hover:rounded-t-[10px] hover:bg-transparent-light-sky-blue"
-                        >AI Baze help</a
+                        >AI Baze help</
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('remove')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >What’s this?</a
+                        >What’s this?</
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('guide')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >User guides</a
+                        >User guides</
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('update')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Show tip of the day</a
+                        >Show tip of the day</
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('linear')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Search commands</a
+                        >Search commands</
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('account')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Get help online</a
+                        >Get help online</
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('comment')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Send feedback</a
+                        >Send feedback</
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('savemode')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Restart in safe mode</a
+                        >Restart in safe mode</
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('getinvoled')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Get involved</a
+                        >Get involved</
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('Donate')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Donate to AI Baze</a
+                        >Donate to AI Baze</
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('License')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >License information</a
+                        >License information</
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('smartphone')"
                         class="menu-dropdown-option hover:bg-transparent-light-sky-blue"
-                        >Check for updates</a
+                        >Check for updates</
                       >
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <button
+                        onclick="rightPanel('about')"
                         class="menu-dropdown-option hover:rounded-b-[10px] hover:bg-transparent-light-sky-blue"
                         style="border-bottom: none"
-                        >About AI Baze</a
+                        >About AI Baze</
                       >
                     </li>
                   </ul>
@@ -345,7 +345,7 @@
 
         <!-- Main content -->
         <div
-          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 pt-2 overflow-hidden"
+          class="flex-1 bg-white-smoke rounded-tl-3xl p-6 pt-2 overflow-hidden relative"
           id="main-content"
         >
           <!-- Ribbon Section -->
@@ -587,13 +587,13 @@
               </div>
               <div class="flex flex-col justify-center gap-2">
                 <div class="flex items-center gap-0.5">
-                  <div class="group hover-div" onclick="rightPanel('service')">
-                    <i class="ri-customer-service-line small-icon-size"></i>
-                    <span class="tooltip group-hover:opacity-100">Service</span>
-                  </div>
-                  <div class="group hover-div" onclick="rightPanel('remove')">
+                  <button class="group hover-div" onclick="rightPanel('service')">
+                    <i class="ri-customer-service-line small-icon-size group-focus:text-white-smoke"></i>
+                    <span class="tooltip group-hover:opacity-100">Aibaze Help</span>
+                  </button>
+                  <button class="group hover-div" onclick="rightPanel('remove')">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -621,11 +621,11 @@
                       </defs>
                     </svg>
 
-                    <span class="tooltip group-hover:opacity-100">Remove</span>
-                  </div>
-                  <div class="group hover-div" onclick="rightPanel('guide')">
+                    <span class="tooltip group-hover:opacity-100">What's This?</span>
+                  </button>
+                  <button class="group hover-div" onclick="rightPanel('guide')">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -642,11 +642,11 @@
                       />
                     </svg>
 
-                    <span class="tooltip group-hover:opacity-100">Guide</span>
-                  </div>
-                  <div class="group hover-div" onclick="rightPanel('update')">
+                    <span class="tooltip group-hover:opacity-100">User Guides</span>
+                  </button>
+                  <button class="group hover-div" onclick="rightPanel('update')">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -659,11 +659,11 @@
                       />
                     </svg>
 
-                    <span class="tooltip group-hover:opacity-100">Updates</span>
-                  </div>
-                  <div class="group hover-div" onclick="rightPanel('linear')" >
+                    <span class="tooltip group-hover:opacity-100">Show Tip of the Day</span>
+                  </button>
+                  <button class="group hover-div" onclick="rightPanel('linear')" >
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -677,11 +677,11 @@
                       />
                     </svg>
 
-                    <span class="tooltip group-hover:opacity-100">Linear</span>
-                  </div>
-                  <div class="group hover-div" onclick="rightPanel('account')">
+                    <span class="tooltip group-hover:opacity-100">Search Commands</span>
+                  </button>
+                  <button class="group hover-div" onclick="rightPanel('account')">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -694,34 +694,34 @@
                       />
                     </svg>
 
-                    <span class="tooltip group-hover:opacity-100">Account</span>
-                  </div>
-                  <div class="group hover-div" onclick="rightPanel('comment')">
-                    <i class="ri-chat-quote-line small-icon-size"></i>
-                    <span class="tooltip group-hover:opacity-100">Comment</span>
-                  </div>
+                    <span class="tooltip group-hover:opacity-100">Get Help Online</span>
+                  </button>
+                  <button class="group hover-div" onclick="rightPanel('comment')">
+                    <i class="ri-chat-quote-line small-icon-size group-focus:text-white-smoke"></i>
+                    <span class="tooltip group-hover:opacity-100">Send Feedback</span>
+                  </button>
                 </div>
                 <div class="flex gap-2 px-2">
-                  <span
-                    class="mini-containers-2"
+                  <button
+                    class="mini-containers !w-full"
                     
                     onclick="rightPanel('getinvoled')"
-                    >Get Involved</span
+                    >Get Involved</button
                   >
-                  <span class="mini-containers-2"
+                  <button class="mini-containers !w-full"
                   
                   onclick="rightPanel('savemode')"
-                    >Rest in Safe Mode</span
+                    >Rest in Safe Mode</button
                   >
                 </div>
               </div>
             </div>
 
             <div class="h-full flex pl-3 gap">
-              <div class="flex flex-col justify-center gap-2">
-                <div class="group hover-div" onclick="rightPanel('Donate')">
+              <div class="flex flex-col justify-center">
+                <button class="group hover-div" onclick="rightPanel('Donate')">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -734,11 +734,11 @@
                     />
                   </svg>
 
-                  <span class="tooltip group-hover:opacity-100">Donate</span>
-                </div>
-                <div class="group hover-div" onclick="rightPanel('smartphone')">
+                  <span class="tooltip group-hover:opacity-100">Donate to Aibaze</span>
+                </button>
+                <button class="group hover-div" onclick="rightPanel('smartphone')">
                   <svg
-                    class="small-icon-size"
+                    class="small-icon-size group-focus:text-white-smoke"
                     width="30"
                     height="30"
                     viewBox="0 0 30 30"
@@ -784,18 +784,17 @@
                   </svg>
 
                   <span class="tooltip group-hover:opacity-100"
-                    >Smartphone</span
+                    >Check for Updates...</span
                   >
-                </div>
+                </button>
               </div>
-              <div class="flex flex-col gap-2">
+              <div class="flex flex-col">
                 <div
-                  class="flex justify-center gap-2"
-                  onclick="rightPanel('License')"
+                  class="flex justify-center gap-2 mt-2"
                 >
-                  <div class="group hover-div">
+                  <button class="group hover-div" onclick="rightPanel('License')">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -830,17 +829,17 @@
                         </clipPath>
                       </defs>
                     </svg>
-                    <span class="tooltip group-hover:opacity-100">license</span>
-                  </div>
-                  <div class="group hover-div" id="pin-button">
-                    <i class="ri-eye-line small-icon-size"></i>
+                    <span class="tooltip group-hover:opacity-100">Licence Information</span>
+                  </button> 
+                  <button class="group hover-div" id="pin-button">
+                    <i class="ri-eye-line small-icon-size group-focus:text-white-smoke"></i>
                     <span class="tooltip group-hover:opacity-100">Hide</span>
-                  </div>
+                  </button>
                 </div>
                 <div>
-                  <div class="group hover-div" onclick="rightPanel('about')">
+                  <button class="group hover-div" onclick="rightPanel('about')">
                     <svg
-                      class="small-icon-size"
+                      class="small-icon-size group-focus:text-white-smoke"
                       width="30"
                       height="30"
                       viewBox="0 0 30 30"
@@ -853,8 +852,8 @@
                       />
                     </svg>
 
-                    <span class="tooltip group-hover:opacity-100">About</span>
-                  </div>
+                    <span class="tooltip group-hover:opacity-100">About Aibaze</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1502,39 +1501,28 @@
           </section>
 
           <!-- Pagination & Zoom controls -->
-          <section
-            class="absolute bottom-2 flex items-center justify-between bg-light-sky-blue py-1 px-10 rounded-2xl w-[90%] sm:w-[93%] md:w-[85%] lg:w-[88%] xl:w-[90%]"
-          >
+          <section class="absolute bottom-2 inset-x-0 flex items-center justify-between bg-light-sky-blue py-1 px-4 rounded-2xl mx-3">
             <!-- Pagination controls -->
             <div class="flex flex-col items-center justify-center">
               <div class="flex items-center space-x-2">
-                <button class="p-1 rounded-full focus:outline-none">
-                  <i class="ri-arrow-left-s-line ri-xl"></i>
-                </button>
-                <span class="py-1 rounded-full">1</span>
-                <button class="p-1 rounded-full focus:outline-none">
-                  <i class="ri-arrow-right-s-line ri-xl"></i>
-                </button>
+                  <button class="p-1 rounded-full focus:outline-none">
+                    <i class="ri-arrow-left-s-line ri-xl"></i>
+                  </button>
+                  <span class="py-1 rounded-full">1</span>
+                  <button class="p-1 rounded-full focus:outline-none">
+                    <i class="ri-arrow-right-s-line ri-xl"></i>
+                  </button>
               </div>
             </div>
-
+            
             <!-- Horizontal scroll -->
-            <div
-              class="scroll-x"
-              style="overflow-x: auto; max-width: 100%"
-            ></div>
+            <div class="scroll-x" style="overflow-x: auto; max-width: 100%;">
+            </div>
 
             <!-- Zoom controls -->
             <div class="flex items-center space-x-2">
               <i class="ri-zoom-out-line text-lg cursor-pointer"></i>
-              <input
-                type="range"
-                id="zoomSlider"
-                min="12"
-                max="200"
-                value="100"
-                class="w-full h-0.5 bg-white-smoke slider-thumb"
-              />
+              <input type="range" id="zoomSlider" min="12" max="200" value="100" class="w-full h-0.5 bg-white-smoke slider-thumb"/>
               <i class="ri-zoom-in-line text-lg cursor-pointer"></i>
               <span id="zoomPercentage" class="text-sm font-medium">100%</span>
             </div>

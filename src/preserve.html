@@ -168,13 +168,13 @@
                         <ul class="text-sm">
                           <li>
                             <button
-                              onclick="rightPanel('merge','null','merge-pages')"
+                              onclick="rightPanel('merge','','merge-pages')"
                               class="menu-dropdown-option hover:rounded-t-[10px]"
                               >Merge pages</
                             >
                           </li>
                           <li>
-                            <button onclick="rightPanel('merge','null','combine-pages')" class="menu-dropdown-option"
+                            <button onclick="rightPanel('merge','','combine-pages')" class="menu-dropdown-option"
                               >Combine pages</button
                             >
                           </li>
@@ -203,12 +203,12 @@
                             >
                           </li>
                           <li>
-                            <button onclick="rightPanel('split','null','extract-pages')" class="menu-dropdown-option"
+                            <button onclick="rightPanel('split','','extract-pages')" class="menu-dropdown-option"
                               >Extract pages</button
                             >
                           </li>
                           <li>
-                            <button onclick="rightPanel('split','null','split-bookmark')" class="menu-dropdown-option"
+                            <button onclick="rightPanel('split','','split-bookmark')" class="menu-dropdown-option"
                               >Split by bookmarks</button
                             >
                           </li>
@@ -218,12 +218,12 @@
                             >
                           </li>
                           <li>
-                            <button onclick="rightPanel('split','null','split-size')" class="menu-dropdown-option"
+                            <button onclick="rightPanel('split','','split-size')" class="menu-dropdown-option"
                               >Split in size</button
                             >
                           </li>
                           <li>
-                            <button onclick="rightPanel('split','null','split-text')"
+                            <button onclick="rightPanel('split','','split-text')"
                               class="menu-dropdown-option hover:rounded-b-[10px]"
                               style="border-bottom: none"
                               >Split by text</button
@@ -241,13 +241,13 @@
                       <div class="sub-dropdown left-full top-0 hidden w-60">
                         <ul class="text-sm">
                           <li>
-                            <button onclick="rightPanel('sign','null','fill-sign')"
+                            <button onclick="rightPanel('sign','','fill-sign')"
                               class="menu-dropdown-option hover:rounded-t-[10px]"
                               >Fill and sign</button
                             >
                           </li>
                           <li>
-                            <button onclick="rightPanel('sign','null','create-forms')"
+                            <button onclick="rightPanel('sign','','create-forms')"
                               class="menu-dropdown-option hover:rounded-b-[10px]"
                               style="border-bottom: none"
                               >Create forms</button
@@ -322,13 +322,13 @@
                       <div class="sub-dropdown left-full top-0 hidden w-60">
                         <ul class="text-sm">
                           <li>
-                            <button onclick="rightPanel('protection','null','protect')"
+                            <button onclick="rightPanel('protection','','protect')"
                               class="menu-dropdown-option hover:rounded-t-[10px]"
                               >Protect document</
                             >
                           </li>
                           <li>
-                            <button onclick="rightPanel('protection','null','remove-security')" class="menu-dropdown-option"
+                            <button onclick="rightPanel('protection','','remove-security')" class="menu-dropdown-option"
                               >Unlock document</button
                             >
                           </li>
@@ -369,7 +369,7 @@
 
         <!-- Main content -->
         <div
-          class="flex-1 bg-white-smoke rounded-tl-3xl p-3 pt-2 overflow-hidden" id="main-content"
+          class="flex-1 bg-white-smoke rounded-tl-3xl p-3 pt-2 overflow-hidden relative" id="main-content"
         >
           <!-- Ribbon Section -->
           <section class="ribbon">
@@ -380,7 +380,7 @@
               </div>
               <div class="flex flex-col justify-center gap-2">
                 <div class="flex items-center gap-0.5">
-                  <button onclick="rightPanel('merge','null','combine-pages')" class="group hover-div">
+                  <button onclick="rightPanel('merge','','combine-pages')" class="group hover-div">
                     <i class="ri-file-copy-line small-icon-size group-focus:text-white-smoke"></i>
                     <span class="tooltip group-hover:opacity-100">Combine Pages</span>
                   </button>
@@ -392,7 +392,7 @@
                   </button>
                 </div>
                 <div class="flex gap-2">
-                  <button onclick="rightPanel('merge','null','merge-pages')" class="mini-containers">Merge Pages</button>
+                  <button onclick="rightPanel('merge','','merge-pages')" class="mini-containers">Merge Pages</button>
                 </div>
               </div>
             </div>
@@ -447,7 +447,7 @@
                 </button>
               </div>
               <div class="flex flex-col justify-center">
-                <button onclick="rightPanel('split','null','split-size')" class="group hover-div">
+                <button onclick="rightPanel('split','','split-size')" class="group hover-div">
                   <svg
                     class="small-icon-size group-focus:text-white-smoke"
                     width="30"
@@ -464,7 +464,7 @@
 
                   <span class="tooltip group-hover:opacity-100">Split by Size</span>
                 </button>
-                <button onclick="rightPanel('split','null','split-text')" class="group hover-div">
+                <button onclick="rightPanel('split','','split-text')" class="group hover-div">
                   <svg
                     class="small-icon-size group-focus:text-white-smoke"
                     width="30"
@@ -495,7 +495,7 @@
                 </button>
               </div>
               <div class="flex flex-col justify-center">
-                <button onclick="rightPanel('split','null','split-bookmark')" class="group hover-div">
+                <button onclick="rightPanel('split','','split-bookmark')" class="group hover-div">
                   <svg
                     class="small-icon-size group-focus:text-white-smoke"
                     width="30"
@@ -516,7 +516,7 @@
 
                   <span class="tooltip group-hover:opacity-100">Split by Bookmarks</span>
                 </button>
-                <button onclick="rightPanel('split','null','extract-pages')" class="group hover-div">
+                <button onclick="rightPanel('split','','extract-pages')" class="group hover-div">
                   <svg
                     class="small-icon-size group-focus:text-white-smoke"
                     width="30"
@@ -544,8 +544,8 @@
                 <p class="font-bold">Document Signing</p>
               </div>
               <div class="flex flex-col items-center pl-2 justify-center gap-2">
-                <button onclick="rightPanel('sign','null','fill-sign')" class="mini-containers">Fill & Sign</button>
-                <button onclick="rightPanel('sign','null','create-forms')" class="mini-containers">Create Forms</button>
+                <button onclick="rightPanel('sign','','fill-sign')" class="mini-containers">Fill & Sign</button>
+                <button onclick="rightPanel('sign','','create-forms')" class="mini-containers">Create Forms</button>
               </div>
             </div>
 
@@ -689,7 +689,7 @@
                 <p class="font-bold">Document Protection</p>
               </div>
               <div class="flex flex-col justify-center">
-                <button onclick="rightPanel('protection','null','protect')" class="group hover-div">
+                <button onclick="rightPanel('protection','','protect')" class="group hover-div">
                   <i class="ri-lock-line small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100">Protect Document</span>
                 </button>
@@ -713,7 +713,7 @@
               </div>
               <div class="flex flex-col mt-2">
                 <div class="flex justify-center">
-                  <button onclick="rightPanel('protection','null','remove-security')" class="group hover-div">
+                  <button onclick="rightPanel('protection','','remove-security')" class="group hover-div">
                     <i class="ri-lock-unlock-line small-icon-size group-focus:text-white-smoke"></i>
                     <span class="tooltip group-hover:opacity-100">Unlock Document</span>
                   </button>
@@ -1131,7 +1131,7 @@
           </section>
 
           <!-- Pagination & Zoom controls -->
-          <section class="absolute bottom-2 flex items-center justify-between bg-light-sky-blue py-1 px-10 rounded-2xl w-[90%] sm:w-[93%] md:w-[85%] lg:w-[88%] xl:w-[90%]">
+          <section class="absolute bottom-2 inset-x-0 flex items-center justify-between bg-light-sky-blue py-1 px-4 rounded-2xl mx-3">
             <!-- Pagination controls -->
             <div class="flex flex-col items-center justify-center">
               <div class="flex items-center space-x-2">

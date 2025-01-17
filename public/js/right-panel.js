@@ -9,34 +9,16 @@ function rightPanel(title, subTitle, targetClass) {
         
         // Show the section corresponding to the given `title`
         $(`.${title}`).show();
-
-        // Handle visibility of `file-detail` and `file-open` based on the `subTitle` parameter
-        if (subTitle == "file-detail") {
-            $(`.${title} .file-detail`).show();
-            $(`.${title} .file-open`).hide();
-        } else if (subTitle == "file-open") {
-            $(`.${title} .file-open`).show();
-            $(`.${title} .file-detail`).hide();
-        } else if (subTitle == "color-picker") {
-            $(`.${title} .color-picker`).show();
-            $(`.${title} .search-replace`).hide();
-            $(`.${title} .style`).hide();
-        } else if (subTitle == "search-replace") {
-            $(`.${title} .color-picker`).hide();
-            $(`.${title} .search-replace`).show();
-            $(`.${title} .style`).hide();
-        } else if (subTitle == "style") {
-            $(`.${title} .color-picker`).hide();
-            $(`.${title} .search-replace`).hide();
-            $(`.${title} .style`).show();
-        }else if (subTitle == "process-media") {
-            $(`.${title} .process-media`).show();
-            $(`.${title} .repair-merge`).hide();
-        } else if (subTitle == "repair-merge") {
-            $(`.${title} .repair-merge`).show();
-            $(`.${title} .process-media`).hide();
-        } 
-
+        console.log(subTitle)
+        
+        if(subTitle && subTitle !== "organize"){
+            console.log("yes")
+            // Hide all sibling elements of the container
+            $('.right-panel-content').children().hide();
+            // Show the target element with the specific subTitle
+            $(`.${title} .${subTitle}`).show(); 
+        }
+        
         // Disable and add `inactive` class to all elements with the `button-active` and `input-active` classes
         $(".button-active, .input-active").removeClass("inactive").prop('disabled', true);
         $(".peer").prop('disabled', true).removeClass("cursor-pointer");

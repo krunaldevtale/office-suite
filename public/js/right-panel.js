@@ -9,10 +9,8 @@ function rightPanel(title, subTitle, targetClass) {
         
         // Show the section corresponding to the given `title`
         $(`.${title}`).show();
-        console.log(subTitle)
         
         if(subTitle && subTitle !== "organize"){
-            console.log("yes")
             // Hide all sibling elements of the container
             $('.right-panel-content').children().hide();
             // Show the target element with the specific subTitle

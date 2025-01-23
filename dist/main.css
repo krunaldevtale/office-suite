@@ -1036,6 +1036,10 @@ body {
   width: 1rem;
 }
 
+.\!w-20 {
+  width: 5rem !important;
+}
+
 .min-w-full {
   min-width: 100%;
 }

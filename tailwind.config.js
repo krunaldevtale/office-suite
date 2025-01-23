@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './src/**/*.html',
     './index.html', // Include your HTML file
+    './login.html', // Include your HTML file
     './src/*.html',
     './dist/**/*.html', // Add your distribution files if applicable
     './styles/**/*.css', // Include your custom CSS

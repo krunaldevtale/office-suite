@@ -22,8 +22,8 @@
       </div>
       <!-- Search bar -->
       <div class="relative w-[27%] hidden md:block">
-        <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
-          <i class="ri-search-line ri-lg"></i>
+        <span class="absolute top-1/2 transform -translate-y-1/2">
+          <svg class="icon !p-[1rem]"><use xlink:href="/public/images/icons.svg#search"></use></svg>                              
         </span>
         <input type="text" placeholder="Search your PDF library or PDF documents..."
           class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke focus:outline-none placeholder:text-dark-charcoal placeholder:text-base" />
@@ -42,7 +42,7 @@
       <!-- Share button -->
       <div class="flex items-center gap-4">
         <button class="share-btn drop-button hidden md:flex items-center gap-2">
-          <i class="ri-share-line"></i> <span class="text-sm md:text-base">Share</span>
+          <i class="ri-share-fill"></i> <span class="text-sm md:text-base">Share</span>
         </button>
         <!-- Share dropdown -->
         <div
@@ -132,44 +132,44 @@
               </button>
             </li>
             <li>
-              <a href="/" class="flex flex-col items-center">
-                <i class="ri-home-5-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="/" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#home"></use></svg>                              
                 <span class="secondary-text">Home</span>
               </a>
             </li>
             <li>
-              <a href="/src/file.html" class="flex flex-col items-center">
-                <i class="ri-file-line text-[32px] px-1.5"></i>
+              <a href="file.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#file"></use></svg>                              
                 <span class="secondary-text">File</span>
               </a>
             </li>
             <li>
-              <a href="/src/edit.html" class="flex flex-col items-center">
-                <i class="ri-edit-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="edit.html" class="flex flex-col items-center menu">
+                <svg class="icon !p-[0.7rem]"><use xlink:href="/public/images/icons.svg#edit"></use></svg>                              
                 <span class="secondary-text">Edit</span>
               </a>
             </li>
             <li>
-              <a href="/src/preserve.html" class="flex flex-col items-center">
-                <i class="ri-shield-keyhole-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="preserve.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#preserve"></use></svg>                              
                 <span class="secondary-text text-center">Preserve</span>
               </a>
             </li>
             <li>
-              <a href="/src/tools.html" class="flex flex-col items-center">
-                <i class="ri-tools-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="tools.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#tools"></use></svg>                              
                 <span class="secondary-text text-center">Tools</span>
               </a>
             </li>
             <li>
-              <a href="/src/help.html" class="flex flex-col items-center">
-                <i class="ri-question-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="help.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#help"></use></svg>                              
                 <span class="secondary-text text-center">Help</span>
               </a>
             </li>
             <li>
-              <a href="/src/ai.html" class="flex flex-col items-center menu-button">
-                <i class="ri-file-line text-[32px] px-1.5"></i>
+              <a href="/src/ai.html" class="flex flex-col items-center menu-button menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#ai"></use></svg>                              
                 <span class="secondary-text">AI</span>
               </a>
               <div class="menu-dropdown hidden w-64">

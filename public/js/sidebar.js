@@ -10,7 +10,7 @@ $(document).ready(function () {
         // Check if the href matches the current path
         if ($(this).attr("href") === currentPath) {
         // Add the 'icon-background' class to the <i> icon inside the <a>
-        $(this).find("i").addClass("icon-background");
+        $(this).find("svg").addClass("icon-background");
         }
     });
 });

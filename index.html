@@ -23,8 +23,8 @@
       </div>
       <!-- Search bar -->
       <div class="relative w-[27%] hidden md:block">
-        <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
-          <i class="ri-search-line ri-lg"></i>
+        <span class="absolute top-1/2 transform -translate-y-1/2">
+          <svg class="icon !p-[1rem]"><use xlink:href="/public/images/icons.svg#search"></use></svg>                              
         </span>
         <input
           type="text"
@@ -41,7 +41,7 @@
       <!-- Share button -->
       <div class="flex items-center gap-4">
         <button class="share-btn drop-button hidden md:flex items-center gap-2">
-          <i class="ri-share-line"></i> <span class="text-sm md:text-base">Share</span>
+          <i class="ri-share-fill"></i> <span class="text-sm md:text-base">Share</span>
         </button>
         <!-- Share dropdown -->
         <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
@@ -69,21 +69,21 @@
               Collaboration link
             </label>
             <div class="relative custom-select border border-dark-gray rounded-md">
-              <div id="selected-item" class="select-selected text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+              <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
                 <span>Select access:</span>
                 <span><i class="ri-arrow-down-s-fill"></i></span>
               </div>
-              <div id="select-options" class="select-items text-sm bg-white-smoke border border-dark-gray hidden absolute w-full mt-1 rounded shadow-lg z-10 overflow-auto scroll h-16">
+              <div class="select-options text-sm bg-white-smoke border border-dark-gray hidden absolute w-full mt-1 rounded shadow-lg z-10 overflow-auto scroll h-16">
                 <div class="option">Only you can access</div>
                 <div class="option">Anyone with the link</div>
                 <div class="option">Specific people</div>
               </div>
-            </div>
+            </div>  
           </div>
           <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
             Copy link
           </button>
-        </div> 
+        </div>  
         <!-- Profile button -->
         <button class="drop-button">       
           <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
@@ -134,44 +134,44 @@
               </button>
             </li>
             <li>
-              <a href="/" class="flex flex-col items-center">
-                <i class="ri-home-5-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="/" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#home"></use></svg>                              
                 <span class="secondary-text">Home</span>
               </a>
             </li>
             <li>
-              <a href="./src/file.html" class="flex flex-col items-center">
-                <i class="ri-file-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="./src/file.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#file"></use></svg>                              
                 <span class="secondary-text">File</span>
               </a>
             </li>
             <li>
-              <a href="/src/edit.html" class="flex flex-col items-center">
-                <i class="ri-edit-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="/src/edit.html" class="flex flex-col items-center menu">
+                <svg class="icon !p-[0.7rem]"><use xlink:href="/public/images/icons.svg#edit"></use></svg>                              
                 <span class="secondary-text">Edit</span>
               </a>
             </li>
             <li>
-              <a href="/src/preserve.html" class="flex flex-col items-center">
-                <i class="ri-shield-keyhole-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="/src/preserve.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#preserve"></use></svg>                              
                 <span class="secondary-text text-center">Preserve</span>
               </a>
             </li>
             <li>
-              <a href="/src/tools.html" class="flex flex-col items-center">
-                <i class="ri-tools-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="/src/tools.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#tools"></use></svg>                              
                 <span class="secondary-text text-center">Tools</span>
               </a>
             </li>
             <li>
-              <a href="/src/help.html" class="flex flex-col items-center">
-                <i class="ri-question-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="/src/help.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#help"></use></svg>                              
                 <span class="secondary-text text-center">Help</span>
               </a>
             </li>
             <li>
-              <a href="./src/ai.html" class="flex flex-col items-center">
-                <i class="ri-file-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="./src/ai.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#ai"></use></svg>                              
                 <span class="secondary-text">AI</span>
               </a>
             </li>
@@ -204,7 +204,7 @@
           <div class="border-4 rounded-3xl feature-list">
             <div class="flex flex-col md:flex-row w-full">
               <a href="/src/file.html" class="w-full md:w-1/2 p-5 flex items-start space-x-4 md:border-r border-b">
-                <i class="ri-file-line text-4xl md:text-5xl"></i>
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#home-file"></use></svg>                              
                 <div>
                   <h3 class="font-bold text-lg md:text-xl">File</h3>
                   <p class="text-xs md:text-sm">
@@ -213,7 +213,7 @@
                 </div>
               </a>
               <a href="/src/edit.html" class="w-full md:w-1/2 p-5 flex items-start space-x-4 border-b">
-                <i class="ri-edit-line text-4xl md:text-5xl"></i>
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#home-edit"></use></svg>                              
                 <div>
                   <h3 class="font-bold text-lg md:text-xl">Edit</h3>
                   <p class="text-xs md:text-sm">
@@ -223,17 +223,17 @@
               </a>
             </div>
             <div class="flex flex-col md:flex-row w-full">
-              <a href="/src/convert-protect.html" class="w-full md:w-1/2 p-4 flex items-start space-x-4 md:border-r border-b">
+              <a href="/src/preserve.html" class="w-full md:w-1/2 p-4 flex items-start space-x-4 md:border-r border-b">
                 <i class="ri-shield-keyhole-line text-4xl md:text-5xl"></i>
                 <div>
-                  <h3 class="font-bold text-lg md:text-xl">Convert and Protect</h3>
+                  <h3 class="font-bold text-lg md:text-xl">Preserve</h3>
                   <p class="text-xs md:text-sm">
                     The convert tool option transforms data, files, or formats from one type to another and it protects your file.
                   </p>
                 </div>
               </a>
               <a href="/src/tools.html" class="w-full md:w-1/2 p-4 flex items-start space-x-4 border-b">
-                <i class="ri-tools-line text-4xl md:text-5xl"></i>
+                <svg class="icon !p-[0.1rem]"><use xlink:href="/public/images/icons.svg#home-tools"></use></svg>                              
                 <div>
                   <h3 class="font-bold text-lg md:text-xl">Tools</h3>
                   <p class="text-xs md:text-sm">
@@ -242,15 +242,25 @@
                 </div>
               </a>
             </div>
-            <a href="/src/help.html" class="p-5 flex flex-col items-start md:items-center justify-center space-x-4">
-              <div class="flex items-center gap-4">
-                <i class="ri-question-line text-4xl md:text-5xl"></i>
-                <h3 class="font-bold text-lg md:text-xl">Help</h3>
-              </div>
-              <p class="text-xs md:text-sm">
-                The help option provides guidance and instructions to assist users in using a tool or system.
-              </p>
-            </a>
+            <div class="flex flex-col md:flex-row w-full">
+              <a href="/src/help.html" class="w-full md:w-1/2 p-4 flex items-start space-x-4 md:border-r">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#home-help"></use></svg>                              
+                <div>
+                  <h3 class="font-bold text-lg md:text-xl">Help</h3>
+                  <p class="text-xs md:text-sm">
+                    The help option provides guidance and instructions to assist users in using a tool or system.
+                  </p>
+                </div>
+              </a>
+              <a href="/src/ai.html" class="w-full md:w-1/2 p-4 flex items-start space-x-4">
+                <svg class="icon !p-[0rem]"><use xlink:href="/public/images/icons.svg#ai"></use></svg>                              
+                <div>
+                  <h3 class="font-bold text-lg md:text-xl">AI</h3>
+                  <p class="text-xs md:text-sm">
+                    AI in PDF editors automates text recognition, editing, and formatting for faster, smarter document management.                  </p>
+                </div>
+              </a>
+            </div>
           </div>
         </section>
 

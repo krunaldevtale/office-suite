@@ -23,8 +23,8 @@
       </div>
       <!-- Search bar -->
       <div class="relative w-[27%] hidden md:block">
-        <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
-          <i class="ri-search-line ri-lg"></i>
+        <span class="absolute top-1/2 transform -translate-y-1/2">
+          <svg class="icon !p-[1rem]"><use xlink:href="/public/images/icons.svg#search"></use></svg>                              
         </span>
         <input
           type="text"
@@ -41,7 +41,7 @@
       <!-- Share button -->
       <div class="flex items-center gap-4">
         <button class="share-btn drop-button hidden md:flex items-center gap-2">
-          <i class="ri-share-line"></i> <span class="text-sm md:text-base">Share</span>
+          <i class="ri-share-fill"></i> <span class="text-sm md:text-base">Share</span>
         </button>
         <!-- Share dropdown -->
         <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
@@ -134,14 +134,14 @@
               </button>
             </li>
             <li>
-              <a href="/" class="flex flex-col items-center">
-                <i class="ri-home-5-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="/" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#home"></use></svg>                              
                 <span class="secondary-text">Home</span>
               </a>
             </li>
             <li>
-              <a href="/src/file.html" class="flex flex-col items-center menu-button">
-                <i class="ri-file-line text-[32px] px-1.5"></i>
+              <a href="/src/file.html" class="flex flex-col items-center menu-button menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#file"></use></svg>                              
                 <span class="secondary-text">File</span>
               </a>
               <div class="menu-dropdown hidden w-48">
@@ -150,7 +150,7 @@
                     <a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">File Operations<i class="ri-arrow-right-s-fill ri-xl"></i></a>
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
-                        <li><a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">New document</a></li>
+                        <li><button onclick="rightPanel('file-operation','new-file','')" class="menu-dropdown-option hover:rounded-t-[10px]">New document</button></li>
                         <li><button onclick="rightPanel('file-operation','file-open','open-document')" class="menu-dropdown-option">Open document (PDF only)</button></li>
                         <li><button onclick="rightPanel('file-operation','file-open','import-document')" class="menu-dropdown-option">Import (PDF only)</button></li>
                         <li><button class="menu-dropdown-option">Save document</button></li>
@@ -219,33 +219,33 @@
               </div>
             </li>
             <li>
-              <a href="/src/edit.html" class="flex flex-col items-center">
-                <i class="ri-edit-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="edit.html" class="flex flex-col items-center menu">
+                <svg class="icon !p-[0.7rem]"><use xlink:href="/public/images/icons.svg#edit"></use></svg>                              
                 <span class="secondary-text">Edit</span>
               </a>
             </li>
             <li>
-              <a href="/src/preserve.html" class="flex flex-col items-center">
-                <i class="ri-shield-keyhole-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="preserve.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#preserve"></use></svg>                              
                 <span class="secondary-text text-center">Preserve</span>
               </a>
             </li>
             <li>
-              <a href="/src/tools.html" class="flex flex-col items-center">
-                <i class="ri-tools-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="tools.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#tools"></use></svg>                              
                 <span class="secondary-text text-center">Tools</span>
               </a>
             </li>
             <li>
-              <a href="/src/help.html" class="flex flex-col items-center">
-                <i class="ri-question-line text-[32px] px-1.5 menu-hover"></i>
+              <a href="help.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#help"></use></svg>                              
                 <span class="secondary-text text-center">Help</span>
               </a>
             </li>
             <li>
-              <a href="/src/ai.html" class="flex flex-col items-center">
-                <i class="ri-file-line text-[32px] px-1.5 menu-hover"></i>
-                <span class="secondary-text text-center">AI</span>
+              <a href="ai.html" class="flex flex-col items-center menu">
+                <svg class="icon"><use xlink:href="/public/images/icons.svg#ai"></use></svg>                              
+                <span class="secondary-text">AI</span>
               </a>
             </li>
           </ul>
@@ -260,55 +260,43 @@
           <section class="ribbon">
             <div class="h-full flex separate gap">
               <div class="icon-containers">
-                <i class="ri-file-3-line icon-size"></i>
+                <svg class="icon icon-size"><use xlink:href="/public/images/icons.svg#file-operation"></use></svg>                              
                 <p class="font-bold">File Operations</p>
               </div>
               <div class="flex flex-col justify-center gap-2">
                 <div class="flex items-center gap-px">
-                  <div class="group hover-div">
-                    <i class="ri-file-add-line small-icon-size group-focus:text-white-smoke"></i>
+                  <button onclick="rightPanel('file-operation','new-file','')" class="group hover-div">
+                    <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#new-file"></use></svg>                              
                     <span class="tooltip group-hover:opacity-100"
                       >Add File</span
                     >
-                  </div>
+                  </button>
                   <button class="group hover-div" onclick="rightPanel('file-operation','file-open','open-document')">
-                    <i class="ri-share-box-line small-icon-size group-focus:text-white-smoke"></i>
+                    <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#open-file"></use></svg>                              
                     <span class="tooltip group-hover:opacity-100">Open Document (PDF Only)</span>
                   </button>
                   <button class="group hover-div" onclick="rightPanel('file-operation','file-open','import-document')">
-                    <i class="ri-download-2-line small-icon-size group-focus:text-white-smoke"></i>
+                    <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#import-file"></use></svg>                              
                     <span class="tooltip group-hover:opacity-100">Import (PDF Only)</span>
                   </button>
                   <buton class="group hover-div" onclick="rightPanel('file-operation','file-open','move-document')">
-                    <i class="ri-drag-move-2-fill small-icon-size group-focus:text-white-smoke"></i>
+                    <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#move-file"></use></svg>                              
                     <span class="tooltip group-hover:opacity-100">Move Document</span>
                   </buton>
                   <button class="group hover-div" onclick="rightPanel('file-operation','file-open','save-as')">
-                    <i class="ri-file-check-line small-icon-size group-focus:text-white-smoke"></i>
+                    <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#save-as"></use></svg>                              
                     <span class="tooltip group-hover:opacity-100">Save As (PDF Only)</span>
                   </button>
                   <div class="group hover-div">
-                    <i class="ri-save-line small-icon-size group-focus:text-white-smoke"></i>
+                    <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#save"></use></svg>                              
                     <span class="tooltip group-hover:opacity-100">Save Document</span>
                   </div>
                   <button class="group hover-div"  onclick="rightPanel('file-operation','file-open','rename-document')">
-                    <svg
-                      class="small-icon-size group-focus:text-white-smoke"
-                      width="30"
-                      height="30"
-                      viewBox="0 -2 25 30"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.1875 0.5H15.185C15.4225 0.500073 15.6512 0.590306 15.8247 0.752466C15.9983 0.914626 16.1038 1.13662 16.12 1.3736C16.1362 1.61058 16.0619 1.84486 15.912 2.02912C15.7621 2.21338 15.5478 2.33387 15.3125 2.36625L15.185 2.375H13.625V23.625H15.1812C15.4078 23.625 15.6267 23.7071 15.7974 23.856C15.9681 24.0049 16.0792 24.2106 16.11 24.435L16.1187 24.5625C16.1187 24.789 16.0367 25.0079 15.8878 25.1787C15.7389 25.3494 15.5332 25.4604 15.3088 25.4912L15.1812 25.5H10.1875C9.94997 25.4999 9.72132 25.4097 9.54776 25.2475C9.3742 25.0854 9.26866 24.8634 9.25247 24.6264C9.23628 24.3894 9.31064 24.1551 9.46054 23.9709C9.61044 23.7866 9.82469 23.6661 10.06 23.6338L10.1875 23.625H11.75V2.375H10.1875C9.96095 2.37499 9.74207 2.29295 9.57134 2.14404C9.4006 1.99514 9.28956 1.78944 9.25875 1.565L9.25 1.4375C9.25001 1.21095 9.33205 0.992072 9.48096 0.821337C9.62986 0.650601 9.83556 0.53956 10.06 0.50875L10.1875 0.5ZM20.8075 4.24625C21.8846 4.24724 22.9174 4.67557 23.679 5.43723C24.4407 6.19888 24.869 7.23161 24.87 8.30875L24.875 17.6888C24.8754 18.7262 24.4789 19.7246 23.7668 20.479C23.0546 21.2335 22.0808 21.6869 21.045 21.7463L20.8125 21.7525H14.8813V19.8775H20.885C21.4527 19.8587 21.9909 19.6198 22.3856 19.2113C22.7803 18.8028 23.0006 18.2568 23 17.6888L22.9963 8.3075C22.9953 7.72721 22.7641 7.17101 22.3536 6.76092C21.943 6.35082 21.3865 6.12033 20.8063 6.12H14.8813V4.245L20.8075 4.24625ZM10.5 4.24625V6.12125H4.5625C3.98234 6.12125 3.42594 6.35172 3.0157 6.76195C2.60547 7.17219 2.375 7.72859 2.375 8.30875V17.6888C2.375 18.8975 3.355 19.8762 4.5625 19.8762H10.4937V21.7512H4.5625C3.48506 21.7512 2.45175 21.3232 1.68988 20.5614C0.928012 19.7995 0.5 18.7662 0.5 17.6888V8.30875C0.5 7.23131 0.928012 6.198 1.68988 5.43613C2.45175 4.67426 3.48506 4.24625 4.5625 4.24625H10.5Z"
-                        fill="currentColor"
-                      />
-                    </svg>
+                    <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#rename-file"></use></svg>                              
                     <span class="tooltip group-hover:opacity-100">Rename Document</span>
                   </button>
                   <div class="group hover-div">
-                    <i class="ri-delete-bin-6-line small-icon-size group-focus:text-white-smoke"></i>
+                    <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#delete-file"></use></svg>                              
                     <span class="tooltip group-hover:opacity-100">Delete</span>
                   </div>
                 </div>
@@ -322,16 +310,16 @@
 
             <div class="h-full flex separate gap">
               <div class="icon-containers">
-                <i class="ri-send-plane-fill icon-size"></i>
+                <svg class="icon icon-size"><use xlink:href="/public/images/icons.svg#share"></use></svg>                              
                 <p class="font-bold">Share</p>
               </div>
               <div class="flex flex-col justify-center">
                 <button onclick="rightPanel('file-share','','share')" class="group hover-div">
-                  <i class="ri-share-fill small-icon-size group-focus:text-white-smoke"></i>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#share-file"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100">Share with Users (via Email)</span>
                 </button>
                 <button onclick="rightPanel('file-share','','attach-email')" class="group hover-div">
-                  <i class="ri-mail-send-line small-icon-size group-focus:text-white-smoke"></i>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#attach-email"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100"
                     >Email as Attachment</span
                   >
@@ -341,38 +329,26 @@
 
             <div class="h-full flex separate gap">
               <div class="icon-containers">
-                <i class="ri-share-forward-2-fill icon-size"></i>
+                <svg class="icon icon-size"><use xlink:href="/public/images/icons.svg#export"></use></svg>                              
                 <p class="font-bold">Export</p>
               </div>
               <div class="flex flex-col justify-center">
-                <button onclick="exporting('Exporting..')" class="group hover-div">
-                  <i class="ri-file-pdf-2-line small-icon-size group-focus:text-white-smoke"></i>
+                <button onclick="rightPanel('export','','')" class="group hover-div">
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#export-pdf"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100">Export as PDF</span>
                 </button>
                 <div class="group hover-div">
-                  <i class="ri-multi-image-line small-icon-size group-focus:text-white-smoke"></i>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#export-img"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100">Export as Image (JPG)</span>
                 </div>
               </div>
               <div class="flex flex-col justify-center">
                 <div class="group hover-div">
-                  <svg
-                    class="small-icon-size group-focus:text-white-smoke"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M14.9994 23.2494L6.74938 14.9994L14.9994 6.74938L17.7463 9.49626L12.2525 14.9994L14.9994 17.7463L23.2494 9.49626L16.0588 2.31501C15.7776 2.03449 15.3966 1.87695 14.9994 1.87695C14.6022 1.87695 14.2212 2.03449 13.94 2.31501L2.31501 13.94C2.03449 14.2212 1.87695 14.6022 1.87695 14.9994C1.87695 15.3966 2.03449 15.7776 2.31501 16.0588L13.94 27.6838C14.2212 27.9643 14.6022 28.1218 14.9994 28.1218C15.3966 28.1218 15.7776 27.9643 16.0588 27.6838L27.6838 16.0588C27.9643 15.7776 28.1218 15.3966 28.1218 14.9994C28.1218 14.6022 27.9643 14.2212 27.6838 13.94L25.9963 12.2525L14.9994 23.2494Z"
-                      fill="currentColor"
-                    />
-                  </svg>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#export-epub"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100">Export as EPUB</span>
                 </div>
                 <div class="group hover-div">
-                  <i class="ri-file-word-line small-icon-size group-focus:text-white-smoke"></i>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#export-word"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100">Export to Word</span>
                 </div>
               </div>
@@ -380,16 +356,16 @@
 
             <div class="h-full flex separate gap">
               <div class="icon-containers">
-                <i class="ri-upload-2-line icon-size"></i>
+                <svg class="icon icon-size"><use xlink:href="/public/images/icons.svg#upload"></use></svg>                              
                 <p class="font-bold">Upload</p>
               </div>
               <div class="flex flex-col justify-center">
                 <button onclick="rightPanel('upload','','drive-upload')" class="group hover-div">
-                  <i class="ri-dropbox-line small-icon-size group-focus:text-white-smoke"></i>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#upload-dropbox"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100">Upload to Dropbox</span>
                 </button>
                 <button onclick="rightPanel('file-share','','upload-url')" class="group hover-div">
-                  <i class="ri-link small-icon-size group-focus:text-white-smoke"></i>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#upload-url"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100"
                     >Upload from URL</span
                   >
@@ -397,26 +373,13 @@
               </div>
               <div class="flex flex-col justify-center">
                 <button onclick="rightPanel('upload','','drive-upload')" class="group hover-div">
-                  <i class="ri-drive-line small-icon-size group-focus:text-white-smoke"></i>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#upload-drive"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100"
                     >Upload to Google Drive</span
                   >
                 </button>
                 <a href="/" class="group hover-div">
-                  <svg
-                    class="small-icon-size group-focus:text-white-smoke"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10.5 3C9.70435 3 8.94129 3.31607 8.37868 3.87868C7.81607 4.44129 7.5 5.20435 7.5 6H6C5.20435 6 4.44129 6.31607 3.87868 6.87868C3.31607 7.44129 3 8.20435 3 9V21C3 21.7956 3.31607 22.5587 3.87868 23.1213C4.44129 23.6839 5.20435 24 6 24H7.5C7.5 24.7956 7.81607 25.5587 8.37868 26.1213C8.94129 26.6839 9.70435 27 10.5 27H19.5C20.2956 27 21.0587 26.6839 21.6213 26.1213C22.1839 25.5587 22.5 24.7956 22.5 24H24C24.7956 24 25.5587 23.6839 26.1213 23.1213C26.6839 22.5587 27 21.7956 27 21V9C27 8.20435 26.6839 7.44129 26.1213 6.87868C25.5587 6.31607 24.7956 6 24 6H22.5C22.5 5.20435 22.1839 4.44129 21.6213 3.87868C21.0587 3.31607 20.2956 3 19.5 3H10.5ZM22.5 7.5H24C24.3978 7.5 24.7794 7.65804 25.0607 7.93934C25.342 8.22064 25.5 8.60218 25.5 9V21C25.5 21.3978 25.342 21.7794 25.0607 22.0607C24.7794 22.342 24.3978 22.5 24 22.5H22.5V7.5ZM7.5 22.5H6C5.60218 22.5 5.22064 22.342 4.93934 22.0607C4.65804 21.7794 4.5 21.3978 4.5 21V9C4.5 8.60218 4.65804 8.22064 4.93934 7.93934C5.22064 7.65804 5.60218 7.5 6 7.5H7.5V22.5ZM9 6C9 5.60218 9.15804 5.22064 9.43934 4.93934C9.72064 4.65804 10.1022 4.5 10.5 4.5H19.5C19.8978 4.5 20.2794 4.65804 20.5607 4.93934C20.842 5.22064 21 5.60218 21 6V24C21 24.3978 20.842 24.7794 20.5607 25.0607C20.2794 25.342 19.8978 25.5 19.5 25.5H10.5C10.1022 25.5 9.72064 25.342 9.43934 25.0607C9.15804 24.7794 9 24.3978 9 24V6Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#upload-recent"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100"
                     >Upload Recent Files</span
                   >
@@ -424,7 +387,7 @@
               </div>
               <div class="flex flex-col justify-center">
                 <button onclick="rightPanel('upload','','drive-upload')" class="group hover-div">
-                  <i class="ri-cloud-windy-line small-icon-size group-focus:text-white-smoke"></i>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#upload-onedrive"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100">Upload to OneDrive</span>
                 </button>
                 <div
@@ -435,31 +398,18 @@
 
             <div class="h-full flex separate gap">
               <div class="icon-containers">
-                <i class="ri-qr-scan-line icon-size"></i>
+                <svg class="icon icon-size"><use xlink:href="/public/images/icons.svg#scan"></use></svg>                              
                 <p class="font-bold">Scan</p>
               </div>
               <div class="flex flex-col justify-center">
                 <button onclick="rightPanel('scan','','text-recognition')" class="group hover-div">
-                  <i class="ri-text-snippet small-icon-size group-focus:text-white-smoke"></i>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#scan-text"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100"
                     >Text Recognition</span
                   >
                 </button>
                 <button onclick="rightPanel('scan','','straighten')" class="group hover-div">
-                  <svg
-                    class="small-icon-size group-focus:text-white-smoke"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4.608 12.1519C4.48015 11.5749 4.4672 10.9784 4.56988 10.3965C4.67256 9.81449 4.88886 9.25844 5.20644 8.76007C5.52401 8.2617 5.93665 7.83076 6.42077 7.49185C6.9049 7.15295 7.45103 6.91272 8.028 6.78489L17.8485 4.60689C18.4256 4.47882 19.0222 4.4657 19.6044 4.56827C20.1865 4.67085 20.7427 4.88711 21.2413 5.2047C21.7398 5.5223 22.1709 5.935 22.5099 6.41924C22.8489 6.90348 23.0892 7.44977 23.217 8.02689L24.264 12.7504H22.725L21.75 8.35089C21.5779 7.57417 21.1043 6.89763 20.4334 6.47005C19.7625 6.04248 18.9492 5.8989 18.1725 6.07089L8.352 8.25039C7.96725 8.33561 7.60306 8.49579 7.28024 8.72179C6.95741 8.94779 6.68227 9.23518 6.47054 9.56754C6.25881 9.8999 6.11464 10.2707 6.04625 10.6588C5.97787 11.0469 5.98662 11.4447 6.072 11.8294L6.276 12.7519H4.74L4.608 12.1519ZM23.7255 17.2504H25.2615L25.3935 17.8489C25.5214 18.4259 25.5343 19.0223 25.4316 19.6043C25.3289 20.1863 25.1126 20.7423 24.7951 21.2407C24.4775 21.7391 24.0649 22.17 23.5807 22.5089C23.0966 22.8478 22.5505 23.0881 21.9735 23.2159L12.1545 25.3954C11.5774 25.5235 10.9808 25.5366 10.3986 25.434C9.8165 25.3314 9.26027 25.1152 8.76173 24.7976C8.26319 24.48 7.83211 24.0673 7.4931 23.583C7.1541 23.0988 6.91383 22.5525 6.786 21.9754L5.739 17.2504H7.275L8.25 21.6514C8.42212 22.4281 8.89571 23.1047 9.5666 23.5322C10.2375 23.9598 11.0508 24.1034 11.8275 23.9314L21.6495 21.7534C22.0342 21.6682 22.3984 21.508 22.7213 21.282C23.0441 21.056 23.3192 20.7686 23.531 20.4362C23.7427 20.1039 23.8869 19.7331 23.9552 19.345C24.0236 18.9569 24.0149 18.5591 23.9295 18.1744L23.7255 17.2504ZM1.5 15.0004C1.5 14.8015 1.57902 14.6107 1.71967 14.4701C1.86032 14.3294 2.05109 14.2504 2.25 14.2504H5.25C5.44891 14.2504 5.63968 14.3294 5.78033 14.4701C5.92098 14.6107 6 14.8015 6 15.0004C6 15.1993 5.92098 15.3901 5.78033 15.5307C5.63968 15.6714 5.44891 15.7504 5.25 15.7504H2.25C2.05109 15.7504 1.86032 15.6714 1.71967 15.5307C1.57902 15.3901 1.5 15.1993 1.5 15.0004ZM9 15.0004C9 14.8015 9.07902 14.6107 9.21967 14.4701C9.36032 14.3294 9.55109 14.2504 9.75 14.2504H12.75C12.9489 14.2504 13.1397 14.3294 13.2803 14.4701C13.421 14.6107 13.5 14.8015 13.5 15.0004C13.5 15.1993 13.421 15.3901 13.2803 15.5307C13.1397 15.6714 12.9489 15.7504 12.75 15.7504H9.75C9.55109 15.7504 9.36032 15.6714 9.21967 15.5307C9.07902 15.3901 9 15.1993 9 15.0004ZM17.25 14.2504C17.0511 14.2504 16.8603 14.3294 16.7197 14.4701C16.579 14.6107 16.5 14.8015 16.5 15.0004C16.5 15.1993 16.579 15.3901 16.7197 15.5307C16.8603 15.6714 17.0511 15.7504 17.25 15.7504H20.25C20.4489 15.7504 20.6397 15.6714 20.7803 15.5307C20.921 15.3901 21 15.1993 21 15.0004C21 14.8015 20.921 14.6107 20.7803 14.4701C20.6397 14.3294 20.4489 14.2504 20.25 14.2504H17.25ZM24 15.0004C24 14.8015 24.079 14.6107 24.2197 14.4701C24.3603 14.3294 24.5511 14.2504 24.75 14.2504H27.75C27.9489 14.2504 28.1397 14.3294 28.2803 14.4701C28.421 14.6107 28.5 14.8015 28.5 15.0004C28.5 15.1993 28.421 15.3901 28.2803 15.5307C28.1397 15.6714 27.9489 15.7504 27.75 15.7504H24.75C24.5511 15.7504 24.3603 15.6714 24.2197 15.5307C24.079 15.3901 24 15.1993 24 15.0004Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#scan-straighten"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100"
                     >Straighten</span
                   >
@@ -469,22 +419,22 @@
 
             <div class="h-full flex gap px-4">
               <div class="icon-containers">
-                <i class="ri-printer-line icon-size"></i>
+                <svg class="icon icon-size"><use xlink:href="/public/images/icons.svg#print"></use></svg>                              
                 <p class="font-bold">Print</p>
               </div>
               <div class="flex flex-col justify-center">
                 <button onclick="rightPanel('print','','print')" class="group hover-div">
-                  <i class="ri-printer-line small-icon-size group-focus:text-white-smoke"></i>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#print-file"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100">Print</span>
                 </button>
                 <button onclick="rightPanel('close','','')" class="group hover-div">
-                  <i class="ri-close-line small-icon-size group-focus:text-white-smoke"></i>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#close-file"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100">Close</span>
                 </button>
               </div>
               <div class="flex justify-center gap-2 mt-2">
                 <button onclick="window.print()" class="group hover-div">
-                  <i class="ri-file-settings-line small-icon-size group-focus:text-white-smoke"></i>
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#print-configuration"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100"
                     >Printer Configuration</span
                   >
@@ -527,6 +477,53 @@
                   </div>
                 </div>
                 <div class="overflow-y-auto scroll right-panel-content">
+                  <div class="new-file hidden p-4 space-y-4">
+                    <div class="text-sm font-bold">New document</div>
+                    <button class="flex justify-center items-center w-28 h-28 bg-white-smoke border border-dark-charcoal rounded">Blank</button>
+                    <div class="text-sm font-bold">Template</div>
+                    <div class="flex justify-between">
+                      <button class="relative flex justify-center items-center w-28 h-28 bg-white-smoke border border-dark-charcoal rounded overflow-hidden">
+                        <img class="object-cover w-full h-full" src="/public/images/template1.jpg" alt="Template Image" />
+                        <div class="absolute h-full w-full flex justify-end items-end">
+                          <svg class="icon !p-[0.6rem]"><use xlink:href="/public/images/icons.svg#star"></use></svg>                              
+                        </div>
+                      </button>
+                      <button class="flex justify-center items-center w-28 h-28 bg-white-smoke border border-dark-charcoal rounded overflow-hidden">
+                        <img class="object-cover w-full h-full" src="/public/images/template2.png" alt="Template Image" />
+                      </button>
+                      <button class="flex justify-center items-center w-28 h-28 bg-white-smoke border border-dark-charcoal rounded overflow-hidden">
+                        <img class="object-cover w-full h-full" src="/public/images/template3.jpg" alt="Template Image" />
+                      </button>
+                    </div>
+                    <div class="flex justify-between">
+                      <button class="flex justify-center items-center w-28 h-28 bg-white-smoke border border-dark-charcoal rounded overflow-hidden">
+                        <img class="object-cover w-full h-full" src="/public/images/template1.jpg" alt="Template Image" />
+                      </button>
+                      <button class="relative flex justify-center items-center w-28 h-28 bg-white-smoke border border-dark-charcoal rounded overflow-hidden">
+                        <img class="object-cover w-full h-full" src="/public/images/template2.png" alt="Template Image" />
+                        <div class="absolute h-full w-full flex justify-end items-end">
+                          <svg class="icon !p-[0.6rem]"><use xlink:href="/public/images/icons.svg#star"></use></svg>                              
+                        </div>
+                      </button>
+                      <button class="relative flex justify-center items-center w-28 h-28 bg-white-smoke border border-dark-charcoal rounded overflow-hidden">
+                        <img class="object-cover w-full h-full" src="/public/images/template3.jpg" alt="Template Image" />
+                        <div class="absolute h-full w-full flex justify-end items-end">
+                          <svg class="icon !p-[0.6rem]"><use xlink:href="/public/images/icons.svg#star"></use></svg>                              
+                        </div>
+                      </button>
+                    </div>
+                    <div class="flex justify-between">
+                      <button class="flex justify-center items-center w-28 h-28 bg-white-smoke border border-dark-charcoal rounded overflow-hidden">
+                        <img class="object-cover w-full h-full" src="/public/images/template1.jpg" alt="Template Image" />
+                      </button>
+                      <button class="flex justify-center items-center w-28 h-28 bg-white-smoke border border-dark-charcoal rounded overflow-hidden">
+                        <img class="object-cover w-full h-full" src="/public/images/template2.png" alt="Template Image" />
+                      </button>
+                      <button class="flex justify-center items-center w-28 h-28 bg-white-smoke border border-dark-charcoal rounded overflow-hidden">
+                        <img class="object-cover w-full h-full" src="/public/images/template3.jpg" alt="Template Image" />
+                      </button>
+                    </div>
+                  </div>
                   <div class="file-open hidden">
                     <!-- Open Document -->
                     <div class="border-b border-white-smoke p-4 open-document">
@@ -618,19 +615,18 @@
                       <label class="text-sm font-bold">Publish content online</label>
                       <div class="flex items-center justify-between mt-2">
                         <button class="social-media">
-                          <i class="ri-share-fill text-xl"></i>
+                          <svg class="w-6 h-6 ml-2"><use xlink:href="/public/images/icons.svg#share-file"></use></svg>                              
                         </button>
                         <button class="social-media">
-                          <i class="ri-whatsapp-line text-xl"></i>
+                          <svg class="w-6 h-6 ml-2"><use xlink:href="/public/images/icons.svg#whatsapp"></use></svg>                              
                         </button>
                         <button class="social-media">
-                          <i class="ri-facebook-circle-line text-xl"></i>
+                          <svg class="w-6 h-6 ml-2"><use xlink:href="/public/images/icons.svg#facebook"></use></svg>                                                      </button>
+                        <button class="social-media">
+                          <svg class="w-6 h-6 ml-2"><use xlink:href="/public/images/icons.svg#instagram"></use></svg>                              
                         </button>
                         <button class="social-media">
-                          <i class="ri-instagram-line text-xl"></i>
-                        </button>
-                        <button class="social-media">
-                          <i class="ri-twitter-line text-xl"></i>
+                          <svg class="w-6 h-6 ml-2"><use xlink:href="/public/images/icons.svg#twitter"></use></svg>                              
                         </button>
                       </div>
                     </div>
@@ -642,47 +638,31 @@
                       <div class="flex gap-2 mt-2 text-sm">
                         <div class="grid grid-cols-1 gap-2 input-active">
                           <div class="flex items-center gap-3">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12 9C13.933 9 15.5 7.433 15.5 5.5C15.5 3.567 13.933 2 12 2C10.067 2 8.5 3.567 8.5 5.5C8.5 7.433 10.067 9 12 9Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              <path d="M2 20.5C2 16.0815 6.0295 12.5 11 12.5M15.5 21L20.5 16L18.5 14L13.5 19V21H15.5Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                                            
+                            <svg class="w-6 h-6"><use xlink:href="/public/images/icons.svg#file-name"></use></svg>                                                                                          
                             <span class="font-medium">File name</span>
                           </div>
                           <div class="flex items-center gap-3">
-                            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M16 18.75C16.2652 18.75 16.5196 18.6446 16.7071 18.4571C16.8946 18.2696 17 18.0152 17 17.75V16.504C17.004 13.698 13.026 11.5 9 11.5C4.974 11.5 1 13.698 1 16.504V17.75C1 18.0152 1.10536 18.2696 1.29289 18.4571C1.48043 18.6446 1.73478 18.75 2 18.75H16ZM12.604 4.854C12.604 5.32728 12.5108 5.79593 12.3297 6.23319C12.1485 6.67045 11.8831 7.06775 11.5484 7.40241C11.2138 7.73707 10.8164 8.00254 10.3792 8.18366C9.94193 8.36478 9.47328 8.458 9 8.458C8.52672 8.458 8.05807 8.36478 7.62081 8.18366C7.18355 8.00254 6.78625 7.73707 6.45159 7.40241C6.11692 7.06775 5.85146 6.67045 5.67034 6.23319C5.48922 5.79593 5.396 5.32728 5.396 4.854C5.396 3.89816 5.77571 2.98147 6.45159 2.30559C7.12747 1.62971 8.04416 1.25 9 1.25C9.95584 1.25 10.8725 1.62971 11.5484 2.30559C12.2243 2.98147 12.604 3.89816 12.604 4.854Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                              
-                            <span class="font-medium pl-1">Owner</span>
+                            <svg class="w-6 h-6"><use xlink:href="/public/images/icons.svg#person"></use></svg>                                                                                                                        
+                            <span class="font-medium">Owner</span>
                           </div>
                           <div class="flex items-center gap-3">
-                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1.2957 19.6023L7.6597 13.2383M15.6737 10.4083L13.7687 16.1233C13.7383 16.2149 13.6862 16.2979 13.617 16.3651C13.5477 16.4323 13.4632 16.4817 13.3707 16.5093L1.6927 19.9803C1.58749 20.0116 1.47572 20.0134 1.36957 19.9855C1.26341 19.9576 1.16693 19.9012 1.09062 19.8223C1.01432 19.7434 0.961109 19.6451 0.93679 19.5381C0.912471 19.4311 0.917973 19.3194 0.952696 19.2153L4.7447 7.84133C4.77187 7.75966 4.8163 7.6848 4.87497 7.62182C4.93363 7.55884 5.00516 7.50922 5.0847 7.47633L10.4717 5.25833C10.5812 5.21309 10.7017 5.2013 10.8179 5.22444C10.9341 5.24757 11.0409 5.3046 11.1247 5.38833L15.5287 9.79433C15.6075 9.87311 15.6628 9.97228 15.6884 10.0807C15.714 10.1892 15.7089 10.3026 15.6737 10.4083Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                              <path d="M15.7904 10.0565L18.6184 7.22748C18.9933 6.85242 19.2039 6.34381 19.2039 5.81348C19.2039 5.28315 18.9933 4.77453 18.6184 4.39948L16.4984 2.27748C16.3126 2.09168 16.0921 1.94428 15.8494 1.84372C15.6067 1.74316 15.3466 1.69141 15.0839 1.69141C14.8212 1.69141 14.561 1.74316 14.3183 1.84372C14.0756 1.94428 13.8551 2.09168 13.6694 2.27748L10.8414 5.10648M9.77938 11.1165C9.64004 10.9772 9.47465 10.8668 9.29262 10.7914C9.1106 10.7161 8.91552 10.6773 8.71852 10.6774C8.52152 10.6774 8.32646 10.7162 8.14448 10.7917C7.96249 10.8671 7.79714 10.9776 7.65788 11.117C7.51861 11.2563 7.40815 11.4217 7.3328 11.6037C7.25746 11.7858 7.2187 11.9808 7.21875 12.1778C7.2188 12.3748 7.25764 12.5699 7.33308 12.7519C7.40851 12.9339 7.51904 13.0992 7.65838 13.2385C7.93977 13.5197 8.32137 13.6777 8.71923 13.6776C9.11709 13.6775 9.49861 13.5194 9.77988 13.238C10.0611 12.9566 10.2191 12.575 10.219 12.1771C10.2189 11.7793 10.0608 11.3977 9.77938 11.1165Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                                           
-                            <span class="font-medium pl-1">Creator</span>
-                          </div>
-                          <div class="flex items-center gap-4">
-                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0.5C4.13261 0.5 4.25979 0.552679 4.35355 0.646447C4.44732 0.740215 4.5 0.867392 4.5 1V2H11.5V1C11.5 0.867392 11.5527 0.740215 11.6464 0.646447C11.7402 0.552679 11.8674 0.5 12 0.5C12.1326 0.5 12.2598 0.552679 12.3536 0.646447C12.4473 0.740215 12.5 0.867392 12.5 1V2.003C12.7447 2.005 12.9627 2.01367 13.154 2.029C13.519 2.059 13.839 2.122 14.135 2.272C14.6053 2.51189 14.9875 2.89451 15.227 3.365C15.378 3.661 15.441 3.981 15.471 4.345C15.5 4.7 15.5 5.137 15.5 5.679V13.321C15.5 13.863 15.5 14.301 15.471 14.654C15.441 15.019 15.378 15.339 15.227 15.635C14.9874 16.1051 14.6051 16.4874 14.135 16.727C13.839 16.878 13.519 16.941 13.155 16.971C12.8 17 12.363 17 11.822 17H4.179C3.637 17 3.199 17 2.846 16.971C2.481 16.941 2.161 16.878 1.865 16.727C1.39451 16.4875 1.01189 16.1053 0.772 15.635C0.622 15.339 0.559 15.019 0.529 14.655C0.5 14.3 0.5 13.862 0.5 13.32V5.68C0.5 5.205 0.5 4.812 0.52 4.483L0.529 4.347C0.559 3.982 0.622 3.662 0.772 3.366C1.01173 2.89535 1.39435 2.51272 1.865 2.273C2.161 2.123 2.481 2.06 2.845 2.03C3.03767 2.01467 3.256 2.006 3.5 2.004V1C3.5 0.867392 3.55268 0.740215 3.64645 0.646447C3.74021 0.552679 3.86739 0.5 4 0.5ZM3.5 3.5V3.003C3.3088 3.00458 3.11771 3.01225 2.927 3.026C2.625 3.05 2.451 3.096 2.319 3.163C2.03651 3.30685 1.80685 3.53651 1.663 3.819C1.596 3.951 1.55 4.125 1.526 4.427C1.5 4.736 1.5 5.132 1.5 5.7V6.25H14.5V5.7C14.5 5.132 14.5 4.736 14.474 4.427C14.45 4.125 14.404 3.951 14.337 3.819C14.1931 3.53651 13.9635 3.30685 13.681 3.163C13.549 3.096 13.375 3.05 13.073 3.026C12.8823 3.01225 12.6912 3.00458 12.5 3.003V3.5C12.5 3.63261 12.4473 3.75979 12.3536 3.85355C12.2598 3.94732 12.1326 4 12 4C11.8674 4 11.7402 3.94732 11.6464 3.85355C11.5527 3.75979 11.5 3.63261 11.5 3.5V3H4.5V3.5C4.5 3.63261 4.44732 3.75979 4.35355 3.85355C4.25979 3.94732 4.13261 4 4 4C3.86739 4 3.74021 3.94732 3.64645 3.85355C3.55268 3.75979 3.5 3.63261 3.5 3.5ZM14.5 7.25H1.5V13.3C1.5 13.868 1.5 14.265 1.526 14.573C1.55 14.875 1.596 15.049 1.663 15.181C1.80685 15.4635 2.03651 15.6931 2.319 15.837C2.451 15.904 2.625 15.95 2.927 15.974C3.236 16 3.632 16 4.2 16H11.8C12.368 16 12.765 16 13.073 15.974C13.375 15.95 13.549 15.904 13.681 15.837C13.9635 15.6931 14.1931 15.4635 14.337 15.181C14.404 15.049 14.45 14.875 14.474 14.573C14.5 14.265 14.5 13.868 14.5 13.3V7.25Z" fill="#333333"/>
-                            </svg>                                                           
-                            <span class="font-medium pl-1">Created date</span>
+                            <svg class="w-6 h-6"><use xlink:href="/public/images/icons.svg#creator"></use></svg>                                                                                                                                                    
+                            <span class="font-medium">Creator</span>
                           </div>
                           <div class="flex items-center gap-3">
-                            <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M20 11.6367C20.4688 11.957 20.8867 12.3203 21.2539 12.7266C21.6211 13.1328 21.9375 13.5781 22.2031 14.0625C22.4688 14.5469 22.6641 15.0586 22.7891 15.5977C22.9141 16.1367 22.9844 16.6875 23 17.25C23 18.1797 22.8242 19.0547 22.4727 19.875C22.1211 20.6953 21.6367 21.4102 21.0195 22.0195C20.4023 22.6289 19.6875 23.1094 18.875 23.4609C18.0625 23.8125 17.1875 23.9922 16.25 24C15.5391 24 14.8516 23.8945 14.1875 23.6836C13.5234 23.4727 12.9141 23.168 12.3594 22.7695C11.8047 22.3711 11.3125 21.8945 10.8828 21.3398C10.4531 20.7852 10.1211 20.1719 9.88672 19.5H0.5V1.5H3.5V0H5V1.5H15.5V0H17V1.5H20V11.6367ZM2 3V6H18.5V3H17V4.5H15.5V3H5V4.5H3.5V3H2ZM9.53516 18C9.51172 17.7578 9.5 17.5078 9.5 17.25C9.5 16.5781 9.59375 15.9258 9.78125 15.293C9.96875 14.6602 10.2539 14.0625 10.6367 13.5H9.5V12H11V13.0078C11.3203 12.6094 11.6758 12.2578 12.0664 11.9531C12.457 11.6484 12.8789 11.3867 13.332 11.168C13.7852 10.9492 14.2578 10.7852 14.75 10.6758C15.2422 10.5664 15.7422 10.5078 16.25 10.5C17.0312 10.5 17.7812 10.6289 18.5 10.8867V7.5H2V18H9.53516ZM16.25 22.5C16.9766 22.5 17.6562 22.3633 18.2891 22.0898C18.9219 21.8164 19.4766 21.4414 19.9531 20.9648C20.4297 20.4883 20.8047 19.9336 21.0781 19.3008C21.3516 18.668 21.4922 17.9844 21.5 17.25C21.5 16.5234 21.3633 15.8438 21.0898 15.2109C20.8164 14.5781 20.4414 14.0234 19.9648 13.5469C19.4883 13.0703 18.9336 12.6953 18.3008 12.4219C17.668 12.1484 16.9844 12.0078 16.25 12C15.5234 12 14.8438 12.1367 14.2109 12.4102C13.5781 12.6836 13.0234 13.0586 12.5469 13.5352C12.0703 14.0117 11.6953 14.5664 11.4219 15.1992C11.1484 15.832 11.0078 16.5156 11 17.25C11 17.9766 11.1367 18.6562 11.4102 19.2891C11.6836 19.9219 12.0586 20.4766 12.5352 20.9531C13.0117 21.4297 13.5664 21.8047 14.1992 22.0781C14.832 22.3516 15.5156 22.4922 16.25 22.5ZM17 16.5H19.25V18H15.5V13.5H17V16.5ZM3.5 12H5V13.5H3.5V12ZM6.5 12H8V13.5H6.5V12ZM6.5 9H8V10.5H6.5V9ZM3.5 15H5V16.5H3.5V15ZM6.5 15H8V16.5H6.5V15ZM11 10.5H9.5V9H11V10.5ZM14 10.5H12.5V9H14V10.5ZM17 10.5H15.5V9H17V10.5Z" fill="#333333"/>
-                            </svg>                                                           
+                            <svg class="w-6 h-6"><use xlink:href="/public/images/icons.svg#created-date"></use></svg>                                                                                                                                                     
+                            <span class="font-medium">Created date</span>
+                          </div>
+                          <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6"><use xlink:href="/public/images/icons.svg#last-updated"></use></svg>                                                                                                                                                    
                             <span class="font-medium">Last updated</span>
                           </div>
-                          <div class="flex items-center gap-5">
-                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 1.5C0.5 1.10218 0.658035 0.720645 0.93934 0.43934C1.22064 0.158036 1.60218 0 2 0H10.9835C11.2274 0.000189019 11.4676 0.0598491 11.6832 0.17381C11.8988 0.287771 12.0834 0.452595 12.221 0.654L15.296 5.154C15.4663 5.40328 15.5573 5.69813 15.5573 6C15.5573 6.30187 15.4663 6.59672 15.296 6.846L12.221 11.346C12.0836 11.5472 11.8992 11.7119 11.6839 11.8258C11.4685 11.9398 11.2286 11.9996 10.985 12H2C1.60218 12 1.22064 11.842 0.93934 11.5607C0.658035 11.2794 0.5 10.8978 0.5 10.5V1.5ZM2.375 2.625C2.375 2.42609 2.45402 2.23532 2.59467 2.09467C2.73532 1.95402 2.92609 1.875 3.125 1.875H10.2425C10.361 1.87487 10.4778 1.9028 10.5834 1.95651C10.689 2.01022 10.7803 2.08818 10.85 2.184L13.304 5.559C13.3972 5.68717 13.4474 5.84155 13.4474 6C13.4474 6.15845 13.3972 6.31283 13.304 6.441L10.85 9.816C10.7803 9.91182 10.689 9.98978 10.5834 10.0435C10.4778 10.0972 10.361 10.1251 10.2425 10.125H3.125C2.92609 10.125 2.73532 10.046 2.59467 9.90533C2.45402 9.76468 2.375 9.57391 2.375 9.375V2.625Z" fill="#333333"/>
-                            </svg>                              
+                          <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6"><use xlink:href="/public/images/icons.svg#keyword"></use></svg>                                                                                                                        
                             <span class="font-medium">Keywords</span>
                           </div>
-                          <div class="flex items-center gap-5">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M0 13.2295V11.9995H8V12.9995L0 13.2295ZM0 9.44153V8.44153H14V9.44153H0ZM0 5.55753V4.55753H14V5.55753H0ZM0 1.99953V0.769531H14V1.99953H0Z" fill="#333333"/>
-                            </svg>                              
+                          <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6"><use xlink:href="/public/images/icons.svg#subject"></use></svg>                                                                                                                        
                             <span class="font-medium">Subject</span>
                           </div>
                         </div>
@@ -704,9 +684,7 @@
                         <button class="version group">
                           <div class="flex items-center gap-2">
                             <div class="version-icon">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.668 13.8327C12.8448 13.8327 13.0143 13.7624 13.1394 13.6374C13.2644 13.5124 13.3346 13.3428 13.3346 13.166V12.3353C13.3373 10.4647 10.6853 8.99935 8.0013 8.99935C5.3173 8.99935 2.66797 10.4647 2.66797 12.3353V13.166C2.66797 13.3428 2.73821 13.5124 2.86323 13.6374C2.98826 13.7624 3.15782 13.8327 3.33464 13.8327H12.668ZM10.404 4.56868C10.404 4.88421 10.3418 5.19664 10.2211 5.48814C10.1003 5.77965 9.92335 6.04452 9.70024 6.26762C9.47714 6.49073 9.21227 6.66771 8.92076 6.78846C8.62926 6.9092 8.31682 6.97135 8.0013 6.97135C7.68578 6.97135 7.37335 6.9092 7.08184 6.78846C6.79034 6.66771 6.52547 6.49073 6.30236 6.26762C6.07925 6.04452 5.90227 5.77965 5.78153 5.48814C5.66078 5.19664 5.59864 4.88421 5.59864 4.56868C5.59864 3.93146 5.85177 3.32033 6.30236 2.86974C6.75295 2.41915 7.36407 2.16602 8.0013 2.16602C8.63853 2.16602 9.24966 2.41915 9.70024 2.86974C10.1508 3.32033 10.404 3.93146 10.404 4.56868Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>                                
+                              <svg class="w-6 h-6 p-0.5"><use xlink:href="/public/images/icons.svg#person"></use></svg>                                                                                                                                                        
                             </div>
                             <span>John Doe</span>
                           </div>
@@ -715,9 +693,7 @@
                         <button class="version group">
                           <div class="flex items-center gap-2">
                             <div class="version-icon">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.668 13.8327C12.8448 13.8327 13.0143 13.7624 13.1394 13.6374C13.2644 13.5124 13.3346 13.3428 13.3346 13.166V12.3353C13.3373 10.4647 10.6853 8.99935 8.0013 8.99935C5.3173 8.99935 2.66797 10.4647 2.66797 12.3353V13.166C2.66797 13.3428 2.73821 13.5124 2.86323 13.6374C2.98826 13.7624 3.15782 13.8327 3.33464 13.8327H12.668ZM10.404 4.56868C10.404 4.88421 10.3418 5.19664 10.2211 5.48814C10.1003 5.77965 9.92335 6.04452 9.70024 6.26762C9.47714 6.49073 9.21227 6.66771 8.92076 6.78846C8.62926 6.9092 8.31682 6.97135 8.0013 6.97135C7.68578 6.97135 7.37335 6.9092 7.08184 6.78846C6.79034 6.66771 6.52547 6.49073 6.30236 6.26762C6.07925 6.04452 5.90227 5.77965 5.78153 5.48814C5.66078 5.19664 5.59864 4.88421 5.59864 4.56868C5.59864 3.93146 5.85177 3.32033 6.30236 2.86974C6.75295 2.41915 7.36407 2.16602 8.0013 2.16602C8.63853 2.16602 9.24966 2.41915 9.70024 2.86974C10.1508 3.32033 10.404 3.93146 10.404 4.56868Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>                                
+                              <svg class="w-6 h-6 p-0.5"><use xlink:href="/public/images/icons.svg#person"></use></svg>                                                                                                                                                                                      
                             </div>
                             <span>John Doe</span>
                           </div>
@@ -726,9 +702,7 @@
                         <button class="version group">
                           <div class="flex items-center gap-2">
                             <div class="version-icon">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.668 13.8327C12.8448 13.8327 13.0143 13.7624 13.1394 13.6374C13.2644 13.5124 13.3346 13.3428 13.3346 13.166V12.3353C13.3373 10.4647 10.6853 8.99935 8.0013 8.99935C5.3173 8.99935 2.66797 10.4647 2.66797 12.3353V13.166C2.66797 13.3428 2.73821 13.5124 2.86323 13.6374C2.98826 13.7624 3.15782 13.8327 3.33464 13.8327H12.668ZM10.404 4.56868C10.404 4.88421 10.3418 5.19664 10.2211 5.48814C10.1003 5.77965 9.92335 6.04452 9.70024 6.26762C9.47714 6.49073 9.21227 6.66771 8.92076 6.78846C8.62926 6.9092 8.31682 6.97135 8.0013 6.97135C7.68578 6.97135 7.37335 6.9092 7.08184 6.78846C6.79034 6.66771 6.52547 6.49073 6.30236 6.26762C6.07925 6.04452 5.90227 5.77965 5.78153 5.48814C5.66078 5.19664 5.59864 4.88421 5.59864 4.56868C5.59864 3.93146 5.85177 3.32033 6.30236 2.86974C6.75295 2.41915 7.36407 2.16602 8.0013 2.16602C8.63853 2.16602 9.24966 2.41915 9.70024 2.86974C10.1508 3.32033 10.404 3.93146 10.404 4.56868Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>                                
+                              <svg class="w-6 h-6 p-0.5"><use xlink:href="/public/images/icons.svg#person"></use></svg>                                                                                                                                                                                        
                             </div>
                             <span>John Doe</span>
                           </div>
@@ -797,14 +771,14 @@
                       <ul class="space-y-2 mt-2 text-sm">
                         <li class="flex items-center justify-between input-active">
                           <div class="flex items-center gap-2">
-                            <i class="ri-user-line bg-royal-blue text-white-smoke rounded-full px-2 py-1"></i>
+                            <svg class="w-8 h-8 p-1 pl-1.5 bg-royal-blue text-white-smoke rounded-full"><use xlink:href="/public/images/icons.svg#person"></use></svg>                                                                                                                                                        
                             <span>John Doe</span>
                           </div>
                           <span class="pr-8">Owner</span>
                         </li>
                         <li class="flex items-center justify-between input-active">
                           <div class="flex items-center gap-2">
-                            <i class="ri-user-line bg-royal-blue text-white-smoke rounded-full px-2 py-1"></i>
+                            <svg class="w-8 h-8 p-1 pl-1.5 bg-royal-blue text-white-smoke rounded-full"><use xlink:href="/public/images/icons.svg#person"></use></svg>                                                                                                                                                        
                             <span>James bond</span>
                           </div>
                           <span>
@@ -849,6 +823,74 @@
                       <button class="button-active">Upload</button>
                     </div>
                   </div>                 
+                </div>
+              </div>
+              <!-- File export -->
+              <div class="export hidden">
+                <!-- Header -->
+                <div class="border-b border-white-smoke flex justify-center items-center">
+                  <div class="right-panel-title">
+                    <span class="text-center w-full">Export</span>
+                    <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
+                  </div>
+                </div>
+                <div class="overflow-y-auto scroll right-panel-content">
+                  <!-- Straighten -->
+                  <div class="border-b border-white-smoke p-4">
+                    <p class="text-transparent-dark-gray text-xs mb-3">document.144.pdf</p>
+                    <div class="bg-white-smoke h-32 rounded-[10px] mb-5 white-button-active"></div>
+                    <button class="bg-medium-gray text-transparent-charcoal px-3 py-1.5 rounded-[10px] text-sm">Export</button>
+                  </div>
+                  <div class="border-b border-white-smoke p-4">
+                    <label class="text-sm font-bold">Export to PDF</label>
+                    <div class="flex gap-2 items-center mt-3">
+                      <div class="flex items-center gap-2">
+                        <button class="white-button-active !w-10 !py-1.5">
+                          <svg width="24" height="24" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 7C1 4.172 1 2.757 1.879 1.879C2.757 1 4.172 1 7 1H8C10.828 1 12.243 1 13.121 1.879C14 2.757 14 4.172 14 7V15C14 17.828 14 19.243 13.121 20.121C12.243 21 10.828 21 8 21H7C4.172 21 2.757 21 1.879 20.121C1 19.243 1 17.828 1 15V7Z" stroke="#333333" stroke-width="1.5"/>
+                            <path d="M16.5 9.007C18.36 9.034 19.414 9.172 20.121 9.879C21 10.758 21 12.172 21 15C21 17.828 21 19.243 20.121 20.122C19.414 20.829 18.36 20.967 16.5 20.994M10 4H5M18 17V13" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M9 16.5C9 16.8978 8.84196 17.2794 8.56066 17.5607C8.27936 17.842 7.89782 18 7.5 18C7.10218 18 6.72064 17.842 6.43934 17.5607C6.15804 17.2794 6 16.8978 6 16.5C6 16.1022 6.15804 15.7206 6.43934 15.4393C6.72064 15.158 7.10218 15 7.5 15C7.89782 15 8.27936 15.158 8.56066 15.4393C8.84196 15.7206 9 16.1022 9 16.5Z" stroke="#333333" stroke-width="1.5"/>
+                            <path d="M19.5 5.986L21 7C21 3.985 18.838 1.483 16 1" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                            
+                        </button>
+                        <div class="relative custom-select w-full px-2 bg-transparent rounded-[10px] border border-white-smoke focus:outline-none placeholder:text-sm placeholder:text-transparent-charcoal placeholder:opacity-30">
+                          <div class="selected-item text-sm p-1.5 rounded cursor-pointer flex justify-between items-center">
+                            <span>Orientation</span>
+                            <span><i class="ri-arrow-down-s-line"></i></span>
+                          </div>
+                          <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full inset-x-0 rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                            <div class="option !pl-1.5">Portrait</div>
+                            <div class="option !pl-1.5">Landscape</div>
+                          </div>
+                        </div>
+                      </div>
+                      <label class="relative flex items-center space-x-2">
+                        <div class="relative flex items-center justify-center w-12 h-8 border border-white-smoke rounded-[10px]">
+                          <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                          <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                          <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                        </div>
+                        <button class="white-button-active !text-transparent-charcoal">Add password</button>
+                      </label>  
+                    </div>
+                    <label class="relative flex items-center space-x-2 mt-3">
+                      <div class="relative flex items-center justify-center w-10 h-8 border border-white-smoke rounded-[10px]">
+                        <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                        <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                        <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                      </div>
+                      <span class="text-sm">Compress file</span>
+                    </label>  
+                  </div>
+                  <div class="p-4">
+                    <label class="text-sm font-bold">Export as JPG</label>
+                    <div class="flex gap-2 items-center mt-3">
+                      <div class="rect-slider-container white-button-active !w-1/4">
+                        <input type="range" class="rect-slider" min="0" max="100" value="50" />
+                      </div>
+                      <p class="text-sm">Set resolution</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- File upload -->

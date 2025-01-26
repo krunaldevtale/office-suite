@@ -12,7 +12,7 @@ function rightPanel(title, subTitle, targetClass) {
         
         if(subTitle && subTitle !== "organize"){
             // Hide all sibling elements of the container
-            $('.right-panel-content').children().hide();
+            $(`.${title} .right-panel-content`).children().hide();
             // Show the target element with the specific subTitle
             $(`.${title} .${subTitle}`).show(); 
         }

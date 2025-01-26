@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="dist/main.css" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+</head>
+<body class="flex justify-center items-center min-h-screen w-screen" style="background-image:url('https://wallpaperswide.com/download/laptop-wallpaper-1152x768.jpg');background-repeat:no-repeat;background-size:cover;">
+    <div class="login-container">
+        <h1 class="text-4xl font-semibold mb-6">Welcome to Aibaze</h1>
+        <p class="text-transparent-dark-gray font-medium text-2xl mb-6">Register your account</p>
+        <form class="space-y-4">
+            <div>
+                <label for="name" class="block font-medium">Name</label>
+                <input id="name" name="name" type="text" placeholder="Rachel" class="mt-1 block w-full rounded-[10px] border border-charcoal-black py-2 px-4 placeholder:text-transparent-dark-gray focus:outline-none">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input id="email" name="email" type="email" placeholder="RachelSaket@gmail.com" class="mt-1 block w-full rounded-[10px] border border-charcoal-black py-2 px-4 placeholder:text-transparent-dark-gray focus:outline-none">
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input id="password" name="password" type="password" placeholder="Rachel14#we" class="mt-1 block w-full rounded-[10px] border border-charcoal-black py-2 px-4 placeholder:text-transparent-dark-gray focus:outline-none">
+            </div>
+            <button type="submit" class="w-3/12 bg-light-sky-blue py-2 px-4 rounded-[10px] font-semibold text-lg focus:outline-none">Sign up</button>
+        </form>
+        <div class="mt-6 text-center flex items-center gap-3">
+            <p class="text-transparent-dark-gray">Create account with</p>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none">
+                    <span class="sr-only">Sign up with Facebook</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.024 3.684 9.167 8.437 9.877v-6.985H7.898v-2.892h2.539V9.845c0-2.507 1.493-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.464h-1.261c-1.242 0-1.63.772-1.63 1.562v1.876h2.773l-.443 2.892h-2.33v6.985C18.316 21.167 22 17.024 22 12z"/></svg>
+                </button>
+                <button class="bg-red-500 text-white p-2 rounded-full hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:outline-none">
+                    <span class="sr-only">Sign up with Google</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.805 10.023h-9.527v3.969h5.611c-.281 1.504-1.164 2.774-2.555 3.573v2.98h4.13c2.41-2.226 3.8-5.506 3.8-9.361 0-.654-.074-1.291-.208-1.915l-1.251.754z"/><path d="M12.278 22c2.865 0 5.273-.952 7.031-2.588l-4.13-2.98c-1.04.698-2.373 1.11-3.893 1.11-2.993 0-5.52-2.01-6.427-4.718H.593v2.972A11.953 11.953 0 0 0 12.278 22z"/><path d="M5.851 13.824a7.207 7.207 0 0 1 0-3.65v-2.97H.593A11.953 11.953 0 0 0 .105 12c0 1.902.445 3.698 1.236 5.288l4.51-3.464z"/><path d="M12.278 4.891c1.547 0 2.938.536 4.03 1.588l3.027-3.027C17.543 1.268 15.144.316 12.278.316A11.953 11.953 0 0 0 .593 6.776l4.51 3.464c.906-2.707 3.434-4.717 6.427-4.717z"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

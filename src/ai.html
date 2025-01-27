@@ -23,7 +23,9 @@
       <!-- Search bar -->
       <div class="relative w-[27%] hidden md:block">
         <span class="absolute top-1/2 transform -translate-y-1/2">
-          <svg class="icon !p-[1rem]"><use xlink:href="/public/images/icons.svg#search"></use></svg>                              
+          <svg class="icon !p-[1rem]">
+            <use xlink:href="/public/images/icons.svg#search"></use>
+          </svg>
         </span>
         <input type="text" placeholder="Search your PDF library or PDF documents..."
           class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke focus:outline-none placeholder:text-dark-charcoal placeholder:text-base" />
@@ -133,43 +135,57 @@
             </li>
             <li>
               <a href="/" class="flex flex-col items-center menu">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#home"></use></svg>                              
+                <svg class="icon">
+                  <use xlink:href="/public/images/icons.svg#home"></use>
+                </svg>
                 <span class="secondary-text">Home</span>
               </a>
             </li>
             <li>
               <a href="file.html" class="flex flex-col items-center menu">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#file"></use></svg>                              
+                <svg class="icon">
+                  <use xlink:href="/public/images/icons.svg#file"></use>
+                </svg>
                 <span class="secondary-text">File</span>
               </a>
             </li>
             <li>
               <a href="edit.html" class="flex flex-col items-center menu">
-                <svg class="icon !p-[0.7rem]"><use xlink:href="/public/images/icons.svg#edit"></use></svg>                              
+                <svg class="icon !p-[0.7rem]">
+                  <use xlink:href="/public/images/icons.svg#edit"></use>
+                </svg>
                 <span class="secondary-text">Edit</span>
               </a>
             </li>
             <li>
               <a href="preserve.html" class="flex flex-col items-center menu">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#preserve"></use></svg>                              
+                <svg class="icon">
+                  <use xlink:href="/public/images/icons.svg#preserve"></use>
+                </svg>
                 <span class="secondary-text text-center">Preserve</span>
               </a>
             </li>
             <li>
               <a href="tools.html" class="flex flex-col items-center menu">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#tools"></use></svg>                              
+                <svg class="icon">
+                  <use xlink:href="/public/images/icons.svg#tools"></use>
+                </svg>
                 <span class="secondary-text text-center">Tools</span>
               </a>
             </li>
             <li>
               <a href="help.html" class="flex flex-col items-center menu">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#help"></use></svg>                              
+                <svg class="icon">
+                  <use xlink:href="/public/images/icons.svg#help"></use>
+                </svg>
                 <span class="secondary-text text-center">Help</span>
               </a>
             </li>
             <li>
               <a href="/src/ai.html" class="flex flex-col items-center menu-button menu">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#ai"></use></svg>                              
+                <svg class="icon">
+                  <use xlink:href="/public/images/icons.svg#ai"></use>
+                </svg>
                 <span class="secondary-text">AI</span>
               </a>
               <div class="menu-dropdown hidden w-64">
@@ -381,32 +397,32 @@
             </div>
             <div class="flex gap-2 mt-2 justify-center">
               <div>
-                <button onclick="rightPanel('file-share','null','share')" class="group hover-div">
+                <button onclick="rightPanel('management','manage-open','document-comparison')" class="group hover-div">
                   <svg class="small-icon-size group-focus:text-white-smoke" width="30" height="30" viewBox="0 -2 25 30"
                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M6.75151 5.25072C6.75151 5.64854 6.59347 6.03007 6.31217 6.31138C6.03086 6.59268 5.64933 6.75072 5.25151 6.75072C4.85368 6.75072 4.47215 6.59268 4.19085 6.31138C3.90954 6.03007 3.75151 5.64854 3.75151 5.25072C3.75151 4.85289 3.90954 4.47136 4.19085 4.19006C4.47215 3.90875 4.85368 3.75072 5.25151 3.75072C5.64933 3.75072 6.03086 3.90875 6.31217 4.19006C6.59347 4.47136 6.75151 4.85289 6.75151 5.25072ZM6.37651 8.82972C7.2316 8.56093 7.96218 7.99485 8.436 7.23399C8.90983 6.47312 9.09556 5.56775 8.95959 4.68179C8.82362 3.79582 8.37493 2.98782 7.69475 2.40406C7.01456 1.8203 6.14785 1.49937 5.25151 1.49937C4.35517 1.49937 3.48845 1.8203 2.80827 2.40406C2.12809 2.98782 1.67939 3.79582 1.54342 4.68179C1.40745 5.56775 1.59319 6.47312 2.06701 7.23399C2.54084 7.99485 3.27142 8.56093 4.12651 8.82972V15.7507C4.12651 16.8447 4.56111 17.8939 5.33469 18.6675C6.10828 19.4411 7.15749 19.8757 8.25151 19.8757H9.19501L8.49001 20.5807C8.38261 20.6845 8.29696 20.8087 8.23807 20.946C8.17917 21.0833 8.14821 21.2309 8.14698 21.3803C8.14576 21.5297 8.17429 21.6778 8.23092 21.816C8.28755 21.9543 8.37115 22.0798 8.47683 22.1854C8.5825 22.291 8.70815 22.3745 8.84644 22.431C8.98472 22.4875 9.13287 22.5159 9.28225 22.5145C9.43162 22.5131 9.57923 22.482 9.71646 22.423C9.85368 22.364 9.97778 22.2782 10.0815 22.1707L12.7065 19.5457L13.5015 18.7507L12.7065 17.9557L10.0815 15.3307C9.97734 15.2256 9.85338 15.1422 9.7168 15.0853C9.58022 15.0284 9.43372 14.9991 9.28576 14.9991C9.13779 14.9991 8.99129 15.0284 8.85471 15.0853C8.71813 15.1422 8.59418 15.2256 8.49001 15.3307C8.27933 15.5417 8.161 15.8276 8.161 16.1257C8.161 16.4238 8.27933 16.7098 8.49001 16.9207L9.19501 17.6257H8.25151C7.21651 17.6257 6.37651 16.7857 6.37651 15.7507V8.82972ZM13.9215 1.83072C14.0245 1.72019 14.1487 1.63154 14.2867 1.57005C14.4247 1.50856 14.5737 1.4755 14.7247 1.47283C14.8758 1.47017 15.0258 1.49795 15.1659 1.55453C15.306 1.61112 15.4332 1.69533 15.5401 1.80216C15.6469 1.90899 15.7311 2.03624 15.7877 2.17632C15.8443 2.3164 15.8721 2.46645 15.8694 2.6175C15.8667 2.76856 15.8337 2.91753 15.7722 3.05553C15.7107 3.19353 15.622 3.31773 15.5115 3.42072L14.8065 4.12572H15.7515C16.8455 4.12572 17.8947 4.56032 18.6683 5.3339C19.4419 6.10749 19.8765 7.1567 19.8765 8.25072V15.1717C20.7316 15.4405 21.4622 16.0066 21.936 16.7675C22.4098 17.5283 22.5956 18.4337 22.4596 19.3197C22.3236 20.2056 21.8749 21.0136 21.1947 21.5974C20.5146 22.1811 19.6478 22.5021 18.7515 22.5021C17.8552 22.5021 16.9885 22.1811 16.3083 21.5974C15.6281 21.0136 15.1794 20.2056 15.0434 19.3197C14.9075 18.4337 15.0932 17.5283 15.567 16.7675C16.0408 16.0066 16.7714 15.4405 17.6265 15.1717V8.25072C17.6265 7.21572 16.7865 6.37572 15.7515 6.37572H14.8065L15.5115 7.08072C15.622 7.18371 15.7107 7.30791 15.7722 7.44591C15.8337 7.58391 15.8667 7.73288 15.8694 7.88394C15.8721 8.03499 15.8443 8.18503 15.7877 8.32512C15.7311 8.4652 15.6469 8.59245 15.5401 8.69928C15.4332 8.80611 15.306 8.89032 15.1659 8.9469C15.0258 9.00348 14.8758 9.03127 14.7247 9.02861C14.5737 9.02594 14.4247 8.99288 14.2867 8.93139C14.1487 8.8699 14.0245 8.78125 13.9215 8.67072L11.2965 6.04572L10.5015 5.25072L11.2965 4.45572L13.9215 1.83072ZM18.7515 20.2507C19.1493 20.2507 19.5309 20.0927 19.8122 19.8114C20.0935 19.5301 20.2515 19.1485 20.2515 18.7507C20.2515 18.3529 20.0935 17.9714 19.8122 17.6901C19.5309 17.4088 19.1493 17.2507 18.7515 17.2507C18.3537 17.2507 17.9722 17.4088 17.6908 17.6901C17.4095 17.9714 17.2515 18.3529 17.2515 18.7507C17.2515 19.1485 17.4095 19.5301 17.6908 19.8114C17.9722 20.0927 18.3537 20.2507 18.7515 20.2507Z"
                       fill="currentColor" />
                   </svg>
-                  <span class="tooltip group-hover:opacity-100">Share with Users (via Email)</span>
+                  <span class="tooltip group-hover:opacity-100">Document Comparison</span>
                 </button>
-                <button onclick="rightPanel('file-share','null','share')" class="group hover-div">
+                <button onclick="rightPanel('management','automatic-table-open','table-generation')" class="group hover-div">
                   <i class="ri-table-line small-icon-size group-focus:text-white-smoke"></i>
                   <span class="tooltip group-hover:opacity-100">Share with Users (via Email)</span>
                 </button>
               </div>
-
               <div>
-                <button onclick="rightPanel('file-share','null','share')" class="group hover-div">
+                <button onclick="rightPanel('management','manage-open','document-navigation')" class="group hover-div">
                   <svg class="small-icon-size group-focus:text-white-smoke" width="30" height="30" viewBox="0 -2 25 30"
                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M7.99913 2V5H17.9991V2H19.9991V5H21.9991V7H19.9991V15H21.9991V17H19.9991V21H17.9991V17H15.9991V15H17.9991V7H7.99913V11H5.99913V7H1.99913V5H5.99913V2H7.99913ZM14.5791 10.419L10.2041 23.545L7.19613 17.802L1.45312 14.794L14.5791 10.419Z"
                       fill="currentColor" />
                   </svg>
-                  <span class="tooltip group-hover:opacity-100">Share with Users (via Email)</span>
+                  <span class="tooltip group-hover:opacity-100">Smart Document Navigation</span>
                 </button>
-                <button onclick="rightPanel('file-share','null','attach-email')" class="group hover-div">
+                <button onclick="rightPanel('management','automatic-table-open','document-categorize')"
+                  class="group hover-div">
                   <svg class="small-icon-size group-focus:text-white-smoke" width="30" height="30" viewBox="0 -2 25 30"
                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -436,7 +452,7 @@
             <div class="flex flex-col justify-center">
               <button onclick="rightPanel('analysis','main-contnt','summarization')" class="group hover-div">
                 <svg class="small-icon-size group-focus:text-white-smoke" width="30" height="30" viewBox="0 -2 25 30"
-                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M8 9C8.28333 9 8.521 8.904 8.713 8.712C8.905 8.52 9.00067 8.28267 9 8C8.99933 7.71733 8.90333 7.48 8.712 7.288C8.52067 7.096 8.28333 7 8 7C7.71667 7 7.47933 7.096 7.288 7.288C7.09667 7.48 7.00067 7.71733 7 8C6.99933 8.28267 7.09533 8.52033 7.288 8.713C7.48067 8.90567 7.718 9.00133 8 9ZM8 13C8.28333 13 8.521 12.904 8.713 12.712C8.905 12.52 9.00067 12.2827 9 12C8.99933 11.7173 8.90333 11.48 8.712 11.288C8.52067 11.096 8.28333 11 8 11C7.71667 11 7.47933 11.096 7.288 11.288C7.09667 11.48 7.00067 11.7173 7 12C6.99933 12.2827 7.09533 12.5203 7.288 12.713C7.48067 12.9057 7.718 13.0013 8 13ZM8 17C8.28333 17 8.521 16.904 8.713 16.712C8.905 16.52 9.00067 16.2827 9 16C8.99933 15.7173 8.90333 15.48 8.712 15.288C8.52067 15.096 8.28333 15 8 15C7.71667 15 7.47933 15.096 7.288 15.288C7.09667 15.48 7.00067 15.7173 7 16C6.99933 16.2827 7.09533 16.5203 7.288 16.713C7.48067 16.9057 7.718 17.0013 8 17ZM5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H16L21 8V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 19H19V9H15V5H5V19Z"
                     fill="currentColor" />
@@ -742,8 +758,8 @@
                 </div>
               </div>
             </div>
-            <!-- File share -->
-            <div class="file-share hidden">
+            <!-- Management -->
+            <div class="management hidden">
               <!-- Header -->
               <div class="border-b border-white-smoke flex justify-center items-center">
                 <div class="right-panel-title">
@@ -752,100 +768,93 @@
                 </div>
               </div>
               <div class="overflow-y-auto scroll right-panel-content">
-                <div class="border-b border-white-smoke p-4 share">
-                  <!-- Direct Link -->
-                  <div class="mb-5">
-                    <div class="flex items-center justify-between">
-                      <div class="flex flex-col">
-                        <label class="text-sm font-bold">Direct link</label>
-                        <p class="text-xs">Anyone with the link can access</p>
-                      </div>
-                      <div class="relative custom-select input-active" style="width:8rem;height:2rem;padding:0">
-                        <div
-                          class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
-                          <span>Select access</span>
-                          <span><i class="ri-arrow-down-s-line"></i></span>
-                        </div>
-                        <div
-                          class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
-                          <div class="option !pl-1.5">Editor</div>
-                          <div class="option !pl-1.5">Viewer</div>
-                          <div class="option !pl-1.5">Commenter</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="flex items-center justify-between input-active text-sm p-2 mt-1">
-                      <div class="flex items-center space-x-2">
-                        <i class="ri-link-m ri-lg"></i>
-                        <span>mydocument.com/pdf</span>
-                      </div>
-                      <button>Copy link</button>
-                    </div>
-                  </div>
-
-                  <!-- Invite via Email -->
-                  <div>
-                    <label class="text-sm font-bold">Invite via email</label>
+                <div class="border-b border-white-smoke p-4 manage-open">
+                  <!-- Document Comparison -->
+                  <div class=" border-white-smoke pb-4 document-comparison">
+                    <label class="text-sm font-bold">Document Comparison</label>
                     <div class="flex items-center gap-2 mt-2">
-                      <input type="text" class="input-active placeholder:text-transparent-charcoal"
-                        placeholder="xyz@gmail.com">
-                      <button class="button-active">Invite</button>
+                      <input type="text" class="input-active" placeholder="My folder - docs - ui ux">
+                      <button class="button-active">Export</button>
+                    </div>
+                    <p class="text-xs mt-2">Split comparison</p>
+                    <div class="flex gap-4 mt-2">
+                      <div class="w-64 h-40 rounded-xl input-active flex items-center justify-center">
+                        Document 1
+                      </div>
+                      <div class="w-64 h-40 input-active flex items-center justify-center">
+                        Document 2
+                      </div>
                     </div>
                   </div>
 
-                  <!-- Already in Project -->
-                  <div class="space-y-2 mt-4">
-                    <label class="text-sm font-bold">Already in project</label>
-                    <ul class="space-y-2 mt-2 text-sm">
-                      <li class="flex items-center justify-between input-active">
-                        <div class="flex items-center gap-2">
-                          <i class="ri-user-line bg-royal-blue text-white-smoke rounded-full px-2 py-1"></i>
-                          <span>John Doe</span>
+                  <!-- Smart Document Navigation -->
+                  <div class=" border-white-smoke pb-4 document-navigation">
+                    <label class="text-sm font-bold">Smart Document Navigation</label>
+                    <p class="text-xs mt-2">List of suggestion</p>
+                    <div class="white-button-active flex-col items-start mt-2" style="align-items: start;">
+                      <label class="relative flex items-center space-x-2 justify-between w-full">
+                        <div><span class="text-xs">Bookmark</span></div>
+                        <div
+                          class="relative flex items-center justify-center w-8 h-8 border border-royal-blue rounded-[10px]">
+                          <input type="checkbox" class="absolute w-full h-full opacity-0 peer input-active">
+                          <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                          <i
+                            class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
                         </div>
-                        <span class="pr-8">Owner</span>
-                      </li>
-                      <li class="flex items-center justify-between input-active">
-                        <div class="flex items-center gap-2">
-                          <i class="ri-user-line bg-royal-blue text-white-smoke rounded-full px-2 py-1"></i>
-                          <span>James bond</span>
+                      </label>
+                      <label class="relative flex items-center w-full justify-between">
+                        <div><span class="text-xs">Section</span></div>
+                        <div
+                          class="relative flex items-center justify-center w-8 h-8 border border-royal-blue ml-1/2 rounded-[10px]">
+                          <input type="checkbox" class="absolute input-active w-full h-full opacity-0 peer">
+                          <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                          <i
+                            class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
                         </div>
-                        <span>
-                          <div class="relative custom-select input-active" style="width:8rem;height:2rem;padding:0">
-                            <div
-                              class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
-                              <span>Select access</span>
-                              <span><i class="ri-arrow-down-s-line"></i></span>
-                            </div>
-                            <div
-                              class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
-                              <div class="option !pl-1.5">Editor</div>
-                              <div class="option !pl-1.5">Viewer</div>
-                              <div class="option !pl-1.5">Commenter</div>
-                            </div>
-                          </div>
-                        </span>
-                      </li>
-                    </ul>
+                      </label>
+                    </div>
+                    <button class="button-active mt-2">Navigate</button>
                   </div>
                 </div>
-                <!-- Email as Attachment -->
-                <div class="border-b border-white-smoke p-4 attach-email">
-                  <label class="text-sm font-bold">Email as Attachment</label>
-                  <div class="flex items-center gap-2 mt-2">
-                    <input type="text" class="input-active placeholder:text-transparent-charcoal"
-                      placeholder="xyz@gmail.com">
-                    <button class="button-active">Send</button>
+                <div class="border-b border-white-smoke p-4 automatic-table-open">
+                  <!-- Automatic Table Generation -->
+                  <div class=" border-white-smoke pb-4 table-generation">
+                    <label class="text-sm font-bold">Automatic Table Generation</label>
+                    <p class="text-xs mt-2">Detected data</p>
+                    <div class="flex gap-4 mt-2 w-64 h-40 rounded-xl input-active ">
+                    </div>
+                    <button class="button-active mt-2">Insert </button>
+                  </div>
+                  <!-- Automatic Document Categorization -->
+                  <div class=" border-white-smoke pb-4 document-categorize">
+                    <label class="text-sm font-bold">Automatic Document Categorization</label>
+                    <p class="text-xs mt-2">List of suggestion</p>
+                    <div class="white-button-active flex-col items-start mt-2" style="align-items: start;">
+                      <label class="relative flex items-center space-x-2 justify-between w-full">
+                        <div><span class="text-xs">Bookmark</span></div>
+                        <div
+                          class="relative flex items-center justify-center w-8 h-8 border border-royal-blue rounded-[10px]">
+                          <input type="checkbox" class="absolute w-full h-full opacity-0 peer input-active">
+                          <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                          <i
+                            class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                            
+                        </div>
+                      </label>
+                      <label class="relative flex items-center w-full justify-between">
+                        <div><span class="text-xs">Section</span></div>
+                        <div
+                          class="relative flex items-center justify-center w-8 h-8 border border-royal-blue ml-1/2 rounded-[10px]">
+                          <input type="checkbox" class="absolute input-active w-full h-full opacity-0 peer">
+                          <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                          <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                        </div>
+                      </label>
+                    </div>
+                    <button class="button-active mt-2">Navigate</button>
                   </div>
                 </div>
 
-                <!-- Upload from URL -->
-                <div class="p-4 upload-url">
-                  <label class="text-sm font-bold">Upload from URL</label>
-                  <div class="flex items-center gap-2 mt-2">
-                    <input type="text" class="input-active" placeholder="Paste here">
-                    <button class="button-active">Upload</button>
-                  </div>
-                </div>
               </div>
             </div>
             <!-- Analysis -->

@@ -859,6 +859,10 @@ body {
   height: 1rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .max-h-32 {
   max-height: 8rem;
 }
@@ -1422,6 +1426,11 @@ body {
 .bg-white-smoke {
   --tw-bg-opacity: 1;
   background-color: rgb(251 251 251 / var(--tw-bg-opacity, 1));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
 }
 
 .object-cover {
@@ -3246,6 +3255,11 @@ input[type="checkbox"].c-checkbox:checked::after {
 .hover\:bg-white-smoke:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(251 251 251 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-blue-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-red-orange:hover {

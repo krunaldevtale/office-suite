@@ -196,13 +196,6 @@
                       <div class="sub-dropdown left-full top-0 hidden w-60">
                         <ul class="text-sm">
                           <li>
-                            <a
-                              href="#"
-                              class="menu-dropdown-option hover:rounded-t-[10px]"
-                              >Split pages</a
-                            >
-                          </li>
-                          <li>
                             <button onclick="rightPanel('split','','extract-pages')" class="menu-dropdown-option"
                               >Extract pages</button
                             >
@@ -409,28 +402,14 @@
                 <p class="font-bold">File Split</p>
               </div>
               <div class="flex flex-col justify-center">
-                <div class="group hover-div">
-                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#split-pages"></use></svg>  
-                  <span class="tooltip group-hover:opacity-100"
-                    >Split Pages</span
-                  >
-                </div>
-                <button onclick="border()" class="group hover-div">
-                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#split-half"></use></svg>  
-                  <span class="tooltip group-hover:opacity-100"
-                    >Split in Half</span
-                  >
-                </button>
-              </div>
-              <div class="flex flex-col justify-center">
                 <button onclick="rightPanel('split','','split-size')" class="group hover-div">
                   <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#split-size"></use></svg>  
                   <span class="tooltip group-hover:opacity-100">Split by Size</span>
                 </button>
-                <button onclick="rightPanel('split','','split-text')" class="group hover-div">
-                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#split-text"></use></svg>  
+                <button onclick="border()" class="group hover-div">
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#split-half"></use></svg>  
                   <span class="tooltip group-hover:opacity-100"
-                    >Split by Text</span
+                    >Split in Half</span
                   >
                 </button>
               </div>
@@ -443,6 +422,14 @@
                   <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#extract-page"></use></svg>  
                   <span class="tooltip group-hover:opacity-100"
                     >Extract Pages</span
+                  >
+                </button>
+              </div>
+              <div class="flex flex-col items-start mt-2">
+                <button onclick="rightPanel('split','','split-text')" class="group hover-div">
+                  <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#split-text"></use></svg>  
+                  <span class="tooltip group-hover:opacity-100"
+                    >Split by Text</span
                   >
                 </button>
               </div>
@@ -646,53 +633,53 @@
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page1</p>
-                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
+                        <button class="hidden delete-button"><svg class="h-5 w-5"><use xlink:href="/public/images/icons.svg#trash"></use></svg><button>
                       </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page2</p>
-                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
-                      </div>
+                        <button class="hidden delete-button"><svg class="h-5 w-5"><use xlink:href="/public/images/icons.svg#trash"></use></svg><button>
+                        </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page3</p>
-                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
-                      </div>
+                        <button class="hidden delete-button"><svg class="h-5 w-5"><use xlink:href="/public/images/icons.svg#trash"></use></svg><button>
+                        </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page4</p>
-                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
-                      </div>
+                        <button class="hidden delete-button"><svg class="h-5 w-5"><use xlink:href="/public/images/icons.svg#trash"></use></svg><button>
+                        </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page5</p>
-                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
-                      </div>
+                        <button class="hidden delete-button"><svg class="h-5 w-5"><use xlink:href="/public/images/icons.svg#trash"></use></svg><button>
+                        </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page6</p>
-                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
-                      </div>
+                        <button class="hidden delete-button"><svg class="h-5 w-5"><use xlink:href="/public/images/icons.svg#trash"></use></svg><button>
+                        </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page7</p>
-                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
-                      </div>
+                        <button class="hidden delete-button"><svg class="h-5 w-5"><use xlink:href="/public/images/icons.svg#trash"></use></svg><button>
+                        </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page8</p>
-                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
-                      </div>
+                        <button class="hidden delete-button"><svg class="h-5 w-5"><use xlink:href="/public/images/icons.svg#trash"></use></svg><button>
+                        </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page9</p>
-                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
-                      </div>
+                        <button class="hidden delete-button"><svg class="h-5 w-5"><use xlink:href="/public/images/icons.svg#trash"></use></svg><button>
+                        </div>
                       <div class="flex flex-col justify-center items-center gap-2">
                         <button class="page-active"></button>
                         <p class="text-xs">page10</p>
-                        <button class="hidden delete-button"><i class="ri-delete-bin-line text-red-orange"></i><button>
-                      </div>
+                        <button class="hidden delete-button"><svg class="h-5 w-5"><use xlink:href="/public/images/icons.svg#trash"></use></svg><button>
+                        </div>
                     </div>
                     <button class="button-active mt-4">Combine</button>
                   </div>                
@@ -856,23 +843,23 @@
                     <label class="text-sm font-bold">Create forms</label>
                     <p class="text-transparent-dark-gray text-xs">Add Field Buttons</p>
                     <div class="flex items-center gap-2 mt-2">
-                      <button class="white-button-active !w-10 !py-3"><i class="ri-align-justify ri-xl"></i></button>
+                      <button class="white-button-active !w-11"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#text-field"></use></svg></button>                        
                       <span class="text-nowrap text-sm">Add Text Field</span>
                     </div>
                     <div class="flex items-center gap-2 mt-2">
-                      <button class="white-button-active !w-10 !py-3"><i class="ri-checkbox-line ri-xl"></i></button>
+                      <button class="white-button-active !w-11"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#checkbox"></use></svg></button>                        
                       <span class="text-nowrap text-sm">Add Checkbox</span>
                     </div>
                     <div class="flex items-center gap-2 mt-2">
-                      <button class="white-button-active !w-10 !py-3"><i class="ri-radio-button-line ri-xl"></i></button>
+                      <button class="white-button-active !w-11"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#radio-button"></use></svg></button>                        
                       <span class="text-nowrap text-sm">Add Radio Button</span>
                     </div>
                     <div class="flex items-center gap-2 mt-2">
-                      <button class="white-button-active !w-10 !py-3"><i class="ri-dropdown-list ri-xl"></i></button>
+                      <button class="white-button-active !w-11"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#dropdown-menu"></use></svg></button>                        
                       <span class="text-nowrap text-sm">Add Dropdown</span>
                     </div>
                     <div class="flex items-center gap-2 mt-2">
-                      <button class="white-button-active !w-10 !py-3"><i class="ri-calendar-2-line ri-xl"></i></button>
+                      <button class="white-button-active !w-11"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#created-date"></use></svg></button>                        
                       <span class="text-nowrap text-sm">Add Date Picker</span>
                     </div>
                   </div>                

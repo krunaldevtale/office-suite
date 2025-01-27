@@ -742,58 +742,15 @@
                     >
 
                     <div class="flex items-center gap-2 py-4">
-                      <svg
-                        width="25"
-                        height="25"
-                        viewBox="0 0 40 40"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect
-                          x="0.5"
-                          y="0.5"
-                          width="39"
-                          height="39"
-                          rx="9.5"
-                          stroke="#FBFBFB"
-                        />
-                      </svg>
-                      <label class="text-sm">Show tips on startup</label>
-                      <svg
-                        width="25"
-                        height="25"
-                        viewBox="0 0 40 40"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect width="40" height="40" rx="10" fill="#FBFBFB" />
-                        <path
-                          d="M12 13.0002V27.0002M16.065 20.6262C16.319 21.8372 17.673 22.7082 20.38 24.4482C23.325 26.3412 24.797 27.2882 25.99 26.9232C26.3962 26.7969 26.7683 26.5797 27.078 26.2882C28 25.4182 28 23.6122 28 20.0002C28 16.3882 28 14.5822 27.078 13.7122C26.768 13.4205 26.3955 13.2033 25.989 13.0772C24.797 12.7122 23.325 13.6592 20.38 15.5522C17.673 17.2922 16.32 18.1622 16.065 19.3742C15.978 19.7862 15.978 20.2142 16.065 20.6262Z"
-                          stroke="#333333"
-                          stroke-opacity="0.3"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
+                      <label class="relative flex items-center justify-center w-10 h-8 border border-white-smoke rounded-[10px]">
+                        <input type="checkbox" class="absolute w-full h-full opacity-0 peer">
+                        <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
+                        <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
+                      </label>
+                      <label class="text-sm text-nowrap">Show tips on startup</label>
+                      <button class="w-10 h-8 bg-white-smoke rounded-lg"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#previous"></use></svg></button>
                       <label class="text-sm">Previous</label>
-                      <svg
-                        width="25"
-                        height="25"
-                        viewBox="0 0 40 40"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect width="40" height="40" rx="10" fill="#FBFBFB" />
-                        <path
-                          d="M28 13.0002V27.0002M23.935 20.6262C23.681 21.8372 22.327 22.7082 19.62 24.4482C16.675 26.3412 15.203 27.2882 14.01 26.9232C13.6038 26.7969 13.2317 26.5797 12.922 26.2882C12 25.4182 12 23.6122 12 20.0002C12 16.3882 12 14.5822 12.922 13.7122C13.232 13.4205 13.6045 13.2033 14.011 13.0772C15.203 12.7122 16.675 13.6592 19.62 15.5522C22.327 17.2922 23.68 18.1622 23.935 19.3742C24.022 19.7862 24.022 20.2142 23.935 20.6262Z"
-                          stroke="#333333"
-                          stroke-opacity="0.3"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
+                      <button class="w-10 h-8 bg-white-smoke rounded-lg"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#next"></use></svg></button>
                       <label class="text-sm">Next</label>
                     </div>
                   </div>

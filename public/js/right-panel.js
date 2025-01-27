@@ -76,6 +76,10 @@ function rightPanel(title, subTitle, targetClass) {
                 $(this).siblings(".delete-button").removeClass("hidden");
             });
         }
+        
+        if(title=="export"){
+            $('.export-both .white-button-active').removeClass("inactive");
+        }
 
         // Smoothly scroll to the target section within the right panel
         $(`.${targetClass}`).get(0).scrollIntoView({

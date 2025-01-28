@@ -57,7 +57,7 @@ function rightPanel(title, subTitle, targetClass) {
         if (targetClass == "history") {
             $(".version,.version-icon").removeClass("inactive").prop('disabled', false);
         }
-        if (targetClass == "merge-pages" || targetClass == "combine-pages") {
+        if (targetClass == "merge-pages" || targetClass == "combine-pages" || targetClass == "image-optimization" || targetClass == "content-personalization") {
             $(".page-active").removeClass("inactive").prop('disabled', false);
             $('.page-active').not(`.${targetClass} .page-active`).each(function () {
                 $(this).addClass("inactive").prop('disabled', true);

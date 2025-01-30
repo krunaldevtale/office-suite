@@ -195,12 +195,12 @@
                         class="ri-arrow-right-s-fill ri-xl"></i></a>
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
-                        <li><a href="#" class="menu-dropdown-option hover:rounded-t-[10px]">Content Redaction</a></li>
-                        <li><button onclick="rightPanel('file-operation','file-open','open-document')"
+                        <li><button onclick="rightPanel('file-operation','file-open','content-redation')" class="menu-dropdown-option hover:rounded-t-[10px]">Content Redaction</button></li>
+                        <li><button onclick="rightPanel('file-operation','file-open', 'grammar-check')"
                             class="menu-dropdown-option">Grammar and Spelling Check</button></li>
-                        <li><button onclick="rightPanel('file-operation','file-open','import-document')"
+                        <li><button onclick="rightPanel('file-operation','file-open','smart-annotations')"
                             class="menu-dropdown-option">Smart Annotation Suggestions</button></li>
-                        <li><button class="menu-dropdown-option">Text-to-Speech</button></li>
+                        <li><button onclick="rightPanel('file-operation','file-detail','text-to-speech')" class="menu-dropdown-option">Text-to-Speech</button></li>
                         <li><button onclick="rightPanel('file-operation','file-open','save-as')"
                             class="menu-dropdown-option">Text Autocomplete</button></li>
                         <li><button onclick="rightPanel('file-operation','file-open','rename-document')"
@@ -214,15 +214,15 @@
                         class="ri-arrow-right-s-fill ri-xl"></i></a>
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
-                        <li><button onclick="rightPanel('file-share','','share')"
+                        <li><button onclick="rightPanel('management','manage-open','document-comparison')"
                             class="menu-dropdown-option hover:rounded-t-[10px]">Document Comparison</button></li>
-                        <li><button onclick="rightPanel('file-share','','attach-email')"
+                        <li><button onclick="rightPanel('management','manage-open','document-navigation')"
                             class="menu-dropdown-option">Smart
                             Document Navigation</button></li>
-                        <li><button onclick="rightPanel('file-share','','attach-email')"
+                        <li><button onclick="rightPanel('management','automatic-table-open','table-generation')"
                             class="menu-dropdown-option">Automatic
                             Table Generation</button></li>
-                        <li><button onclick="rightPanel('file-share','','attach-email')"
+                        <li><button onclick="rightPanel('management','automatic-table-open','document-categorize')"
                             class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Document
                             Categorization</button></li>
                       </ul>
@@ -233,13 +233,13 @@
                         class="ri-arrow-right-s-fill ri-xl"></i></a>
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
-                        <li><button onclick="exporting('Exporting..')"
+                        <li><button onclick="rightPanel('analysis','main-contnt','summarization')"
                             class="menu-dropdown-option hover:rounded-t-[10px]">Summarization</button></li>
-                        <li><a href="#" class="menu-dropdown-option">Sentiment Analysis</a></li>
-                        <li><a href="#" class="menu-dropdown-option">Semantic Search</a></li>
-                        <li><a href="#" class="menu-dropdown-option">Text Translation</a></li>
-                        <li><a href="#" class="menu-dropdown-option hover:rounded-b-[10px]"
-                            style="border-bottom:none">Document Summarization for Legal/Medical Text</a></li>
+                        <li><button onclick="rightPanel('analysis','main-contnt','sentiment-analysis')" class="menu-dropdown-option">Sentiment Analysis</button></li>
+                        <li><button onclick="rightPanel('analysis','main-contnt','semantic-search')" class="menu-dropdown-option">Semantic Search</button></li>
+                        <li><button onclick="rightPanel('analysis-two','main-contont','text-translation')" class="menu-dropdown-option">Text Translation</button></li>
+                        <li><button onclick="rightPanel('analysis-two','main-contont','document-for-legal-medical-text')" class="menu-dropdown-option hover:rounded-b-[10px]"
+                            style="border-bottom:none">Document Summarization for Legal/Medical Text</button></li>
                       </ul>
                     </div>
                   </li>
@@ -250,7 +250,7 @@
                       <ul class="text-sm ">
                         <li><button onclick="exporting('Uploading..')"
                             class="menu-dropdown-option hover:rounded-t-[10px]">Voice-to-Text (Dictation)</button></li>
-                        <li><button onclick="exporting('Uploading..')"
+                        <li><button onclick="rightPanel('usability','','content-personalization')"
                             class="menu-dropdown-option hover:rounded-b-[10px]" style="border-bottom:none">Content
                             Personalization</button></li>
                       </ul>
@@ -261,7 +261,7 @@
                       style="border-bottom:none">Performance Optimization<i class="ri-arrow-right-s-fill ri-xl"></i></a>
                     <div class="sub-dropdown left-full top-0 hidden w-60">
                       <ul class="text-sm ">
-                        <li><button onclick="rightPanel('print','','print')"
+                        <li><button onclick="rightPanel('usability','','image-optimization')"
                             class="menu-dropdown-option hover:rounded-[10px]" style="border-bottom:none">Image
                             Optimization</button></li>
                       </ul>
@@ -285,10 +285,10 @@
             </div>
             <div class="flex flex-col justify-center gap-2 mt-2">
               <div class="flex items-center gap-4">
-                <div class="group hover-div" onclick="rightPanel('file-operation','file-open','content-redation')">
+                <button class="group hover-div" onclick="rightPanel('file-operation','file-open','content-redation')">
                   <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#content-redaction"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100">Content Redaction</span>
-                </div>
+                </button>
                 <button class="group hover-div" onclick="rightPanel('file-operation','file-open', 'grammar-check')">
                   <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#grammar"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100">Grammar and Spelling Check</span>
@@ -376,11 +376,11 @@
                 <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#sentiment-analysis"></use></svg>                              
                 <span class="tooltip group-hover:opacity-100">Sentiment Analysis</span>
               </button>
-              <a href="#" onclick="rightPanel('analysis-two','main-contont','document-for-legal-medical-text')"
+              <button onclick="rightPanel('analysis-two','main-contont','document-for-legal-medical-text')"
                 class="group hover-div ">
                 <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#medical-text"></use></svg>                              
                 <span class="tooltip group-hover:opacity-100">Document Summarization for Legal/Medical Text</span>
-              </a>
+              </button>
             </div>
             <div class="flex flex-col justify-center">
               <button onclick="rightPanel('analysis','main-contnt','semantic-search')" class="group hover-div">
@@ -397,11 +397,11 @@
               <p class="font-bold">Usability</p>
             </div>
             <div class="flex flex-col justify-center">
-              <button onclick="rightPanel('upload','','drive-upload')" class="group hover-div">
+              <button onclick="rightPanel('usability','','content-personalization')" class="group hover-div">
                 <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#content-personalization"></use></svg>                              
                 <span class="tooltip group-hover:opacity-100">Content Personalization</span>
               </button>
-              <button onclick="rightPanel('file-share','','upload-url')" class="group hover-div">
+              <button onclick="rightPanel('usability','','image-optimization')" class="group hover-div">
                 <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#image-optimization"></use></svg>                              
                 <span class="tooltip group-hover:opacity-100">Image Optimization</span>
               </button>
@@ -1247,22 +1247,78 @@
               </div>
             </div>
             <!-- File close -->
-            <div class="close hidden">
+            <div class="usability hidden">
               <!-- Header -->
               <div class="border-b border-white-smoke flex justify-center items-center">
                 <div class="right-panel-title">
-                  <span class="text-center w-full">File</span>
+                  <span class="text-center w-full">Usability</span>
                   <button onclick="hideRightPanel()"><i class="ri-close-large-line"></i></button>
                 </div>
               </div>
               <div class="overflow-y-auto scroll right-panel-content">
-                <div class="p-4">
-                  <label class="text-sm">Are you sure you want to permanently delete this file?This action cannot be
-                    undone, and the item cannot be recovered</label>
-                  <div class="flex items-center justify-end gap-2 mt-2">
-                    <button class="px-3 py-2 rounded-[10px] bg-red-orange text-white-smoke text-sm">Delete</button>
-                    <button
-                      class="px-3 py-2 rounded-[10px] text-royal-blue border border-royal-blue text-sm">Cancel</button>
+                <div class="flex flex-col gap-4 border-b border-white-smoke p-4 content-personalization">
+                  <div>
+                    <label class="text-sm font-bold">Content Personalization</label>
+                    <p class="text-xs">Choose style/layout</p>
+                  </div>
+                  <div class="flex gap-2 overflow-x-auto w-[23rem] no-scrollbar">
+                    <div class="flex flex-col justify-center items-center gap-2">
+                      <button class="page-active"></button>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-2">
+                      <button class="page-active"></button>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-2">
+                      <button class="page-active"></button>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-2">
+                      <button class="page-active"></button>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-2">
+                      <button class="page-active"></button>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-2">
+                      <button class="page-active"></button>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-2">
+                      <button class="page-active"></button>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-2">
+                      <button class="page-active"></button>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-2">
+                      <button class="page-active"></button>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-2">
+                      <button class="page-active"></button>
+                    </div>
+                  </div>
+                  <div class="bg-white-smoke h-32 rounded-[10px] white-button-active flex justify-center items-center">Preview</div>
+                  <button class="button-active !w-14">Apply</button>
+                </div>
+                <div class="flex flex-col gap-4 p-4 image-optimization">
+                  <label class="text-sm font-bold">Image Optimization</label>
+                  <div class="flex items-end gap-2">
+                    <div class="flex flex-col gap-2">
+                      <p class="text-transparent-dark-gray text-xs">Compression type</p>
+                      <div class="relative custom-select input-active" style="width:10rem;height:2rem;padding:0">
+                        <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
+                          <span>Types</span>
+                          <span><i class="ri-arrow-down-s-line"></i></span>
+                        </div>
+                        <div class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
+                          <div class="option !pl-1.5">Lossless</div>
+                          <div class="option !pl-1.5">Maximum</div>
+                        </div>
+                      </div> 
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <p class="text-transparent-dark-gray text-xs">Quality</p>
+                      <div class="rect-slider-container white-button-active">
+                        <input type="range" class="rect-slider !w-[85px]" min="0" max="100" value="50" />
+                      </div>
+                    </div>
+                    <button class="button-active !w-24 !justify-center">Apply</button>
                   </div>
                 </div>
               </div>

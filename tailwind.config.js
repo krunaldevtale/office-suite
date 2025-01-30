@@ -30,7 +30,8 @@ module.exports = {
         'olive': '#DBD77C',
         'light-gray': '#EFEFEF',
         'very-light-gray': '#F8F8F8',
-        'transparent-medium-gray': '#9090901A'
+        'transparent-medium-gray': '#9090901A',
+        'royal-blue': '#0272D9'
       },
       backgroundImage: {
         'gradient-primary': 'linear-gradient(180deg, #01D7AB 0%, #0272D9 100%)',

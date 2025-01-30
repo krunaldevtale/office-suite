@@ -313,7 +313,7 @@
                   <span class="tooltip group-hover:opacity-100">Text Autocomplete</span>
                 </div>
                 <button class="group hover-div"
-                  onclick="rightPanel('file-operation','file-detail','document-document-style-detection')">
+                  onclick="rightPanel('file-operation','file-detail','document-style-detection')">
                   <svg class="icon small-icon-size group-focus:text-white-smoke"><use xlink:href="/public/images/icons.svg#style-detection"></use></svg>                              
                   <span class="tooltip group-hover:opacity-100">Document Style Detection</span>
                 </button>
@@ -533,7 +533,7 @@
                 <div class="file-detail hidden">
                   <!-- content-aware-assistance -->
                   <div class="border-b border-white-smoke p-4 cursor-pointer content-aware-assistance">
-                    <label class="text-sm font-bold">Smart Annotation Suggestions</label>
+                    <label class="text-sm font-bold">Context-Aware Editing Assistance</label>
                     <p class="text-xs mt-1">List of suggestion</p>
                     <div class="white-button-active flex-col items-start mt-2" style="align-items: start;">
                       <label class="relative flex items-center space-x-2 justify-between w-full">
@@ -561,7 +561,7 @@
                       <div class="relative custom-select input-active mt-2" style="width:8rem;padding:0">
                         <div
                           class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center ">
-                          <span>Type</span>
+                          <span>Style</span>
                           <span><i class="ri-arrow-down-s-line"></i></span>
                         </div>
                         <div
@@ -601,7 +601,7 @@
                   </div>
                   <!-- Document Style Detection -->
                   <div class="border-b border-white-smoke p-4 cursor-pointer document-style-detection">
-                    <label class="text-sm font-bold">Smart Annotation Suggestions</label>
+                    <label class="text-sm font-bold">Document Style Detection</label>
                     <p class="text-xs mt-1">List of suggestion</p>
                     <div class="white-button-active flex-col items-start mt-2" style="align-items: start;">
                       <label class="relative flex items-center space-x-2 justify-between w-full">
@@ -704,26 +704,41 @@
                     <div class="white-button-active flex-col items-start mt-2" style="align-items: start;">
                       <label class="relative flex items-center space-x-2 justify-between w-full">
                         <div><span class="text-xs">Bookmark</span></div>
-                        <div
+                        <div class="flex gap-1">
+                          <div
                           class="relative flex items-center justify-center w-8 h-8 border border-royal-blue rounded-[10px]">
                           <input type="checkbox" class="absolute w-full h-full opacity-0 peer input-active">
                           <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
                           <i
                             class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
-                            
                         </div>
+                        <div class="relative bg-royal-blue flex items-center justify-center w-8 h-8 border border-royal-blue rounded-[10px]">
+                           <i class="ri-pencil-line  text-white-smoke"></i>
+                        </div>
+                        </div>
+                        
+                       
                       </label>
                       <label class="relative flex items-center w-full justify-between">
                         <div><span class="text-xs">Section</span></div>
+                        <div class="flex gap-1">
                         <div
                           class="relative flex items-center justify-center w-8 h-8 border border-royal-blue ml-1/2 rounded-[10px]">
                           <input type="checkbox" class="absolute input-active w-full h-full opacity-0 peer">
                           <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
                           <i class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
                         </div>
+                        <div class="relative bg-royal-blue flex items-center justify-center w-8 h-8 border border-royal-blue rounded-[10px]">
+                          <i class="ri-pencil-line  text-white-smoke"></i>
+                       </div>
+                      </div>
                       </label>
                     </div>
-                    <button class="button-active mt-2">Navigate</button>
+                    <div class="flex gap-2">
+                      <button class="button-active mt-2">Navigate</button>
+                      <button class="button-active w-full mt-2">Add custom category</button>
+                    </div>
+                    
                   </div>
                 </div>
 
@@ -820,51 +835,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="file-detail hidden">
-                  <!-- content-aware-assistance -->
-                  <div class="border-b border-white-smoke p-4 cursor-pointer content-aware-assistance">
-                    <label class="text-sm font-bold">Smart Annotation Suggestions</label>
-                    <p class="text-xs mt-1">List of suggestion</p>
-                    <div class="white-button-active flex-col items-start mt-2" style="align-items: start;">
-                      <label class="relative flex items-center space-x-2 justify-between w-full">
-                        <div><span class="text-xs">Hello, dear </span></div>
-                        <div
-                          class="relative flex items-center justify-center w-8 h-8 border border-royal-blue rounded-[10px]">
-                          <input type="checkbox" class="absolute w-full h-full opacity-0 peer input-active">
-                          <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
-                          <i
-                            class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
-                        </div>
-                      </label>
-                      <label class="relative flex items-center w-full justify-between">
-                        <div><span class="text-xs">It wasn’t your fault sir</span></div>
-                        <div
-                          class="relative flex items-center justify-center w-8 h-8 border border-royal-blue ml-1/2 rounded-[10px]">
-                          <input type="checkbox" class="absolute input-active w-full h-full opacity-0 peer">
-                          <span class="absolute inset-0 bg-transparent peer-checked:bg-white rounded-[9px] z-0"></span>
-                          <i
-                            class="ri-check-line text-2xl text-charcoal-black opacity-0 peer-checked:opacity-100 z-20"></i>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="flex gap-2">
-                      <div class="relative custom-select input-active mt-2" style="width:8rem;padding:0">
-                        <div
-                          class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center ">
-                          <span>Type</span>
-                          <span><i class="ri-arrow-down-s-line"></i></span>
-                        </div>
-                        <div
-                          class="select-options p-0 text-xs bg-white-smoke hidden absolute w-full rounded-lg shadow-lg z-10 overflow-auto scroll h-16">
-                          <div class="option !pl-1.5">type-1</div>
-                          <div class="option !pl-1.5">type-2</div>
-                          <div class="option !pl-1.5">type-3</div>
-                        </div>
-                      </div>
-                      <button class="button-active mt-2">Apply</button>
-                    </div>
-                  </div>
-                </div>
+               
               </div>
             </div>
 
@@ -954,8 +925,7 @@
                       <div class="bg-white-smoke h-32 rounded-[10px] mb-4 ">
                         <div class="py-1 px-2 flex justify-end">
                           <svg class="h-5 w-5"><use xlink:href="/public/images/icons.svg#text-copy"></use></svg>                          <!-- <button class="bg-transparent ">
-                            <!-- <button class="bg-transparent ">
-          </button> -->
+                            <!-- <button class="bg-transparent "> </button> -->
                         </div>
                       </div>
                     </div>

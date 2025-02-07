@@ -14,6 +14,7 @@
   --royal-blue: #0272D9;
   --white-smoke: #FBFBFB;
   --frosted-white: #FFFFFF1A;
+  --hazy-white: #FBFBFB99;
   --medium-gray:#FBFBFB4D;
   --dark-charcoal: #333333;
   --transparent-charcoal: #3333334D;
@@ -24,6 +25,7 @@
   --transparent-dark-gray: #33333399;
   --frosted-gray: #D4D4D41A;
   --light-sky-blue: #BBE2FA;
+  --steel-blue: #44576699;
   --transparent-light-sky-blue: #87CEFA8C;
   --red-orange: #EE361C;
   --olive: #DBD77C;
@@ -73,11 +75,6 @@
   @apply bg-royal-blue;
 }
 
-.login-container{
- @apply relative rounded-lg max-w-xl w-full p-8;
- backdrop-filter: blur(20px);
- background: #FBFBFB99;
-}
 .icon{
   padding: 0.4rem;
   width: 50px; 
@@ -570,3 +567,16 @@ input[type="checkbox"].c-checkbox:checked::after {
   cursor: pointer;
 }
 
+/* Login page css*/
+.login-bg{
+  background-image: url('/public/images/login.jpeg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+}
+.login-container{
+  @apply absolute right-0 sm:right-[17%] text-white-smoke h-full max-w-[34rem] w-full z-0;
+}
+.blur-container{
+  @apply absolute bg-steel-blue h-full w-full filter blur-sm z-0;
+}

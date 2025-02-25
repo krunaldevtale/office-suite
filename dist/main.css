@@ -3110,6 +3110,13 @@ input[type="checkbox"].c-checkbox:checked::after {
   color: rgb(251 251 251 / var(--tw-text-opacity, 1));
 }
 
+.captureImage-layout{
+  background-color: #BBE2FA;
+}
+
+.red{
+  color:red
+}
 @media (min-width: 640px) {
   .login-container {
     right: 17%;

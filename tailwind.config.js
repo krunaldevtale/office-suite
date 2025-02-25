@@ -11,6 +11,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"], // Adding Roboto font
+      },
+
       colors: {
         'medium-aquamarine': '#01D7AB',
         'royal-blue': '#0272D9',

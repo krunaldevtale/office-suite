@@ -3112,7 +3112,10 @@ input[type="checkbox"].c-checkbox:checked::after {
 
 .captureImage-layout{
   background-color: #BBE2FA;
+  width: 390px;
+  height: 224px;
 }
+
 
 .red{
   color:red
@@ -3121,6 +3124,7 @@ input[type="checkbox"].c-checkbox:checked::after {
   .login-container {
     right: 17%;
   }
+  
 }
 
 .blur-container {
@@ -3584,3 +3588,4 @@ input[type="checkbox"].c-checkbox:checked::after {
     font-size: 27px;
   }
 }
+

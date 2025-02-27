@@ -38,7 +38,7 @@
             <input
               id="email"
               name="email"
-              type="email"
+              type="text"
               placeholder="RachelSaket@gmail.com"
               class="mt-1 block w-full rounded-[10px] border border-white-smoke bg-transparent py-2 px-4 placeholder:text-hazy-white focus:outline-none"
             />
@@ -139,36 +139,99 @@
       </div>
 
       <!-- Capture image -->
-      <div class="relative z-10 p-8 sm:p-20 flex flex-col gap-6 " id="capture-image">
-        <h1 class="text-4xl sm:text-[40px] font-semibold font-['Roboto'] ">Capture Image</h1>
+      <div class="relative z-10 p-8 sm:p-20 flex flex-col gap-6" id="capture-image">
+        <h1 class="text-4xl sm:text-[40px] font-semibold font-['Roboto']">Capture Image</h1>
         <p class="text-hazy-white font-medium text-xl font-['Roboto'] mt-2">
             Take your face photo in bright light
         </p>
     
-        <div class="flex flex-col sm:flex-row gap-6 ">
-            <!-- Main Video Capture Section -->
-            <div class="flex flex-col items-center gap-4 captureImage-layout rounded-xl mt-3">
-                <div class="relative max-w-[390px] w-full h-[224px] border border-gray-500 rounded-xl overflow-hidden">
-                    <video id="video" class="w-full h-full object-cover"></video>
-                    <canvas id="canvas" class="hidden"></canvas>
+        <div class=" flex flex-col p-4  mt-3 captureImage-layout rounded-lg img-container">
+            <div class="flex flex-1 ">
+                <!-- Main Camera View -->
+                <div class="flex flex-1 " >
+                    <video id="video" autoplay ></video>
                 </div>
-                
+                <div class="w-[2px] h-full bg-dark-gray mx-4"></div>
+                <!-- Preview Screens -->
+                <div class="w-1/4 flex flex-col  ml-4">
+                    <div class="flex-1 rounded-xl flex items-center justify-center">
+                        <canvas id="preview1" class="hidden"></canvas>
+                    </div>
+                    
+                    <div class="flex-1  rounded-xl flex items-center justify-center">
+                        <canvas id="preview2" class="hidden"></canvas>
+                    </div>
+                    
+                    <div class="flex-1  rounded-xl flex items-center justify-center">
+                        <canvas id="preview3" class="hidden"></canvas>
+                    </div>
+                </div>
             </div>
     
-            
-          <div> <button id="capture-btn" type="button"
-            class="bg-light-sky-blue py-2 px-6 rounded-[10px] text-dark-charcoal text-lg font-medium focus:outline-none mt-3 max-w-xl font-['Roboto']">
-            <i class="ri-camera-line"></i> Capture
-        </button></div>
-           
+          
+        </div>
+          <!-- Capture Button -->
+          <div class="flex  mt-4">
+            <button id="capture-btn"  class=" bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-lg focus:outline-none">
+             <i class="ri-camera-line"></i>   Capture
+            </button>
         </div>
     </div>
-    
-    
+        
+    <!--Image Preview-->
+    <div class="relative z-10 p-8 sm:p-20 flex flex-col gap-6" id="imagepreview">
+        <h1 class="text-4xl sm:text-[40px] font-semibold">Capture Image</h1>
+        <div class=" flex gap-1 p-4  mt-4 captureImage-layout rounded-lg">
+            <div id="finalImage1" class="preview-box"></div>
+            <div id="finalImage2" class="preview-box"></div>
+            <div id="finalImage3" class="preview-box"></div>
+        </div>
+        <div class="flex gap-3 mt-4 justify-between">
+            <button id="retake-btn"  class="w-full bg-transparent py-2 px-4 rounded-[10px]  text-lg border border-white-1">
+                <i class="ri-reset-left-fill"></i>   Retake
+               </button>
+               <button id="save-btn"  class="w-full bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-lg focus:outline-none">
+                   Save
+               </button>
+        </div>
+    </div>  
+
+    <!--Audio-->
+    <div class="relative z-10 p-8 sm:p-20 flex flex-col gap-2" id="recordaudio">
+        <h1 id="instruction-text" class="text-3xl sm:text-[40px] font-semibold">Record audio </h1>
+        <p id="instruction-subtext" class="text-hazy-white font-medium text-xl">Read below,loud and clear</p>
+        
+        <!-- Capture Audio  Section -->
+        <div class="flex flex-col  mt-6">
+            <div class="w-80 h-48 bg-light-sky-blue rounded flex items-center justify-center ml-8 sm:ml-16">
+            <p class="text-dark-charcoal p-4 font-semibold text-base">
+                “Welcome to Aibaze, your all-in-one office suite for productivity. With Aibaze, you can create and edit
+                 documents in Word, analyze data in Excel, design stunning presentations in PowerPoint, and manage PDFs with ease”
+            </p>
+            </div>
+            
+            <button id="record-button" class="mt-4 bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-base font-medium focus:outline-none w-36 flex items-center justify-center gap-2">
+                <i class="ri-mic-line"></i>
+                Record
+            </button>
+            <div id="audio-controls" class="hidden mt-4 flex items-center gap-2">
+                <button id="play-pause-button" class="bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-base font-medium focus:outline-none">
+                    <i class="ri-play-line"></i>
+                </button>
+                <div id="audio-progress" class="w-full h-1 bg-gray-300 rounded">
+                    <div id="audio-progress-bar" class="h-full bg-light-sky-blue rounded"></div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+</div>
 </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="public/js/forms.js"></script>
+    <script src="public/js/capture.js"></script>
+    <script src="public/js/audio.js"></script>
   </body>
 </html>

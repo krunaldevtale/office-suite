@@ -637,6 +637,10 @@ body {
   top: 25%;
 }
 
+.top-12 {
+  top: 3rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -913,10 +917,6 @@ body {
 
 .w-12 {
   width: 3rem;
-}
-
-.w-14 {
-  width: 3.5rem;
 }
 
 .w-16 {
@@ -1448,10 +1448,6 @@ body {
   padding: 0.5rem;
 }
 
-.p-20 {
-  padding: 5rem;
-}
-
 .p-3 {
   padding: 0.75rem;
 }
@@ -1675,10 +1671,6 @@ body {
 
 .text-\[23px\] {
   font-size: 23px;
-}
-
-.text-\[40px\] {
-  font-size: 40px;
 }
 
 .text-\[5px\] {
@@ -3110,21 +3102,10 @@ input[type="checkbox"].c-checkbox:checked::after {
   color: rgb(251 251 251 / var(--tw-text-opacity, 1));
 }
 
-.captureImage-layout{
-  background-color: #BBE2FA;
-  width: 390px;
-  height: 224px;
-}
-
-
-.red{
-  color:red
-}
 @media (min-width: 640px) {
   .login-container {
     right: 17%;
   }
-  
 }
 
 .blur-container {
@@ -3135,6 +3116,21 @@ input[type="checkbox"].c-checkbox:checked::after {
   background-color: #44576699;
   --tw-blur: blur(4px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+#left-margin-container {
+  margin-left: 20px;
+  /* Adjust the margin-left value as needed */
+}
+
+.login-search-box {
+  position: absolute;
+  top: 3rem;
+  right: 0px;
+}
+
+#first-container {
+  margin-left: 14%;
 }
 
 .placeholder\:text-base::-moz-placeholder {
@@ -3347,11 +3343,6 @@ input[type="checkbox"].c-checkbox:checked::after {
 
   .sm\:p-20 {
     padding: 5rem;
-  }
-
-  .sm\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .sm\:text-\[40px\] {
@@ -3588,4 +3579,9 @@ input[type="checkbox"].c-checkbox:checked::after {
     font-size: 27px;
   }
 }
+
+
+
+
+
 

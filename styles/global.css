@@ -580,3 +580,21 @@ input[type="checkbox"].c-checkbox:checked::after {
 .blur-container{
   @apply absolute bg-steel-blue h-full w-full filter blur-sm z-0;
 }
+
+#left-margin-container {
+  margin-left: 20px; /* Adjust the margin-left value as needed */
+}
+
+.login-search-box{
+  @apply absolute top-12 right-0 ;
+}
+
+#first-container {
+  margin-left: 14%;
+}
+
+
+
+
+
+

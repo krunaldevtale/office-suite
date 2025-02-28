@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> User Login Page</title>
+    <link href="dist/main.css" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        rel="stylesheet"
+    />
+</head>
+<body class="min-h-screen w-screen login-bg relative">
+    <div class="login-container">
+        <div class="blur-container"></div>
+        <div class="relative z-10 p-8 sm:p-20 flex flex-col gap-2">
+            <h1 id="instruction-text" class="text-3xl sm:text-[40px] font-semibold">Capture image </h1>
+            <p id="instruction-subtext" class="text-hazy-white font-medium text-xl">Take your face photo in a bright light</p>
+            
+            <!-- Capture Image Section -->
+            <div class="flex flex-col  mt-8">
+                <div id="camera-box" class="w-80 h-48 bg-light-sky-blue rounded flex items-center justify-center ml-8 sm:ml-16">
+                    <video id="video" class="w-full h-full object-cover rounded" autoplay></video>
+                    <canvas id="canvas" class="hidden w-full h-full object-cover rounded"></canvas>
+                </div>
+                
+                <button id="capture-button" class="mt-4 bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-base font-medium focus:outline-none w-36 flex items-center justify-center gap-2">
+                    <i class="ri-camera-line"></i>
+                    Capture
+                </button>
+                <button id="retake-button" class="mt-4 border border-light-sky-blue py-2 px-4 rounded-[10px] text-white-smoke text-base font-medium focus:outline-none w-36 flex items-center justify-center gap-2 hidden">
+                    <i class="ri-reset-left-line"></i>
+                    Retake
+                </button>
+                <p id="error-message" class="text-red-500 text-center hidden">Couldn't recognize your image</p>
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script>
+        document.getElementById('capture-button').addEventListener('click', function() {
+            const video = document.getElementById('video');
+            const canvas = document.getElementById('canvas');
+            const instructionText = document.getElementById('instruction-text');
+            const instructionSubtext = document.getElementById('instruction-subtext');
+            const captureButton = document.getElementById('capture-button');
+            const retakeButton = document.getElementById('retake-button');
+            const errorMessage = document.getElementById('error-message');
+
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+                    video.srcObject = stream;
+                    video.play();
+                });
+            }
+
+            captureButton.addEventListener('click', function() {
+                // Simulate image capture success or failure
+                setTimeout(function() {
+                    const success = isFaceProperlyVisible(video); // Check if face is properly visible
+
+                    const context = canvas.getContext('2d');
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
+                    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+                    video.pause();
+                    video.classList.add('hidden');
+                    canvas.classList.remove('hidden');
+
+                    if (success) {
+                        // Image captured successfully
+                        errorMessage.classList.add('hidden');
+                        instructionSubtext.textContent = "Take your face photo in a bright light";
+                        instructionSubtext.classList.remove('text-red-500');
+                        captureButton.classList.add('hidden');
+                        retakeButton.classList.add('hidden');
+
+                        // Show the captured image for 5 seconds before redirecting
+                        setTimeout(function() {
+                            window.location.href = 'audio-capture.html';
+                        }, 5000);
+                    } else {
+                        // Image capture failed
+                        instructionText.textContent = "Capture image";
+                        instructionSubtext.textContent = "Couldn't recognize your image";
+                        instructionSubtext.classList.add('text-red-500');
+                        errorMessage.classList.add('hidden');
+                        captureButton.classList.add('hidden');
+                        retakeButton.classList.remove('hidden');
+                    }
+                }, 2000); // Simulate 2 seconds delay for image capture
+            });
+        });
+
+        document.getElementById('retake-button').addEventListener('click', function() {
+            const video = document.getElementById('video');
+            const canvas = document.getElementById('canvas');
+            const instructionText = document.getElementById('instruction-text');
+            const instructionSubtext = document.getElementById('instruction-subtext');
+            const captureButton = document.getElementById('capture-button');
+            const retakeButton = document.getElementById('retake-button');
+            const errorMessage = document.getElementById('error-message');
+
+            instructionText.textContent = "Capture image";
+            instructionText.classList.remove('text-red-500');
+            instructionSubtext.textContent = "Take your face photo in a bright light";
+            instructionSubtext.classList.remove('text-red-500');
+            captureButton.classList.remove('hidden');
+            retakeButton.classList.add('hidden');
+            canvas.classList.add('hidden');
+            video.classList.remove('hidden');
+            errorMessage.classList.add('hidden');
+
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+                    video.srcObject = stream;
+                    video.play();
+                });
+            }
+        });
+
+        function isFaceProperlyVisible(video) {
+            // Implement face detection logic here
+            // Return true if face is properly visible, otherwise return false
+            // For demonstration purposes, we'll randomly return true or false
+            return Math.random() > 0.5;
+        }
+    </script>
+</body>
+</html>

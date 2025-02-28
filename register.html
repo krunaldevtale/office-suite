@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page</title>
+    <link href="dist/main.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen w-screen login-bg relative">
+    <div class="login-container">
+      <div class="blur-container"></div>
+      <div
+        class="relative z-10 p-8 sm:p-20 flex flex-col gap-2"
+        id="form-container"
+      >
+        <h1 class="text-4xl sm:text-[40px] font-semibold">Welcome to Aibaze</h1>
+        <p class="text-hazy-white font-medium text-2xl">
+          Register your account
+        </p>
+        <form class="space-y-4" id="signupForm">
+          <div>
+            <label for="name" class="block font-medium">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Rachel"
+              class="mt-1 block w-full rounded-[10px] border border-white-smoke bg-transparent py-2 px-4 placeholder:text-hazy-white focus:outline-none"
+            />
+            <span id="nameError" class="red text-sm hidden"></span>
+          </div>
+          <div>
+            <label for="email" class="block font-medium">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="text"
+              placeholder="RachelSaket@gmail.com"
+              class="mt-1 block w-full rounded-[10px] border border-white-smoke bg-transparent py-2 px-4 placeholder:text-hazy-white focus:outline-none"
+            />
+            <span id="emailError" class="red text-sm hidden"></span>
+          </div>
+          <div class="flex flex-col">
+            <label for="password" class="block font-medium">Password</label>
+            <div
+              class="flex items-center border border-white-smoke rounded-[10px] px-4 py-2"
+            >
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Rachel14#we"
+                class="w-full bg-transparent outline-none placeholder:text-hazy-white"
+              />
+             
+              <i id="toggleIcon" class="ri-eye-line cursor-pointer"></i>
+            </div>
+            <span
+            id="passwordError"
+            class="red text-sm hidden"
+          ></span>
+          </div>
+
+          <div class="inline-flex flex-col w-full" id="signup-button">
+            <button
+              type="submit"
+              class="w-full bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-lg focus:outline-none"
+            >
+              Sign up
+            </button>
+            <div class="flex justify-end mt-1">
+              <a href="#">Already have an account?</a>
+            </div>
+          </div>
+        </form>
+        <div class="text-center flex flex-col items-center gap-3">
+          <div class="flex gap-2 items-center">
+            <hr class="w-20" />
+            <p>Or</p>
+            <hr class="w-20" />
+          </div>
+          <div class="flex justify-center gap-4">
+            <button
+              class="border border-white-smoke p-2 rounded-full focus:outline-none"
+            >
+              <svg class="h-8 w-8">
+                <use xlink:href="/public/images/icons.svg#login-facebook"></use>
+              </svg>
+            </button>
+            <button
+              class="border border-white-smoke p-2 rounded-full focus:outline-none"
+            >
+              <svg class="h-8 w-8 google-login">
+                <use xlink:href="/public/images/icons.svg#login-google"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Choose account -->
+      <div
+        class="relative z-10 p-8 sm:p-20 flex flex-col gap-4"
+        id="chooseAccount"
+      >
+        <h1 class="text-4xl sm:text-[40px] font-semibold font-['Roboto']">Welcome to Aibaze</h1>
+        <p class="text-hazy-white font-medium text-2xl font-['Roboto']">Choose an account</p>
+        <div id="googleAccounts" class="space-y-3">
+          <div
+            class="google-profile cursor-pointer flex items-center gap-3 rounded-[10px]"
+          >
+            <img
+              src="public/images/user.png"
+              alt="User Profile"
+              class="w-12 h-12 rounded-full border border-white-1"
+            />
+            <div>
+              <p class="font-medium text-lg font-['Roboto']">Rachel Saket</p>
+              <p class="text-gray-600 text-sm font-['Roboto']">rachelsaket@gmail.com</p>
+            </div>
+          </div>
+          <div
+            class="google-profile cursor-pointer flex items-center gap-3 rounded-[10px] mt-3"
+          >
+            <img
+              src="public/images/account-circle-fill.png"
+              alt="User Profile"
+              class="w-12 h-12 rounded-full border border-purple-50"
+            />
+            <div>
+              <p class="font medium">Use another account</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Capture image -->
+      <div class="relative z-10 p-8 sm:p-20 flex flex-col gap-6" id="capture-image">
+        <h1 class="text-4xl sm:text-[40px] font-semibold font-['Roboto']">Capture Image</h1>
+        <p class="text-hazy-white font-medium text-xl font-['Roboto'] mt-2">
+            Take your face photo in bright light
+        </p>
+    
+        <div class=" flex flex-col p-4  mt-3 captureImage-layout rounded-lg img-container">
+            <div class="flex flex-1 ">
+                <!-- Main Camera View -->
+                <div class="flex flex-1 " >
+                    <video id="video" autoplay ></video>
+                </div>
+                <div class="w-[2px] h-full bg-dark-gray mx-4"></div>
+                <!-- Preview Screens -->
+                <div class="w-1/4 flex flex-col  ml-4">
+                    <div class="flex-1 rounded-xl flex items-center justify-center">
+                        <canvas id="preview1" class="hidden"></canvas>
+                    </div>
+                    
+                    <div class="flex-1  rounded-xl flex items-center justify-center">
+                        <canvas id="preview2" class="hidden"></canvas>
+                    </div>
+                    
+                    <div class="flex-1  rounded-xl flex items-center justify-center">
+                        <canvas id="preview3" class="hidden"></canvas>
+                    </div>
+                </div>
+            </div>
+    
+          
+        </div>
+          <!-- Capture Button -->
+          <div class="flex  mt-4">
+            <button id="capture-btn"  class=" bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-lg focus:outline-none">
+             <i class="ri-camera-line"></i>   Capture
+            </button>
+        </div>
+    </div>
+        
+    <!--Image Preview-->
+    <div class="relative z-10 p-8 sm:p-20 flex flex-col gap-6" id="imagepreview">
+        <h1 class="text-4xl sm:text-[40px] font-semibold">Capture Image</h1>
+        <div class=" flex gap-1 p-4  mt-4 captureImage-layout rounded-lg">
+            <div id="finalImage1" class="preview-box"></div>
+            <div id="finalImage2" class="preview-box"></div>
+            <div id="finalImage3" class="preview-box"></div>
+        </div>
+        <div class="flex gap-3 mt-4 justify-between">
+            <button id="retake-btn"  class="w-full bg-transparent py-2 px-4 rounded-[10px]  text-lg border border-white-1">
+                <i class="ri-reset-left-fill"></i>   Retake
+               </button>
+               <button id="save-btn"  class="w-full bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-lg focus:outline-none">
+                   Save
+               </button>
+        </div>
+    </div>  
+
+    <!--Audio-->
+    <div class="relative z-10 p-8 sm:p-20 flex flex-col gap-2" id="recordaudio">
+        <h1 id="instruction-text" class="text-3xl sm:text-[40px] font-semibold">Record audio </h1>
+        <p id="instruction-subtext" class="text-hazy-white font-medium text-xl">Read below,loud and clear</p>
+        
+        <!-- Capture Audio  Section -->
+        <div class="flex flex-col  mt-6">
+            <div class="w-80 h-48 bg-light-sky-blue rounded flex items-center justify-center ml-8 sm:ml-16">
+            <p class="text-dark-charcoal p-4 font-semibold text-base">
+                “Welcome to Aibaze, your all-in-one office suite for productivity. With Aibaze, you can create and edit
+                 documents in Word, analyze data in Excel, design stunning presentations in PowerPoint, and manage PDFs with ease”
+            </p>
+            </div>
+            
+            <button id="record-button" class="mt-4 bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-base font-medium focus:outline-none w-36 flex items-center justify-center gap-2">
+                <i class="ri-mic-line"></i>
+                Record
+            </button>
+            <div id="audio-controls" class="hidden mt-4 flex items-center gap-2">
+                <button id="play-pause-button" class="bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-base font-medium focus:outline-none">
+                    <i class="ri-play-line"></i>
+                </button>
+                <div id="audio-progress" class="w-full h-1 bg-gray-300 rounded">
+                    <div id="audio-progress-bar" class="h-full bg-light-sky-blue rounded"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="public/js/forms.js"></script>
+    <script src="public/js/capture.js"></script>
+    <script src="public/js/audio.js"></script>
+  </body>
+</html>

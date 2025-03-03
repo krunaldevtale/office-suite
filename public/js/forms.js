@@ -1,5 +1,6 @@
 $(document).ready(function () {
     $("#recordaudio").hide();
+    $("#audiopreview").hide();
     $("#signupForm").submit(function (e) {
       e.preventDefault(); // Prevent form submission
   

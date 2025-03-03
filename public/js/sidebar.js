@@ -11,6 +11,17 @@ $(document).ready(function () {
         if ($(this).attr("href") === currentPath) {
         // Add the 'icon-background' class to the <i> icon inside the <a>
         $(this).find("svg").addClass("icon-background");
+    
+
         }
+    });
+    $("#sidebar nav li button").click(function () {
+        // Remove active class from all buttons
+        $("#sidebar nav li").removeClass("icon-background");
+        
+
+        // Add active class to the clicked button's <li> and <i> icon
+        $(this).closest("li").addClass("icon-background");
+      
     });
 });

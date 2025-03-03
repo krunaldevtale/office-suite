@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $("#recordaudio").hide();
     $("#imagepreview").hide();
+    $("#audiopreview").hide();
     const video = document.getElementById("video");
     const previews = [
         $("#preview1"),

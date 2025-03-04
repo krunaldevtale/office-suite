@@ -4,49 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Manager</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/main.css" rel="stylesheet" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+   
 </head>
-<body class="bg-blue-100 h-screen flex">
-    <!-- Sidebar -->
-    <div class="w-60 bg-light-sky-blue text-white p-4 flex flex-col">
-        <h2 class="text-2xl font-bold">Logo</h2>
-        <ul class="mt-4 space-y-2 flex-1">
-            <li class="bg-green-500 p-2 rounded">All Projects</li>
-            <li>Collaborations</li>
-            <li>My Collection</li>
-            <li>Bookmarked</li>
-            <li>Trash</li>
-        </ul>
-    </div>
+<body class="overflow-hidden">
+    <main class="flex flex-wrap h-screen bg-light-sky-blue">
+
+        <header
+        class="w-full py-4 px-6 pr-10 flex justify-between items-center relative"
+      >
+
+      <div class="flex items-center gap-4">
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-2xl menu-toggle">
+          <i class="ri-menu-line"></i>
+        </button>
+        <!-- Logo -->
+        <h1 class="logo-title">Logo</h1>
+      </div>
+
+      <div class="relative w-[27%] hidden md:block">
+        <span class="absolute top-1/2 transform -translate-y-1/2">
+          <svg class="icon !p-[1rem]">
+            <use xlink:href="/public/images/icons.svg#search"></use>
+          </svg>
+        </span>
+        <input
+          type="text"
+          placeholder="Search your PDF library or PDF documents..."
+          class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke focus:outline-none placeholder:text-dark-charcoal placeholder:text-base"
+        />
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button class="drop-button hidden md:flex items-center gap-2">
+          <i class="ri-notification-3-line"></i>
+        </button>
+        <!-- Profile button -->
+        <button class="drop-button">
+          <img
+            src="/public/images/user.png"
+            alt="Profile"
+            class="rounded-full h-8 w-8"
+          />
+        </button>
+      </div>
+    </header>
+
+     <!-- Mobile search bar -->
+     <div class="md:hidden relative w-full pb-4 px-6">
+        <span
+          class="absolute left-10 top-1/4 mt-1.5 transform -translate-y-1/2"
+        >
+          <i class="ri-search-line"></i>
+        </span>
+        <input
+          type="text"
+          placeholder="Search your PDF library or documents..."
+          class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke"
+        />
+      </div>
+
+
+      <!--Sidebar-->
+      <aside
+        id="sidebar"
+        class="md:relative bg-light-sky-blue z-10 w-48 transform -translate-x-full md:translate-x-0 md:relative shadow-lg md:shadow-none transition-transform duration-300"
+      >
+        <nav class="mt-4">
+          <ul class="flex flex-col ml-2" style="height: calc(100vh - 5.8rem)">
+            <li class="md:hidden flex justify-end">
+              <button class="menu-toggle">
+                <i class="ri-close-circle-fill"></i>
+              </button>
+            </li>
+            <li>
+              <button
+                class="sidebar-btn flex items-center gap-2 w-full px-4 py-3"
+              >
+                <i class="ri-layout-grid-line ri-lg"></i>
+                <span class="text-base font-medium">All Projects</span>
+                </button>
+            </li>
+            <li>
+              <button
+                class="sidebar-btn flex items-center gap-2 w-full px-4 py-3"
+              >
+                <i class="ri-user-follow-line ri-lg"></i>
+                <span class="text-base font-medium">Collaborations</span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="sidebar-btn flex items-center gap-2 w-full px-4 py-3"
+              >
+              <i class="ri-archive-stack-line ri-lg"></i>
+                <span class="text-base font-medium">My Collection</span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="sidebar-btn flex items-center gap-2 w-full px-4 py-3"
+              >
+              <i class="ri-star-line ri-lg"></i>
+                <span class="text-base font-medium">Bookmarked</span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="sidebar-btn flex items-center gap-2 w-full px-4 py-3"
+              >
+              <i class="ri-delete-bin-line ri-lg"></i>
+                <span class="text-base font-medium">Trash</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
     
     <!-- Main Content -->
-    <div class="flex-1 flex flex-col">
+    <div
+        class="flex-1 bg-white-smoke rounded-tl-3xl overflow-y-auto scroll main-content relative"
+      >
         <!-- Top Navbar -->
-        <div class="bg-light-sky-blue text-white p-4 flex justify-between items-center rounded-tl-3xl">
-            <div class="relative w-96">
-                <input type="text" placeholder="Search your PDF library or documents..." 
-                    class="pl-4 p-2 w-full border rounded bg-transparent text-white placeholder-white focus:outline-none" />
-                <i class="ri-search-line absolute right-4 top-1/2 transform -translate-y-1/2 text-white"></i>
-            </div>
-        </div>
+       
 
         <!-- File Manager Table -->
-        <div class="flex-1 p-6 bg-white rounded-tl-3xl shadow">
-            <div class="flex justify-between items-center mb-4">
+        
+            <div class="flex flex-col mt-8 ml-6">
+                <div
+                  class="w-full py-4 px-3 flex justify-between items-center relative"
+                >
                 <h3 class="text-3xl font-semibold">File manager</h3>
-                <button class="text-sm md:text-base p-1 border border-royal-blue rounded-lg flex gap-4 px-6">
-                    Back <i class="ri-arrow-left-s-line ri-lg"></i>
-                </button>
-            </div>
 
-            <p class="mt-4 text-base font-normal text-dark-charcoal">Manage your files and project here</p>
-            <div class="mt-4">
-                <input type="checkbox" id="bookmarks" name="bookmarks" class="mr-2">
-                <label for="bookmarks" class="text-base font-normal text-dark-charcoal">Bookmarked</label>
-            </div>
+                  <button
+                    class="border border-royal-blue rounded-lg px-8 text-royal-blue"
+                  >
+                    <i class="ri-arrow-left-s-line"></i>Back
+                  </button>
+                </div>
+      
+                <p class="mt-2 text-base font-normal text-dark-charcoal">
+                  Manage your files and project here
+                </p>
+               
 
-            <table class="w-full mt-4 border-collapse">
-                <thead class="bg-blue-100 text-base font-medium text-dark-charcoal">
+                <div class="mt-2">
+                    <input type="checkbox" id="bookmarks" name="bookmarks" class="">
+                    <label for="bookmarks" class="text-base font-normal text-dark-charcoal">Bookmarked</label>
+                </div>
+              </div>
+
+            
+            
+              <div class="w-full mt-4">
+                <table class="w-full border-collapse">
+                <thead class="bg-light-sky-blue w-full text-base font-medium text-dark-charcoal">
                     <tr>
                         <th class="p-2 text-left">File Name</th>
                         <th class="p-2 text-left">Type</th>
@@ -100,9 +218,7 @@
                         <td class="p-2">Recently Uploaded</td>
                         <td class="p-2 flex gap-2">
                             <img src="/public/images/Profile1.jpeg" alt="Profile" class="rounded-full h-10 w-10 object-cover scale-110">
-                            
                         </td>
-
                         <td class="p-2">1 kb</td>
                         <td class="py-4 md:py-5">
                             <button class="more-button">
@@ -128,10 +244,8 @@
                         <td class="p-2">Jan 19, 2025</td>
                         <td class="p-2">Restricted</td>
                         <td class="p-2">Edited</td>
-
                         <td class="p-2 flex gap-2">
                             <img src="/public/images/Profile3.jpeg" alt="Profile" class="rounded-full h-10 w-10 object-cover scale-110">
-                            
                         </td>
                         <td class="p-2">2 kb</td>
                         <td class="py-4 md:py-5">
@@ -151,7 +265,6 @@
                     </tr>
                     <tr class="text-base font-normal text-dark-charcoal">
                         <td class="p-2">Myresume.pdf</td>
-
                         <td class="p-2">
                             <img src="/public/images/pdf-dark.png" alt="Excel Icon" class="w-6 h-6 object-contain">
                         </td>
@@ -159,16 +272,19 @@
                         <td class="p-2">Dec 08, 2024</td>
                         <td class="p-2">View</td>
                         <td class="p-2">Shared</td>
-
                         <td class="p-2 flex gap-2">
                             <img src="/public/images/Profile4.jpeg" alt="Profile" class="rounded-full h-10 w-10 object-cover scale-110">
-                            
                         </td>
                         <td class="p-2">1 kb</td>
                         <td class="py-4 md:py-5">
                             <button class="more-button">
                                 <i class="ri-more-fill ri-lg md:ri-xl"></i>
                             </button>
+                            <div class="moredropdown hidden absolute md:w-2/12 lg:w-48 bg-dark-charcoal shadow-md rounded-lg z-[9999]">
+                                <ul class="text-sm text-white-smoke">
+                        
+                        <td class="py-4 md:py-5">
+                            
                             <div class="moredropdown hidden absolute md:w-2/12 lg:w-48 bg-dark-charcoal shadow-md rounded-lg z-[9999]">
                                 <ul class="text-sm text-white-smoke">
                                     <li><a href="#" class="block px-4 py-2">Open</a></li>
@@ -184,6 +300,13 @@
             </table>
            
         </div>
+    
     </div>
+    </div>
+  </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/public/js/sidebar.js"></script>
+    
 </body>
+
 </html>

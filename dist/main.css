@@ -625,10 +625,6 @@ body {
   right: 5rem;
 }
 
-.right-4 {
-  right: 1rem;
-}
-
 .top-0 {
   top: 0px;
 }
@@ -745,6 +741,14 @@ body {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
 }
 
 .block {
@@ -1021,10 +1025,6 @@ body {
 
 .w-8\/12 {
   width: 66.666667%;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .w-\[10rem\] {
@@ -1410,11 +1410,6 @@ body {
   background-color: #FBFBFB4D !important;
 }
 
-.bg-blue-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 234 254 / var(--tw-bg-opacity, 1));
-}
-
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
@@ -1428,11 +1423,6 @@ body {
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
-}
-
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
 }
 
 .bg-light-sky-blue {
@@ -1464,11 +1454,6 @@ body {
 
 .bg-transparent {
   background-color: transparent;
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .bg-white-smoke {
@@ -1688,10 +1673,6 @@ body {
   padding-left: 0.75rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
-}
-
 .pr-10 {
   padding-right: 2.5rem;
 }
@@ -1883,16 +1864,6 @@ body {
 
 .underline {
   text-decoration-line: underline;
-}
-
-.placeholder-white::-moz-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-placeholder-opacity, 1));
-}
-
-.placeholder-white::placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-placeholder-opacity, 1));
 }
 
 .opacity-0 {

@@ -98,7 +98,7 @@ $(document).ready(function () {
     
     // Close all dropdowns when clicking outside
     $(document).on('click', function (e) {
-      if (!$(e.target).closest('.more-button').length) {
+      if (!$(e.target).closest('.more-button, .moredropdown').length) {
         $('.moredropdown').addClass('hidden');
       }
     });

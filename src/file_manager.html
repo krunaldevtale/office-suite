@@ -136,7 +136,7 @@
 
         <!-- File Manager Table -->
         
-            <div class="flex flex-col mt-8 ml-6">
+            <div class="flex flex-col mt-8 ml-3">
                 <div
                   class="w-full py-4 px-3 flex justify-between items-center relative"
                 >
@@ -148,17 +148,18 @@
                     <i class="ri-arrow-left-s-line"></i>Back
                   </button>
                 </div>
+              </div>
       
-                <p class="mt-2 text-base font-normal text-dark-charcoal">
+                <p class="mt-2 text-base font-normal text-dark-charcoal ml-3">
                   Manage your files and project here
                 </p>
                
 
-                <div class="mt-2">
-                    <input type="checkbox" id="bookmarks" name="bookmarks" class="">
+                <div class="mt-2 ml-3">
+                    <input type="checkbox" id="bookmarks" name="bookmarks" class="w-5 h-5 rounded-tl-6xl">
                     <label for="bookmarks" class="text-base font-normal text-dark-charcoal">Bookmarked</label>
                 </div>
-              </div>
+              
 
             
             
@@ -166,14 +167,125 @@
                 <table class="w-full border-collapse">
                 <thead class="bg-light-sky-blue w-full text-base font-medium text-dark-charcoal">
                     <tr>
-                        <th class="p-2 text-left">File Name</th>
-                        <th class="p-2 text-left">Type</th>
-                        <th class="p-2 text-left">Owner</th>
-                        <th class="p-2 text-left">Last Modified</th>
-                        <th class="p-2 text-left">Access level</th>
-                        <th class="p-2 text-left">Recent Activity</th>
-                        <th class="p-2 text-left">Collaborations</th>
-                        <th class="p-2 text-left">Size</th>
+                      <th class="p-2 text-left heading-class">File Name</th>
+                       
+                        <th class="p-2 relative">
+                          <!-- Dropdown Button for Type -->
+                          <button class="dropdown-button flex items-center gap-1 heading-class">
+                              Type <i class="ri-arrow-down-s-fill"></i>
+                          </button>
+                          <!-- Dropdown Menu for Type -->
+                          <div class="dropdown-menu hidden absolute mt-2 w-md bg-white shadow-md rounded-xl z-10 border border-dark-charcoal heading-class">
+                              <ul class="text-base text-dark-charcoal">
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal">Excel</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal">PDF</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal">Word</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal">Powerpoint</a></li>
+                              </ul>
+                          </div>
+                      </th>
+                      
+                      <th class="p-2 text-left relative">
+                          <!-- Dropdown Button for Owner -->
+                          <button class="dropdown-button flex items-center gap-1">
+                              Owner <i class="ri-arrow-down-s-fill"></i>
+                          </button>
+                          <!-- Dropdown Menu for Owner -->
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
+                              <ul class="text-base text-dark-charcoal">
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Owned by me</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Owned by organization</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">External owner</a></li>
+                              </ul>
+                          </div>
+                      </th>
+                      
+                    
+                       
+
+                        <th class="p-2 text-left relative">
+                          <!-- Dropdown Button for Owner -->
+                          <button class="dropdown-button flex items-center gap-1">
+                              Last Modified<i class="ri-arrow-down-s-fill"></i>
+                          </button>
+                          <!-- Dropdown Menu for Owner -->
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
+                              <ul class="text-base text-dark-charcoal">
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Today</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Last 7 Days</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Last 30 days</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Older</a></li>
+                              </ul>
+                          </div>
+                      </th>
+                        
+
+                        <th class="p-2 text-left relative">
+                          <!-- Dropdown Button for Owner -->
+                          <button class="dropdown-button flex items-center gap-1">
+                            Access level<i class="ri-arrow-down-s-fill"></i>
+                          </button>
+                          <!-- Dropdown Menu for Owner -->
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
+                              <ul class="text-base text-dark-charcoal">
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Can Edit</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">View Only</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Restricted</a></li>
+                                  
+                              </ul>
+                          </div>
+                      </th>
+                        
+
+                        <th class="p-2 text-left relative">
+                          <!-- Dropdown Button for Owner -->
+                          <button class="dropdown-button flex items-center gap-1">
+                            Recent Activity<i class="ri-arrow-down-s-fill"></i>
+                          </button>
+                          <!-- Dropdown Menu for Owner -->
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
+                              <ul class="text-base text-dark-charcoal">
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Downloaded</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Recently uploaded</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Edited</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Shared</a></li>
+                              </ul>
+                          </div>
+                      </th>
+                      
+
+                        <th class="p-2 text-left relative">
+                          <!-- Dropdown Button for Owner -->
+                          <button class="dropdown-button flex items-center gap-1">
+                            Collaborations<i class="ri-arrow-down-s-fill"></i>
+                          </button>
+                          <!-- Dropdown Menu for Owner -->
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
+                              <ul class="text-base text-dark-charcoal">
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Only me</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Shared with me</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Shared in organization</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Public files</a></li>
+                              </ul>
+                          </div>
+                      </th>
+                        
+                        <th class="p-2 text-left relative">
+                          <!-- Dropdown Button for Owner -->
+                          <button class="dropdown-button flex items-center gap-1">
+                            Size<i class="ri-arrow-down-s-fill"></i>
+                          </button>
+                          <!-- Dropdown Menu for Owner -->
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
+                              <ul class="text-base text-dark-charcoal">
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Small (&lt; 10MB)</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Medium (10MB - 100MB)</a></li>
+                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Large (&gt; 100MB)</a></li>
+                                  
+                              </ul>
+                          </div>
+                      </th>
+                        
                         <th class="p-2 text-left"></th>
                     </tr>
                 </thead>
@@ -306,6 +418,7 @@
   </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/public/js/sidebar.js"></script>
+    <script src="/public/js/dropdown_filemanager.js"></script>
     
 </body>
 

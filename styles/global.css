@@ -609,6 +609,30 @@ input[type="checkbox"].c-checkbox:checked::after {
   }
 }
 
+/* Reduce gap between headings */
+.heading-class {
+ 
+  margin-left: -60%; /* Add left margin for consistent horizontal alignment */
+}
+
+.column-class {
+ 
+  margin-left: -80%; /* Add left margin for consistent horizontal alignment */
+}
+
+
+
+
+
+/* Adjust for smaller screens */
+@media screen and (max-width: 768px) {
+  #dropdown-menu {
+      left: auto;
+      right: 0; /* Align dropdown to the right for smaller screens */
+  }
+}
+
+
 
 
 

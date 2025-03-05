@@ -40,7 +40,11 @@ module.exports = {
         'very-light-gray': '#F8F8F8',
         'transparent-medium-gray': '#9090901A',
         'royal-blue': '#0272D9',
+<<<<<<< HEAD
         'transparent-sky-blue':'#BDE3FB',
+=======
+        'red-orange':'#FF3434'
+>>>>>>> d1e9616b4a7be4d71ea1a5dd989db15537fb1302
       },
       backgroundImage: {
         'gradient-primary': 'linear-gradient(180deg, #01D7AB 0%, #0272D9 100%)',

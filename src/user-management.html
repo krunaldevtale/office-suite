@@ -103,7 +103,7 @@
       <!--Sidebar-->
       <aside
         id="sidebar"
-        class="flex items-center justify-center  md:relative bg-light-sky-blue z-10 w-52  transform -translate-x-full md:translate-x-0 md:relative shadow-lg md:shadow-none transition-transform duration-300"
+        class="flex items-center justify-center md:relative bg-light-sky-blue z-10 w-52 transform -translate-x-full md:translate-x-0 md:relative shadow-lg md:shadow-none transition-transform duration-300"
       >
         <nav class="mt-4">
           <ul class="flex flex-col" style="height: calc(100vh - 5.8rem)">
@@ -113,7 +113,7 @@
               </button>
             </li>
             <li>
-              <button
+              <button id="alluser-btn"
                 class="flex gap-4 pt-2.5 pb-2.5 pr-8 pl-3"
               >
                 <i class="ri-group-3-line"></i>
@@ -121,7 +121,7 @@
               </button>
             </li>
             <li>
-              <button
+              <button id="admin-btn"
                 class="flex gap-4 pt-2.5 pb-2.5 pr-8 pl-3"
               >
                 <i class="ri-user-follow-line"></i>
@@ -129,7 +129,7 @@
               </button>
             </li>
             <li>
-              <button
+              <button id="regularuser-btn"
                 class="flex gap-4 pt-2.5 pb-2.5 pr-8 pl-3"
               >
                 <i class="ri-group-line"></i>
@@ -137,7 +137,7 @@
               </button>
             </li>
             <li>
-              <button
+              <button id="userrole-btn"
                 class="flex gap-4 pt-2.5 pb-2.5 pr-8 pl-3"
               >
                 <i class="ri-user-community-line"></i>
@@ -145,7 +145,7 @@
               </button>
             </li>
             <li>
-              <button
+              <button id="activity-btn"
                 class="flex gap-4 pt-2.5 pb-2.5 pr-8 pl-3"
               >
                 <i class="ri-pulse-line"></i>
@@ -155,15 +155,16 @@
           </ul>
         </nav>
       </aside>
-      <!--Main content-->
-      <div
+
+      <!--All users content-->
+      <div id="allusers-content"
         class="flex-1 bg-white-smoke rounded-tl-3xl overflow-y-auto scroll main-content"
       >
         <div class="flex flex-col">
           
             
           <div class="p-6 relative">
-            <p class="font-semibold">User management</p>
+            <p class="font-semibold text-3xl">User management</p>
             <div>  
               
               <button class="flex items-center justify-center gap-6 absolute right-6 top-6 border border-royal-blue text-royal-blue py-2 px-4 rounded-lg w-28">
@@ -191,32 +192,39 @@
                   
                     <!-- Copy Icon -->
                     <div class="relative">
-                      <i id="copyIcon" class="ri-file-copy-line cursor-pointer"></i>
-                  
+                      <i  class="ri-file-copy-line cursor-pointer copyIcon"></i>
+                      
                       <!-- Copied Button -->
-                      <button id="copiedBtn" 
+                      <button 
                         class=" absolute bottom-full  right-1  border border-royal-blue text-royal-blue 
-                        rounded-tl-xl rounded-tr-xl rounded-bl-xl p-2 bg-white  text-sm">
+                        rounded-tl-xl rounded-tr-xl rounded-bl-xl p-2 bg-white  text-sm hidden copiedBtn">
                         Copied
                       </button>
                     </div>
                   </div>
                  <div class="flex items-center border border-dark-charcoal rounded-md px-2 py-1 rounded-xl">
-                   <input type="text" placeholder="xyz@gmail.com" class="w-full outline-none bg-transparent" />
+                   <input type="text" placeholder="xyz@gmail.com" class="w-full outline-none bg-transparent emailInput"  />
                   </div>
                   <div class="flex mt-2 flex-col">
                     <p class="text-sm font-normal mb-2"> Assign role</p>
-                    <div class="flex flex-row gap-6"> 
+                    <div class="flex flex-row justify-between"> 
                       <button class="royal-blue rounded-xl p-2 text-white-smoke">Admin</button>
                       <button class="border border-charcoal-black rounded-xl p-2 text-transparent-dark-gray">user</button>
                       <button class="border border-charcoal-black rounded-xl p-2 text-transparent-dark-gray">Manager</button>
                     </div>
                   </div>
-                  <div class="flex items-center border border-dark-charcoal rounded-xl px-2 py-1 mt-4">
-                    <input type="text"  class="w-full outline-none bg-transparent" placeholder="set permissions" />
-                    <i class="ri-arrow-down-s-fill"></i>
-                    
-                   </div>
+                  <!--Set Permissions dropdown-->
+                  <div class="dropdownContainer relative">
+                    <div class="flex items-center border border-dark-charcoal rounded-xl px-2 py-1 mt-4 cursor-pointer permissionDropdown">
+                      <input type="text" id="" class="permissionInput w-full outline-none bg-transparent cursor-pointer" placeholder="Set permissions" readonly />
+                      <i class="ri-arrow-down-s-fill"></i>
+                    </div>
+                    <ul  class="permissionList absolute left-0 mt-1 w-full bg-white border border-dark-charcoal rounded-lg shadow-md hidden z-10">
+                      <li class="p-2  cursor-pointer">Permission 1</li>
+                      <li class="p-2  cursor-pointer">Permission 2</li>
+                      
+                    </ul>
+                  </div>
                    <div class="flex flex-row gap-6 mt-2"> 
                     <button class="royal-blue rounded-xl p-2 text-white-smoke">Send</button>
                     <button class="border border-red-orange rounded-xl p-2 text-red-orange">Cancel </button>
@@ -248,7 +256,7 @@
                                 
                               </ul>
                             </div>
-                          </div>
+                          
                     
                     </th>
                     <th class="text-left px-4 relative">
@@ -275,7 +283,352 @@
               </table>
             </div>
           </div>
-      
+        </div>
+      </div>
+
+      <!--Admins-->
+
+      <div id="admin-content"
+      class="flex-1 bg-white-smoke rounded-tl-3xl overflow-y-auto scroll main-content"
+    >
+      <div class="flex flex-col">
+        
+          
+        <div class="p-6 relative">
+          <p class="font-semibold text-3xl">User management</p>
+          <div>  
+            
+            <button class="flex items-center justify-center gap-6 absolute right-6 top-6 border border-royal-blue text-royal-blue py-2 px-4 rounded-lg w-28">
+              <i class="ri-arrow-left-s-line"></i>Back</button>
+          </div>
+        
+          <p class="font-normal ">
+            Manage your team members and their account permissions here
+          </p>
+          
+          <div class="relative flex mt-4">
+            <button  class=" more-button royal-blue px-6 py-2 pr-10  rounded-lg text-white flex gap-2">
+              <i class="ri-add-circle-line"></i>Add Users
+            </button>
+            <!--Addusers Dropdown-->
+            <div class="moredropdown hidden absolute left-0 top-full  w-72 bg-white shadow-md rounded-lg z-[9999] border border-dark-charcoal p-3">
+              <div class="flex flex-col p-2">
+                <div class="flex justify-between">  
+                  <p class="text-dark-charcoal font-normal text-base mb-2">Add new user</p>
+                  
+                </div>
+              
+                <div class="flex justify-between relative">
+                  <label class="text-sm font-normal" >Enter email</label>
+                
+                  <!-- Copy Icon -->
+                  <div class="relative">
+                    <i  class="ri-file-copy-line cursor-pointer copyIcon"></i>
+                    
+                    <!-- Copied Button -->
+                    <button 
+                      class=" absolute bottom-full  right-1  border border-royal-blue text-royal-blue 
+                      rounded-tl-xl rounded-tr-xl rounded-bl-xl p-2 bg-white  text-sm hidden copiedBtn">
+                      Copied
+                    </button>
+                  </div>
+                </div>
+               <div class="flex items-center border border-dark-charcoal rounded-md px-2 py-1 rounded-xl">
+                 <input type="text" placeholder="xyz@gmail.com" class="w-full outline-none bg-transparent emailInput"  />
+                </div>
+                <div class="flex mt-2 flex-col">
+                  <p class="text-sm font-normal mb-2"> Assign role</p>
+                  <div class="flex flex-row gap-6"> 
+                    <button class="royal-blue rounded-xl p-2 text-white-smoke">Admin</button>
+                    <button class="border border-charcoal-black rounded-xl p-2 text-transparent-dark-gray">user</button>
+                    <button class="border border-charcoal-black rounded-xl p-2 text-transparent-dark-gray">Manager</button>
+                  </div>
+                </div>
+                <!--Set Permissions dropdown-->
+                <div class="dropdownContainer relative">
+                  <div class="flex items-center border border-dark-charcoal rounded-xl px-2 py-1 mt-4 cursor-pointer permissionDropdown">
+                    <input type="text" id="" class="permissionInput w-full outline-none bg-transparent cursor-pointer" placeholder="Set permissions" readonly />
+                    <i class="ri-arrow-down-s-fill"></i>
+                  </div>
+                  <ul  class="permissionList absolute left-0 mt-1 w-full bg-white border border-dark-charcoal rounded-lg shadow-md hidden z-10">
+                    <li class="p-2  cursor-pointer">Permission 1</li>
+                    <li class="p-2  cursor-pointer">Permission 2</li>
+                  </ul>
+                </div>
+                 <div class="flex flex-row gap-6 mt-2"> 
+                  <button class="royal-blue rounded-xl p-2 text-white-smoke">Send</button>
+                  <button class="border border-red-orange rounded-xl p-2 text-red-orange">Cancel </button>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+
+        
+       
+      </div>
+      <div class=" bg-light-sky-blue h-8 ">
+          <div >
+            <table>
+              <thead>
+                <tr class="h-8">
+                  <th class="text-left px-8">Name</th>
+                  <th class="text-left px-4">Email</th>
+                 
+                  <th class="text-left px-4 relative">
+                      <div class="inline-flex items-center gap-1 more-button cursor-pointer relative">
+                        Status <i class="ri-arrow-down-s-fill"></i>
+                      </div>
+                          <div class="moredropdown hidden absolute left-0 top-full mt-1 w-40 bg-white-smoke shadow-md rounded-lg z-[9999] border border-dark-charcoal">
+                            <ul class="text-sm ">
+                              <li><a href="#" class="block px-4 py-2 text-base font-normal">Active</a></li>
+                              <li><a href="#" class="block px-4 py-2 text-base font-normal">Pending</a></li>
+                              <li><a href="#" class="block px-4 py-2 text-base font-normal">Completed</a></li>
+                              <li><a href="#" class="block px-4 py-2 text-base font-normal">On hold</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                  
+                  </th>
+                  <th class="text-left px-4">Last active</th>
+                </tr>
+              </thead>
+              <tbody id="adminTable">
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Regular Users-->
+    <div id="admin-content"
+      class="flex-1 bg-white-smoke rounded-tl-3xl overflow-y-auto scroll main-content"
+    >
+      <div class="flex flex-col">
+        
+          
+        <div class="p-6 relative">
+          <p class="font-semibold text-3xl">User management</p>
+          <div>  
+            
+            <button class="flex items-center justify-center gap-6 absolute right-6 top-6 border border-royal-blue text-royal-blue py-2 px-4 rounded-lg w-28">
+              <i class="ri-arrow-left-s-line"></i>Back</button>
+          </div>
+        
+          <p class="font-normal ">
+            Manage your team members and their account permissions here
+          </p>
+          
+          <div class="relative flex mt-4">
+            <button  class=" more-button royal-blue px-6 py-2 pr-10  rounded-lg text-white flex gap-2">
+              <i class="ri-add-circle-line"></i>Add Users
+            </button>
+            <!--Addusers Dropdown-->
+            <div class="moredropdown hidden absolute left-0 top-full  w-72 bg-white shadow-md rounded-lg z-[9999] border border-dark-charcoal p-3">
+              <div class="flex flex-col p-2">
+                <div class="flex justify-between">  
+                  <p class="text-dark-charcoal font-normal text-base mb-2">Add new user</p>
+                  
+                </div>
+              
+                <div class="flex justify-between relative">
+                  <label class="text-sm font-normal" >Enter email</label>
+                
+                  <!-- Copy Icon -->
+                  <div class="relative">
+                    <i  class="ri-file-copy-line cursor-pointer copyIcon"></i>
+                    
+                    <!-- Copied Button -->
+                    <button 
+                      class=" absolute bottom-full  right-1  border border-royal-blue text-royal-blue 
+                      rounded-tl-xl rounded-tr-xl rounded-bl-xl p-2 bg-white  text-sm hidden copiedBtn">
+                      Copied
+                    </button>
+                  </div>
+                </div>
+               <div class="flex items-center border border-dark-charcoal rounded-md px-2 py-1 rounded-xl">
+                 <input type="text" placeholder="xyz@gmail.com" class="w-full outline-none bg-transparent emailInput"  />
+                </div>
+                <div class="flex mt-2 flex-col">
+                  <p class="text-sm font-normal mb-2"> Assign role</p>
+                  <div class="flex flex-row gap-6"> 
+                    <button class="royal-blue rounded-xl p-2 text-white-smoke">Admin</button>
+                    <button class="border border-charcoal-black rounded-xl p-2 text-transparent-dark-gray">user</button>
+                    <button class="border border-charcoal-black rounded-xl p-2 text-transparent-dark-gray">Manager</button>
+                  </div>
+                </div>
+                <!--Set Permissions dropdown-->
+                <div class="dropdownContainer relative">
+                  <div class="flex items-center border border-dark-charcoal rounded-xl px-2 py-1 mt-4 cursor-pointer permissionDropdown">
+                    <input type="text" id="" class="permissionInput w-full outline-none bg-transparent cursor-pointer" placeholder="Set permissions" readonly />
+                    <i class="ri-arrow-down-s-fill"></i>
+                  </div>
+                  <ul  class="permissionList absolute left-0 mt-1 w-full bg-white border border-dark-charcoal rounded-lg shadow-md hidden z-10">
+                    <li class="p-2  cursor-pointer">Permission 1</li>
+                      <li class="p-2  cursor-pointer">Permission 2</li>
+                  </ul>
+                </div>
+                 <div class="flex flex-row gap-6 mt-2"> 
+                  <button class="royal-blue rounded-xl p-2 text-white-smoke">Send</button>
+                  <button class="border border-red-orange rounded-xl p-2 text-red-orange">Cancel </button>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+
+        
+       
+      </div>
+      <div class=" bg-light-sky-blue h-8 ">
+          <div >
+            <table>
+              <thead>
+                <tr class="h-8">
+                  <th class="text-left px-8">Name</th>
+                  <th class="text-left px-4">Email</th>
+                 
+                  <th class="text-left px-4 relative">
+                      <div class="inline-flex items-center gap-1 more-button cursor-pointer relative">
+                        Status <i class="ri-arrow-down-s-fill"></i>
+                      </div>
+                          <div class="moredropdown hidden absolute left-0 top-full mt-1 w-40 bg-white-smoke shadow-md rounded-lg z-[9999] border border-dark-charcoal">
+                            <ul class="text-sm ">
+                              <li><a href="#" class="block px-4 py-2 text-base font-normal">Active</a></li>
+                              <li><a href="#" class="block px-4 py-2 text-base font-normal">Pending</a></li>
+                              <li><a href="#" class="block px-4 py-2 text-base font-normal">Completed</a></li>
+                              <li><a href="#" class="block px-4 py-2 text-base font-normal">On hold</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                  
+                  </th>
+                  <th class="text-left px-4">Last active</th>
+                </tr>
+              </thead>
+              <tbody id="reguserTable">
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <!--User Roles-->
+      <div id="userroles-content"  class="flex-1 bg-white-smoke rounded-tl-3xl overflow-y-auto scroll main-content">
+        <div class="flex flex-col">
+          <div class="p-8 relative">
+            <p class="font-semibold text-3xl">User management</p>
+            <div>  
+              <button class="flex items-center justify-center gap-6 absolute right-6 top-6 border border-royal-blue text-royal-blue py-2 px-4 rounded-lg w-28">
+                <i class="ri-arrow-left-s-line"></i>Back</button>
+            </div>
+            <p class="font-normal ">
+              Manage your team members and their account permissions here
+            </p>
+          </div>
+          <div class=" bg-light-sky-blue h-8 mt-6">
+            <div >
+              <table>
+                <thead>
+                  <tr class="h-8">
+                    <th class="text-left px-8">Name</th>
+                    <th class="text-left px-4 relative">
+                      <div class="inline-flex items-center gap-1 more-button cursor-pointer relative">
+                        Date & Time <i class="ri-arrow-down-s-fill"></i>
+                      </div>
+                      <div class="moredropdown hidden absolute left-0 top-full mt-1 w-40 bg-white-smoke shadow-md rounded-lg z-[9999] border border-dark-charcoal">
+                        <ul class="text-sm ">
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Today</a></li>
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Last 7 days</a></li>
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Last 30 days</a></li>
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Older</a></li>
+                         </ul>
+                      </div>
+                    </th>
+                    <th class="text-left px-4 relative">
+                      <div class="inline-flex items-center gap-1 more-button cursor-pointer relative">
+                        Action <i class="ri-arrow-down-s-fill"></i>
+                      </div>
+                      <div class="moredropdown hidden absolute left-0 top-full mt-1 w-40 bg-white-smoke shadow-md rounded-lg z-[9999] border border-dark-charcoal">
+                        <ul class="text-sm ">
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Edited</a></li>
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Deleted</a></li>
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Shared</a></li>
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Created Project</a></li>
+                         </ul>
+                      </div>
+                    </th>
+                    <th class="text-left px-8">Project</th>
+                    <th class="text-left px-8">Details</th>
+                  </tr>
+                </thead>
+                <tbody id="userroleTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Activity Logs-->
+      <div id="activityLogs"  class="flex-1 bg-white-smoke rounded-tl-3xl overflow-y-auto scroll main-content">
+        <div class="flex flex-col">
+          <div class="p-8 relative">
+            <p class="font-semibold text-3xl">User management</p>
+            <div>  
+              <button class="flex items-center justify-center gap-6 absolute right-6 top-6 border border-royal-blue text-royal-blue py-2 px-4 rounded-lg w-28">
+                <i class="ri-arrow-left-s-line"></i>Back</button>
+            </div>
+            <p class="font-normal ">
+              Manage your team members and their account permissions here
+            </p>
+          </div>
+          <div class=" bg-light-sky-blue h-8 mt-6">
+            <div >
+              <table>
+                <thead>
+                  <tr class="h-8">
+                    <th class="text-left px-8">Name</th>
+                    <th class="text-left px-4 relative">
+                      <div class="inline-flex items-center gap-1 more-button cursor-pointer relative">
+                        Date & Time <i class="ri-arrow-down-s-fill"></i>
+                      </div>
+                      <div class="moredropdown hidden absolute left-0 top-full mt-1 w-40 bg-white-smoke shadow-md rounded-lg z-[9999] border border-dark-charcoal">
+                        <ul class="text-sm ">
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Today</a></li>
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Last 7 days</a></li>
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Last 30 days</a></li>
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Older</a></li>
+                         </ul>
+                      </div>
+                    </th>
+                    <th class="text-left px-4 relative">
+                      <div class="inline-flex items-center gap-1 more-button cursor-pointer relative">
+                        Action <i class="ri-arrow-down-s-fill"></i>
+                      </div>
+                      <div class="moredropdown hidden absolute left-0 top-full mt-1 w-40 bg-white-smoke shadow-md rounded-lg z-[9999] border border-dark-charcoal">
+                        <ul class="text-sm ">
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Edited</a></li>
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Deleted</a></li>
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Shared</a></li>
+                          <li><a href="#" class="block px-4 py-2 text-base font-normal">Created Project</a></li>
+                         </ul>
+                      </div>
+                    </th>
+                    <th class="text-left px-8">Project</th>
+                    <th class="text-left px-8">Details</th>
+                  </tr>
+                </thead>
+                <tbody id="activitylogsTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/public/js/sidebar.js"></script>

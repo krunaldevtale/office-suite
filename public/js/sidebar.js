@@ -15,13 +15,17 @@ $(document).ready(function () {
 
         }
     });
-    $("#sidebar nav li button").click(function () {
-        // Remove active class from all buttons
-        $("#sidebar nav li").removeClass("icon-background");
-        
-
-        // Add active class to the clicked button's <li> and <i> icon
-        $(this).closest("li").addClass("icon-background");
-      
+    $(document).ready(function () {
+        // Set "All Users" as the default active button
+        $("#alluser-btn").closest("li").addClass("icon-background");
+    
+        $("#sidebar nav li button").click(function () {
+            // Remove active class from all list items
+            $("#sidebar nav li").removeClass("icon-background");
+    
+            // Add active class to the clicked button's parent <li>
+            $(this).closest("li").addClass("icon-background");
+        });
     });
+    
 });

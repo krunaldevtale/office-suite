@@ -21,4 +21,5 @@ $(document).ready(function () {
         $('.dropdown').addClass('hidden');
         }
     });
+    
 });

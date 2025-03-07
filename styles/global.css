@@ -98,6 +98,7 @@
   @apply rounded-lg;
   background: var(--primary-gradient-color);
   color: var(--white-smoke);
+  
 }
 
 .menu:hover .icon{
@@ -612,13 +613,320 @@ input[type="checkbox"].c-checkbox:checked::after {
 /* Reduce gap between headings */
 .heading-class {
  
+  margin-left: -70%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading1-class {
+ 
+  margin-left: -20%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading2-class {
+ 
+  margin-left: -14%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading3-class {
+ 
+  margin-left: -30%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading4-class {
+ 
+  margin-left: -40%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading5-class {
+ 
+  margin-left: -50%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading6-class {
+ 
+  margin-left: -130%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading7-class {
+ 
+  margin-left: -30%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading8-class {
+ 
+  margin-left: -55%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading9-class {
+ 
+  margin-left: -40%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading10-class {
+ 
+  margin-left: -66%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading11-class {
+ 
+  margin-left: -96%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading12-class {
+ 
+  margin-left: -30%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading13-class {
+ 
+  margin-left: 60%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading14-class {
+ 
+  margin-left: -68%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading15-class {
+ 
   margin-left: -60%; /* Add left margin for consistent horizontal alignment */
 }
+
+.heading16-class {
+ 
+  margin-left: -114%; /* Add left margin for consistent horizontal alignment */
+}
+
+.heading17-class {
+ 
+  margin-left: 36%; /* Add left margin for consistent horizontal alignment */
+}
+
+
+.heading18-class {
+ 
+  margin-left: 126%; /* Add left margin for consistent horizontal alignment */
+}
+
+
+
+
 
 .column-class {
  
   margin-left: -80%; /* Add left margin for consistent horizontal alignment */
 }
+
+.icon-class {
+ 
+  margin-left: -20%; /* Add left margin for consistent horizontal alignment */
+}
+
+.icon-class1 {
+ 
+  margin-left: -10%; /* Add left margin for consistent horizontal alignment */
+}
+
+.icon-class2 {
+ 
+  margin-left: -10%; /* Add left margin for consistent horizontal alignment */
+}
+
+.icon-class3 {
+ 
+  margin-left: -40%; /* Add left margin for consistent horizontal alignment */
+}
+
+.icon-class4 {
+ 
+  margin-left: -38%; /* Add left margin for consistent horizontal alignment */
+}
+
+.icon-class5 {
+ 
+  margin-left: -60%; /* Add left margin for consistent horizontal alignment */
+}
+
+
+.dropdown-class {
+ 
+  margin-left: -20%; /* Add left margin for consistent horizontal alignment */
+}
+
+.dropdown1-class {
+ 
+  margin-left: -30%; /* Add left margin for consistent horizontal alignment */
+}
+
+.dropdown2-class {
+ 
+  margin-left: -40%; /* Add left margin for consistent horizontal alignment */
+}
+
+
+.dropdown3-class {
+ 
+  margin-left: -54%; /* Add left margin for consistent horizontal alignment */
+}
+
+.dropdown4-class {
+ 
+  margin-left: -160%; /* Add left margin for consistent horizontal alignment */
+}
+
+.dropdown5-class {
+ 
+  margin-left: -42%; /* Add left margin for consistent horizontal alignment */
+}
+
+.dropdown6-class {
+ 
+  margin-left: -60%; /* Add left margin for consistent horizontal alignment */
+}
+
+.dropdown7-class {
+ 
+  margin-left: -90%; /* Add left margin for consistent horizontal alignment */
+}
+
+.dropdown8-class {
+ 
+  margin-left: -80%; /* Add left margin for consistent horizontal alignment */
+}
+
+.dropdown9-class {
+ 
+  margin-left: -78%; /* Add left margin for consistent horizontal alignment */
+}
+
+
+#upload-dropdown-menu {
+  margin-top: 11%; 
+  margin-left: 10%;   /* Adds 20px margin to the left */
+}
+
+
+
+.access-class {
+ 
+  margin-left: -10%; /* Add left margin for consistent horizontal alignment */
+}
+
+.activity-class {
+ 
+  margin-left: -30%; /* Add left margin for consistent horizontal alignment */
+}
+
+.activity1-class {
+ 
+  margin-left: -60%; /* Add left margin for consistent horizontal alignment */
+}
+
+
+.collaboration-class {
+ 
+  margin-left: -44%; /* Add left margin for consistent horizontal alignment */
+}
+
+.collaboration1-class {
+ 
+  margin-left: -88%; /* Add left margin for consistent horizontal alignment */
+}
+
+.size-class {
+ 
+  margin-left: -130%; /* Add left margin for consistent horizontal alignment */
+}
+
+.size-class1 {
+ 
+  margin-left: -24%; /* Add left margin for consistent horizontal alignment */
+}
+
+.size-class2 {
+ 
+  margin-left: -112%; /* Add left margin for consistent horizontal alignment */
+}
+
+.size-class3 {
+ 
+  margin-left: -28%; /* Add left margin for consistent horizontal alignment */
+}
+
+.size-class4 {
+ 
+  margin-left: -224%; /* Add left margin for consistent horizontal alignment */
+}
+
+
+.file-class {
+ 
+  margin-left: 10%; /* Add left margin for consistent horizontal alignment */
+}
+
+.three-dots {
+  margin-left: -400%;
+}
+
+.three-dots-dropdown {
+  margin-left: -10%;
+}
+
+.three-dots1 {
+  margin-left: -10%;
+}
+
+.three-dots-dropdown1 {
+  margin-left: -8%;
+}
+
+.three-dots-dropdown2 {
+  margin-left: 2%;
+}
+
+
+.star {
+  margin-left: -260%;
+}
+
+
+#star1 {
+  margin-left: -140%;
+}
+
+.star3 {
+  margin-left: -220%;
+}
+
+.star4 {
+  margin-left: -220%;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none; /* Remove default checkbox styling */
+  background-color: white;
+  border: 1px solid #000; /* Change color as needed */
+  border-radius: 35%; 
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked::after {
+  content: "✓"; /* Unicode for checkmark */
+  font-size: 16px;
+  color: black; /* Tick color */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
 
 
 
@@ -631,6 +939,12 @@ input[type="checkbox"].c-checkbox:checked::after {
       right: 0; /* Align dropdown to the right for smaller screens */
   }
 }
+
+
+.blue-star {
+  color: #0272D9;
+}
+
 
 
 

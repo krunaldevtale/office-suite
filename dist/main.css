@@ -653,6 +653,33 @@ body {
   top: 100%;
 }
 
+<<<<<<< HEAD
+=======
+.right-2 {
+  right: 0.5rem;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.right-full {
+  right: 100%;
+}
+
+>>>>>>> 7d104a89a3d7fd54244c0e8a24e41961191f0349
 .z-0 {
   z-index: 0;
 }
@@ -669,6 +696,17 @@ body {
   z-index: 9999;
 }
 
+<<<<<<< HEAD
+=======
+.z-50 {
+  z-index: 50;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+>>>>>>> 7d104a89a3d7fd54244c0e8a24e41961191f0349
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -895,6 +933,17 @@ body {
   height: 100vh;
 }
 
+<<<<<<< HEAD
+=======
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+>>>>>>> 7d104a89a3d7fd54244c0e8a24e41961191f0349
 .max-h-32 {
   max-height: 8rem;
 }
@@ -1084,6 +1133,33 @@ body {
   width: 100vw;
 }
 
+<<<<<<< HEAD
+=======
+.w-\[60\%\] {
+  width: 60%;
+}
+
+.w-4\/12 {
+  width: 33.333333%;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-52 {
+  width: 13rem;
+}
+
+.w-14 {
+  width: 3.5rem;
+}
+
+>>>>>>> 7d104a89a3d7fd54244c0e8a24e41961191f0349
 .min-w-full {
   min-width: 100%;
 }
@@ -1250,6 +1326,14 @@ body {
 
 .gap-px {
   gap: 1px;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-2\.5 {
+  gap: 0.625rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1450,6 +1534,11 @@ body {
   border-color: rgb(251 251 251 / var(--tw-border-opacity, 1));
 }
 
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+
 .border-t-transparent {
   border-top-color: transparent;
 }
@@ -1512,6 +1601,11 @@ body {
 .bg-white-smoke {
   --tw-bg-opacity: 1;
   background-color: rgb(251 251 251 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
 }
 
 .object-contain {
@@ -1746,6 +1840,30 @@ body {
   padding-top: 0.5rem;
 }
 
+.pb-2\.5 {
+  padding-bottom: 0.625rem;
+}
+
+.pt-2\.5 {
+  padding-top: 0.625rem;
+}
+
+.pr-20 {
+  padding-right: 5rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
+.pr-1 {
+  padding-right: 0.25rem;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1918,6 +2036,11 @@ body {
 .text-white-smoke {
   --tw-text-opacity: 1;
   color: rgb(251 251 251 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
 
 .underline {

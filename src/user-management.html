@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="overflow-hidden">
+  <body >
     <main class="flex flex-wrap h-screen bg-light-sky-blue">
       <!-- Header -->
       <header
@@ -103,10 +103,10 @@
       <!--Sidebar-->
       <aside
         id="sidebar"
-        class="md:relative bg-light-sky-blue z-10 w-48 transform -translate-x-full md:translate-x-0 md:relative shadow-lg md:shadow-none transition-transform duration-300"
+        class="flex items-center justify-center  md:relative bg-light-sky-blue z-10 w-52  transform -translate-x-full md:translate-x-0 md:relative shadow-lg md:shadow-none transition-transform duration-300"
       >
         <nav class="mt-4">
-          <ul class="flex flex-col ml-2" style="height: calc(100vh - 5.8rem)">
+          <ul class="flex flex-col" style="height: calc(100vh - 5.8rem)">
             <li class="md:hidden flex justify-end">
               <button class="menu-toggle">
                 <i class="ri-close-circle-fill"></i>
@@ -114,7 +114,7 @@
             </li>
             <li>
               <button
-                class="sidebar-btn flex items-center gap-2 w-full px-4 py-3"
+                class="flex gap-4 pt-2.5 pb-2.5 pr-8 pl-3"
               >
                 <i class="ri-group-3-line"></i>
                 <span class="sidebar-text">All users</span>
@@ -122,7 +122,7 @@
             </li>
             <li>
               <button
-                class="sidebar-btn flex items-center gap-2 w-full px-4 py-3"
+                class="flex gap-4 pt-2.5 pb-2.5 pr-8 pl-3"
               >
                 <i class="ri-user-follow-line"></i>
                 <span class="sidebar-text">Admins</span>
@@ -130,7 +130,7 @@
             </li>
             <li>
               <button
-                class="sidebar-btn flex items-center gap-2 w-full px-4 py-3"
+                class="flex gap-4 pt-2.5 pb-2.5 pr-8 pl-3"
               >
                 <i class="ri-group-line"></i>
                 <span class="sidebar-text">Regular Users</span>
@@ -138,7 +138,7 @@
             </li>
             <li>
               <button
-                class="sidebar-btn flex items-center gap-2 w-full px-4 py-3"
+                class="flex gap-4 pt-2.5 pb-2.5 pr-8 pl-3"
               >
                 <i class="ri-user-community-line"></i>
                 <span class="sidebar-text">User roles</span>
@@ -146,7 +146,7 @@
             </li>
             <li>
               <button
-                class="sidebar-btn flex items-center gap-2 w-full px-4 py-3"
+                class="flex gap-4 pt-2.5 pb-2.5 pr-8 pl-3"
               >
                 <i class="ri-pulse-line"></i>
                 <span class="sidebar-text">Activity Logs</span>
@@ -159,78 +159,82 @@
       <div
         class="flex-1 bg-white-smoke rounded-tl-3xl overflow-y-auto scroll main-content"
       >
-        <div class="flex flex-col mt-8 ml-3">
-          <div
-            class="w-full py-4 px-3 flex justify-between items-center relative"
-          >
-            <p class="font-semibold px-3">User management</p>
-            <button
-              class="border border-royal-blue rounded-lg px-8 text-royal-blue flex gap-4 justify-between"
-            >
-              <i class="ri-arrow-left-s-line"></i>Back
-            </button>
-          </div>
-
-          <p class="font-normal px-6 pr-10">
-            Manage your team members and their account permissions here
-          </p>
-          <div class="relative flex mt-4 ml-3">
-            <button  class=" more-button royal-blue px-6 py-2 pr-10 ml-2 rounded-lg text-white flex gap-2">
-              <i class="ri-add-circle-line"></i>Add Users
-            </button>
-            <!--Addusers Dropdown-->
-            <div class="moredropdown hidden absolute left-0 top-full ml-2 w-72 bg-white shadow-md rounded-lg z-[9999] border border-dark-charcoal p-3">
-              <div class="flex flex-col p-2">
-                <div class="flex justify-between">  
-                  <p class="text-dark-charcoal font-normal text-base mb-2">Add new user</p>
-                  
-                </div>
+        <div class="flex flex-col">
+          
+            
+          <div class="p-6 relative">
+            <p class="font-semibold">User management</p>
+            <div>  
               
-                <div class="flex justify-between relative">
-                  <label class="text-sm font-normal" >Enter email</label>
-                
-                  <!-- Copy Icon -->
-                  <div class="relative">
-                    <i id="copyIcon" class="ri-file-copy-line cursor-pointer"></i>
-                
-                    <!-- Copied Button -->
-                    <button id="copiedBtn" 
-                      class=" absolute bottom-full  right-1  border border-royal-blue text-royal-blue 
-                      rounded-tl-xl rounded-tr-xl rounded-bl-xl p-2 bg-white  text-sm">
-                      Copied
-                    </button>
+              <button class="flex items-center justify-center gap-6 absolute right-6 top-6 border border-royal-blue text-royal-blue py-2 px-4 rounded-lg w-28">
+                <i class="ri-arrow-left-s-line"></i>Back</button>
+            </div>
+          
+            <p class="font-normal ">
+              Manage your team members and their account permissions here
+            </p>
+            
+            <div class="relative flex mt-4">
+              <button  class=" more-button royal-blue px-6 py-2 pr-10  rounded-lg text-white flex gap-2">
+                <i class="ri-add-circle-line"></i>Add Users
+              </button>
+              <!--Addusers Dropdown-->
+              <div class="moredropdown hidden absolute left-0 top-full  w-72 bg-white shadow-md rounded-lg z-[9999] border border-dark-charcoal p-3">
+                <div class="flex flex-col p-2">
+                  <div class="flex justify-between">  
+                    <p class="text-dark-charcoal font-normal text-base mb-2">Add new user</p>
+                    
                   </div>
-                </div>
-               <div class="flex items-center border border-dark-charcoal rounded-md px-2 py-1 rounded-xl">
-                 <input type="text" placeholder="xyz@gmail.com" class="w-full outline-none bg-transparent" />
-                </div>
-                <div class="flex mt-2 flex-col">
-                  <p class="text-sm font-normal mb-2"> Assign role</p>
-                  <div class="flex flex-row gap-6"> 
-                    <button class="royal-blue rounded-xl p-2 text-white-smoke">Admin</button>
-                    <button class="border border-charcoal-black rounded-xl p-2 text-transparent-dark-gray">user</button>
-                    <button class="border border-charcoal-black rounded-xl p-2 text-transparent-dark-gray">Manager</button>
-                  </div>
-                </div>
-                <div class="flex items-center border border-dark-charcoal rounded-xl px-2 py-1 mt-4">
-                  <input type="text"  class="w-full outline-none bg-transparent" placeholder="set permissions" />
-                  <i class="ri-arrow-down-s-fill"></i>
+                
+                  <div class="flex justify-between relative">
+                    <label class="text-sm font-normal" >Enter email</label>
                   
-                 </div>
-                 <div class="flex flex-row gap-6 mt-2"> 
-                  <button class="royal-blue rounded-xl p-2 text-white-smoke">Send</button>
-                  <button class="border border-red-orange rounded-xl p-2 text-red-orange">Cancel </button>
+                    <!-- Copy Icon -->
+                    <div class="relative">
+                      <i id="copyIcon" class="ri-file-copy-line cursor-pointer"></i>
+                  
+                      <!-- Copied Button -->
+                      <button id="copiedBtn" 
+                        class=" absolute bottom-full  right-1  border border-royal-blue text-royal-blue 
+                        rounded-tl-xl rounded-tr-xl rounded-bl-xl p-2 bg-white  text-sm">
+                        Copied
+                      </button>
+                    </div>
+                  </div>
+                 <div class="flex items-center border border-dark-charcoal rounded-md px-2 py-1 rounded-xl">
+                   <input type="text" placeholder="xyz@gmail.com" class="w-full outline-none bg-transparent" />
+                  </div>
+                  <div class="flex mt-2 flex-col">
+                    <p class="text-sm font-normal mb-2"> Assign role</p>
+                    <div class="flex flex-row gap-6"> 
+                      <button class="royal-blue rounded-xl p-2 text-white-smoke">Admin</button>
+                      <button class="border border-charcoal-black rounded-xl p-2 text-transparent-dark-gray">user</button>
+                      <button class="border border-charcoal-black rounded-xl p-2 text-transparent-dark-gray">Manager</button>
+                    </div>
+                  </div>
+                  <div class="flex items-center border border-dark-charcoal rounded-xl px-2 py-1 mt-4">
+                    <input type="text"  class="w-full outline-none bg-transparent" placeholder="set permissions" />
+                    <i class="ri-arrow-down-s-fill"></i>
+                    
+                   </div>
+                   <div class="flex flex-row gap-6 mt-2"> 
+                    <button class="royal-blue rounded-xl p-2 text-white-smoke">Send</button>
+                    <button class="border border-red-orange rounded-xl p-2 text-red-orange">Cancel </button>
+                  </div>
                 </div>
               </div>
-            </div>
-            
+              
+          </div>
+
+          
+         
         </div>
-        <div class="mt-4 bg-light-sky-blue h-8 ">
-            <div class="overflow-x-auto">
-              <table class=" border-collapse">
+        <div class=" bg-light-sky-blue h-8 ">
+            <div >
+              <table>
                 <thead>
                   <tr class="h-8">
-                    <th class="text-left px-4">Name</th>
+                    <th class="text-left px-8">Name</th>
                     <th class="text-left px-4">Email</th>
                     <th class="text-left px-4 relative">
                         <div class="inline-flex items-center gap-1 more-button cursor-pointer relative">

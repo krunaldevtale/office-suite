@@ -65,14 +65,14 @@ $(document).ready(function () {
   // All users
   users.forEach((user) => {
     $("#tableBody").append(`
-        <tr >
-          <td class="text-left px-8 py-2">${user.name}</td>
+        <tr>
+          <td class="text-left text-nowrap px-8 py-2">${user.name}</td>
           <td class="text-left px-4">${user.email}</td>
-          <td class="text-left px-4">${user.role}</td>
+          <td class="text-left text-nowrap px-4">${user.role}</td>
           <td class="text-left px-4">${user.status}</td>
-          <td class="text-left px-4">${user.lastActive}</td>
-         <td >
-                <button class="more-button absolute right-10">
+          <td class="text-left text-nowrap px-4">${user.lastActive}</td>
+         <td class=" flex justify-end">
+                <button class="more-button px-4 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
             <div class="moredropdown hidden absolute right-full w-72 bg-white border border-dark-charcoal rounded-lg shadow-md z-[9999]">
@@ -80,12 +80,12 @@ $(document).ready(function () {
                     <!-- User Info -->
                     <li>
                         <div class="flex items-center justify-between px-4 py-2">
-                            <span class="text-base font-semibold text-dark-charcoal">
-                                <i class="ri-user-3-line"></i> User info
+                            <span class="text-base font-semibold text-dark-charcoal flex text-nowrap">
+                                <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-info"></use></svg>  User info
                             </span>
                             <div class="flex items-center">
                                 <i class="ri-pencil-line hidden edit-icon mr-2"></i>
-                                <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg> 
                             </div>
                         </div>
                         <ul class="submenu hidden px-6">
@@ -99,8 +99,10 @@ $(document).ready(function () {
                 <!-- Activity Log -->
                 <li>
                  <div class="flex items-center justify-between px-4 py-2">
-                    <span class="text-base font-semibold"><i class="ri-pulse-line"></i> Activity Log</span>
-                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                    <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-activity"></use></svg>  Activity Log
+                    </span>
+                     <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
         
                             <!-- Activity Log Submenu -->
@@ -110,19 +112,19 @@ $(document).ready(function () {
                                 <!-- Files Modified with Toggle -->
                                 <li class="block px-4 text-base font-normal flex justify-between items-center files-modified">
                                     <span>Files Modified</span>
-                                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                     <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                 </li>
 
                                 <!-- Project 1 (Initially Hidden) -->
                                 <ul class="submenu hidden project-list">
                                     <li class="block px-4 text-base font-normal flex justify-between items-center project-item">
                                         <span class="pl-6">Project 1</span>
-                                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                       <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                     </li>
                                     <ul class="submenu px-4 project-details hidden">
                                         <li class="block  text-base font-normal flex justify-between items-center cv-item">
                                         <span class="pl-6">cv.pdf</span>
-                                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                         <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                     </li>
                                         <ul class="submenu hidden cv-details px-4">
                                             <li class="block pl-6 text-base font-normal">File type-PDF</li>
@@ -133,7 +135,7 @@ $(document).ready(function () {
                                 </ul>
                                 <li class="block px-4 text-base font-normal flex justify-between items-center recent-projects">
                                     <span>Recent Projects</span>
-                                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                    <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                 </li>
                                 <ul class="submenu hidden recent-list px-4">
                                 <li class="block pl-6 text-base font-normal">Project 1</li>
@@ -145,9 +147,11 @@ $(document).ready(function () {
 
                 <!-- Manage Permissions -->
                 <li>
-                    <div class="flex items-center justify-between px-4 py-2">
-                        <span class="text-base font-semibold"><i class="ri-shield-fill"></i> Manage Permissions</span>
-                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                    <div class="flex items-center justify-between px-3 py-2">
+                          <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#permission"></use></svg>Manage Permissions
+                    </span>
+                        <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4">
                      <li class="pl-6 text-base font-normal">Permission 1</li>                
@@ -156,14 +160,16 @@ $(document).ready(function () {
                 </li>
                 <!-- Actions Submenu -->
                 <li>
-                    <div class="flex items-center justify-between px-4 py-2">
-                        <span class="text-base font-semibold"><i class="ri-clipboard-line"></i> Actions</span>
-                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                    <div class="flex items-center justify-between px-3 py-1">
+                        <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#actions"></use></svg>Actions
+                    </span>
+                        <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4 role-details">
                         <li class="block px-1 text-base font-normal flex justify-between items-center role">
                             <span class="pl-6">Change Role</span>
-                            <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                            <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                         </li>
                         <li class="submenu hidden role-list px-4">
                             <ul>
@@ -186,14 +192,14 @@ $(document).ready(function () {
 
 users.forEach((user) => {
     $("#adminTable").append(`
-        <tr >
-          <td class="text-left px-8 py-2">${user.name}</td>
+         <tr>
+          <td class="text-left text-nowrap px-8 py-2">${user.name}</td>
           <td class="text-left px-4">${user.email}</td>
-       
+          <td class="text-left text-nowrap px-4">${user.role}</td>
           <td class="text-left px-4">${user.status}</td>
-          <td class="text-left px-4">${user.lastActive}</td>
-         <td >
-                <button class="more-button absolute right-10">
+        
+         <td class=" flex justify-end">
+                <button class="more-button px-4 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
             <div class="moredropdown hidden absolute right-full w-72 bg-white border border-dark-charcoal rounded-lg shadow-md z-[9999]">
@@ -201,12 +207,12 @@ users.forEach((user) => {
                     <!-- User Info -->
                     <li>
                         <div class="flex items-center justify-between px-4 py-2">
-                            <span class="text-base font-semibold text-dark-charcoal">
-                                <i class="ri-user-3-line"></i> User info
+                            <span class="text-base font-semibold text-dark-charcoal flex text-nowrap">
+                                <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-info"></use></svg>  User info
                             </span>
                             <div class="flex items-center">
                                 <i class="ri-pencil-line hidden edit-icon mr-2"></i>
-                                <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                             </div>
                         </div>
                         <ul class="submenu hidden px-6">
@@ -220,8 +226,10 @@ users.forEach((user) => {
                 <!-- Activity Log -->
                 <li>
                  <div class="flex items-center justify-between px-4 py-2">
-                    <span class="text-base font-semibold"><i class="ri-pulse-line"></i> Activity Log</span>
-                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                     <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-activity"></use></svg>  Activity Log
+                    </span>
+                    <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
         
                             <!-- Activity Log Submenu -->
@@ -231,19 +239,19 @@ users.forEach((user) => {
                                 <!-- Files Modified with Toggle -->
                                 <li class="block px-4 text-base font-normal flex justify-between items-center files-modified">
                                     <span>Files Modified</span>
-                                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                 <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                 </li>
 
                                 <!-- Project 1 (Initially Hidden) -->
                                 <ul class="submenu hidden project-list">
                                     <li class="block px-4 text-base font-normal flex justify-between items-center project-item">
                                         <span class="pl-6">Project 1</span>
-                                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                        <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                     </li>
                                     <ul class="submenu px-4 project-details hidden">
                                         <li class="block  text-base font-normal flex justify-between items-center cv-item">
                                         <span class="pl-6">cv.pdf</span>
-                                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                        <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                     </li>
                                         <ul class="submenu hidden cv-details px-4">
                                             <li class="block pl-6 text-base font-normal">File type-PDF</li>
@@ -254,7 +262,7 @@ users.forEach((user) => {
                                 </ul>
                                 <li class="block px-4 text-base font-normal flex justify-between items-center recent-projects">
                                     <span>Recent Projects</span>
-                                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                    <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                 </li>
                                 <ul class="submenu hidden recent-list px-4">
                                 <li class="block pl-6 text-base font-normal">Project 1</li>
@@ -266,9 +274,11 @@ users.forEach((user) => {
 
                 <!-- Manage Permissions -->
                 <li>
-                    <div class="flex items-center justify-between px-4 py-2">
-                        <span class="text-base font-semibold"><i class="ri-shield-fill"></i> Manage Permissions</span>
-                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                    <div class="flex items-center justify-between px-3 py-2">
+                       <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#permission"></use></svg>Manage Permissions
+                    </span>
+                        <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4">
                      <li class="pl-6 text-base font-normal">Permission 1</li>                
@@ -277,14 +287,16 @@ users.forEach((user) => {
                 </li>
                 <!-- Actions Submenu -->
                 <li>
-                    <div class="flex items-center justify-between px-4 py-2">
-                        <span class="text-base font-semibold"><i class="ri-clipboard-line"></i> Actions</span>
-                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                    <div class="flex items-center justify-between px-3 py-2">
+                      <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#actions"></use></svg>Actions
+                    </span>
+                        <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4 role-details">
                         <li class="block px-1 text-base font-normal flex justify-between items-center role">
                             <span class="pl-6">Change Role</span>
-                            <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                            <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                         </li>
                         <li class="submenu hidden role-list px-4">
                             <ul>
@@ -308,14 +320,14 @@ users.forEach((user) => {
 
 users.forEach((user) => {
     $("#reguserTable").append(`
-        <tr >
-          <td class="text-left px-8 py-2">${user.name}</td>
+         <tr>
+          <td class="text-left text-nowrap px-8 py-2">${user.name}</td>
           <td class="text-left px-4">${user.email}</td>
-          <td class="text-left px-4">${user.role}</td>
+          <td class="text-left text-nowrap px-4">${user.role}</td>
           <td class="text-left px-4">${user.status}</td>
-          <td class="text-left px-4">${user.lastActive}</td>
-         <td >
-                <button class="more-button absolute right-10">
+        
+         <td class=" flex justify-end">
+                <button class="more-button px-4 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
             <div class="moredropdown hidden absolute right-full w-72 bg-white border border-dark-charcoal rounded-lg shadow-md z-[9999]">
@@ -323,12 +335,12 @@ users.forEach((user) => {
                     <!-- User Info -->
                     <li>
                         <div class="flex items-center justify-between px-4 py-2">
-                            <span class="text-base font-semibold text-dark-charcoal">
-                                <i class="ri-user-3-line"></i> User info
+                           <span class="text-base font-semibold text-dark-charcoal flex text-nowrap">
+                                <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-info"></use></svg>  User info
                             </span>
                             <div class="flex items-center">
                                 <i class="ri-pencil-line hidden edit-icon mr-2"></i>
-                                <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                             </div>
                         </div>
                         <ul class="submenu hidden px-6">
@@ -342,8 +354,10 @@ users.forEach((user) => {
                 <!-- Activity Log -->
                 <li>
                  <div class="flex items-center justify-between px-4 py-2">
-                    <span class="text-base font-semibold"><i class="ri-pulse-line"></i> Activity Log</span>
-                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                     <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-activity"></use></svg>  Activity Log
+                    </span>
+                    <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
         
                             <!-- Activity Log Submenu -->
@@ -353,19 +367,19 @@ users.forEach((user) => {
                                 <!-- Files Modified with Toggle -->
                                 <li class="block px-4 text-base font-normal flex justify-between items-center files-modified">
                                     <span>Files Modified</span>
-                                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                    <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                 </li>
 
                                 <!-- Project 1 (Initially Hidden) -->
                                 <ul class="submenu hidden project-list">
                                     <li class="block px-4 text-base font-normal flex justify-between items-center project-item">
                                         <span class="pl-6">Project 1</span>
-                                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                         <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                     </li>
                                     <ul class="submenu px-4 project-details hidden">
                                         <li class="block  text-base font-normal flex justify-between items-center cv-item">
                                         <span class="pl-6">cv.pdf</span>
-                                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                       <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                     </li>
                                         <ul class="submenu hidden cv-details px-4">
                                             <li class="block pl-6 text-base font-normal">File type-PDF</li>
@@ -388,9 +402,11 @@ users.forEach((user) => {
 
                 <!-- Manage Permissions -->
                 <li>
-                    <div class="flex items-center justify-between px-4 py-2">
-                        <span class="text-base font-semibold"><i class="ri-shield-fill"></i> Manage Permissions</span>
-                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                    <div class="flex items-center justify-between px-3 py-2">
+                       <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#permission"></use></svg>Manage Permissions
+                    </span>
+                       <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4">
                      <li class="pl-6 text-base font-normal">Permission 1</li>                
@@ -399,14 +415,16 @@ users.forEach((user) => {
                 </li>
                 <!-- Actions Submenu -->
                 <li>
-                    <div class="flex items-center justify-between px-4 py-2">
-                        <span class="text-base font-semibold"><i class="ri-clipboard-line"></i> Actions</span>
-                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                    <div class="flex items-center justify-between px-3 py-2">
+                       <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#actions"></use></svg>Actions
+                    </span>
+                        <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4 role-details">
                         <li class="block px-1 text-base font-normal flex justify-between items-center role">
                             <span class="pl-6">Change Role</span>
-                            <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                          <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                         </li>
                         <li class="submenu hidden role-list px-4">
                             <ul>
@@ -427,14 +445,15 @@ users.forEach((user) => {
 //User Roles
   userRoles.forEach((user) => {
     $("#userroleTable").append(`
-        <tr >
-          <td class="text-left px-8 py-2">${user.name}</td>
+        <tr class="text-nowrap">
+         <td class="text-left px-8 py-2">${user.name}</td>
           <td class="text-left px-4">${user.DateTime}</td>
           <td class="text-left px-4">${user.Action}</td>
           <td class="text-left px-4">${user.Project}</td>
-          <td class="text-left px-4">${user.Details}</td>
-         <td >
-                <button class="more-button absolute right-10">
+            <td class="text-left px-4">${user.Details}</td>
+        
+         <td class=" flex justify-end">
+                <button class="more-button px-4 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
             <div class="moredropdown hidden absolute right-full w-72 bg-white border border-dark-charcoal rounded-lg shadow-md z-[9999]">
@@ -442,12 +461,12 @@ users.forEach((user) => {
                     <!-- User Info -->
                     <li>
                         <div class="flex items-center justify-between px-4 py-2">
-                            <span class="text-base font-semibold text-dark-charcoal">
-                                <i class="ri-user-3-line"></i> User info
+                           <span class="text-base font-semibold text-dark-charcoal flex text-nowrap">
+                                <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-info"></use></svg>  User info
                             </span>
                             <div class="flex items-center">
                                 <i class="ri-pencil-line hidden edit-icon mr-2"></i>
-                                <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                              <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                             </div>
                         </div>
                         <ul class="submenu hidden px-6">
@@ -461,8 +480,10 @@ users.forEach((user) => {
                 <!-- Activity Log -->
                 <li>
                  <div class="flex items-center justify-between px-4 py-2">
-                    <span class="text-base font-semibold"><i class="ri-pulse-line"></i> Activity Log</span>
-                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                   <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-activity"></use></svg>  Activity Log
+                    </span>
+                    <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
         
                             <!-- Activity Log Submenu -->
@@ -472,19 +493,19 @@ users.forEach((user) => {
                                 <!-- Files Modified with Toggle -->
                                 <li class="block px-4 text-base font-normal flex justify-between items-center files-modified">
                                     <span>Files Modified</span>
-                                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                    <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                 </li>
 
                                 <!-- Project 1 (Initially Hidden) -->
                                 <ul class="submenu hidden project-list">
                                     <li class="block px-4 text-base font-normal flex justify-between items-center project-item">
                                         <span class="pl-6">Project 1</span>
-                                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                         <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                     </li>
                                     <ul class="submenu px-4 project-details hidden">
                                         <li class="block  text-base font-normal flex justify-between items-center cv-item">
                                         <span class="pl-6">cv.pdf</span>
-                                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                        <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                     </li>
                                         <ul class="submenu hidden cv-details px-4">
                                             <li class="block pl-6 text-base font-normal">File type-PDF</li>
@@ -495,7 +516,7 @@ users.forEach((user) => {
                                 </ul>
                                 <li class="block px-4 text-base font-normal flex justify-between items-center recent-projects">
                                     <span>Recent Projects</span>
-                                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                    <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                 </li>
                                 <ul class="submenu hidden recent-list px-4">
                                 <li class="block pl-6 text-base font-normal">Project 1</li>
@@ -507,9 +528,11 @@ users.forEach((user) => {
 
                 <!-- Manage Permissions -->
                 <li>
-                    <div class="flex items-center justify-between px-4 py-2">
-                        <span class="text-base font-semibold"><i class="ri-shield-fill"></i> Manage Permissions</span>
-                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                    <div class="flex items-center justify-between px-3 py-2">
+                      <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#permission"></use></svg>Manage Permissions
+                    </span>
+                       <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4">
                      <li class="pl-6 text-base font-normal">Permission 1</li>                
@@ -518,14 +541,16 @@ users.forEach((user) => {
                 </li>
                 <!-- Actions Submenu -->
                 <li>
-                    <div class="flex items-center justify-between px-4 py-2">
-                        <span class="text-base font-semibold"><i class="ri-clipboard-line"></i> Actions</span>
-                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                    <div class="flex items-center justify-between px-3 py-2">
+                        <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#actions"></use></svg>Actions
+                    </span>
+                        <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4 role-details">
                         <li class="block px-1 text-base font-normal flex justify-between items-center role">
                             <span class="pl-6">Change Role</span>
-                            <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                            <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                         </li>
                         <li class="submenu hidden role-list px-4">
                             <ul>
@@ -548,17 +573,18 @@ users.forEach((user) => {
 //Activity Logs
   userRoles.forEach((user) => {
     $("#activitylogsTable").append(`
-        <tr >
+        <tr class=" text-nowrap">
           <td class="text-left px-8 py-2">${user.name}</td>
           <td class="text-left px-4">${user.DateTime}</td>
           <td class="text-left px-4">${user.Action}</td>
-        <td class="text-left px-4 cursor-pointer relative project-cell group">
-    <div class="inline-block break-words max-w-[150px] truncate project-text">
+       <td class="text-left px-4 cursor-pointer  group project-cell">
+    
+    <div class="inline-block break-words max-w-[150px] relative truncate project-text">
         ${user.Project}
     </div>
 
-    <!-- Click Me Button (Initially Hidden, Positioned on Right) -->
-    <button class="hidden absolute top-full left-auto right-0 mt-1 bg-white-smoke text-dark-charcoal border border-dark-charcoal py-1 px-3 rounded-tr-xl  rounded-bl-xl rounded-br-xl shadow-md project-btn z-10">
+   
+    <button class="absolute border border-dark-charcoal px-2 rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[999]">
         ${user.Project}
     </button>
 </td>
@@ -567,8 +593,8 @@ users.forEach((user) => {
 
 
           <td class="text-left px-4">${user.Details}</td>
-         <td >
-                <button class="more-button absolute right-10">
+         <td class=" flex justify-end">
+                <button class="more-button px-4 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
             <div class="moredropdown hidden absolute right-full w-72 bg-white border border-dark-charcoal rounded-lg shadow-md z-[9999]">
@@ -576,12 +602,12 @@ users.forEach((user) => {
                     <!-- User Info -->
                     <li>
                         <div class="flex items-center justify-between px-4 py-2">
-                            <span class="text-base font-semibold text-dark-charcoal">
-                                <i class="ri-user-3-line"></i> User info
+                             <span class="text-base font-semibold text-dark-charcoal flex text-nowrap">
+                                <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-info"></use></svg>  User info
                             </span>
                             <div class="flex items-center">
                                 <i class="ri-pencil-line hidden edit-icon mr-2"></i>
-                                <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                               <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                             </div>
                         </div>
                         <ul class="submenu hidden px-6">
@@ -595,8 +621,10 @@ users.forEach((user) => {
                 <!-- Activity Log -->
                 <li>
                  <div class="flex items-center justify-between px-4 py-2">
-                    <span class="text-base font-semibold"><i class="ri-pulse-line"></i> Activity Log</span>
-                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                     <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-activity"></use></svg>  Activity Log
+                    </span>
+                  <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
         
                             <!-- Activity Log Submenu -->
@@ -606,19 +634,19 @@ users.forEach((user) => {
                                 <!-- Files Modified with Toggle -->
                                 <li class="block px-4 text-base font-normal flex justify-between items-center files-modified">
                                     <span>Files Modified</span>
-                                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                  <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                 </li>
 
                                 <!-- Project 1 (Initially Hidden) -->
                                 <ul class="submenu hidden project-list">
                                     <li class="block px-4 text-base font-normal flex justify-between items-center project-item">
                                         <span class="pl-6">Project 1</span>
-                                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                         <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                     </li>
                                     <ul class="submenu px-4 project-details hidden">
                                         <li class="block  text-base font-normal flex justify-between items-center cv-item">
                                         <span class="pl-6">cv.pdf</span>
-                                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                      <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                     </li>
                                         <ul class="submenu hidden cv-details px-4">
                                             <li class="block pl-6 text-base font-normal">File type-PDF</li>
@@ -629,7 +657,7 @@ users.forEach((user) => {
                                 </ul>
                                 <li class="block px-4 text-base font-normal flex justify-between items-center recent-projects">
                                     <span>Recent Projects</span>
-                                    <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                                    <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                                 </li>
                                 <ul class="submenu hidden recent-list px-4">
                                 <li class="block pl-6 text-base font-normal">Project 1</li>
@@ -641,9 +669,11 @@ users.forEach((user) => {
 
                 <!-- Manage Permissions -->
                 <li>
-                    <div class="flex items-center justify-between px-4 py-2">
-                        <span class="text-base font-semibold"><i class="ri-shield-fill"></i> Manage Permissions</span>
-                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                    <div class="flex items-center justify-between px-3 py-2">
+                       <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#permission"></use></svg>Manage Permissions
+                    </span>
+                   <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4">
                      <li class="pl-6 text-base font-normal">Permission 1</li>                
@@ -652,9 +682,11 @@ users.forEach((user) => {
                 </li>
                 <!-- Actions Submenu -->
                 <li>
-                    <div class="flex items-center justify-between px-4 py-2">
-                        <span class="text-base font-semibold"><i class="ri-clipboard-line"></i> Actions</span>
-                        <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                    <div class="flex items-center justify-between px-3 py-2">
+                 <span class="text-base font-semibold flex text-nowrap">   
+                    <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#actions"></use></svg>Actions
+                    </span>
+                        <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4 role-details">
                         <li class="block px-1 text-base font-normal flex justify-between items-center role">
@@ -752,62 +784,13 @@ users.forEach((user) => {
 });
 
 
-  
-    // Hide all sections except the default one (if any)
-    $("#admin-content, #userroles-content, #activityLogs").hide();
-
-    // Function to show the selected section and hide others
-    function showSection(sectionId) {
-        $(".main-content").hide(); // Hide all sections
-        $(sectionId).show();  // Show the selected section with fade effect
+$(".nav-link").each(function() {
+    if (this.href === window.location.href) {
+      $(this).addClass("bg-gray-300 text-blue-600 font-semibold");
     }
-
-    // Click events for buttons
-    $("#userrole-btn").on("click", function (event) {
-        event.preventDefault();
-        showSection("#userroles-content");
-    });
-
-    $("#alluser-btn").on("click", function (event) {
-        event.preventDefault();
-        showSection("#allusers-content");
-    });
-
-    $("#activity-btn").on("click", function (event) {
-        event.preventDefault();
-        showSection("#activityLogs");
-    });
-
-    $("#admin-btn").on("click", function (event) {
-        event.preventDefault();
-        showSection("#admin-content");
-    });
-
-
-    $(".project-cell").click(function (event) {
-        event.stopPropagation(); // Prevent closing on cell click
-
-        let projectText = $(this).find(".project-text");
-        let projectBtn = $(this).find(".project-btn");
-
-        // Get text height and position the button exactly below it
-        let textHeight = projectText.outerHeight();
-        projectBtn.css("top", textHeight + 5 + "px"); // Position button below text with 5px gap
-
-        // Hide other buttons first
-        $(".project-btn").fadeOut(200).addClass("hidden");
-
-        // Show the button with fade-in effect
-        projectBtn.removeClass("hidden").fadeIn(200);
-    });
-
-    // Hide button when clicking anywhere outside
-    $(document).click(function () {
-        $(".project-btn").fadeOut(200, function () {
-            $(this).addClass("hidden");
-        });
-    });
-
+  });
+    
+   
 });
 
 

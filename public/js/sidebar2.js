@@ -25,4 +25,30 @@ $(document).ready(function () {
         // Add active class to the clicked <li>
         $(this).closest("li").addClass("icon-background");
     });
+
+    
+
+    // Highlight active link based on current URL (on page load)
+    $("#user-sidebar a").each(function () {
+      if ($(this).attr("href") === currentPath) {
+        $("#user-sidebar a").removeClass("icon-background"); // Remove class from all
+        $(this).addClass("icon-background"); // Add to current link
+      }
+    });
+
+    // Add click event to highlight selected link
+    $("#user-sidebar a").click(function () {
+      $("#user-sidebar a").removeClass("icon-background");
+      $(this).addClass("icon-background");
+      
+      // Store in localStorage for persistence after page reload
+      localStorage.setItem("activeLink", $(this).attr("href"));
+    });
+
+    // Persist the active link after reload
+    var activeLink = localStorage.getItem("activeLink");
+    if (activeLink) {
+      $("#user-sidebar a").removeClass("icon-background");
+      $("#user-sidebar a[href='" + activeLink + "']").addClass("icon-background");
+    }
 });

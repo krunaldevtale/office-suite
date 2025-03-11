@@ -11,7 +11,7 @@
   </head>
   <body>
     <main class="flex flex-col h-screen bg-light-sky-blue">
-      <!-- Header -->
+    <!-- Header -->
     <header class="w-full py-4 px-6 pr-10 flex justify-between items-center relative">
       <div class="flex items-center gap-4">
         <!-- Mobile Menu Button -->
@@ -23,8 +23,8 @@
       </div>
       <!-- Search bar -->
       <div class="relative w-[27%] hidden md:block">
-        <span class="absolute top-1/2 transform -translate-y-1/2">
-          <svg class="icon !p-[1rem]"><use xlink:href="/public/images/icons.svg#search"></use></svg>                              
+        <span class="absolute top-3 left-3 ">
+          <svg class="icon !w-5 !h-5 !p-0"><use xlink:href="/public/images/icons.svg#search"></use></svg>                              
         </span>
         <input
           type="text"
@@ -33,73 +33,48 @@
         />
         <div class="dropdown hidden absolute w-full mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
           <ul class="text-sm">
-            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-t-lg"><i class="ri-mail-add-line"></i>Attach Email</a></li>
-            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-b-lg"><i class="ri-download-line"></i>Downloads</a></li>
+            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-t-lg">suggestion 1</a></li>
+            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-b-lg">suggestion 2</a></li>
           </ul>
         </div>
       </div>
-      <!-- Share button -->
+      <!-- Notification button -->
       <div class="flex items-center gap-4">
-        <button class="share-btn drop-button hidden md:flex items-center gap-2">
-          <i class="ri-share-fill"></i> <span class="text-sm md:text-base">Share</span>
+        <button class="drop-button hidden md:flex items-center gap-2">
+          <svg class="icon !h-10 !w-10 !p-0"><use xlink:href="/public/images/icons.svg#notification"></use></svg>                              
         </button>
-        <!-- Share dropdown -->
-        <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
-          <h2 class="text-lg font-medium mb-4">Share your work</h2>
-          <div class="mb-4">
-            <label class="font-normal mb-1 block" for="people-input">
-              People with access
-            </label>
-            <div class="flex items-center gap-2 border border-dark-gray rounded-md p-2">
-              <input
-                id="people-input"
-                type="text"
-                placeholder="Add people or your team"
-                class="w-full text-sm bg-transparent outline-none placeholder:text-dark-charcoal"
-                onclick="event.stopPropagation();"
-              />
+        <!-- Notification dropdown -->
+        <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-3/12 mx-auto mt-8 rounded-[20px] bg-white-smoke z-10">
+          <p class="font-semibold text-base p-4">Notifications</p>
+          <div class="flex bg-light-sky-blue h-8 gap-3 pl-4">
+            <p class="font-medium text-base p-1">All</p>
+            <p class="text-transparent-dark-gray font-medium text-base p-1"> Unread(2)</p><br/>
+          </div>
+          <div class="flex flex-col p-4 pb-8 gap-4">
+            <p class="text-transparent-dark-gray font-medium text-sm">Today</p>
+            <div class="flex flex-col"> 
+              <div class="flex justify-between">
+                <p class="font-medium text-base">Sahil singh</p>
+                <div class="flex items-center gap-1">
+                  <p class="font-normal text-sm">42m ago</p>
+                  <div class="royal-blue w-2 h-2 rounded-full"></div>
+                </div>
+              </div>
+              <p class="text-sm font-normal">12 comments - essay writing</p>
+            </div>
+            <p class="text-transparent-dark-gray font-medium text-sm">Older</p>
+            <div class="flex flex-col"> 
+              <div class="flex justify-between gap-1"> 
+                <p class="font-medium text-base">Kate</p>
+                <p class="font-normal text-sm">26 feb</p>
+              </div>
+              <p class="text-sm font-normal">Can edit - accounts</p>
             </div>
           </div>
-          <button class="flex items-center gap-2 mb-4">
-            <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
-            <i class="ri-add-fill"></i>
-          </button>
-          <div class="mb-4">
-            <label class="mb-1 block" for="collaboration-link">
-              Collaboration link
-            </label>
-            <div class="relative custom-select border border-dark-gray rounded-md">
-              <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
-                <span>Select access:</span>
-                <span><i class="ri-arrow-down-s-fill"></i></span>
-              </div>
-              <div class="select-options text-sm bg-white-smoke border border-dark-gray hidden absolute w-full mt-1 rounded shadow-lg z-10 overflow-auto scroll h-16">
-                <div class="option">Only you can access</div>
-                <div class="option">Anyone with the link</div>
-                <div class="option">Specific people</div>
-              </div>
-            </div>  
-          </div>
-          <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
-            Copy link
-          </button>
-        </div>
+        </div>  
         <!-- Profile button -->
-        <button class="drop-button">       
+        <div>       
           <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
-        </button>
-        <!-- Profile dropdown -->
-        <div class="dropdown hidden absolute top-1/2 right-10 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
-          <div class="flex items-center justify-start mb-5 gap-3">
-            <div>
-              <p class="font-medium text-lg">Hello Rachel!</p>
-              <p class="text-sm">Rachelsaket@gmail.com</p>
-            </div>
-            <img src="/public/images/user.png" alt="Profile" class="rounded-full h-12 w-12">
-          </div>
-          <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
-            Log Out
-          </button>
         </div>
       </div>
     </header>
@@ -123,9 +98,10 @@
 
     <div class="flex" style="height:calc(100vh - 74px)">
         <!-- Sidebar -->
-        <aside id="sidebar"
+        <!-- Sidebar -->
+      <aside id="sidebar"
         class="fixed bg-light-sky-blue z-10 inset-y-0 left-0 w-32 transform -translate-x-full md:translate-x-0 md:relative md:w-24 shadow-lg md:shadow-none transition-transform duration-300"
-        >
+      >
           <nav class="mt-4">
             <ul class="flex flex-col gap-5 px-6 overflow-auto scroll" style="height:calc(100vh - 5.8rem)">
               <li class="md:hidden flex justify-end">
@@ -135,19 +111,19 @@
               </li>
               <li>
                 <a href="/" class="flex flex-col items-center menu">
-                  <svg class="icon"><use xlink:href="/public/images/icons.svg#home"></use></svg>                              
+                  <svg class="icon !pl-[0.9rem]"><use xlink:href="/public/images/icons.svg#home"></use></svg>                              
                   <span class="secondary-text">Home</span>
                 </a>
               </li>
               <li>
                 <a href="file.html" class="flex flex-col items-center menu">
-                  <svg class="icon"><use xlink:href="/public/images/icons.svg#file"></use></svg>                              
+                  <svg class="icon !pl-4"><use xlink:href="/public/images/icons.svg#file"></use></svg>                              
                   <span class="secondary-text">File</span>
                 </a>
               </li>
               <li>
                 <a href="/src/edit.html" class="flex flex-col items-center menu-button menu">
-                  <svg class="icon !p-[0.7rem]"><use xlink:href="/public/images/icons.svg#edit"></use></svg>                              
+                  <svg class="icon !p-[0.7rem] !pl-4 !pt-4"><use xlink:href="/public/images/icons.svg#edit"></use></svg>                              
                   <span class="secondary-text">Edit</span>
                 </a>
                 <div class="menu-dropdown hidden w-48">
@@ -377,31 +353,31 @@
               </li>
               <li>
                 <a href="preserve.html" class="flex flex-col items-center menu">
-                  <svg class="icon"><use xlink:href="/public/images/icons.svg#preserve"></use></svg>                              
+                  <svg class="icon !pl-4"><use xlink:href="/public/images/icons.svg#preserve"></use></svg>                              
                   <span class="secondary-text text-center">Preserve</span>
                 </a>
               </li>
               <li>
-                <a href="tools.html" class="flex flex-col items-center menu">
-                  <svg class="icon"><use xlink:href="/public/images/icons.svg#tools"></use></svg>                              
+                <a href="/src/tools.html" class="flex flex-col items-center menu">
+                  <svg class="icon !pr-[0.7rem]"><use xlink:href="/public/images/icons.svg#tools"></use></svg>                              
                   <span class="secondary-text text-center">Tools</span>
                 </a>
               </li>
               <li>
-                <a href="help.html" class="flex flex-col items-center menu">
-                  <svg class="icon"><use xlink:href="/public/images/icons.svg#help"></use></svg>                              
+                <a href="/src/help.html" class="flex flex-col items-center menu">
+                  <svg class="icon !pl-4"><use xlink:href="/public/images/icons.svg#help"></use></svg>                              
                   <span class="secondary-text text-center">Help</span>
                 </a>
               </li>
               <li>
-                <a href="ai.html" class="flex flex-col items-center menu">
-                  <svg class="icon"><use xlink:href="/public/images/icons.svg#ai"></use></svg>                              
+                <a href="./src/ai.html" class="flex flex-col items-center menu">
+                  <svg class="icon !pl-4"><use xlink:href="/public/images/icons.svg#ai"></use></svg>                              
                   <span class="secondary-text">AI</span>
                 </a>
               </li>
             </ul>
           </nav>
-        </aside>
+      </aside>
 
         <!-- Main content -->
         <div
@@ -603,13 +579,18 @@
           <!-- File Section -->
           <section class="flex file-section gap-4 mt-4" style="max-height: calc(100vh - 17.5rem);">
             <div class="file scroll">
-              <div class="box">
-               <div class="upload-section cursor-pointer" onclick="document.getElementById('fileUpload').click()">
+              <div>
+                <p class="mb-2 ml-2">Mycv.pdf</p>
+                <div class="box relative">
+                  <!-- page number -->
+                  <p class="absolute h-full w-full flex justify-end items-end p-2">01</p>
+                  <div class="upload-section cursor-pointer" onclick="document.getElementById('fileUpload').click()">
                     <i class="ri-upload-cloud-2-fill ri-xl"></i>
                     <span>Drop a PDF file here, or click to upload</span>
                     <input type="file" id="fileUpload" class="hidden" accept=".pdf" onchange="handleFileUpload(event)"/>
+                  </div>
+                  <div id="pdfViewer"></div>
                 </div>
-                <div id="pdfViewer"></div>
               </div>
             </div>
             <div class="right-panel hidden">

@@ -1375,6 +1375,7 @@ body {
   border-top-right-radius: 0.75rem;
 }
 
+
 .border {
   border-width: 1px;
 }
@@ -1700,6 +1701,11 @@ body {
   padding-bottom: 0.93rem;
 }
 
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
 .\!pl-1 {
   padding-left: 0.25rem !important;
 }
@@ -1782,6 +1788,10 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.text-end {
+  text-align: end;
 }
 
 .align-top {

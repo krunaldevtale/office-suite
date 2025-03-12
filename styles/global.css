@@ -710,9 +710,36 @@ input[type="checkbox"].c-checkbox:checked::after {
 }
 
 
+.userContainer{
+  max-width: 90rem;
+}
+.pl-6{
+  padding-left: 1.5rem;
+}
 
+.pl-4{
+  padding-left: 1rem;
+}
+.pr-4{
+  padding-right: 1rem;
+}
+.pr-3{
+  padding-right:0.75rem ;
+}
+.rounded-br-xl{
+  border-bottom-right-radius: 0.75rem;
+}
+.rounded-br-lg{
+  border-bottom-right-radius: 0.5rem;
+}
 
+.rounded-bl-lg{
+  border-bottom-left-radius: 0.5rem;
+}
 
+.rounded-tr-lg{
+  border-top-right-radius: 0.5rem;
+}
 .column-class {
  
   margin-left: -80%; /* Add left margin for consistent horizontal alignment */

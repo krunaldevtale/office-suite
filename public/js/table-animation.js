@@ -84,7 +84,7 @@ $(document).ready(function () {
         $dropdown.css('top', '26%'); 
       } else {
         // Position it below the button
-        $dropdown.css('right', '5rem');
+        $dropdown.css('right', '4rem');
         $dropdown.css('bottom', 'initial');
       }
   

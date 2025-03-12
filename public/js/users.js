@@ -72,10 +72,10 @@ $(document).ready(function () {
           <td class="text-left px-4">${user.status}</td>
           <td class="text-left text-nowrap px-4">${user.lastActive}</td>
          <td class=" flex justify-end">
-                <button class="more-button px-4 py-2">
+                <button class="more-button pl-6 pr-10 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
-            <div class="moredropdown hidden absolute right-full w-72 bg-white border border-dark-charcoal rounded-lg shadow-md z-[9999]">
+            <div class="moredropdown hidden absolute  top-72 w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-40 scroll">
                 <ul class="text-sm">
                     <!-- User Info -->
                     <li>
@@ -84,7 +84,7 @@ $(document).ready(function () {
                                 <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-info"></use></svg>  User info
                             </span>
                             <div class="flex items-center">
-                                <i class="ri-pencil-line hidden edit-icon mr-2"></i>
+                                <i class="ri-pencil-line hidden edit-icon mr-2 cursor-pointer"></i>
                                 <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg> 
                             </div>
                         </div>
@@ -147,38 +147,38 @@ $(document).ready(function () {
 
                 <!-- Manage Permissions -->
                 <li>
-                    <div class="flex items-center justify-between px-3 py-2">
+                    <div class="flex items-center justify-between pl-3 pr-4 py-2">
                           <span class="text-base font-semibold flex text-nowrap">   
                     <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#permission"></use></svg>Manage Permissions
                     </span>
                         <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4">
-                     <li class="pl-6 text-base font-normal">Permission 1</li>                
-                     <li class="pl-6 text-base font-normal">Permission 2</li>
+                     <li class="pl-6 text-base font-normal cursor-pointer">Permission 1</li>                
+                     <li class="pl-6 text-base font-normal cursor-pointer">Permission 2</li>
                     </ul>
                 </li>
                 <!-- Actions Submenu -->
                 <li>
-                    <div class="flex items-center justify-between px-3 py-1">
+                    <div class="flex items-center justify-between pl-3 pr-4 py-1">
                         <span class="text-base font-semibold flex text-nowrap">   
                     <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#actions"></use></svg>Actions
                     </span>
                         <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4 role-details">
-                        <li class="block px-1 text-base font-normal flex justify-between items-center role">
+                        <li class="block  text-base font-normal flex justify-between items-center role">
                             <span class="pl-6">Change Role</span>
                             <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                         </li>
                         <li class="submenu hidden role-list px-4">
                             <ul>
-                                <li class="pl-6 text-base font-normal">Regular User</li>
-                                <li class="pl-6 text-base font-normal">Admin</li>
-                                <li class="pl-6 text-base font-normal">Manager</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Regular User</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Admin</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Manager</li>
                             </ul>
                         </li>
-                        <li class="pl-6 text-base font-normal">Remove</li>
+                        <li class="pl-6 text-base font-normal cursor-pointer">Remove</li>
            
     </div>
 </td>
@@ -199,10 +199,10 @@ users.forEach((user) => {
           <td class="text-left px-4">${user.status}</td>
         
          <td class=" flex justify-end">
-                <button class="more-button px-4 py-2">
+                <button class="more-button pl-6 pr-10 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
-            <div class="moredropdown hidden absolute right-full w-72 bg-white border border-dark-charcoal rounded-lg shadow-md z-[9999]">
+            <div class="moredropdown hidden absolute right-8  w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-40 scroll">
                 <ul class="text-sm">
                     <!-- User Info -->
                     <li>
@@ -211,7 +211,7 @@ users.forEach((user) => {
                                 <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-info"></use></svg>  User info
                             </span>
                             <div class="flex items-center">
-                                <i class="ri-pencil-line hidden edit-icon mr-2"></i>
+                                <i class="ri-pencil-line hidden edit-icon mr-2 cursor-pointer"></i>
                                 <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                             </div>
                         </div>
@@ -274,20 +274,20 @@ users.forEach((user) => {
 
                 <!-- Manage Permissions -->
                 <li>
-                    <div class="flex items-center justify-between px-3 py-2">
+                    <div class="flex items-center justify-between pl-3 pr-4 py-2">
                        <span class="text-base font-semibold flex text-nowrap">   
                     <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#permission"></use></svg>Manage Permissions
                     </span>
                         <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4">
-                     <li class="pl-6 text-base font-normal">Permission 1</li>                
-                     <li class="pl-6 text-base font-normal">Permission 2</li>
+                     <li class="pl-6 text-base font-normal cursor-pointer">Permission 1</li>                
+                     <li class="pl-6 text-base font-normal cursor-pointer">Permission 2</li>
                     </ul>
                 </li>
                 <!-- Actions Submenu -->
                 <li>
-                    <div class="flex items-center justify-between px-3 py-2">
+                    <div class="flex items-center justify-between pl-3 pr-4 py-2">
                       <span class="text-base font-semibold flex text-nowrap">   
                     <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#actions"></use></svg>Actions
                     </span>
@@ -300,12 +300,12 @@ users.forEach((user) => {
                         </li>
                         <li class="submenu hidden role-list px-4">
                             <ul>
-                                <li class="pl-6 text-base font-normal">Regular User</li>
-                                <li class="pl-6 text-base font-normal">Admin</li>
-                                <li class="pl-6 text-base font-normal">Manager</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Regular User</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Admin</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Manager</li>
                             </ul>
                         </li>
-                        <li class="pl-6 text-base font-normal">Remove</li>
+                        <li class="pl-6 text-base font-normal cursor-pointer">Remove</li>
            
     </div>
 </td>
@@ -327,10 +327,10 @@ users.forEach((user) => {
           <td class="text-left px-4">${user.status}</td>
         
          <td class=" flex justify-end">
-                <button class="more-button px-4 py-2">
+                <button class="more-button pl-6 pr-10 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
-            <div class="moredropdown hidden absolute right-full w-72 bg-white border border-dark-charcoal rounded-lg shadow-md z-[9999]">
+            <div class="moredropdown hidden absolute right-8  w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-40 scroll">
                 <ul class="text-sm">
                     <!-- User Info -->
                     <li>
@@ -339,7 +339,7 @@ users.forEach((user) => {
                                 <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-info"></use></svg>  User info
                             </span>
                             <div class="flex items-center">
-                                <i class="ri-pencil-line hidden edit-icon mr-2"></i>
+                                <i class="ri-pencil-line hidden edit-icon mr-2 cursor-pointer"></i>
                                 <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                             </div>
                         </div>
@@ -402,20 +402,20 @@ users.forEach((user) => {
 
                 <!-- Manage Permissions -->
                 <li>
-                    <div class="flex items-center justify-between px-3 py-2">
+                    <div class="flex items-center justify-between pl-3 pr-4 py-2">
                        <span class="text-base font-semibold flex text-nowrap">   
                     <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#permission"></use></svg>Manage Permissions
                     </span>
                        <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4">
-                     <li class="pl-6 text-base font-normal">Permission 1</li>                
-                     <li class="pl-6 text-base font-normal">Permission 2</li>
+                     <li class="pl-6 text-base font-normal cursor-pointer">Permission 1</li>                
+                     <li class="pl-6 text-base font-normal cursor-pointer">Permission 2</li>
                     </ul>
                 </li>
                 <!-- Actions Submenu -->
                 <li>
-                    <div class="flex items-center justify-between px-3 py-2">
+                    <div class="flex items-center justify-between pl-3 pr-4 py-2">
                        <span class="text-base font-semibold flex text-nowrap">   
                     <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#actions"></use></svg>Actions
                     </span>
@@ -428,12 +428,12 @@ users.forEach((user) => {
                         </li>
                         <li class="submenu hidden role-list px-4">
                             <ul>
-                                <li class="pl-6 text-base font-normal">Regular User</li>
-                                <li class="pl-6 text-base font-normal">Admin</li>
-                                <li class="pl-6 text-base font-normal">Manager</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Regular User</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Admin</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Manager</li>
                             </ul>
                         </li>
-                        <li class="pl-6 text-base font-normal">Remove</li>
+                        <li class="pl-6 text-base font-normal cursor-pointer">Remove</li>
            
     </div>
 </td>
@@ -450,13 +450,13 @@ users.forEach((user) => {
           <td class="text-left px-4">${user.DateTime}</td>
           <td class="text-left px-4">${user.Action}</td>
           <td class="text-left px-4">${user.Project}</td>
-            <td class="text-left px-4">${user.Details}</td>
+            <td class="text-left px-4">"${user.Details}"</td>
         
          <td class=" flex justify-end">
-                <button class="more-button px-4 py-2">
+                <button class="more-button pl-6 pr-10 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
-            <div class="moredropdown hidden absolute right-full w-72 bg-white border border-dark-charcoal rounded-lg shadow-md z-[9999]">
+            <div class="moredropdown hidden absolute right-8  w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-40 scroll">
                 <ul class="text-sm">
                     <!-- User Info -->
                     <li>
@@ -465,7 +465,7 @@ users.forEach((user) => {
                                 <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-info"></use></svg>  User info
                             </span>
                             <div class="flex items-center">
-                                <i class="ri-pencil-line hidden edit-icon mr-2"></i>
+                                <i class="ri-pencil-line hidden edit-icon mr-2 cursor-pointer"></i>
                               <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                             </div>
                         </div>
@@ -528,20 +528,20 @@ users.forEach((user) => {
 
                 <!-- Manage Permissions -->
                 <li>
-                    <div class="flex items-center justify-between px-3 py-2">
+                    <div class="flex items-center justify-between pl-3 pr-4 py-2">
                       <span class="text-base font-semibold flex text-nowrap">   
                     <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#permission"></use></svg>Manage Permissions
                     </span>
                        <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4">
-                     <li class="pl-6 text-base font-normal">Permission 1</li>                
-                     <li class="pl-6 text-base font-normal">Permission 2</li>
+                     <li class="pl-6 text-base font-normal cursor-pointer">Permission 1</li>                
+                     <li class="pl-6 text-base font-normal cursor-pointer">Permission 2</li>
                     </ul>
                 </li>
                 <!-- Actions Submenu -->
                 <li>
-                    <div class="flex items-center justify-between px-3 py-2">
+                    <div class="flex items-center justify-between pl-3 pr-4 py-2">
                         <span class="text-base font-semibold flex text-nowrap">   
                     <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#actions"></use></svg>Actions
                     </span>
@@ -554,12 +554,12 @@ users.forEach((user) => {
                         </li>
                         <li class="submenu hidden role-list px-4">
                             <ul>
-                                <li class="pl-6 text-base font-normal">Regular User</li>
-                                <li class="pl-6 text-base font-normal">Admin</li>
-                                <li class="pl-6 text-base font-normal">Manager</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Regular User</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Admin</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Manager</li>
                             </ul>
                         </li>
-                        <li class="pl-6 text-base font-normal">Remove</li>
+                        <li class="pl-6 text-base font-normal cursor-pointer">Remove</li>
            
     </div>
 </td>
@@ -577,27 +577,20 @@ users.forEach((user) => {
           <td class="text-left px-8 py-2">${user.name}</td>
           <td class="text-left px-4">${user.DateTime}</td>
           <td class="text-left px-4">${user.Action}</td>
-       <td class="text-left px-4 cursor-pointer  group project-cell">
-    
-    <div class="inline-block break-words max-w-[150px] relative truncate project-text">
-        ${user.Project}
-    </div>
-
-   
-    <button class="absolute border border-dark-charcoal px-2 rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[999]">
-        ${user.Project}
-    </button>
-</td>
-
-
-
-
-          <td class="text-left px-4">${user.Details}</td>
+         <td class="text-left px-4 cursor-pointer  group project-cell">
+            <div class=" relative truncate">
+            ${user.Project}
+            </div>
+            <button class="absolute border border-dark-charcoal px-2 rounded-tr-lg rounded-bl-lg rounded-br-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[999]">
+                ${user.Project}
+            </button>
+        </td>
+        <td class="text-left px-4">"${user.Details}"</td>
          <td class=" flex justify-end">
-                <button class="more-button px-4 py-2">
+                <button class="more-button pl-6 pr-10 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
-            <div class="moredropdown hidden absolute right-full w-72 bg-white border border-dark-charcoal rounded-lg shadow-md z-[9999]">
+            <div class="moredropdown hidden absolute right-8 top-72 w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-40 scroll">
                 <ul class="text-sm">
                     <!-- User Info -->
                     <li>
@@ -606,7 +599,7 @@ users.forEach((user) => {
                                 <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#user-info"></use></svg>  User info
                             </span>
                             <div class="flex items-center">
-                                <i class="ri-pencil-line hidden edit-icon mr-2"></i>
+                                <i class="ri-pencil-line hidden edit-icon mr-2 cursor-pointer"></i>
                                <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                             </div>
                         </div>
@@ -669,20 +662,20 @@ users.forEach((user) => {
 
                 <!-- Manage Permissions -->
                 <li>
-                    <div class="flex items-center justify-between px-3 py-2">
+                    <div class="flex items-center justify-between pl-3 pr-4 py-2">
                        <span class="text-base font-semibold flex text-nowrap">   
                     <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#permission"></use></svg>Manage Permissions
                     </span>
                    <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                     </div>
                     <ul class="submenu hidden px-4">
-                     <li class="pl-6 text-base font-normal">Permission 1</li>                
-                     <li class="pl-6 text-base font-normal">Permission 2</li>
+                     <li class="pl-6 text-base font-normal cursor-pointer">Permission 1</li>                
+                     <li class="pl-6 text-base font-normal cursor-pointer">Permission 2</li>
                     </ul>
                 </li>
                 <!-- Actions Submenu -->
                 <li>
-                    <div class="flex items-center justify-between px-3 py-2">
+                    <div class="flex items-center justify-between pl-3 pr-4 py-2">
                  <span class="text-base font-semibold flex text-nowrap">   
                     <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#actions"></use></svg>Actions
                     </span>
@@ -691,16 +684,16 @@ users.forEach((user) => {
                     <ul class="submenu hidden px-4 role-details">
                         <li class="block px-1 text-base font-normal flex justify-between items-center role">
                             <span class="pl-6">Change Role</span>
-                            <i class="ri-arrow-down-s-fill toggle-arrow"></i>
+                            <svg class=" w-6 h-6 toggle-arrow"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                         </li>
                         <li class="submenu hidden role-list px-4">
                             <ul>
-                                <li class="pl-6 text-base font-normal">Regular User</li>
-                                <li class="pl-6 text-base font-normal">Admin</li>
-                                <li class="pl-6 text-base font-normal">Manager</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Regular User</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Admin</li>
+                                <li class="pl-6 text-base font-normal cursor-pointer">Manager</li>
                             </ul>
                         </li>
-                        <li class="pl-6 text-base font-normal">Remove</li>
+                        <li class="pl-6 text-base font-normal cursor-pointer">Remove</li>
            
     </div>
 </td>
@@ -710,47 +703,44 @@ users.forEach((user) => {
       `);
   });
 
-  // Event delegation for dynamically added elements
+//dropdown opens on clicking on three dots.
   $(document).on("click", ".toggle-arrow", function (event) {
-    event.stopPropagation(); // Prevents event from bubbling up
-
-    // Toggle arrow rotation
-    $(this).toggleClass("rotate-180");
-
-    // Check if the clicked element is "Files Modified"
+    event.stopPropagation();
+     $(this).toggleClass("rotate-180");
     if ($(this).closest("li").hasClass("files-modified")) {
-      $(this).closest("li").next(".project-list").slideToggle(200); // Toggle Project 1 submenu
+      $(this).closest("li").next(".project-list").slideToggle(200); 
     } else if ($(this).closest("li").hasClass("project-item")) {
-      $(this).closest("li").next(".project-details").slideToggle(200); // Toggle Project 1 details
+      $(this).closest("li").next(".project-details").slideToggle(200); 
     } else if ($(this).closest("li").hasClass("cv-item")) {
-      $(this).closest("li").next(".cv-details").slideToggle(200); // Toggle Project 1 details
+      $(this).closest("li").next(".cv-details").slideToggle(200); 
     } else if ($(this).closest("li").hasClass("recent-projects")) {
-      $(this).closest("li").next(".recent-list").slideToggle(200); // Toggle Project 1 details
+      $(this).closest("li").next(".recent-list").slideToggle(200); 
     } else if ($(this).closest("li").hasClass("role")) {
-      $(this).closest("li").next(".role-list").slideToggle(200); // Toggle Project 1 details
-    } else {
-      // Toggle the submenu for normal items
+      $(this).closest("li").next(".role-list").slideToggle(200);
+    } else 
+      {
       $(this).closest("li").children(".submenu").slideToggle(200);
     }
 
-    // Toggle the edit icon next to the arrow
+ // Toggle the edit icon next to the arrow
     $(this).siblings(".edit-icon").toggleClass("hidden");
+    
   });
 
-   //copy button
+//copy button in add users dropdown
    $(document).on("click", ".copyIcon", function () {
-    let container = $(this).closest(".moredropdown"); // Find the closest parent dropdown
-    let emailInput = container.find(".emailInput"); // Get the corresponding input field
-    let copiedBtn = container.find(".copiedBtn"); // Get the copied button in the same section
+    let container = $(this).closest(".moredropdown"); 
+    let emailInput = container.find(".emailInput"); 
+    let copiedBtn = container.find(".copiedBtn"); 
 
-    let email = emailInput.val().trim(); // Get the email value
+    let email = emailInput.val().trim(); 
 
     if (email !== "") {
         navigator.clipboard.writeText(email).then(() => {
-            copiedBtn.removeClass("hidden").fadeIn(200); // Show "Copied" message
+            copiedBtn.removeClass("hidden").fadeIn(200); 
 
             setTimeout(() => {
-                copiedBtn.fadeOut(200); // Hide after 2 seconds
+                copiedBtn.fadeOut(200); 
             }, 2000);
         }).catch(err => {
             console.error("Failed to copy: ", err);
@@ -759,38 +749,39 @@ users.forEach((user) => {
         alert("Please enter an email to copy!");
     }
 });
-   //Set Permissions dropdown
-   $(document).ready(function () {
-    // Toggle the dropdown for the clicked button
+   
+//Set Permissions dropdown inside add users dropdown
     $(document).on("click", ".permissionDropdown", function (event) {
-        event.stopPropagation(); // Prevent closing when clicking inside
-        let dropdownList = $(this).siblings(".permissionList"); // Get related list
-        $(".permissionList").not(dropdownList).addClass("hidden"); // Hide others
-        dropdownList.toggleClass("hidden"); // Toggle visibility
+        event.stopPropagation(); 
+        let dropdownList = $(this).siblings(".permissionList"); 
+        $(".permissionList").not(dropdownList).addClass("hidden"); 
+        dropdownList.toggleClass("hidden"); 
     });
-
-    // Handle selection inside the dropdown
     $(document).on("click", ".permissionList li", function (event) {
-        event.stopPropagation(); // Prevent closing when selecting
+        event.stopPropagation(); 
         let inputField = $(this).closest(".dropdownContainer").find(".permissionInput");
-        inputField.val($(this).text()); // Update input field
-        $(this).closest(".permissionList").addClass("hidden"); // Hide dropdown
+        inputField.val($(this).text()); 
+        $(this).closest(".permissionList").addClass("hidden"); 
     });
 
     // Hide all dropdowns when clicking outside
     $(document).click(function () {
         $(".permissionList").addClass("hidden");
     });
+
+//back button functionailty.
+   $("#back-btn").click(function(){
+    window.location.href="../home-screen.html"
+   })
+
+   
+  
+
+   $(".role-button").click(function () {
+    $(".role-button").removeClass("royal-blue text-white-smoke"); // Remove styles from all buttons
+    $(this).addClass("royal-blue text-white-smoke"); // Add style only to the clicked button
 });
 
-
-$(".nav-link").each(function() {
-    if (this.href === window.location.href) {
-      $(this).addClass("bg-gray-300 text-blue-600 font-semibold");
-    }
-  });
-    
-   
 });
 
 

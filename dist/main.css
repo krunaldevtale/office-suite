@@ -903,6 +903,10 @@ body {
   height: 100vh;
 }
 
+.\!h-10 {
+  height: 2.5rem !important;
+}
+
 .max-h-32 {
   max-height: 8rem;
 }
@@ -1354,8 +1358,24 @@ body {
   border-radius: 0.75rem;
 }
 
+.rounded-\[20px\] {
+  border-radius: 20px;
+}
+
+.rounded-bl-lg {
+  border-bottom-left-radius: 0.5rem;
+}
+
 .rounded-bl-xl {
   border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-br-lg {
+  border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-br-xl {
+  border-bottom-right-radius: 0.75rem;
 }
 
 .rounded-tl-3xl {
@@ -1364,6 +1384,10 @@ body {
 
 .rounded-tl-xl {
   border-top-left-radius: 0.75rem;
+}
+
+.rounded-tr-lg {
+  border-top-right-radius: 0.5rem;
 }
 
 .rounded-tr-xl {
@@ -1436,11 +1460,6 @@ body {
 .border-light-sky-blue {
   --tw-border-opacity: 1;
   border-color: rgb(187 226 250 / var(--tw-border-opacity, 1));
-}
-
-.border-purple-50 {
-  --tw-border-opacity: 1;
-  border-color: rgb(250 245 255 / var(--tw-border-opacity, 1));
 }
 
 .border-red-orange {
@@ -1526,6 +1545,10 @@ body {
   background-color: rgb(251 251 251 / var(--tw-bg-opacity, 1));
 }
 
+.fill-current {
+  fill: currentColor;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -1600,6 +1623,10 @@ body {
   padding: 2rem;
 }
 
+.\!p-0 {
+  padding: 0px !important;
+}
+
 .\!py-1 {
   padding-top: 0.25rem !important;
   padding-bottom: 0.25rem !important;
@@ -1670,6 +1697,11 @@ body {
   padding-bottom: 0.5rem;
 }
 
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1690,11 +1722,6 @@ body {
   padding-bottom: 0.93rem;
 }
 
-.py-2\.5 {
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-}
-
 .\!pl-1 {
   padding-left: 0.25rem !important;
 }
@@ -1709,10 +1736,6 @@ body {
 
 .pb-2 {
   padding-bottom: 0.5rem;
-}
-
-.pb-2\.5 {
-  padding-bottom: 0.625rem;
 }
 
 .pb-3 {
@@ -1747,8 +1770,24 @@ body {
   padding-left: 0.75rem;
 }
 
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
 .pr-10 {
   padding-right: 2.5rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .pr-8 {
@@ -1767,8 +1806,8 @@ body {
   padding-top: 0.5rem;
 }
 
-.pt-2\.5 {
-  padding-top: 0.625rem;
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .text-left {
@@ -3428,6 +3467,42 @@ input[type="checkbox"].c-checkbox:checked::after {
   /* Add left margin for consistent horizontal alignment */
 }
 
+.userContainer{
+  max-width: 90rem;
+}
+
+.pl-6{
+  padding-left: 1.5rem;
+}
+
+.pl-4{
+  padding-left: 1rem;
+}
+
+.pr-4{
+  padding-right: 1rem;
+}
+
+.pr-3{
+  padding-right:0.75rem ;
+}
+
+.rounded-br-xl{
+  border-bottom-right-radius: 0.75rem;
+}
+
+.rounded-br-lg{
+  border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-bl-lg{
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-tr-lg{
+  border-top-right-radius: 0.5rem;
+}
+
 .column-class {
   margin-left: -80%;
   /* Add left margin for consistent horizontal alignment */
@@ -3828,6 +3903,11 @@ input[type="checkbox"].c-checkbox:checked::after {
   color: rgb(251 251 251 / var(--tw-text-opacity, 1));
 }
 
+.group:hover .group-hover\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
@@ -4059,6 +4139,10 @@ input[type="checkbox"].c-checkbox:checked::after {
 
   .xl\:w-2\/12 {
     width: 16.666667%;
+  }
+
+  .xl\:w-3\/12 {
+    width: 25%;
   }
 
   .xl\:gap-0\.5 {

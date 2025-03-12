@@ -23,8 +23,8 @@
       </div>
       <!-- Search bar -->
       <div class="relative w-[27%] hidden md:block">
-        <span class="absolute top-1/2 transform -translate-y-1/2">
-          <svg class="icon !p-[1rem]"><use xlink:href="/public/images/icons.svg#search"></use></svg>                              
+        <span class="absolute top-3 left-3 ">
+          <svg class="icon !w-5 !h-5 !p-0"><use xlink:href="/public/images/icons.svg#search"></use></svg>                              
         </span>
         <input
           type="text"
@@ -33,73 +33,48 @@
         />
         <div class="dropdown hidden absolute w-full mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
           <ul class="text-sm">
-            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-t-lg"><i class="ri-mail-add-line"></i>Attach Email</a></li>
-            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-b-lg"><i class="ri-download-line"></i>Downloads</a></li>
+            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-t-lg">suggestion 1</a></li>
+            <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-b-lg">suggestion 2</a></li>
           </ul>
         </div>
       </div>
-      <!-- Share button -->
+      <!-- Notification button -->
       <div class="flex items-center gap-4">
-        <button class="share-btn drop-button hidden md:flex items-center gap-2">
-          <i class="ri-share-fill"></i> <span class="text-sm md:text-base">Share</span>
+        <button class="drop-button hidden md:flex items-center gap-2">
+          <svg class="icon !h-10 !w-10 !p-0"><use xlink:href="/public/images/icons.svg#notification"></use></svg>                              
         </button>
-        <!-- Share dropdown -->
-        <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
-          <h2 class="text-lg font-medium mb-4">Share your work</h2>
-          <div class="mb-4">
-            <label class="font-normal mb-1 block" for="people-input">
-              People with access
-            </label>
-            <div class="flex items-center gap-2 border border-dark-gray rounded-md p-2">
-              <input
-                id="people-input"
-                type="text"
-                placeholder="Add people or your team"
-                class="w-full text-sm bg-transparent outline-none placeholder:text-dark-charcoal"
-                onclick="event.stopPropagation();"
-              />
+        <!-- Notification dropdown -->
+        <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-3/12 mx-auto mt-8 rounded-[20px] bg-white-smoke z-10">
+          <p class="font-semibold text-base p-4">Notifications</p>
+          <div class="flex bg-light-sky-blue h-8 gap-3 pl-4">
+            <p class="font-medium text-base p-1">All</p>
+            <p class="text-transparent-dark-gray font-medium text-base p-1"> Unread(2)</p><br/>
+          </div>
+          <div class="flex flex-col p-4 pb-8 gap-4">
+            <p class="text-transparent-dark-gray font-medium text-sm">Today</p>
+            <div class="flex flex-col"> 
+              <div class="flex justify-between">
+                <p class="font-medium text-base">Sahil singh</p>
+                <div class="flex items-center gap-1">
+                  <p class="font-normal text-sm">42m ago</p>
+                  <div class="royal-blue w-2 h-2 rounded-full"></div>
+                </div>
+              </div>
+              <p class="text-sm font-normal">12 comments - essay writing</p>
+            </div>
+            <p class="text-transparent-dark-gray font-medium text-sm">Older</p>
+            <div class="flex flex-col"> 
+              <div class="flex justify-between gap-1"> 
+                <p class="font-medium text-base">Kate</p>
+                <p class="font-normal text-sm">26 feb</p>
+              </div>
+              <p class="text-sm font-normal">Can edit - accounts</p>
             </div>
           </div>
-          <button class="flex items-center gap-2 mb-4">
-            <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
-            <i class="ri-add-fill"></i>
-          </button>
-          <div class="mb-4">
-            <label class="mb-1 block" for="collaboration-link">
-              Collaboration link
-            </label>
-            <div class="relative custom-select border border-dark-gray rounded-md">
-              <div class="selected-item text-sm p-2 rounded cursor-pointer flex justify-between items-center gap-2">
-                <span>Select access:</span>
-                <span><i class="ri-arrow-down-s-fill"></i></span>
-              </div>
-              <div class="select-options text-sm bg-white-smoke border border-dark-gray hidden absolute w-full mt-1 rounded shadow-lg z-10 overflow-auto scroll h-16">
-                <div class="option">Only you can access</div>
-                <div class="option">Anyone with the link</div>
-                <div class="option">Specific people</div>
-              </div>
-            </div>  
-          </div>
-          <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
-            Copy link
-          </button>
         </div>  
         <!-- Profile button -->
-        <button class="drop-button">       
+        <div>       
           <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
-        </button>
-        <!-- Profile dropdown -->
-        <div class="dropdown hidden absolute top-1/2 right-10 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
-          <div class="flex items-center justify-start mb-5 gap-3">
-            <div>
-              <p class="font-medium text-lg">Hello Rachel!</p>
-              <p class="text-sm">Rachelsaket@gmail.com</p>
-            </div>
-            <img src="/public/images/user.png" alt="Profile" class="rounded-full h-12 w-12">
-          </div>
-          <button class="w-full bg-light-sky-blue py-2 rounded-md font-semibold transition">
-            Log Out
-          </button>
         </div>
       </div>
     </header>
@@ -135,43 +110,43 @@
             </li>
             <li>
               <a href="/" class="flex flex-col items-center menu">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#home"></use></svg>                              
+                <svg class="icon !pl-[0.9rem]"><use xlink:href="/public/images/icons.svg#home"></use></svg>                              
                 <span class="secondary-text">Home</span>
               </a>
             </li>
             <li>
               <a href="./src/file.html" class="flex flex-col items-center menu">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#file"></use></svg>                              
+                <svg class="icon !pl-4"><use xlink:href="/public/images/icons.svg#file"></use></svg>                              
                 <span class="secondary-text">File</span>
               </a>
             </li>
             <li>
               <a href="/src/edit.html" class="flex flex-col items-center menu">
-                <svg class="icon !p-[0.7rem]"><use xlink:href="/public/images/icons.svg#edit"></use></svg>                              
+                <svg class="icon !p-[0.7rem] !pl-4 !pt-4"><use xlink:href="/public/images/icons.svg#edit"></use></svg>                              
                 <span class="secondary-text">Edit</span>
               </a>
             </li>
             <li>
               <a href="/src/preserve.html" class="flex flex-col items-center menu">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#preserve"></use></svg>                              
+                <svg class="icon !pl-4"><use xlink:href="/public/images/icons.svg#preserve"></use></svg>                              
                 <span class="secondary-text text-center">Preserve</span>
               </a>
             </li>
             <li>
               <a href="/src/tools.html" class="flex flex-col items-center menu">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#tools"></use></svg>                              
+                <svg class="icon !pr-[0.7rem]"><use xlink:href="/public/images/icons.svg#tools"></use></svg>                              
                 <span class="secondary-text text-center">Tools</span>
               </a>
             </li>
             <li>
               <a href="/src/help.html" class="flex flex-col items-center menu">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#help"></use></svg>                              
+                <svg class="icon !pl-4"><use xlink:href="/public/images/icons.svg#help"></use></svg>                              
                 <span class="secondary-text text-center">Help</span>
               </a>
             </li>
             <li>
               <a href="./src/ai.html" class="flex flex-col items-center menu">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#ai"></use></svg>                              
+                <svg class="icon !pl-4"><use xlink:href="/public/images/icons.svg#ai"></use></svg>                              
                 <span class="secondary-text">AI</span>
               </a>
             </li>
@@ -182,12 +157,7 @@
       <!-- Main content -->
       <div class="flex-1 bg-white-smoke rounded-tl-3xl overflow-y-auto scroll main-content">
         <!-- Intro Section -->
-        <section class="flex flex-col items-center gap-10 py-5 intro">
-          <div class="flex justify-between w-full px-8 md:px-0 md:w-5/12 lg:w-1/4 text-sm md:text-xl font-medium">
-            <p>Create</p>
-            <p>Convert</p>
-            <p>Help & Support</p>
-          </div>
+        <section class="flex flex-col items-center gap-10 py-20 intro">
           <div class="flex flex-col items-center gap-3 text-center px-4 md:px-0">
             <h2 class="text-3xl md:text-4xl font-bold">
               Every Essential PDF Tool Consolidated for You
@@ -199,12 +169,11 @@
         </section>
 
         <!-- Features Section -->
-        <h3 class="px-10 py-5 font-medium text-xl home">Home</h3>
         <section class="p-6 md:p-10 feature">
           <div class="border-4 rounded-3xl feature-list">
             <div class="flex flex-col md:flex-row w-full">
               <a href="/src/file.html" class="w-full md:w-1/2 p-5 flex items-start space-x-4 md:border-r border-b">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#home-file"></use></svg>                              
+                <svg class="icon !p-[0.1rem]"><use xlink:href="/public/images/icons.svg#file"></use></svg>                              
                 <div>
                   <h3 class="font-bold text-lg md:text-xl">File</h3>
                   <p class="text-xs md:text-sm">
@@ -213,7 +182,7 @@
                 </div>
               </a>
               <a href="/src/edit.html" class="w-full md:w-1/2 p-5 flex items-start space-x-4 border-b">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#home-edit"></use></svg>                              
+                <svg class="icon !p-[0rem]"><use xlink:href="/public/images/icons.svg#edit"></use></svg>                              
                 <div>
                   <h3 class="font-bold text-lg md:text-xl">Edit</h3>
                   <p class="text-xs md:text-sm">
@@ -224,7 +193,7 @@
             </div>
             <div class="flex flex-col md:flex-row w-full">
               <a href="/src/preserve.html" class="w-full md:w-1/2 p-4 flex items-start space-x-4 md:border-r border-b">
-                <i class="ri-shield-keyhole-line text-4xl md:text-5xl"></i>
+                <svg class="icon !p-[0.1rem]"><use xlink:href="/public/images/icons.svg#preserve"></use></svg>                              
                 <div>
                   <h3 class="font-bold text-lg md:text-xl">Preserve</h3>
                   <p class="text-xs md:text-sm">
@@ -233,7 +202,7 @@
                 </div>
               </a>
               <a href="/src/tools.html" class="w-full md:w-1/2 p-4 flex items-start space-x-4 border-b">
-                <svg class="icon !p-[0.1rem]"><use xlink:href="/public/images/icons.svg#home-tools"></use></svg>                              
+                <svg class="icon !p-[0.1rem]"><use xlink:href="/public/images/icons.svg#tools"></use></svg>                              
                 <div>
                   <h3 class="font-bold text-lg md:text-xl">Tools</h3>
                   <p class="text-xs md:text-sm">
@@ -244,7 +213,7 @@
             </div>
             <div class="flex flex-col md:flex-row w-full">
               <a href="/src/help.html" class="w-full md:w-1/2 p-4 flex items-start space-x-4 md:border-r">
-                <svg class="icon"><use xlink:href="/public/images/icons.svg#home-help"></use></svg>                              
+                <svg class="icon !p-[0rem]"><use xlink:href="/public/images/icons.svg#help"></use></svg>                              
                 <div>
                   <h3 class="font-bold text-lg md:text-xl">Help</h3>
                   <p class="text-xs md:text-sm">
@@ -265,71 +234,63 @@
         </section>
 
         <!-- Table Section -->
-        <section class="min-w-full bg-white-smoke p-6 md:p-10 table-section relative" id="recent-files">
-          <div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-6 md:pb-10 space-y-4 md:space-y-0">
+        <section class="min-w-full bg-white-smoke table-section relative" id="recent-files">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-6 md:py-10 px-8 space-y-4 md:space-y-0">
             <h2 class="text-lg md:text-2xl font-medium">Recent files</h2>
-            <button id="toggleTable" class="text-sm md:text-base p-2 border border-light-sky-blue rounded-lg flex gap-4 items-center px-3">
+            <button id="toggleTable" class="text-sm md:text-base p-2 border border-royal-blue text-royal-blue rounded-lg flex gap-4 items-center px-3">
               More<i class="ri-arrow-right-s-line ri-lg"></i>
             </button>
           </div>
           <div id="tableContainer" class="overflow-x-auto scroll transition-all duration-300 ease-in-out" style="width:100%">
             <table class="table-auto border-collapse w-full h-full">
-              <thead>
+              <thead class="bg-light-sky-blue px-8 py-4">
                 <tr>
-                  <th class="text-left text-sm md:text-xl font-medium underline text-nowrap">File name</th>
-                  <th class="text-left text-sm md:text-xl font-medium underline text-nowrap">Owner</th>
-                  <th class="text-left text-sm md:text-xl font-medium underline text-nowrap">Last modified</th>
-                  <th class="w-2/12"></th>
+                  <th class="text-left text-sm md:text-base font-medium text-nowrap pl-8 py-1">File name</th>
+                  <th class="text-left text-sm md:text-base font-medium text-nowrap">Owner</th>
+                  <th class="text-left text-sm md:text-base font-medium text-nowrap">Last modified</th>
+                  <th class="w-full pr-8"></th>
                 </tr>
               </thead>
               <tbody id="tableRows">
-                <tr class="border-b-2 border-light-sky-blue">
-                  <td class="py-4 md:py-5 flex items-center gap-3">
-                    <div class="border border-mediumGray rounded-md p-2 flex flex-col justify-center items-center">
-                      <p class="text-[5px] md:text-[6px] font-medium text-nowrap">Terms & Conditions</p>
-                      <img class="w-6 h-6 md:w-8 md:h-8" src="/public/images/pdf.svg" alt="PDF Icon"/>
-                    </div>
-                    <span class="text-xs md:text-base text-nowrap">Office Research</span>
+                <tr>
+                  <td class="py-2 pr-10 pl-[1.4rem] flex items-center gap-3">
+                    <svg class="icon"><use xlink:href="/public/images/icons.svg#pdf"></use></svg> 
+                    <span class="text-nowrap">Office Research                             
                   </td>
-                  <td class="py-4 md:py-5 text-xs md:text-base text-nowrap">Owned by me</td>
-                  <td class="py-4 md:py-5 text-xs md:text-base text-nowrap">24 mins ago</td>
-                  <td class="py-4 md:py-5">
-                    <button class="more-button">
-                      <i class="ri-more-fill ri-lg md:ri-xl"></i>
-                    </button>
-                    <div class="moredropdown hidden absolute md:w-2/12 lg:w-48 bg-dark-charcoal shadow-md rounded-lg z-[9999]">
-                      <ul class="text-sm text-white-smoke">
-                        <li><a href="#" class="block px-4 py-2">Open</a></li>
-                        <li><a href="#" class="block px-4 py-2">Copy</a></li>
-                        <li><a href="#" class="block px-4 py-2">Share</a></li>
-                        <li><a href="#" class="block px-4 py-2">Rename</a></li>
-                        <li><a href="#" class="block px-4 py-2">Move to bin</a></li>
-                      </ul>
+                  <td class="pr-10 text-xs md:text-base text-nowrap">Owned by me</td>
+                  <td class="pr-10 text-xs md:text-base text-nowrap">24 mins ago</td>
+                  <td class="pr-8">
+                    <div class="flex justify-end">
+                      <button class="more-button">
+                        <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
+                      </button>
+                      <div class="moredropdown hidden absolute right-16 md:w-2/12 lg:w-24 bg-white-smoke shadow-md rounded-lg z-[9999]">
+                        <ul class="text-sm">
+                          <li><a href="#" class="px-2 py-1 flex items-center gap-1 hover:bg-light-sky-blue rounded-t-lg"><svg class="icon !w-8 !h-8"><use xlink:href="/public/images/icons.svg#pdf-open"></use></svg>Open</a></li>
+                          <li><a href="#" class="px-2 py-1 flex items-center gap-1 hover:bg-light-sky-blue rounded-b-lg"><svg class="icon !w-8 !h-8"><use xlink:href="/public/images/icons.svg#pdf-delete"></use></svg>Delete</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </td>
                 </tr>
-                <tr class="border-b-2 border-light-sky-blue">
-                  <td class="py-4 md:py-5 flex items-center gap-3">
-                    <div class="border border-mediumGray rounded-md p-2 flex flex-col justify-center items-center">
-                      <p class="text-[5px] md:text-[6px] font-medium text-nowrap">Terms & Conditions</p>
-                      <img class="w-6 h-6 md:w-8 md:h-8" src="/public/images/pdf.svg" alt="PDF Icon"/>
-                    </div>
-                    <span class="text-xs md:text-base text-nowrap">Office Research</span>
+                <tr>
+                  <td class="py-2 pr-10 pl-[1.4rem] flex items-center gap-3">
+                    <svg class="icon"><use xlink:href="/public/images/icons.svg#pdf"></use></svg> 
+                    <span class="text-nowrap">Office Research                             
                   </td>
-                  <td class="py-4 md:py-5 text-xs md:text-base text-nowrap">Owned by me</td>
-                  <td class="py-4 md:py-5 text-xs md:text-base text-nowrap">24 mins ago</td>
-                  <td class="py-4 md:py-5">
-                    <button class="more-button">
-                      <i class="ri-more-fill ri-lg md:ri-xl"></i>
-                    </button>
-                    <div class="moredropdown hidden absolute md:w-2/12 lg:w-48 bg-dark-charcoal shadow-md rounded-lg z-[9999]">
-                      <ul class="text-sm text-white-smoke">
-                        <li><a href="#" class="block px-4 py-2">Open</a></li>
-                        <li><a href="#" class="block px-4 py-2">Copy</a></li>
-                        <li><a href="#" class="block px-4 py-2">Share</a></li>
-                        <li><a href="#" class="block px-4 py-2">Rename</a></li>
-                        <li><a href="#" class="block px-4 py-2">Move to bin</a></li>
-                      </ul>
+                  <td class="pr-10 text-xs md:text-base text-nowrap">Owned by me</td>
+                  <td class="pr-10 text-xs md:text-base text-nowrap">24 mins ago</td>
+                  <td class="pr-8">
+                    <div class="flex justify-end">
+                      <button class="more-button">
+                        <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
+                      </button>
+                      <div class="moredropdown hidden absolute right-16 md:w-2/12 lg:w-24 bg-white-smoke shadow-md rounded-lg z-[9999]">
+                        <ul class="text-sm">
+                          <li><a href="#" class="px-2 py-1 flex items-center gap-1 hover:bg-light-sky-blue rounded-t-lg"><svg class="icon !w-8 !h-8"><use xlink:href="/public/images/icons.svg#pdf-open"></use></svg>Open</a></li>
+                          <li><a href="#" class="px-2 py-1 flex items-center gap-1 hover:bg-light-sky-blue rounded-b-lg"><svg class="icon !w-8 !h-8"><use xlink:href="/public/images/icons.svg#pdf-delete"></use></svg>Delete</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </td>
                 </tr>
@@ -337,7 +298,13 @@
               </tbody>
             </table>
           </div>
-        </section>            
+        </section>   
+
+        <!-- Tip Section -->
+        <div class="border border-royal-blue flex items-start p-3 w-80 ml-8 my-4 rounded-l-3xl rounded-br-3xl tip">
+          <p><span class="text-royal-blue">Tip of the Day:</span> Want to quickly rearrange pages in your PDF? Simply drag and drop them in the thumbnail view to reorder your document in seconds!</p>
+          <i class="ri-close-fill"></i>
+        </div>
       </div>
     </div>
   </main>

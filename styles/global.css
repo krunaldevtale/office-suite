@@ -82,6 +82,8 @@
 }
 .menu svg{
   padding: 0.6rem;
+  width: 55px;
+  height: 55px;
 }
 /* For all Share Button */
 .share-btn {
@@ -138,7 +140,7 @@
 }
 
 .mini-containers{
-  @apply w-fit h-8 p-2 rounded-lg font-bold underline text-[0.5rem] xl:text-[0.5rem] 2xl:text-[0.6rem];
+  @apply w-fit h-8 p-2 rounded-lg font-bold text-[0.5rem] xl:text-[0.5rem] 2xl:text-[0.6rem];
   background: var(--medium-gray)
 }
 .mini-containers-2{
@@ -971,6 +973,31 @@ input[type="checkbox"].c-checkbox:checked::after {
 .blue-star {
   color: #0272D9;
 }
+.dropdown{
+  box-shadow: 2px 2px 4px 0px #33333340;
+}
+
+
+
+
+.icon-filemanager{
+  padding: 0.4rem;
+  width: 38px;
+  height: 34px;
+}
+
+.icon-notification{
+  padding: 0.4rem;
+  width: 38px;
+  height: 38px;
+}
+
+.icon-filemanager2{
+  padding: 0.4rem;
+  width: 38px;
+  height: 38px;
+}
+
 
 
 

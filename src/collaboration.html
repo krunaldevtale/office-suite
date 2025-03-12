@@ -44,7 +44,9 @@
           
         <!-- Notification Button -->
         <button class="more-button md:flex items-center gap-2">
-          <i class="ri-notification-3-line"></i>
+          <svg class="icon-notification ">
+            <use xlink:href="/public/images/icons.svg#notification"></use>
+          </svg>
         </button>
       
         <!--Notification Dropdown Menu -->
@@ -109,57 +111,66 @@
 
       <!--Sidebar-->
       <aside
-        id="sidebar"
-        class="md:relative bg-light-sky-blue z-10 w-48 transform -translate-x-full md:translate-x-0 md:relative shadow-lg md:shadow-none transition-transform duration-300"
-      >
-        <nav class="mt-4">
-          <ul class="flex flex-col ml-6" style="height: calc(100vh - 5.8rem)">
-            <li class="md:hidden flex justify-end">
-              <button class="menu-toggle">
-                <i class="ri-close-circle-fill"></i>
-              </button>
-            </li>
-            <li>
-              <a href="/src/all_projects.html" class="sidebar-btn flex items-center gap-2 w-full px-4 py-3">
-                  <i class="ri-layout-grid-line ri-lg"></i>
-                  <span class="text-base font-medium">All Projects</span>
+      id="sidebar"
+      class="md:relative bg-light-sky-blue z-10 w-48 transform -translate-x-full md:translate-x-0 md:relative shadow-lg md:shadow-none transition-transform duration-300"
+    >
+      <nav class="mt-4">
+        <ul class="flex flex-col ml-6" style="height: calc(100vh - 5.8rem)">
+          <li class="md:hidden flex justify-end">
+            <button class="menu-toggle">
+              <i class="ri-close-circle-fill"></i>
+            </button>
+          </li>
+          <li>
+            <a href="/src/all_projects.html" class="sidebar-btn flex items-center gap-2 w-full px-4 py-3">
+              <svg class="icon-filemanager ">
+                <use xlink:href="/public/images/icons.svg#file-manager-projects"></use>
+              </svg>
+                <span class="text-base font-medium">All Projects</span>
+            </a>
+        </li>
+        
+          <li>
+              <a href="/src/collaboration.html" class="sidebar-btn flex items-center gap-2 w-full px-4 py-3">
+                <svg class="icon-filemanager2 ">
+                  <use xlink:href="/public/images/icons.svg#file-manager-collaborations"></use>
+                </svg>
+                  <span class="text-base font-medium">Collaborations</span>
               </a>
           </li>
           
-            <li>
-                <a href="/src/collaboration.html" class="sidebar-btn flex items-center gap-2 w-full px-4 py-3">
-                    <i class="ri-user-follow-line ri-lg"></i>
-                    <span class="text-base font-medium">Collaborations</span>
-                </a>
-            </li>
-            
-            <li>
-                <a href="/src/collection.html" class="sidebar-btn flex items-center gap-2 w-full px-4 py-3">
-                    <i class="ri-archive-stack-line ri-lg"></i>
-                    <span class="text-base font-medium">My Collection</span>
-                </a>
-            </li>
-            
-
-            <li>
-                <a href="/src/bookmarked.html" class="sidebar-btn flex items-center gap-2 w-full px-4 py-3">
-                    <i class="ri-star-line ri-lg"></i>
-                    <span class="text-base font-medium">Bookmarked</span>
-                </a>
-            </li>
-
-           
-            <li>
-              <a href="/src/trash.html" class="sidebar-btn flex items-center gap-2 w-full px-4 py-3">
-                  <i class="ri-delete-bin-line ri-lg"></i>
-                  <span class="text-base font-medium">Trash</span>
+          <li>
+              <a href="/src/collection.html" class="sidebar-btn flex items-center gap-2 w-full px-4 py-3">
+                <svg class="icon-filemanager">
+                  <use xlink:href="/public/images/icons.svg#file-manager-collection"></use>
+                </svg>
+                  <span class="text-base font-medium whitespace-nowrap">My Collection</span>
               </a>
           </li>
           
-          </ul>
-        </nav>
-      </aside>
 
+          <li>
+              <a href="/src/bookmarked.html" class="sidebar-btn flex items-center gap-2 w-full px-4 py-3">
+                <svg class="icon-filemanager">
+                  <use xlink:href="/public/images/icons.svg#file-manager-bookmarked"></use>
+                </svg>
+                  <span class="text-base font-medium">Bookmarked</span>
+              </a>
+          </li>
+
+         
+          <li>
+            <a href="/src/trash.html" class="sidebar-btn flex items-center gap-2 w-full px-4 py-3">
+              <svg class=" icon-filemanager">
+                <use xlink:href="/public/images/icons.svg#file-manager-trash"></use>
+              </svg>
+                <span class="text-base font-medium">Trash</span>
+            </a>
+        </li>
+        
+        </ul>
+      </nav>
+    </aside>
     
     <!-- Main Content -->
     <div
@@ -175,12 +186,14 @@
                   class="w-full py-4 px-3 flex justify-between items-center relative"
                 >
                 <h3 class="text-3xl font-semibold">File manager</h3>
-
+                
+                <a href="/src/all_projects.html">
                   <button
                     class="border border-royal-blue rounded-lg px-8 text-royal-blue"
                   >
                     <i class="ri-arrow-left-s-line"></i>Back
                   </button>
+                </a>
                 </div>
               </div>
       
@@ -197,13 +210,13 @@
 
             
             
-              <div class="w-full mt-2 mb-2">
-                <table class="w-full border-collapse">
+              <div class="w-full mt-2 mb-2 overflow-x-auto">
+                <table class="w-full border-collapse min-w-max">
                 <thead class="bg-light-sky-blue w-full text-base font-medium text-dark-charcoal">
                     <tr>
-                      <th class="p-2  heading14-class">File Name</th>
+                      <th class="py-2 px-4  heading14-class">File Name</th>
                        
-                        <th class="p-2 relative">
+                        <th class="py-2 px-4 relative">
                           <!-- Dropdown Button for Type -->
                           <button class="dropdown-button flex items-center gap-1 heading7-class">
                               Type <i class="ri-arrow-down-s-fill"></i>
@@ -219,7 +232,7 @@
                           </div>
                       </th>
                       
-                      <th class="p-2 text-left relative">
+                      <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
                           <button class="dropdown-button flex items-center gap-1 heading1-class">
                               Owner <i class="ri-arrow-down-s-fill"></i>
@@ -237,9 +250,9 @@
                     
                        
 
-                        <th class="p-2 text-left relative">
+                        <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1 heading2-class">
+                          <button class="dropdown-button flex items-center gap-1 heading2-class whitespace-nowrap">
                               Last Modified<i class="ri-arrow-down-s-fill"></i>
                           </button>
                           <!-- Dropdown Menu for Owner -->
@@ -254,9 +267,9 @@
                       </th>
                         
 
-                        <th class="p-2 text-left relative">
+                        <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1  heading3-class">
+                          <button class="dropdown-button flex items-center gap-1  heading3-class whitespace-nowrap">
                             Access level<i class="ri-arrow-down-s-fill"></i>
                           </button>
                           <!-- Dropdown Menu for Owner -->
@@ -271,9 +284,9 @@
                       </th>
                         
 
-                        <th class="p-2 text-left relative">
+                        <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1 heading4-class">
+                          <button class="dropdown-button flex items-center gap-1 heading4-class whitespace-nowrap">
                             Recent Activity<i class="ri-arrow-down-s-fill"></i>
                           </button>
                           <!-- Dropdown Menu for Owner -->
@@ -288,9 +301,9 @@
                       </th>
                       
 
-                        <th class="p-2 text-left relative">
+                        <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1 heading5-class">
+                          <button class="dropdown-button flex items-center gap-1 heading5-class ">
                             Collaborations<i class="ri-arrow-down-s-fill"></i>
                           </button>
                           <!-- Dropdown Menu for Owner -->
@@ -304,7 +317,7 @@
                           </div>
                       </th>
                         
-                        <th class="p-2 text-left relative">
+                        <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
                           <button class="dropdown-button flex items-center gap-1 heading6-class">
                             Size<i class="ri-arrow-down-s-fill"></i>
@@ -320,45 +333,48 @@
                           </div>
                       </th>
                         
-                        <th class="p-2 text-left"></th>
+                        <th class="py-2 px-4 text-left"></th>
+                        <th class="py-2 px-4 text-left"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="text-base font-normal text-dark-charcoal">
                         
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="file-class">Accounts</span>
                       </td>
-                        <td class="p-2 ">
-                            <img src="/public/images/excel-icon-dark.png" alt="Excel Icon" class="w-6 h-6 object-contain icon-class">
-                        </td>
-                        <td class="p-2">
+                      <td class="py-2 px-4 ">
+                        <svg class=" icon-filemanager">
+                          <use xlink:href="/public/images/icons.svg#excel-dark"></use>
+                        </svg>
+                      </td>
+                        <td class="py-2 px-4">
                           <span class="icon-class1">Me</span>
                       </td>
                        
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="icon-class1">Feb 11, 2025</span>
                       </td>
                         
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="access-class">Edit</span>
                       </td>
                         
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="activity-class">Downloaded</span>
                       </td>
-                        <td class="p-2 flex gap-2 collaboration-class">
+                        <td class="py-2 px-4 flex gap-2 collaboration-class">
                             <img src="/public/images/user.png" alt="Profile" class="rounded-full h-10 w-10 ">
                             <img src="/public/images/Profile.jpeg" alt="Profile" class="rounded-full h-10 w-10 object-cover">
                         </td>
                         
 
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="size-class">2 kb</span>
                       </td>
                       
 
-                        <th class="py-4 md:py-5">
+                        <td class="py-4 md:py-5">
                           <!-- Dropdown Button for Owner -->
                           <button class="dropdown-button flex items-center gap-1 heading1-class">
                             <i class="ri-more-2-fill ri-lg md:ri-xl three-dots"></i>
@@ -384,8 +400,8 @@
                             </ul>
                             
                           </div>
-                      </th>
-                      <td>
+                      </td>
+                      <td class="py-2 px-4">
                         <i class="ri-star-line text-xl star"></i> <!-- Star line icon with class 'star' -->
                       </td>
 
@@ -395,39 +411,41 @@
                     <tr class="text-base font-normal text-dark-charcoal">
                         
 
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="file-class">Hindi essay</span>
                       </td>
-                        <td class="p-2">
-                            <img src="/public/images/word-icon-dark.png" alt="Excel Icon" class="w-6 h-6 object-contain icon-class">
-                        </td>
+                      <td class="py-2 px-4">
+                        <svg class=" icon-filemanager">
+                          <use xlink:href="/public/images/icons.svg#word-dark"></use>
+                        </svg>
+                      </td>
                        
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="icon-class">Rohan</span>
                       </td>
                        
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="icon-class1">Feb 02, 2025</span>
                       </td>
                        
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="access-class">View</span>
                       </td>
                         
 
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="activity-class">Recently Uploaded</span>
                       </td>
-                        <td class="p-2 flex gap-2 collaboration-class">
+                        <td class="py-2 px-4 flex gap-2 collaboration-class">
                             <img src="/public/images/Profile1.jpeg" alt="Profile" class="rounded-full h-10 w-10 object-cover scale-110 ">
                         </td>
                         
 
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="size-class">1 kb</span>
                       </td>
                       
-                      <th class="py-4 md:py-5">
+                      <td class="py-4 md:py-5">
                         <!-- Dropdown Button for Owner -->
                         <button class="dropdown-button flex items-center gap-1 heading1-class">
                           <i class="ri-more-2-fill ri-lg md:ri-xl three-dots"></i>
@@ -453,47 +471,48 @@
                           </ul>
                           
                         </div>
-                    </th>
+                    </td>
 
-                    <td>
+                    <td class="py-2 px-4">
                       <i class="ri-star-line text-xl star"></i> <!-- Star line icon with class 'star' -->
                     </td>
                     </tr>
                     <tr class="text-base font-normal text-dark-charcoal">
                         
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="file-class">Science project</span>
                       </td>
-                        <td class="p-2">
-                            <img src="/public/images/powerpoint-dark.png" alt="Excel Icon" class="w-6 h-6 object-contain icon-class">
-                        </td>
-                       
-                        <td class="p-2">
+                      <td class="py-2 px-4">
+                        <svg class=" icon-filemanager">
+                          <use xlink:href="/public/images/icons.svg#ppt-dark"></use>
+                        </svg>
+                      </td>
+                        <td class="py-2 px-4">
                           <span class="icon-class">Kate</span>
                       </td>
                        
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="icon-class1">Jan 19, 2025</span>
                       </td>
                        
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="access-class">Restricted</span>
                       </td>
                         
 
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="activity-class ">Edited</span>
                       </td>
-                        <td class="p-2 flex gap-2 collaboration-class">
+                        <td class="py-2 px-4 flex gap-2 collaboration-class">
                             <img src="/public/images/Profile3.jpeg" alt="Profile" class="rounded-full h-10 w-10 object-cover scale-110">
                         </td>
                         
 
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="size-class">2 kb</span>
                       </td>
                       
-                      <th class="py-4 md:py-5">
+                      <td class="py-4 md:py-5">
                         <!-- Dropdown Button for Owner -->
                         <button class="dropdown-button flex items-center gap-1 heading1-class">
                           <i class="ri-more-2-fill ri-lg md:ri-xl three-dots"></i>
@@ -519,47 +538,52 @@
                           </ul>
                           
                         </div>
-                    </th>
+                    </td>
 
-                    <td>
+                    <td class="py-2 px-4">
                       <i class="ri-star-line text-xl star"></i> <!-- Star line icon with class 'star' -->
                     </td>
+
                     </tr>
+
+
                     <tr class="text-base font-normal text-dark-charcoal">
                         
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="file-class">Myresume.pdf</span>
                       </td>
-                        <td class="p-2">
-                            <img src="/public/images/pdf-dark.png" alt="Excel Icon" class="w-6 h-6 object-contain icon-class">
-                        </td>
+                      <td class="py-2 px-4">
+                        <svg class=" icon-filemanager">
+                          <use xlink:href="/public/images/icons.svg#pdf-dark"></use>
+                        </svg>
+                      </td>
                         
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="icon-class">Sahil</span>
                       </td>
                         
 
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="icon-class1">Dec 08, 2024</span>
                       </td>
                         
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="access-class">View</span>
                       </td>
                         
 
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="activity-class">Shared</span>
                       </td>
-                        <td class="p-2 flex gap-2 collaboration-class">
+                        <td class="py-2 px-4 flex gap-2 collaboration-class">
                             <img src="/public/images/Profile4.jpeg" alt="Profile" class="rounded-full h-10 w-10 object-cover scale-110">
                         </td>
                        
-                        <td class="p-2">
+                        <td class="py-2 px-4">
                           <span class="size-class">1 kb</span>
                       </td>
                       
-                      <th class="py-4 md:py-5">
+                      <td class="py-4 md:py-5">
                         <!-- Dropdown Button for Owner -->
                         <button class="dropdown-button flex items-center gap-1 heading1-class">
                           <i class="ri-more-2-fill ri-lg md:ri-xl three-dots"></i>
@@ -585,9 +609,9 @@
                           </ul>
                           
                         </div>
-                    </th>
+                    </td>
 
-                    <td>
+                    <td class="py-2 px-4">
                       <i class="ri-star-line text-xl star"></i> <!-- Star line icon with class 'star' -->
                     </td>
                     </tr>

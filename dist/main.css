@@ -3732,6 +3732,19 @@ input[type="checkbox"].c-checkbox:checked::after {
   height: 38px;
 }
 
+.icon-capture{
+  padding: 0.4rem;
+  width: 38px;
+  height: 38px;
+ 
+}
+
+.icon-three-dots{
+  padding: 0.4rem;
+  width: 34px;
+  height: 34px;
+ 
+}
 .placeholder\:text-base::-moz-placeholder {
   font-size: 1rem;
   line-height: 1.5rem;

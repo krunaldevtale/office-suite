@@ -22,24 +22,35 @@
             <p id="instruction-subtext" class="text-hazy-white font-medium text-xl">Take your face photo in a bright light</p>
             
             <!-- Capture Image Section -->
-            <div class="flex flex-col  mt-8">
-                <div id="camera-box" class="w-80 h-48 bg-light-sky-blue rounded flex items-center justify-center ml-8 sm:ml-16">
-                    <video id="video" class="w-full h-full object-cover rounded" autoplay></video>
-                    <canvas id="canvas" class="hidden w-full h-full object-cover rounded"></canvas>
+            <div class="flex flex-col mt-8">                 
+                <div id="camera-box" class="w-80 h-48 bg-light-sky-blue rounded flex items-center justify-center ml-8 sm:ml-16">                     
+                    <video id="video" class="w-full h-full object-cover rounded" autoplay></video>                     
+                    <canvas id="canvas" class="hidden w-full h-full object-cover rounded"></canvas>                 
+                </div>   
+            
+                <!-- Wrapper to control alignment -->
+                <div class="flex justify-start w-full ml-6">  
+                    <button id="capture-button" class="mt-4 bg-light-sky-blue py-1 px-4 rounded-[10px] text-dark-charcoal text-base font-medium focus:outline-none w-48 flex items-center justify-center gap-2">
+                        <svg class="icon-capture">
+                            <use xlink:href="/public/images/icons.svg#capture-camera"></use>
+                        </svg>
+                        Capture
+                    </button>
                 </div>
-                
-                <button id="capture-button" class="mt-4 bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-base font-medium focus:outline-none w-36 flex items-center justify-center gap-2">
-                    <i class="ri-camera-line"></i>
-                    Capture
-                </button>
-                <button id="retake-button" class="mt-4 border border-light-sky-blue py-2 px-4 rounded-[10px] text-white-smoke text-base font-medium focus:outline-none w-36 flex items-center justify-center gap-2 hidden">
-                    <i class="ri-reset-left-line"></i>
-                    Retake
-                </button>
-                <p id="error-message" class="text-red-500 text-center hidden">Couldn't recognize your image</p>
-                
+
+                <div class="flex justify-start w-full ml-6">
+                <button id="retake-button" class="mt-4 border border-light-sky-blue py-1 px-4 rounded-[10px] text-white-smoke text-base font-medium focus:outline-none w-48 flex items-center justify-center gap-2 hidden">                     
+                    
+                    <svg class="icon-capture">
+                        <use xlink:href="/public/images/icons.svg#capture-retake"></use>
+                    </svg>                    
+                    Retake                 
+                </button>  
+            </div>               
+            
+                <p id="error-message" class="text-red-500 text-center hidden">Couldn't recognize your image</p>                             
             </div>
-        </div>
+            
 
         
     </div>

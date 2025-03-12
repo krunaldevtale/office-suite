@@ -1034,12 +1034,6 @@
     <path d="M19 7.66667L17.88 16.9978C17.7107 18.4122 17.6267 19.1189 17.24 19.6533C16.9009 20.1238 16.4021 20.5 15.8067 20.7344C15.1307 21 14.28 21 12.5733 21H9.42667C7.72133 21 6.86933 21 6.19333 20.7333C5.5974 20.4991 5.09815 20.1228 4.75867 19.6522C4.37467 19.1189 4.28933 18.4122 4.11867 16.9978L3 7.66667M13 14.8889V9.33333M9 14.8889V9.33333M1 4.88889H7.15333M7.15333 4.88889L7.668 1.92C7.81733 1.38 8.356 1 8.97467 1H13.0253C13.644 1 14.1813 1.38 14.332 1.92L14.8467 4.88889M7.15333 4.88889H14.8467M14.8467 4.88889H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
 
-
- 
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 24" id="notification">
-    <g clip-path="url(#clip0_3058_407)">
-    
-
   
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="account">
     <rect width="32" height="32" rx="16" fill="#EADDFF"></rect>

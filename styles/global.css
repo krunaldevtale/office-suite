@@ -709,9 +709,11 @@ input[type="checkbox"].c-checkbox:checked::after {
   margin-left: 126%; /* Add left margin for consistent horizontal alignment */
 }
 
-
+.h-41{
+  height: 10.5rem;
+}
 .userContainer{
-  max-width: 90rem;
+  max-width: 97rem;
 }
 .pl-6{
   padding-left: 1.5rem;
@@ -950,6 +952,9 @@ input[type="checkbox"].c-checkbox:checked::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.more-button:hover svg {
+  fill: white;
 }
 
 

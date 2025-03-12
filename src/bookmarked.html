@@ -187,11 +187,11 @@
                 <h3 class="text-3xl font-semibold">File manager</h3>
                 
                 <a href="/src/all_projects.html">
-                  <button
-                    class="border border-royal-blue rounded-lg px-8 text-royal-blue"
-                  >
-                    <i class="ri-arrow-left-s-line"></i>Back
-                  </button>
+                  <div>  
+                    <button class="flex items-center justify-center gap-6 absolute right-6 top-6 border border-royal-blue text-royal-blue py-2 px-4 rounded-lg w-28">
+                      <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#backbtn"></use></svg> 
+                      <span>Back</span>
+                  </div>
                   </a>
                 </div>
               </div>
@@ -210,12 +210,12 @@
                 <table class="w-full border-collapse min-w-max">
                 <thead class="bg-light-sky-blue w-full text-base font-medium text-dark-charcoal">
                     <tr>
-                      <th class="py-2 px-4 text-left heading-class">File Name</th>
+                      <th class="py-2 px-4 text-left ">File Name</th>
                        
-                        <th class="py-2 px-4 relative">
+                        <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Type -->
-                          <button class="dropdown-button flex items-center gap-1 heading7-class">
-                              Type <i class="ri-arrow-down-s-fill"></i>
+                          <button class="dropdown-button flex items-center gap-1 ">
+                              Type <svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Type -->
                           <div class="dropdown-menu hidden absolute mt-2 w-md bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
@@ -231,7 +231,7 @@
                       <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
                           <button class="dropdown-button flex items-center gap-1 ">
-                              Owner <i class="ri-arrow-down-s-fill"></i>
+                              Owner <svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Owner -->
                           <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
@@ -249,7 +249,7 @@
                         <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
                           <button class="dropdown-button flex items-center gap-1  whitespace-nowrap">
-                              Last Modified<i class="ri-arrow-down-s-fill"></i>
+                              Last Modified<svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Owner -->
                           <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
@@ -266,7 +266,7 @@
                         <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
                           <button class="dropdown-button flex items-center gap-1   whitespace-nowrap">
-                            Access level<i class="ri-arrow-down-s-fill"></i>
+                            Access level <svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Owner -->
                           <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
@@ -283,7 +283,7 @@
                         <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
                           <button class="dropdown-button flex items-center gap-1  whitespace-nowrap">
-                            Recent Activity<i class="ri-arrow-down-s-fill"></i>
+                            Recent Activity <svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Owner -->
                           <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
@@ -300,7 +300,7 @@
                         <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
                           <button class="dropdown-button flex items-center gap-1  whitespace-nowrap">
-                            Collaborations<i class="ri-arrow-down-s-fill"></i>
+                            Collaborations <svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Owner -->
                           <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
@@ -316,7 +316,7 @@
                         <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
                           <button class="dropdown-button flex items-center gap-1 ">
-                            Size<i class="ri-arrow-down-s-fill"></i>
+                            Size <svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Owner -->
                           <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
@@ -370,7 +370,7 @@
                       </td>
                       
 
-                        <td class="py-2 px-4 text-left md:py-5">
+                        <td class="py-2 px-4 text-left relative md:py-5">
                           <!-- Dropdown Button for Owner -->
                           <button class="dropdown-button flex items-center gap-1 ">
                             <i class="ri-more-2-fill ri-lg md:ri-xl "></i>
@@ -380,17 +380,23 @@
                             <ul class="text-base text-dark-charcoal">
                               <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                  <i class="ri-folder-shared-line text-lg"></i> Open
+                                  <svg class="icon-three-dots">
+                                    <use xlink:href="/public/images/icons.svg#open"></use>
+                                  </svg>Open
                                 </a>
                               </li>
                               <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                  <i class="ri-pencil-line text-lg"></i> Edit
+                                  <svg class="icon-three-dots">
+                                    <use xlink:href="/public/images/icons.svg#edit"></use>
+                                  </svg> Edit
                                 </a>
                               </li>
                               <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                  <i class="ri-delete-bin-5-line text-lg"></i> Delete
+                                  <svg class="icon-three-dots">
+                                    <use xlink:href="/public/images/icons.svg#trash"></use>
+                                  </svg> Delete
                                 </a>
                               </li>
                             </ul>
@@ -398,7 +404,7 @@
                           </div>
                       </td>
                       <td class="py-2 px-4 text-left">
-                        <i class="ri-star-fill text-xl star blue-star"></i> <!-- Star line icon with class 'star' -->
+                        <i class="ri-star-fill text-xl  blue-star"></i> <!-- Star line icon with class 'star' -->
                       </td>
                       
                       
@@ -420,7 +426,7 @@
                      
                        
                         <td class="py-2 px-4 text-left">
-                          <span class="text-left">Rohan</span>
+                          <span class="">Rohan</span>
                       </td>
                        
                         <td class="py-2 px-4 text-left">
@@ -444,7 +450,7 @@
                           <span class="">1 kb</span>
                       </td>
 
-                      <td class="py-2 px-10 md:py-5">
+                      <td class="py-2 px-4 text-left relative md:py-5">
                         <!-- Dropdown Button for Owner -->
                         <button class="dropdown-button flex items-center gap-1 ">
                           <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
@@ -454,17 +460,23 @@
                           <ul class="text-base text-dark-charcoal">
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-folder-shared-line text-lg"></i> Open
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#open"></use>
+                                </svg>Open
                               </a>
                             </li>
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-pencil-line text-lg"></i> Edit
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#edit"></use>
+                                </svg>Edit
                               </a>
                             </li>
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-delete-bin-5-line text-lg"></i> Delete
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#trash"></use>
+                                </svg> Delete
                               </a>
                             </li>
                           </ul>
@@ -503,7 +515,7 @@
                         <td class="py-2 px-4 text-left">
                           <span class=" ">Edited</span>
                       </td>
-                        <td class="py-2 px-4 flex gap-2 ">
+                        <td class="py-2 px-4 text-left flex gap-2 ">
                             <img src="/public/images/Profile3.jpeg" alt="Profile" class="rounded-full h-10 w-10 object-cover scale-110">
                         </td>
                         
@@ -512,7 +524,7 @@
                           <span class="">2 kb</span>
                       </td>
                       
-                      <td class="py-2 px-10 md:py-5">
+                      <td class="py-2 px-4 text-left relative md:py-5">
                         <!-- Dropdown Button for Owner -->
                         <button class="dropdown-button flex items-center gap-1">
                           <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
@@ -522,17 +534,23 @@
                           <ul class="text-base text-dark-charcoal">
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-folder-shared-line text-lg"></i> Open
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#open"></use>
+                                </svg>Open
                               </a>
                             </li>
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-pencil-line text-lg"></i> Edit
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#edit"></use>
+                                </svg>Edit
                               </a>
                             </li>
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-delete-bin-5-line text-lg"></i> Delete
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#trash"></use>
+                                </svg>Delete
                               </a>
                             </li>
                           </ul>
@@ -579,7 +597,7 @@
                           <span class="">1 kb</span>
                       </td>
                       
-                      <td class="py-2 px-10 text-left md:py-5">
+                      <td class="py-2 px-4 text-left relative text-left md:py-5">
                         <!-- Dropdown Button for Owner -->
                         <button class="dropdown-button flex items-center gap-1 ">
                           <i class="ri-more-2-fill ri-lg md:ri-xl "></i>
@@ -589,17 +607,23 @@
                           <ul class="text-base text-dark-charcoal">
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-folder-shared-line text-lg"></i> Open
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#open"></use>
+                                </svg> Open
                               </a>
                             </li>
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-pencil-line text-lg"></i> Edit
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#edit"></use>
+                                </svg> Edit
                               </a>
                             </li>
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-delete-bin-5-line text-lg"></i> Delete
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#trash"></use>
+                                </svg> Delete
                               </a>
                             </li>
                           </ul>

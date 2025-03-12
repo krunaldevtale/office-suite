@@ -25,11 +25,16 @@
                         documents in Word, analyze data in Excel, design stunning presentations in PowerPoint, and manage PDFs with ease.”
                     </p>
                 </div>
-
-                <button id="record-button" class="mt-4 bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-base font-medium focus:outline-none w-36 flex items-center justify-center gap-2">
-                    <i class="ri-mic-line"></i>
+               
+                <div class="flex justify-start w-full ml-6">
+                <button id="record-button" class="mt-4 bg-light-sky-blue py-1 px-4 rounded-[10px] text-dark-charcoal text-base font-medium focus:outline-none w-48
+                 flex items-center justify-center gap-2">
+                    <svg class="icon-capture">
+                        <use xlink:href="/public/images/icons.svg#audio-record"></use>
+                    </svg> 
                     Record
                 </button>
+                </div>
 
 
                 <div id="audio-controls" class="hidden mt-4 flex items-center gap-4 w-full">
@@ -45,11 +50,14 @@
                 </div>
                 
 
-
-                <button id="re-record-button" class="mt-4 border border-white py-2 px-4 rounded-[10px] text-white-smoke text-base font-medium focus:outline-none w-36 flex items-center justify-center gap-2 hidden">
-                    <i class="ri-reset-left-line"></i>
+                <div class="flex justify-start w-full ml-6">
+                <button id="re-record-button" class="mt-4 border border-white py-1 px-4 rounded-[10px] text-white-smoke text-base font-medium focus:outline-none w-48 flex items-center justify-center gap-2 hidden">
+                    <svg class="icon-capture">
+                        <use xlink:href="/public/images/icons.svg#capture-retake"></use>
+                    </svg> 
                     Rerecord
                 </button>
+            </div>
 
                
             </div>

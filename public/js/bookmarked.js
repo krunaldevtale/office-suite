@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // When any star icon with the class 'star' is clicked
-    $(".star").on("click", function () {
+    $(".star2").on("click", function () {
       // Toggle the filled and outlined star icons
       $(this).toggleClass("ri-star-line ri-star-fill");
   

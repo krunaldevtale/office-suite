@@ -189,9 +189,11 @@
                 <h3 class="text-3xl font-semibold">File manager</h3>
 
                 <a href="/home-screen.html">
-                  <button class="border border-royal-blue rounded-lg px-8 text-royal-blue">
-                    <i class="ri-arrow-left-s-line"></i>Back
-                  </button>
+                  <div>  
+                    <button class="flex items-center justify-center gap-6 absolute right-6 top-6 border border-royal-blue text-royal-blue py-2 px-4 rounded-lg w-28">
+                      <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#backbtn"></use></svg> 
+                      <span>Back</span>
+                  </div>
                 </a>
                 
                 </div>
@@ -215,12 +217,12 @@
                 <table class="w-full border-collapse min-w-max">
                 <thead class="bg-light-sky-blue w-full text-base font-medium text-dark-charcoal">
                     <tr>
-                      <th class="py-2 px-4 text-left heading-class">File Name</th>
+                      <th class="py-2 px-4 text-left ">File Name</th>
                        
                       <th class="py-2 px-4 text-left relative">
                         <!-- Dropdown Button for Type -->
                         <button class="dropdown-button flex items-center gap-1">
-                            Type <i class="ri-arrow-down-s-fill"></i>
+                            Type <svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                         </button>
                         <!-- Dropdown Menu for Type -->
                         <div class="dropdown-menu hidden absolute mt-2 w-md bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
@@ -236,11 +238,11 @@
                       
                       <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1 heading1-class">
-                              Owner <i class="ri-arrow-down-s-fill"></i>
+                          <button class="dropdown-button flex items-center gap-1 ">
+                              Owner<svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Owner -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal heading-class">
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
                               <ul class="text-base text-dark-charcoal">
                                   <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Owned by me</a></li>
                                   <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Owned by organization</a></li>
@@ -254,11 +256,11 @@
 
                         <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1 heading2-class whitespace-nowrap">
-                              Last Modified<i class="ri-arrow-down-s-fill"></i>
+                          <button class="dropdown-button flex items-center gap-1  whitespace-nowrap">
+                              Last Modified<svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Owner -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal dropdown-class">
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
                               <ul class="text-base text-dark-charcoal">
                                   <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Today</a></li>
                                   <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Last 7 Days</a></li>
@@ -271,11 +273,11 @@
 
                         <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1  heading3-class whitespace-nowrap">
-                            Access level<i class="ri-arrow-down-s-fill"></i>
+                          <button class="dropdown-button flex items-center gap-1   whitespace-nowrap">
+                            Access level<svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Owner -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal dropdown1-class">
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
                               <ul class="text-base text-dark-charcoal">
                                   <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Can Edit</a></li>
                                   <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">View Only</a></li>
@@ -288,11 +290,11 @@
 
                         <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1 heading4-class whitespace-nowrap">
-                            Recent Activity<i class="ri-arrow-down-s-fill"></i>
+                          <button class="dropdown-button flex items-center gap-1  whitespace-nowrap">
+                            Recent Activity<svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Owner -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal dropdown2-class">
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
                               <ul class="text-base text-dark-charcoal">
                                   <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Downloaded</a></li>
                                   <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Recently uploaded</a></li>
@@ -305,11 +307,11 @@
 
                         <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1 heading5-class whitespace-nowrap">
-                            Collaborations <i class="ri-arrow-down-s-fill"></i>
+                          <button class="dropdown-button flex items-center gap-1 whitespace-nowrap">
+                            Collaborations <svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Owner -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal dropdown3-class">
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
                               <ul class="text-base text-dark-charcoal">
                                   <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Only me</a></li>
                                   <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Shared with me</a></li>
@@ -321,11 +323,11 @@
                         
                         <th class="py-2 px-4 text-left relative">
                           <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1 heading6-class whitespace-nowrap">
-                            Size<i class="ri-arrow-down-s-fill"></i>
+                          <button class="dropdown-button flex items-center gap-1  whitespace-nowrap">
+                            Size<svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
                           </button>
                           <!-- Dropdown Menu for Owner -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal dropdown4-class">
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
                               <ul class="text-base text-dark-charcoal">
                                   <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Small (&lt; 10MB)</a></li>
                                   <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Medium (10MB - 100MB)</a></li>
@@ -342,69 +344,75 @@
                 <tbody>
                     <tr class="text-base font-normal text-dark-charcoal">
                         
-                        <td class="py-2 px-4">
-                          <span class="file-class">Accounts</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Accounts</span>
                       </td>
-                        <td class="py-2 px-4 ">
+                        <td class="py-2 px-4 text-left">
                           <svg class=" icon-filemanager">
                             <use xlink:href="/public/images/icons.svg#excel-dark"></use>
                           </svg>
                         </td>
-                        <td class="py-2 px-4">
-                          <span class="icon-class1">Me</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Me</span>
                       </td>
                        
-                        <td class="py-2 px-4">
-                          <span class="icon-class1">Feb 11, 2025</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Feb 11, 2025</span>
                       </td>
                         
-                        <td class="py-2 px-4">
-                          <span class="access-class">Edit</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Edit</span>
                       </td>
                         
-                        <td class="py-2 px-4">
-                          <span class="activity-class">Downloaded</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Downloaded</span>
                       </td>
-                        <td class="py-2 px-4 flex gap-2 collaboration-class">
+                        <td class="py-2 px-4 text-left flex gap-2 ">
                             <img src="/public/images/user.png" alt="Profile" class="rounded-full h-10 w-10 ">
                             <img src="/public/images/Profile.jpeg" alt="Profile" class="rounded-full h-10 w-10 object-cover">
                         </td>
                         
 
-                        <td class="py-2 px-4">
-                          <span class="size-class">2 kb</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">2 kb</span>
                       </td>
                       
 
-                        <td class="py-4 md:py-5">
+                        <td class="py-2 px-4 text-left relative md:py-5">
                           <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1 heading1-class">
-                            <i class="ri-more-2-fill ri-lg md:ri-xl three-dots"></i>
+                          <button class="dropdown-button flex items-center gap-1">
+                            <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                           </button>
                           <!-- Dropdown Menu for Owner -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal three-dots-dropdown">
+                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
                             <ul class="text-base text-dark-charcoal">
                               <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                  <i class="ri-folder-shared-line text-lg"></i> Open
+                                  <svg class="icon-three-dots">
+                                    <use xlink:href="/public/images/icons.svg#open"></use>
+                                  </svg> Open
                                 </a>
                               </li>
                               <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                  <i class="ri-pencil-line text-lg"></i> Edit
+                                  <svg class="icon-three-dots">
+                                    <use xlink:href="/public/images/icons.svg#edit"></use>
+                                  </svg> Edit
                                 </a>
                               </li>
                               <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                  <i class="ri-delete-bin-5-line text-lg"></i> Delete
+                                  <svg class="icon-three-dots">
+                                    <use xlink:href="/public/images/icons.svg#trash"></use>
+                                  </svg> Delete
                                 </a>
                               </li>
                             </ul>
                             
                           </div>
                       </td>
-                      <td class="py-2 px-4">
-                        <i class="ri-star-line text-xl star"></i> <!-- Star line icon with class 'star' -->
+                      <td class="py-2 px-4 text-left">
+                        <i class="ri-star-line star2 text-xl "></i> <!-- Star line icon with class 'star' -->
                       </td>
                       
                       
@@ -415,61 +423,67 @@
                     <tr class="text-base font-normal text-dark-charcoal">
                         
 
-                        <td class="py-2 px-4">
-                          <span class="file-class">Hindi essay</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Hindi essay</span>
                       </td>
-                        <td class="py-2 px-4">
+                        <td class="py-2 px-4 text-left">
                           <svg class=" icon-filemanager">
                             <use xlink:href="/public/images/icons.svg#word-dark"></use>
                           </svg>
                         </td>
                        
-                        <td class="py-2 px-4">
-                          <span class="icon-class">Rohan</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Rohan</span>
                       </td>
                        
-                        <td class="py-2 px-4">
-                          <span class="icon-class1">Feb 02, 2025</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Feb 02, 2025</span>
                       </td>
                        
-                        <td class="py-2 px-4">
-                          <span class="access-class">View</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">View</span>
                       </td>
                         
 
-                        <td class="py-2 px-4">
-                          <span class="activity-class">Recently Uploaded</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Recently Uploaded</span>
                       </td>
-                        <td class="py-2 px-4 flex gap-2 collaboration-class">
+                        <td class="py-2 px-4 text-left flex gap-2">
                             <img src="/public/images/Profile1.jpeg" alt="Profile" class="rounded-full h-10 w-10 object-cover scale-110 ">
                         </td>
                         
 
-                        <td class="py-2 px-4">
-                          <span class="size-class">1 kb</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">1 kb</span>
                       </td>
 
-                      <td class="py-4 md:py-5">
+                      <td class="py-2 px-4 text-left md:py-5">
                         <!-- Dropdown Button for Owner -->
-                        <button class="dropdown-button flex items-center gap-1 heading1-class">
-                          <i class="ri-more-2-fill ri-lg md:ri-xl three-dots"></i>
+                        <button class="dropdown-button flex items-center gap-1 ">
+                          <i class="ri-more-2-fill ri-lg md:ri-xl "></i>
                         </button>
                         <!-- Dropdown Menu for Owner -->
-                        <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal three-dots-dropdown">
+                        <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
                           <ul class="text-base text-dark-charcoal">
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-folder-shared-line text-lg"></i> Open
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#open"></use>
+                                </svg> Open
                               </a>
                             </li>
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-pencil-line text-lg"></i> Edit
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#edit"></use>
+                                </svg> Edit
                               </a>
                             </li>
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-delete-bin-5-line text-lg"></i> Delete
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#trash"></use>
+                                </svg> Delete
                               </a>
                             </li>
                           </ul>
@@ -477,68 +491,74 @@
                         </div>
                     </td>
 
-                    <td class="py-2 px-4">
-                      <i class="ri-star-line text-xl star"></i> <!-- Star line icon with class 'star' -->
+                    <td class="py-2 px-4 text-left">
+                      <i class="ri-star-line star2 text-xl "></i> <!-- Star line icon with class 'star' -->
                     </td>
                     
                     </tr>
                     <tr class="text-base font-normal text-dark-charcoal">
                         
-                        <td class="py-2 px-4">
-                          <span class="file-class">Science project</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Science project</span>
                       </td>
-                        <td class="py-2 px-4">
+                        <td class="py-2 px-4 text-left">
                           <svg class=" icon-filemanager">
                             <use xlink:href="/public/images/icons.svg#ppt-dark"></use>
                           </svg>
                         </td>
                        
-                        <td class="py-2 px-4">
-                          <span class="icon-class">Kate</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Kate</span>
                       </td>
                        
-                        <td class="py-2 px-4">
-                          <span class="icon-class1">Jan 19, 2025</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Jan 19, 2025</span>
                       </td>
                        
-                        <td class="py-2 px-4">
-                          <span class="access-class">Restricted</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Restricted</span>
                       </td>
                         
 
-                        <td class="py-2 px-4">
-                          <span class="activity-class ">Edited</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class=" ">Edited</span>
                       </td>
-                        <td class="py-2 px-4 flex gap-2 collaboration-class">
+                        <td class="py-2 px-4 text-left flex gap-2 ">
                             <img src="/public/images/Profile3.jpeg" alt="Profile" class="rounded-full h-10 w-10 object-cover scale-110">
                         </td>
                         
 
-                        <td class="py-2 px-4">
-                          <span class="size-class">2 kb</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">2 kb</span>
                       </td>
                       
-                      <td class="py-4 md:py-5">
+                      <td class="py-2 px-4 text-left md:py-5">
                         <!-- Dropdown Button for Owner -->
-                        <button class="dropdown-button flex items-center gap-1 heading1-class">
-                          <i class="ri-more-2-fill ri-lg md:ri-xl three-dots"></i>
+                        <button class="dropdown-button flex items-center gap-1 ">
+                          <i class="ri-more-2-fill ri-lg md:ri-xl "></i>
                         </button>
                         <!-- Dropdown Menu for Owner -->
-                        <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal three-dots-dropdown">
+                        <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
                           <ul class="text-base text-dark-charcoal">
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-folder-shared-line text-lg"></i> Open
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#open"></use>
+                                </svg> Open
                               </a>
                             </li>
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-pencil-line text-lg"></i> Edit
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#edit"></use>
+                                </svg>Edit
                               </a>
                             </li>
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-delete-bin-5-line text-lg"></i> Delete
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#trash"></use>
+                                </svg> Delete
                               </a>
                             </li>
                           </ul>
@@ -546,75 +566,81 @@
                         </div>
                     </td>
 
-                    <td class="py-2 px-4">
-                      <i class="ri-star-line text-xl star"></i> <!-- Star line icon with class 'star' -->
+                    <td class="py-2 px-4 text-left">
+                      <i class="ri-star-line star2 text-xl "></i> <!-- Star line icon with class 'star' -->
                     </td>
                     </tr>
                     <tr class="text-base font-normal text-dark-charcoal">
                         
-                        <td class="py-2 px-4">
-                          <span class="file-class">Myresume.pdf</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Myresume.pdf</span>
                       </td>
-                        <td class="py-2 px-4">
+                        <td class="py-2 px-4 text-left">
                           <svg class=" icon-filemanager">
                             <use xlink:href="/public/images/icons.svg#pdf-dark"></use>
                           </svg>
                         </td>
                         
-                        <td class="py-2 px-4">
-                          <span class="icon-class">Sahil</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Sahil</span>
                       </td>
                         
 
-                        <td class="py-2 px-4">
-                          <span class="icon-class1">Dec 08, 2024</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Dec 08, 2024</span>
                       </td>
                         
-                        <td class="py-2 px-4">
-                          <span class="access-class">View</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">View</span>
                       </td>
                         
 
-                        <td class="py-2 px-4">
-                          <span class="activity-class">Shared</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">Shared</span>
                       </td>
-                        <td class="py-2 px-4 flex gap-2 collaboration-class">
+                        <td class="py-2 px-4 text-left flex gap-2 ">
                             <img src="/public/images/Profile4.jpeg" alt="Profile" class="rounded-full h-10 w-10 object-cover scale-110">
                         </td>
                        
-                        <td class="py-2 px-4">
-                          <span class="size-class">1 kb</span>
+                        <td class="py-2 px-4 text-left">
+                          <span class="">1 kb</span>
                       </td>
                       
-                      <td class="py-4 md:py-5">
+                      <td class="py-2 px-4 text-left md:py-5">
                         <!-- Dropdown Button for Owner -->
-                        <button class="dropdown-button flex items-center gap-1 heading1-class">
-                          <i class="ri-more-2-fill ri-lg md:ri-xl three-dots"></i>
+                        <button class="dropdown-button flex items-center gap-1 ">
+                          <i class="ri-more-2-fill ri-lg md:ri-xl "></i>
                         </button>
                         <!-- Dropdown Menu for Owner -->
-                        <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal three-dots-dropdown">
+                        <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
                           <ul class="text-base text-dark-charcoal">
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-folder-shared-line text-lg"></i> Open
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#open"></use>
+                                </svg> Open
                               </a>
                             </li>
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-pencil-line text-lg"></i> Edit
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#edit"></use>
+                                </svg> Edit
                               </a>
                             </li>
                             <li>
                               <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <i class="ri-delete-bin-5-line text-lg"></i> Delete
+                                <svg class="icon-three-dots">
+                                  <use xlink:href="/public/images/icons.svg#trash"></use>
+                                </svg>Delete
                               </a>
                             </li>
                           </ul>
                           
                         </div>
                     </td>
-                    <td class="py-2 px-4">
-                      <i class="ri-star-line text-xl star"></i> <!-- Star line icon with class 'star' -->
+                    <td class="py-2 px-4 text-left">
+                      <i class="ri-star-line text-xl star2"></i> <!-- Star line icon with class 'star' -->
                     </td>
                     </tr>
                 </tbody>

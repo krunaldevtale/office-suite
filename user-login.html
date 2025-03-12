@@ -84,9 +84,16 @@
                             class="w-full bg-transparent outline-none placeholder:text-hazy-white" />
                         <i id="toggleIcon" class="ri-eye-line cursor-pointer text-light-sky-blue" onclick="togglePasswordVisibility('reg-password', 'toggleIcon')"></i>
                     </div>
+                    
+                    <div class="flex justify-between items-center w-full">
+                        <span id="passwordError" class="text-red-500 text-sm mt-2">
+                            <span class="text-red-500">*</span> wrong password
+                        </span>
+                    <div class="text-hazy-white font-normal text-sm mt-2 cursor-pointer" onclick="showForgotPassword()">Forgot Password ?</div>
+                </div>
+
                 
-                    <div class="text-white-smoke font-normal cursor-pointer" onclick="showForgotPassword()">Forgot Password?</div>
-                    <span id="passwordError" class="red text-sm hidden"></span>
+                    
                 </div>
 
                 <button type="submit" class="w-full bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-lg focus:outline-none">Log in</button>

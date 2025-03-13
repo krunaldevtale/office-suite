@@ -998,6 +998,12 @@ input[type="checkbox"].c-checkbox:checked::after {
   height: 38px;
 }
 
+.icon-capture{
+  padding: 0.4rem;
+  width: 32px;
+  height: 36px;
+}
+
 
 
 

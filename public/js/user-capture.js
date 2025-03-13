@@ -1,90 +1,89 @@
 $(document).ready(function () {
-    const video = $("#video")[0];
-    const canvas = $("#canvas")[0];
-    const instructionText = $("#instruction-text");
-    const instructionSubtext = $("#instruction-subtext");
-    const captureButton = $("#capture-button");
-    const retakeButton = $("#retake-button");
-    const errorMessage = $("#error-message");
-
     let stream = null;
-    let isCameraOn = false;
+    let imageCaptured = false;
 
     function startVideoStream() {
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             navigator.mediaDevices.getUserMedia({ video: true })
                 .then(function (videoStream) {
                     stream = videoStream;
-                    video.srcObject = stream;
-                    video.play();
-                    $(video).removeClass("hidden");
-                    $(canvas).addClass("hidden");
-                    isCameraOn = true;
+                    $("#video").prop("srcObject", stream).removeClass("hidden").get(0).play();
+                    $("#canvas").addClass("hidden");
+                    $("#capture-button").removeClass("hidden");
+                    $("#retake-button").addClass("hidden");
                 })
                 .catch(function (error) {
                     console.error("Camera access denied:", error);
-                    instructionSubtext.text("Please allow camera access").addClass("text-red-500");
+                    $("#instruction-subtext").text("Please allow camera access.").addClass("text-red-500");
                 });
         }
     }
 
     function stopVideoStream() {
         if (stream) {
-            let tracks = stream.getTracks();
-            tracks.forEach(track => track.stop()); // Stop all video tracks
+            stream.getTracks().forEach(track => track.stop());
             stream = null;
-            isCameraOn = false;
         }
     }
 
     function isFaceProperlyVisible() {
-        return Math.random() > 0.5; // Simulating face detection
+        return Math.random() > 0.5; // Simulated face detection logic
     }
 
-    captureButton.on("click", function () {
-        if (!isCameraOn) {
-            // Start camera only when Capture button is clicked for the first time
+    $("#capture-button").click(function () {
+        if (!stream) {
             startVideoStream();
             return;
         }
 
-        // Capture image
-        const success = isFaceProperlyVisible();
-        const context = canvas.getContext("2d");
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        video.pause();
-        $(video).addClass("hidden");
-        $(canvas).removeClass("hidden");
-        stopVideoStream(); // Stop the camera after capturing
+        setTimeout(function () {
+            let success = isFaceProperlyVisible();
+            let video = $("#video").get(0);
+            let canvas = $("#canvas").get(0);
+            let context = canvas.getContext("2d");
 
-        if (success) {
-            errorMessage.addClass("hidden");
-            instructionSubtext.text("Take your face photo in a bright light").removeClass("text-red-500");
-            captureButton.addClass("hidden");
-            retakeButton.removeClass("hidden");
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-            setTimeout(function () {
-                window.location.href = "audio-capture.html";
-            }, 5000);
-        } else {
-            instructionText.text("Capture image");
-            instructionSubtext.text("Couldn't recognize your image").addClass("text-red-500");
-            errorMessage.addClass("hidden");
-            captureButton.removeClass("hidden");
-            retakeButton.removeClass("hidden");
-        }
+            video.pause();
+            $("#video").addClass("hidden");
+            $("#canvas").removeClass("hidden");
+
+            stopVideoStream();
+            imageCaptured = true;
+
+            if (success) {
+                $("#error-message").addClass("hidden");
+                $("#instruction-subtext").text("Take your face photo in bright light.").removeClass("text-red-500");
+                $("#capture-button, #retake-button").addClass("hidden");
+
+                setTimeout(function () {
+                    window.location.href = "audio-capture.html";
+                }, 5000);
+            } else {
+                $("#instruction-text").text("Capture image");
+                $("#instruction-subtext").text("Couldn't recognize your image.").addClass("text-red-500");
+                $("#error-message").addClass("hidden");
+                $("#capture-button").addClass("hidden");
+                $("#retake-button").removeClass("hidden");
+            }
+        }, 2000);
     });
 
-    retakeButton.on("click", function () {
-        instructionText.text("Capture image").removeClass("text-red-500");
-        instructionSubtext.text("Take your face photo in a bright light").removeClass("text-red-500");
-        captureButton.removeClass("hidden");
-        retakeButton.addClass("hidden");
-        $(canvas).addClass("hidden");
-        $(video).removeClass("hidden");
-        errorMessage.addClass("hidden");
-        startVideoStream(); // Restart camera
+    $("#retake-button").click(function () {
+        if (!imageCaptured) return;
+
+        $("#instruction-text").text("Capture image");
+        $("#instruction-subtext").text("Take your face photo in bright light.").removeClass("text-red-500");
+        $("#capture-button").removeClass("hidden");
+        $("#retake-button").addClass("hidden");
+
+        $("#canvas").addClass("hidden");
+        $("#video").removeClass("hidden");
+
+        $("#error-message").addClass("hidden");
+
+        startVideoStream();
     });
 });

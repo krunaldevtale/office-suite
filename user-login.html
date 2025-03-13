@@ -21,10 +21,13 @@
                 <!-- Name/Email Input -->
                 <div>
                     <label for="name" class="block font-medium">Name/Email</label>
+                    
                     <input id="name" name="name" type="text" placeholder="Rachel" 
                         class="mt-1 block w-full rounded-[10px] border border-white-smoke bg-transparent py-2 px-4 placeholder:text-hazy-white focus:outline-none">
-                </div>
+                        <span  class="nameError text-red-500 text-sm hidden"></span>
             
+                </div>
+               
                 <!-- Continue Button -->
                 <button type="button" id="continue-button" 
                     class="w-full bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-lg focus:outline-none">
@@ -75,6 +78,8 @@
                     <label for="reg-name" class="block font-medium">Name/Email</label>
                     <input id="reg-name" name="name" type="text" placeholder="Rachel" 
                         class="mt-1 block w-full rounded-[10px] border border-white-smoke bg-transparent py-2 px-4 placeholder:text-hazy-white focus:outline-none">
+                        <span  class="nameError text-red-500 text-sm hidden"></span>
+                      
                 </div>
                 
                 <div class="flex flex-col">
@@ -83,11 +88,13 @@
                         <input id="reg-password" name="password" type="password" placeholder="Rachel14#we"
                             class="w-full bg-transparent outline-none placeholder:text-hazy-white" />
                         <i id="toggleIcon" class="ri-eye-line cursor-pointer text-light-sky-blue" onclick="togglePasswordVisibility('reg-password', 'toggleIcon')"></i>
+                       
                     </div>
+                    <span class="passwordError text-red-500 text-sm hidden" ></span>
                     
                     <div class="flex justify-between items-center w-full">
-                        <span id="passwordError" class="text-red-500 text-sm mt-2">
-                            <span class="text-red-500">*</span> wrong password
+                        <span id="passwordError" class="text-red-500 text-sm mt-2 hidden">
+                            <span class="text-red-500">*</span> Wrong password
                         </span>
                     <div class="text-hazy-white font-normal text-sm mt-2 cursor-pointer" onclick="showForgotPassword()">Forgot Password ?</div>
                 </div>
@@ -110,9 +117,11 @@
                     <div class="relative">
                         <input id="login-password" name="login-password" type="password"
                             class="mt-1 block w-full rounded-[10px] border border-light-sky-blue bg-transparent py-2 px-4 text-center focus:outline-none z-0">
-                        <span class="absolute inset-y-0 left-0 right-0 flex items-center justify-center text-light-sky-blue bg-transparent z-10 cursor-pointer" onclick="redirectToImageAudio()">Login with image & audio</span>
+                        <span class="absolute inset-y-0 left-0 right-0 flex items-center justify-center text-light-sky-blue bg-transparent z-10 cursor-pointer" 
+                            onclick="window.location.href='image-capture.html'">Login with image & audio</span>
                     </div>
                 </div>
+                
                 
             </form>
         <!--Forgot Password-->
@@ -141,71 +150,8 @@
         
     </div>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const continueButton = document.getElementById('continue-button');
-        const loginForm = document.getElementById('login-form');
-        const registrationForm = document.getElementById('registration-form');
-
-        continueButton.addEventListener('click', function() {
-            window.location.href = 'image-capture.html';
-        });
-
-        registrationForm.addEventListener('submit', function(event) {
-            const name = document.getElementById('reg-name').value;
-            const email = document.getElementById('reg-email').value;
-            const password = document.getElementById('reg-password').value;
-
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            const namePattern = /^[a-zA-Z\s]+$/;
-
-            if (!name || !namePattern.test(name)) {
-                alert('Please enter a valid name.');
-                event.preventDefault();
-                return;
-            }
-
-            if (!email || !emailPattern.test(email)) {
-                alert('Please enter a valid email.');
-                event.preventDefault();
-                return;
-            }
-
-            if (!password) {
-                alert('Please enter your password.');
-                event.preventDefault();
-                return;
-            }
-        });
-    });
-
-    function togglePasswordVisibility(passwordFieldId, iconId) {
-        const passwordField = document.getElementById(passwordFieldId);
-        const icon = document.getElementById(iconId);
-        
-        if (passwordField.type === "password") {
-            passwordField.type = "text";
-            icon.classList.remove("ri-eye-line");
-            icon.classList.add("ri-eye-off-line");
-        } else {
-            passwordField.type = "password";
-            icon.classList.remove("ri-eye-off-line");
-            icon.classList.add("ri-eye-line");
-        }
-    }
-
-    function redirectToImageAudio() {
-        window.location.href = 'image-capture.html';
-    }
-
-    function showRegistrationForm() {
-        document.getElementById('login-form').classList.add('hidden');
-        document.getElementById('registration-form').classList.remove('hidden');
-    }
-    function showForgotPassword(){
-        document.getElementById('registration-form').classList.add('hidden');
-        document.getElementById('forgotpassword').classList.remove('hidden');
-    }
-</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="public/js/forms.js"></script>
+<script src="/public/js/user-login.js"></script>
 
 </html>

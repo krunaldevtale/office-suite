@@ -17,13 +17,7 @@ $(document).ready(function() {
     let captureCount = 0; // Initialize capture counter
 
     // Access the user's camera
-    navigator.mediaDevices.getUserMedia({ video: true })
-        .then(stream => {
-            video.srcObject = stream;
-        })
-        .catch(err => {
-            console.error("Error accessing camera: ", err);
-        });
+   
 
     $("#capture-btn").click(function() {
         if (captureCount >= 3) {

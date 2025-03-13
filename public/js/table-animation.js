@@ -18,7 +18,7 @@ $(document).ready(function () {
                   <button class="more-button">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                   </button>
-                  <div class="moredropdown hidden absolute right-16 md:w-2/12 lg:w-24 bg-white-smoke shadow-md rounded-lg z-[9999]">
+                  <div class="moredropdown hidden absolute !right-16 md:w-2/12 lg:w-24 bg-white-smoke shadow-md rounded-lg z-[9999]">
                     <ul class="text-sm">
                       <li><a href="#" class="px-2 py-1 flex items-center gap-1 hover:bg-light-sky-blue rounded-t-lg"><svg class="icon !w-8 !h-8"><use xlink:href="/public/images/icons.svg#pdf-open"></use></svg>Open</a></li>
                       <li><a href="#" class="px-2 py-1 flex items-center gap-1 hover:bg-light-sky-blue rounded-b-lg"><svg class="icon !w-8 !h-8"><use xlink:href="/public/images/icons.svg#pdf-delete"></use></svg>Delete</a></li>

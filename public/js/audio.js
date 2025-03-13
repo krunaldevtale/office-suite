@@ -3,18 +3,32 @@ let audioChunks = [];
 let audioBlob;
 let audioUrl;
 let audio = new Audio();
+let stream; // Store the media stream globally
 
 $(document).ready(function () {
-  $("#save-btn").click(function () {
+  $("#save-btn").click(async function () {
     $("#imagepreview").hide();
     $("#recordaudio").show();
+    try {
+      // Request microphone access when clicking "Save"
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      
+    
+    } catch (err) {
+      console.error("Microphone access denied:", err);
+      alert("Microphone access is required to record audio.");
+    }
   });
 
   let recordButton = $("#record-button");
 
-  recordButton.on("click", async function () {
+  recordButton.on("click", function () {
+    if (!stream) {
+      alert("Please click 'Save' first to allow microphone access.");
+      return;
+    }
+
     if (!mediaRecorder || mediaRecorder.state === "inactive") {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       mediaRecorder = new MediaRecorder(stream);
       audioChunks = []; // Reset chunks on new recording
 
@@ -36,49 +50,45 @@ $(document).ready(function () {
       };
 
       mediaRecorder.start();
-      recordButton.html('<i class="ri-stop-line"></i> Stop');
+      recordButton.html('<svg class="h-6 w-6"> <use xlink:href="/public/images/icons.svg#stop-line"></use></svg>  Stop');
     } else {
       mediaRecorder.stop();
-      recordButton.html('<i class="ri-mic-line"></i> Record');
+      recordButton.html('<svg class="h-6 w-6"> <use xlink:href="/public/images/icons.svg#audio-record"></use></svg> Record');
     }
   });
 
-  $(document).ready(function () {
-   let playButton = $("#play-button");
-   let progressBar = $("#progress-bar");
-   let audio = new Audio(); // Declare globally
- 
-   playButton.on("click", function () {
-     let recordedAudio = localStorage.getItem("recordedAudio");
- 
-     if (recordedAudio) {
-       if (!audio.paused && audio.src) {
-         audio.pause();
-         playButton.html('<i class="ri-play-large-fill"></i>'); // Toggle back to play
-         return;
-       }
- 
-       audio.src = recordedAudio; // Use the stored audio
-       audio.play();
-       playButton.html('<i class="ri-pause-large-fill"></i>'); // Change to pause icon
- 
-       // Update progress bar as audio plays
-       $(audio).on("timeupdate", function () {
-         let progress = (audio.currentTime / audio.duration) * 100;
-         progressBar.css("width", progress + "%");
-       });
- 
-       // Reset progress and button when audio ends
-       $(audio).on("ended", function () {
-         progressBar.css("width", "0%");
-         playButton.html('<i class="ri-play-large-fill"></i>'); // Reset to play icon
-       });
-     } else {
-       alert("No recorded audio found!");
-     }
-   });
- });
- 
+  let playButton = $("#play-button");
+  let progressBar = $("#progress-bar");
+
+  playButton.on("click", function () {
+    let recordedAudio = localStorage.getItem("recordedAudio");
+
+    if (recordedAudio) {
+      if (!audio.paused && audio.src) {
+        audio.pause();
+        playButton.html('<svg class="h-6 w-6"><use xlink:href="/public/images/icons.svg#audio-play"></use> </svg>'); // Toggle back to play
+        return;
+      }
+
+      audio.src = recordedAudio; // Use the stored audio
+      audio.play();
+      playButton.html('<svg class="h-6 w-6"><use xlink:href="/public/images/icons.svg#pause"></use> </svg>'); // Change to pause icon
+
+      // Update progress bar as audio plays
+      $(audio).on("timeupdate", function () {
+        let progress = (audio.currentTime / audio.duration) * 100;
+        progressBar.css("width", progress + "%");
+      });
+
+      // Reset progress and button when audio ends
+      $(audio).on("ended", function () {
+        progressBar.css("width", "0%");
+        playButton.html('<svg class="h-6 w-6"><use xlink:href="/public/images/icons.svg#audio-play"></use> </svg>'); // Reset to play icon
+      });
+    } else {
+      alert("No recorded audio found!");
+    }
+  });
 
   // Re-record button functionality
   $("#rerecord-btn").click(function () {

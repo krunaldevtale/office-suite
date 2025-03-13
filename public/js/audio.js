@@ -36,10 +36,10 @@ $(document).ready(function () {
       };
 
       mediaRecorder.start();
-      recordButton.html('<i class="ri-stop-line"></i> Stop');
+      recordButton.html('<svg class="h-6 w-6"> <use xlink:href="/public/images/icons.svg#stop-line"></use></svg>  Stop');
     } else {
       mediaRecorder.stop();
-      recordButton.html('<i class="ri-mic-line"></i> Record');
+      recordButton.html('<svg class="h-6 w-6"> <use xlink:href="/public/images/icons.svg#audio-record"></use></svg> Record');
     }
   });
 
@@ -54,13 +54,13 @@ $(document).ready(function () {
      if (recordedAudio) {
        if (!audio.paused && audio.src) {
          audio.pause();
-         playButton.html('<i class="ri-play-large-fill"></i>'); // Toggle back to play
+         playButton.html('<svg class="h-6 w-6"><use xlink:href="/public/images/icons.svg#audio-play"></use> </svg>'); // Toggle back to play
          return;
        }
  
        audio.src = recordedAudio; // Use the stored audio
        audio.play();
-       playButton.html('<i class="ri-pause-large-fill"></i>'); // Change to pause icon
+       playButton.html('<svg class="h-6 w-6"><use xlink:href="/public/images/icons.svg#pause"></use> </svg>'); // Change to pause icon
  
        // Update progress bar as audio plays
        $(audio).on("timeupdate", function () {
@@ -71,7 +71,7 @@ $(document).ready(function () {
        // Reset progress and button when audio ends
        $(audio).on("ended", function () {
          progressBar.css("width", "0%");
-         playButton.html('<i class="ri-play-large-fill"></i>'); // Reset to play icon
+         playButton.html('<svg class="h-6 w-6"><use xlink:href="/public/images/icons.svg#audio-play"></use> </svg>'); // Reset to play icon
        });
      } else {
        alert("No recorded audio found!");

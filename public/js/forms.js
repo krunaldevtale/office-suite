@@ -72,11 +72,11 @@ $(document).ready(function () {
   
       if (passwordInput.attr("type") === "password") {
         passwordInput.attr("type", "text");
-        icon.removeClass("ri-eye-line").addClass("ri-eye-off-line");
-      } else {
+        icon.attr("xlink:href", "public/images/icons.svg#eyeline");
+    } else {
         passwordInput.attr("type", "password");
-        icon.removeClass("ri-eye-off-line").addClass("ri-eye-line");
-      }
+        icon.attr("xlink:href", "public/images/icons.svg#eyeicon");
+    }
     });
   
     // Initially Hide Unnecessary Sections

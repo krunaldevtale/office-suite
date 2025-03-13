@@ -57,7 +57,9 @@
                 class="w-full bg-transparent outline-none placeholder:text-hazy-white"
               />
              
-              <i id="toggleIcon" class="ri-eye-line cursor-pointer"></i>
+              <svg class="h-6 w-6 cursor-pointer" id="toggleIcon" >
+                <use xlink:href="/public/images/icons.svg#eyeicon"></use>
+              </svg>
             </div>
             <span
             id="passwordError"
@@ -168,9 +170,11 @@
           
         </div>
           <!-- Capture Button -->
-          <div class="flex  mt-4">
-            <button id="capture-btn"  class=" bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-lg focus:outline-none">
-             <i class="ri-camera-line"></i>   Capture
+          <div class="flex mt-4 text-nowrap">
+            <button id="capture-btn"  class="flex text-nowrap gap-2 bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-lg focus:outline-none">
+             <svg class="h-6 w-6">
+              <use xlink:href="/public/images/icons.svg#capture-camera"></use>
+            </svg>   Capture
             </button>
         </div>
     </div>
@@ -183,11 +187,13 @@
             <div id="finalImage2" class="preview-box"></div>
             <div id="finalImage3" class="preview-box"></div>
         </div>
-        <div class="flex gap-3 mt-4 justify-between">
-            <button id="retake-btn"  class="w-full bg-transparent py-2 px-4 rounded-[10px]  text-lg border border-white-1">
-                <i class="ri-reset-left-fill"></i>   Retake
+        <div class="flex gap-3  justify-between">
+            <button id="retake-btn"  class="px-2 py-2 justify-center w-full bg-transparent flex text-nowrap gap-2 text-center rounded-[10px]  text-lg border border-white-1">
+              <svg class="h-6 w-6">
+                <use xlink:href="/public/images/icons.svg#capture-retake"></use>
+              </svg>  Retake
                </button>
-               <button id="save-btn"  class="w-full bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-lg focus:outline-none">
+               <button id="save-btn"  class="w-full bg-light-sky-blue  rounded-[10px] text-dark-charcoal text-lg focus:outline-none">
                    Save
                </button>
         </div>
@@ -208,7 +214,9 @@
             </div>
             
             <button id="record-button" class="mt-4 bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-base font-medium focus:outline-none w-36 flex items-center justify-center gap-2">
-                <i class="ri-mic-line"></i>
+              <svg class="h-6 w-6">
+                <use xlink:href="/public/images/icons.svg#audio-record"></use>
+              </svg>
                 Record
             </button>
             <div id="audio-controls" class="hidden mt-4 flex items-center gap-2">
@@ -236,7 +244,9 @@
             </p>
             </div>
             <div class="flex items-start mt-3 ml-2">
-              <button id="play-button"><i class="ri-play-large-fill w-32 h-32"></i></button> 
+              <button id="play-button"> <svg class="h-6 w-6">
+                <use xlink:href="/public/images/icons.svg#audio-play"></use>
+              </svg></i></button> 
               <div id="progress-container" style="width: 100%; background: #ddd; height: 5px; margin-top: 10px;">
               <div id="progress-bar" style="width: 0%; height: 100%; background: #007bff;">
             </div>
@@ -244,8 +254,10 @@
           </div>
            
             <div class="flex gap-3 mt-2">
-              <button id="rerecord-btn"  class="w-full bg-transparent py-2 px-4 rounded-[10px]  text-lg border border-white-1">
-                  <i class="ri-reset-left-fill"></i>   Rerecord
+              <button id="rerecord-btn"  class="flex text-nowrap gap-2 justify-center w-full bg-transparent py-2 px-4 rounded-[10px]  text-lg border border-white-1">
+                <svg class="h-6 w-6">
+                  <use xlink:href="/public/images/icons.svg#capture-retake"></use>
+                </svg>  Rerecord
                  </button>
                  <button id="saveaudio-btn"  class="w-full bg-light-sky-blue py-2 px-4 rounded-[10px] text-dark-charcoal text-lg focus:outline-none">
                      Save

@@ -202,7 +202,7 @@ users.forEach((user) => {
                 <button class="more-button pl-6 pr-10 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
-            <div class="moredropdown hidden absolute right-8  w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-40 scroll">
+            <div class="moredropdown hidden absolute  top-72 w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-41 scroll">
                 <ul class="text-sm">
                     <!-- User Info -->
                     <li>
@@ -330,7 +330,7 @@ users.forEach((user) => {
                 <button class="more-button pl-6 pr-10 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
-            <div class="moredropdown hidden absolute right-8  w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-40 scroll">
+            <div class="moredropdown hidden absolute right-8  w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-41 scroll">
                 <ul class="text-sm">
                     <!-- User Info -->
                     <li>
@@ -456,7 +456,7 @@ users.forEach((user) => {
                 <button class="more-button pl-6 pr-10 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
-            <div class="moredropdown hidden absolute right-8  w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-40 scroll">
+            <div class="moredropdown hidden absolute right-8  w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-41 scroll">
                 <ul class="text-sm">
                     <!-- User Info -->
                     <li>
@@ -590,7 +590,7 @@ users.forEach((user) => {
                 <button class="more-button pl-6 pr-10 py-2">
                     <i class="ri-more-2-fill ri-lg md:ri-xl"></i>
                 </button>
-            <div class="moredropdown hidden absolute right-8 top-72 w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-40 scroll">
+            <div class="moredropdown hidden absolute right-8 top-72 w-72 bg-white border border-dark-charcoal rounded-xl shadow-md z-[9999] overflow-y-auto h-41 scroll">
                 <ul class="text-sm">
                     <!-- User Info -->
                     <li>

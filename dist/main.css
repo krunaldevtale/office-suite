@@ -669,6 +669,26 @@ body {
   top: 100%;
 }
 
+.right-10 {
+  right: 2.5rem;
+}
+
+.right-8 {
+  right: 2rem;
+}
+
+.\!right-8 {
+  right: 2rem !important;
+}
+
+.\!right-12 {
+  right: 3rem !important;
+}
+
+.\!right-16 {
+  right: 4rem !important;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -700,8 +720,17 @@ body {
   margin-bottom: 1rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .-mt-1 {
   margin-top: -0.25rem;
+}
+
+.-mt-7 {
+  margin-top: -1.75rem;
 }
 
 .mb-0 {
@@ -738,6 +767,10 @@ body {
 
 .ml-3 {
   margin-left: 0.75rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .ml-5 {
@@ -788,6 +821,14 @@ body {
   margin-top: -10px;
 }
 
+.-mt-5 {
+  margin-top: -1.25rem;
+}
+
+.-mt-4 {
+  margin-top: -1rem;
+}
+
 .block {
   display: block;
 }
@@ -822,6 +863,10 @@ body {
 
 .\!h-5 {
   height: 1.25rem !important;
+}
+
+.\!h-7 {
+  height: 1.75rem !important;
 }
 
 .\!h-8 {
@@ -876,6 +921,10 @@ body {
   height: 9rem;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
 .h-40 {
   height: 10rem;
 }
@@ -908,6 +957,10 @@ body {
   height: 14rem;
 }
 
+.h-\[26rem\] {
+  height: 26rem;
+}
+
 .h-\[40px\] {
   height: 40px;
 }
@@ -928,12 +981,24 @@ body {
   height: 100vh;
 }
 
+.\!h-4 {
+  height: 1rem !important;
+}
+
+.max-h-16 {
+  max-height: 4rem;
+}
+
 .max-h-32 {
   max-height: 8rem;
 }
 
 .max-h-40 {
   max-height: 10rem;
+}
+
+.max-h-60 {
+  max-height: 15rem;
 }
 
 .min-h-\[58rem\] {
@@ -970,6 +1035,10 @@ body {
 
 .\!w-5 {
   width: 1.25rem !important;
+}
+
+.\!w-7 {
+  width: 1.75rem !important;
 }
 
 .\!w-8 {
@@ -1046,6 +1115,10 @@ body {
 
 .w-36 {
   width: 9rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-40 {
@@ -1129,6 +1202,10 @@ body {
   width: 100vw;
 }
 
+.\!w-4 {
+  width: 1rem !important;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -1188,6 +1265,10 @@ body {
   animation: spin 1s linear infinite;
 }
 
+.cursor-move {
+  cursor: move;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1212,6 +1293,10 @@ body {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1296,6 +1381,10 @@ body {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-px {
@@ -1827,6 +1916,10 @@ body {
 
 .pr-10 {
   padding-right: 2.5rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .pr-8 {
@@ -3785,6 +3878,11 @@ input[type="checkbox"].c-checkbox:checked::after {
   opacity: 0.3;
 }
 
+.checked\:bg-royal-blue:checked {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 114 217 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:rounded-\[10px\]:hover {
   border-radius: 10px;
 }
@@ -3853,6 +3951,10 @@ input[type="checkbox"].c-checkbox:checked::after {
   color: rgb(251 251 251 / var(--tw-text-opacity, 1));
 }
 
+.focus\:border-none:focus {
+  border-style: none;
+}
+
 .focus\:border-royal-blue:focus {
   --tw-border-opacity: 1;
   border-color: rgb(2 114 217 / var(--tw-border-opacity, 1));
@@ -3914,6 +4016,10 @@ input[type="checkbox"].c-checkbox:checked::after {
 .group:focus .group-focus\:text-white-smoke {
   --tw-text-opacity: 1;
   color: rgb(251 251 251 / var(--tw-text-opacity, 1));
+}
+
+.peer:checked ~ .peer-checked\:block {
+  display: block;
 }
 
 .peer:checked ~ .peer-checked\:bg-white {

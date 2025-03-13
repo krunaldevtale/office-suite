@@ -737,6 +737,19 @@
                     </div>
                   </div>
                   <div class="p-4">
+                    <div class="flex gap-4 mb-3">
+                      <div class="relative w-10">
+                        <div class="w-10 h-10 rounded-lg bg-white-smoke"></div>
+                        <button class="absolute right-0 top-0 -mt-5" onclick="widgetClose('.form-radio')"><svg class="w-4 h-4 p-0"><use xlink:href="/public/images/icons.svg#close-file"></use></svg></button>
+                      </div>
+                      <div class="relative w-10">
+                        <div class="w-10 h-10 rounded-lg bg-white-smoke p-1"><svg class="w-8 h-8 p-0"><use xlink:href="/public/images/icons.svg#file-error"></use></div>
+                        <button class="absolute right-0 top-0 -mt-5" onclick="widgetClose('.form-radio')"><svg class="w-4 h-4 p-0"><use xlink:href="/public/images/icons.svg#close-file"></use></svg></button>
+                      </div>
+                      <div class="bg-white-smoke text-red-orange rounded-lg text-xs p-1">
+                        File is unsupported.<br/>Please use PNG, JPG, or PDF
+                      </div>
+                    </div>
                     <div class="white-button-active-one">
                       
                       <input
@@ -868,6 +881,7 @@
                       
                     </ul>
                   </div>
+                  <button class="bg-royal-blue text-white-smoke px-3 py-1 ml-4 rounded-lg">Buy now</button>
                 </div>
               </div>
               <div class="savemode hidden">

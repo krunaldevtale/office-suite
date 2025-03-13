@@ -10,7 +10,7 @@
     />
   </head>
   <body class="overflow-hidden">
-    <main class="flex flex-wrap h-screen bg-light-sky-blue">
+    <main class="userContainer flex flex-wrap h-screen bg-light-sky-blue">
       <!-- Header -->
       <header
         class="w-full py-4 px-6 pr-10 flex justify-between items-center relative"
@@ -39,38 +39,42 @@
         <div class="flex items-center gap-4">
           
             <!-- Notification Button -->
-            <button class="more-button md:flex items-center gap-2">
-                <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#notification"></use></svg> 
+            <button class="group more-button hover:bg-royal-blue rounded-full ">
+              <svg class="!h-10 !w-10  text-black group-hover:text-white">
+                <use xlink:href="/public/images/icons.svg#notification"></use>
+              </svg>
             </button>
-          
+              
+              
             <!--Notification Dropdown Menu -->
-            <div class="moredropdown hidden absolute top-1/2 right-20 w-96 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
-              <p class="font-semibold text-base">Notifications</p>
-              <div class="flex bg-light-sky-blue h-8 gap-3 mt-2">
+            <div class="moredropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-3/12 mx-auto mt-8 rounded-[20px] bg-white-smoke z-10">
+              <p class="font-semibold text-base p-4">Notifications</p>
+              <div class="flex bg-light-sky-blue h-8 gap-3 pl-4">
                 <p class="font-medium text-base p-1">All</p>
                 <p class="text-transparent-dark-gray font-medium text-base p-1"> Unread(2)</p><br/>
                 
               </div>
-              <div class="flex mt-2 flex-col">
+              <div class="flex flex-col p-4 pb-8 gap-4 ">
                 <p class="text-transparent-dark-gray font-medium text-sm">Today</p>
-                <div class="flex justify-between mt-2">
-                  <p class="font-medium text-base">Sahil singh</p>
-                  <div class="flex items-center gap-1">
-                    <p class="font-normal text-sm">42m ago</p>
-                    <div class="royal-blue w-2 h-2 rounded-full"></div>
-                  </div>
-                  
+                <div class="flex flex-col"> 
+                    <div class="flex justify-between">
+                      <p class="font-medium text-base">Sahil singh</p>
+                      <div class="flex items-center gap-1">
+                        <p class="font-normal text-sm">42m ago</p>
+                        <div class="royal-blue w-2 h-2 rounded-full"></div>
+                      </div>
+                    </div>
+                    <p class="text-sm font-normal">12 comments - essay writing</p>
                 </div>
-                <p class="text-sm font-normal">12 comments - essay writing</p>
-
-                <div class="flex mt-3 flex-col"> 
-                  <p class="text-transparent-dark-gray font-medium text-sm">Older</p>
-                  <div class="flex justify-between gap-1"> <p class="font-medium text-base">Kate</p>
-                  
-                    <p class="font-normal text-sm">26 feb</p></div>
                  
-                </div>
-                <p class="text-sm font-normal">Can edit - accounts</p>
+                <p class="text-transparent-dark-gray font-medium text-sm">Older</p>
+                  <div class="flex flex-col"> 
+                    <div class="flex justify-between gap-1"> 
+                      <p class="font-medium text-base">Kate</p>
+                      <p class="font-normal text-sm">26 feb</p>
+                    </div>
+                    <p class="text-sm font-normal">Can edit - accounts</p>
+                  </div>
               </div>
             </div>
           
@@ -159,9 +163,10 @@
            <p class="font-semibold text-3xl">User management</p>
            <div>  
              
-             <button class="flex items-center justify-center gap-6 absolute right-6 top-6 border border-royal-blue text-royal-blue py-2 px-4 rounded-lg w-28">
+             <button class="flex items-center justify-center gap-6 absolute right-6 top-6 border border-royal-blue text-royal-blue py-1 px-4 rounded-lg w-28 " id="back-btn">
                 <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#backbtn"></use></svg> 
                 <span>Back</span>
+             </button>
            </div>
          
            <p class="font-normal ">
@@ -181,7 +186,7 @@
                    
                  </div>
                
-                 <div class="flex justify-between relative">
+                 <div class="flex justify-between relative pb-2">
                    <label class="text-sm font-normal" >Enter email</label>
                  
                    <!-- Copy Icon -->
@@ -201,10 +206,10 @@
                  </div>
                  <div class="flex mt-2 flex-col">
                    <p class="text-sm font-normal mb-2"> Assign role</p>
-                   <div class="flex flex-row justify-between"> 
-                     <button class="royal-blue rounded-xl p-2 text-white-smoke">Admin</button>
-                     <button class="border border-charcoal-black rounded-xl p-2 text-transparent-dark-gray">user</button>
-                     <button class="border border-charcoal-black rounded-xl p-2 text-transparent-dark-gray">Manager</button>
+                   <div class="flex flex-row justify-between gap-2"> 
+                     <button  class="role-button border border-charcoal-black rounded-xl py-1 pl-4 pr-3 text-transparent-dark-gray">Admin</button>
+                     <button  class="role-button border border-charcoal-black rounded-xl py-1 pl-4 pr-3 text-transparent-dark-gray">user</button>
+                     <button  class="role-button border border-charcoal-black rounded-xl py-1 pl-4 pr-3 text-transparent-dark-gray">Manager</button>
                    </div>
                  </div>
                  <!--Set Permissions dropdown-->
@@ -219,9 +224,9 @@
                      
                    </ul>
                  </div>
-                  <div class="flex flex-row gap-6 mt-2"> 
-                   <button class="royal-blue rounded-xl p-2 text-white-smoke">Send</button>
-                   <button class="border border-red-orange rounded-xl p-2 text-red-orange">Cancel </button>
+                  <div class="flex flex-row gap-4 pt-2"> 
+                   <button class="role-button border border-charcoal-black rounded-xl py-1 px-4 text-transparent-dark-gray">Send</button>
+                   <button class="border border-red-orange rounded-xl py-1 px-4 text-red-orange">Cancel </button>
                  </div>
                </div>
              </div>

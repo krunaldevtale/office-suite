@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
   </head>
   <body>
     <main class="flex flex-col h-screen bg-light-sky-blue">
@@ -539,7 +540,60 @@
                       <span>Drop a PDF file here, or click to upload</span>
                       <input type="file" id="fileUpload" class="hidden" accept=".pdf"/>
                   </div>
-                </div>
+                  <div class="widgets absolute flex gap-4 p-5 mt-4 h-full w-full">
+                    <div class="flex flex-col gap-8">
+                      <div class="form-text relative hidden cursor-move">
+                        <button class="absolute right-0 top-0 -mt-7" onclick="widgetClose('.form-text')"><svg class="icon !w-7 !h-7"><use xlink:href="/public/images/icons.svg#close-file"></use></svg></button>
+                        <input type="text" class="p-2 rounded-full pl-4 focus:outline-none border border-dark-charcoal bg-transparent focus:border-none" placeholder="Add text" />
+                      </div>
+                      <div class="form-dropdown relative bg-white-smoke rounded-full cursor-move hidden mx-4">
+                        <input type="checkbox" id="dropdown-toggle" class="hidden" />
+                        <label for="dropdown-toggle" class="selected-item text-sm cursor-pointer flex justify-between items-center pr-4 bg-white rounded-full">
+                          <input type="text" class="p-2 rounded-full pl-4 focus:outline-none bg-transparent" placeholder="Label" />
+                          <span><i class="ri-arrow-down-s-fill cursor-pointer"></i></span>
+                        </label>
+                        <div id="dropdown-content" class="rounded-full text-sm p-0 bg-white-smoke hidden absolute w-full inset-x-0 shadow-lg z-10 overflow-auto max-h-16">
+                          <div>
+                            <input type="text" class="p-2 pl-4 focus:outline-none bg-transparent text-dark-charcoal" placeholder="Add text" onclick="event.stopPropagation();" />
+                          </div>
+                        </div>
+                        <button class="absolute right-0 top-0 -mt-7" onclick="widgetClose('.form-dropdown')">
+                          <svg class="icon !w-7 !h-7"><use xlink:href="/public/images/icons.svg#close-file"></use></svg>
+                        </button>
+                      </div>                      
+                      <div class="flex gap-4 pl-3">
+                        <div class="form-radio relative w-10 hidden cursor-move">
+                          <input type="radio" class="checked:bg-royal-blue h-4 w-4" checked/>
+                          <button class="absolute right-0 top-0 -mt-7" onclick="widgetClose('.form-radio')"><svg class="icon !w-7 !h-7"><use xlink:href="/public/images/icons.svg#close-file"></use></svg></button>
+                        </div>
+                        <div class="form-checkbox relative w-10 hidden cursor-move">
+                          <input type="checkbox" class="checked:bg-royal-blue h-4 w-4" checked/>
+                          <button class="absolute right-0 top-0 -mt-7" onclick="widgetClose('.form-checkbox')"><svg class="icon !w-7 !h-7"><use xlink:href="/public/images/icons.svg#close-file"></use></svg></button>
+                        </div>
+                      </div>                                                                 
+                    </div>
+                    <div class="form-calendar bg-white-smoke relative shadow-lg rounded-3xl p-5 w-96 h-[26rem] hidden cursor-move">
+                      <p class="pl-2">select date</p>
+                      <div class="flex justify-between items-center pl-2"><span class="text-2xl" id="dateDisplay">Mon, Aug 17</span><svg class="icon !p-[0.7rem]"><use xlink:href="/public/images/icons.svg#edit"></use></svg></div>
+                      <div class="flex justify-between items-center mb-3">                  
+                          <div id="monthYearDropdown" class="relative cursor-pointer">
+                              <div class="px-2 py-1"><span id="monthYearLabel">Loading...</span> <i class="ri-arrow-down-s-fill"></i></div>
+                              <div id="dropdownContent" class="absolute left-0 mt-1 bg-white border rounded shadow-lg hidden max-h-60 overflow-y-auto">
+                              </div>
+                          </div>
+                          <div class="flex gap-2">
+                            <button id="prevMonth"><i class="ri-arrow-left-s-line ri-xl"></i></button>
+                            <button id="nextMonth"><i class="ri-arrow-right-s-line ri-xl"></i></button>
+                          </div>
+                      </div>
+                      <div class="grid grid-cols-7 text-center font-bold">
+                          <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+                      </div>
+                      <div id="calendarDays" class="grid grid-cols-7 text-center mt-2"></div>
+                      <button class="absolute right-0 top-0 -mt-7" onclick="widgetClose('.form-calendar')"><svg class="icon !w-7 !h-7"><use xlink:href="/public/images/icons.svg#close-file"></use></svg></button>
+                    </div>
+                  </div>
+                </div> 
               </div>
             </div>
             <div class="right-panel hidden">
@@ -829,23 +883,23 @@
                     <label class="text-sm font-bold">Create forms</label>
                     <p class="text-transparent-dark-gray text-xs">Add Field Buttons</p>
                     <div class="flex items-center gap-2 mt-2">
-                      <button class="white-button-active !w-11"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#text-field"></use></svg></button>                        
+                      <button class="white-button-active !w-11 text-field" onclick="widget('.form-text')"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#text-field"></use></svg></button>                        
                       <span class="text-nowrap text-sm">Add Text Field</span>
                     </div>
                     <div class="flex items-center gap-2 mt-2">
-                      <button class="white-button-active !w-11"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#checkbox"></use></svg></button>                        
+                      <button class="white-button-active !w-11" onclick="widget('.form-checkbox')"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#checkbox"></use></svg></button>                        
                       <span class="text-nowrap text-sm">Add Checkbox</span>
                     </div>
                     <div class="flex items-center gap-2 mt-2">
-                      <button class="white-button-active !w-11"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#radio-button"></use></svg></button>                        
+                      <button class="white-button-active !w-11" onclick="widget('.form-radio')"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#radio-button"></use></svg></button>                        
                       <span class="text-nowrap text-sm">Add Radio Button</span>
                     </div>
                     <div class="flex items-center gap-2 mt-2">
-                      <button class="white-button-active !w-11"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#dropdown-menu"></use></svg></button>                        
+                      <button class="white-button-active !w-11" onclick="widget('.form-dropdown')"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#dropdown-menu"></use></svg></button>                        
                       <span class="text-nowrap text-sm">Add Dropdown</span>
                     </div>
                     <div class="flex items-center gap-2 mt-2">
-                      <button class="white-button-active !w-11"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#created-date"></use></svg></button>                        
+                      <button class="white-button-active !w-11" onclick="widget('.form-calendar')"><svg class="h-5 w-10"><use xlink:href="/public/images/icons.svg#created-date"></use></svg></button>                        
                       <span class="text-nowrap text-sm">Add Date Picker</span>
                     </div>
                   </div>                
@@ -947,6 +1001,7 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="/public/js/right-panel.js"></script>
     <script src="/public/js/zoom.js"></script>
     <script src="/public/js/ribbon.js"></script>
@@ -954,5 +1009,6 @@
     <script src="/public/js/menu-dropdown.js"></script>
     <script src="/public/js/dropdown.js"></script>
     <script src="/public/js/custom-select.js"></script>
+    <script src="/public/js/calendar.js"></script>
   </body>
 </html>

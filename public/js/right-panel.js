@@ -65,7 +65,7 @@ function rightPanel(title, subTitle, targetClass) {
         }
 
         // Handle `white-button-active` elements for specific target class
-            $(".white-button-active").removeClass("inactive").prop('disabled', true);
+            $(".white-button-active").removeClass("inactive").prop('disabled', false);
             $('.white-button-active').not(`.${targetClass} .white-button-active, .${targetClass} .white-button-active`).each(function () {
                 $(this).addClass("inactive").prop('disabled', true);
             });
@@ -121,3 +121,38 @@ $('.forget-password').on('click', function() {
 function border() {
     $(".dotted-border").removeClass("hidden");
 }
+//widget in create forms of preserve
+function widget(id){
+    if ($(".widget").hasClass("hidden")) {
+        $(".widget").removeClass("hidden");
+        $(".upload-section").hide();
+    }
+    else{
+        $(".upload-section").hide();
+        $(id).removeClass("hidden");
+        $(id).draggable({
+            containment:  ".widgets",
+            start: function() {
+                $(this).css("z-index", 9999);
+            },
+            stop: function() {
+                $(this).css("z-index", 1);
+            }
+        });
+    }
+}
+function widgetClose(id){
+    $(id).addClass("hidden");
+}
+$(".upload-section").show();
+
+const dropdownToggle = document.getElementById("dropdown-toggle");
+const dropdownContent = document.getElementById("dropdown-content");
+
+dropdownToggle.addEventListener("change", function () {
+    if (dropdownToggle.checked) {
+        dropdownContent.classList.remove("hidden");
+    } else {
+        dropdownContent.classList.add("hidden");
+    }
+});

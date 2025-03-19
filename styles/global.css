@@ -931,7 +931,12 @@ input[type="checkbox"].c-checkbox:checked::after {
 .star4 {
   margin-left: -220%;
 }
-
+.\!w-6 {
+  width: 1.5rem !important;
+}
+.\!h-6 {
+  height: 1.5rem !important;
+}
 .custom-checkbox {
   width: 20px;
   height: 20px;

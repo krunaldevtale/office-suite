@@ -30,10 +30,41 @@
             </div>
         
             <!-- Notification bell icon -->
-            <div class="w-10 h-10 flex justify-center items-center">
-                <i class="ri-notification-4-line text-2xl text-white"></i>
-            </div>
-        
+            <button class=" more-button  ">
+                <svg class="h-6 w-6">
+                  <use xlink:href="/public/images/icons.svg#Vector"></use>
+                </svg>
+              </button>
+              <div class="moredropdown hidden absolute top-1/2 right-20 w-8/12 mx-auto mt-8 rounded-[20px] bg-white-smoke z-10">
+                <p class="font-semibold text-base p-4">Notifications</p>
+                <div class="flex bg-light-sky-blue h-8 gap-3 pl-4">
+                  <p class="font-medium text-base p-1">All</p>
+                  <p class="text-transparent-dark-gray font-medium text-base p-1"> Unread(2)</p><br/>
+                  
+                </div>
+                <div class="flex flex-col p-4 pb-8 gap-4 ">
+                  <p class="text-transparent-dark-gray font-medium text-sm">Today</p>
+                  <div class="flex flex-col"> 
+                      <div class="flex justify-between">
+                        <p class="font-medium text-base">Sahil singh</p>
+                        <div class="flex items-center gap-1">
+                          <p class="font-normal text-sm">42m ago</p>
+                          <div class="royal-blue w-2 h-2 rounded-full"></div>
+                        </div>
+                      </div>
+                      <p class="text-sm font-normal">12 comments - essay writing</p>
+                  </div>
+                   
+                  <p class="text-transparent-dark-gray font-medium text-sm">Older</p>
+                    <div class="flex flex-col"> 
+                      <div class="flex justify-between gap-1"> 
+                        <p class="font-medium text-base">Kate</p>
+                        <p class="font-normal text-sm">26 feb</p>
+                      </div>
+                      <p class="text-sm font-normal">Can edit - accounts</p>
+                    </div>
+                </div>
+              </div>
             <!-- User profile image inside the button -->
             <button class="flex items-center justify-center">
                 <img src="/public/images/user.png" alt="Profile" class="rounded-full h-10 w-10">
@@ -129,5 +160,14 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/public/js/sidebar.js"></script>
+    <script src="/public/js/users.js"></script>
+    <script src="/public/js/dropdown.js"></script>
+    <script src="/public/js/sidebar2.js"></script>
+    <script src="/public/js/table-animation.js"></script>
+  
+  
+  <script src="/public/js/custom-select.js"></script>
 </body>
 </html>

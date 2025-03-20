@@ -72,9 +72,9 @@ $(document).ready(function () {
     });
   
     // Toggle Password Visibility
-    $("#toggleIcon").click(function () {
-      let passwordInput = $("#password");
-      let icon = $("#toggleIcon");
+    $(".toggleIcon").click(function () {
+      let passwordInput = $(".password");
+      let icon = $(".toggleIcon");
   
       if (passwordInput.attr("type") === "password") {
         passwordInput.attr("type", "text");
@@ -95,5 +95,6 @@ $(document).ready(function () {
       $("#form-container").hide();
       $("#chooseAccount").show();
     });
+    
   });
   

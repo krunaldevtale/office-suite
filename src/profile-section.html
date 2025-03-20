@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/main.css" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+</head>
+<body >
+    <main class="min-h-screen w-screen profile-bg ">
+    <header class="w-full py-4 px-6 pr-10 flex justify-between items-center relative">
+        <div class="flex items-center gap-4">
+        
+          <!-- Logo -->
+          <h1 class="logo-title text-white">Logo</h1>
+        </div>
+        <!-- Search bar -->
+        <div class="relative w-[27%] hidden md:block">
+          <span class="absolute top-3 left-3 ">
+            <svg class="icon !w-5 !h-5 !p-0"><use xlink:href="/public/images/icons.svg#search"></use></svg>                              
+          </span>
+          <input
+            type="text"
+            placeholder="Search your PDF library or PDF documents..."
+            class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke focus:outline-none placeholder:text-dark-charcoal placeholder:text-base"
+          />
+          <div class="dropdown hidden absolute w-full mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
+            <ul class="text-sm">
+              <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-t-lg">suggestion 1</a></li>
+              <li><a href="#" class="px-4 py-2 flex items-center gap-3 hover:bg-transparent-light-sky-blue hover:rounded-b-lg">suggestion 2</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Notification button -->
+        <div class="flex items-center gap-4">
+          <button class="drop-button hidden md:flex items-center gap-2">
+            <svg class=" h-6 w-6"><use xlink:href="/public/images/icons.svg#Vector"></use></svg>                              
+          </button>
+          <!-- Notification dropdown -->
+          <div class="dropdown hidden absolute top-1/2 right-20 w-8/12 sm:w-5/12 md:w-4/12 lg:w-3/12 xl:w-3/12 mx-auto mt-8 rounded-[20px] bg-white-smoke z-10">
+            <p class="font-semibold text-base p-4">Notifications</p>
+            <div class="flex bg-light-sky-blue h-8 gap-3 pl-4">
+              <p class="font-medium text-base p-1">All</p>
+              <p class="text-transparent-dark-gray font-medium text-base p-1"> Unread(2)</p><br/>
+            </div>
+            <div class="flex flex-col p-4 pb-8 gap-4">
+              <p class="text-transparent-dark-gray font-medium text-sm">Today</p>
+              <div class="flex flex-col"> 
+                <div class="flex justify-between">
+                  <p class="font-medium text-base">Sahil singh</p>
+                  <div class="flex items-center gap-1">
+                    <p class="font-normal text-sm">42m ago</p>
+                    <div class="royal-blue w-2 h-2 rounded-full"></div>
+                  </div>
+                </div>
+                <p class="text-sm font-normal">12 comments - essay writing</p>
+              </div>
+              <p class="text-transparent-dark-gray font-medium text-sm">Older</p>
+              <div class="flex flex-col"> 
+                <div class="flex justify-between gap-1"> 
+                  <p class="font-medium text-base">Kate</p>
+                  <p class="font-normal text-sm">26 feb</p>
+                </div>
+                <p class="text-sm font-normal">Can edit - accounts</p>
+              </div>
+            </div>
+          </div>  
+          <!-- Profile button -->
+          <div>       
+            <img src="/public/images/user.png" alt="Profile" class="rounded-full h-8 w-8">
+          </div>
+        </div>
+      </header>
+      <!-- Mobile search bar -->
+      <div class="md:hidden relative w-full pb-4 px-6">
+          <span class="absolute left-10 top-1/4 mt-1.5 transform -translate-y-1/2">
+            <i class="ri-search-line"></i>
+          </span>
+          <input
+            type="text"
+            placeholder="Search your PDF library or documents..."
+            class="drop-button border rounded-lg px-10 py-2 w-full bg-white-smoke"
+          />
+          <div class="dropdown hidden absolute w-11/12 mt-2 bg-white-smoke border border-dark-gray shadow-md rounded-lg z-10">
+            <ul class="text-sm">
+              <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-mail-add-line"></i>Attach Email</a></li>
+              <li><a href="#" class="px-4 py-2 flex items-center gap-3"><i class="ri-download-line"></i>Downloads</a></li>
+            </ul>
+          </div>
+      </div>
+    </header>
+   
+    <div class="flex justify-end">
+        <div class="bg-white-smoke rounded-tl-3xl min-h-screen w-[85%] relative">
+            <div class="flex flex-row items-center relative">  
+                <img src="../public/images/profile-img.jpeg" alt="profile-image" class="w-36 h-36 mt-8 ml-16 rounded-full">
+            
+                <!-- Pencil Icon with Clickable Dropdown -->
+                <div id="" class="more-button absolute bottom-2 right-[62rem] bg-royal-blue p-1 rounded-full cursor-pointer">
+                    <svg class="w-6 h-6 text-white">
+                        <use xlink:href="/public/images/icons.svg#pencil"></use>
+                    </svg>
+                </div>
+            
+                <!-- Dropdown Menu (Initially Hidden) -->
+                <div class="moredropdown absolute top-44 left-44 w-40 bg-white shadow-lg rounded-lg hidden z-[9999]">
+                    <ul class="py-2 flex flex-col">
+                        <li class="flex items-center gap-2 py-1 px-2 font-normal text-base cursor-pointer  text-nowrap">
+                            <svg class="w-5 h-5">
+                                <use xlink:href="/public/images/icons.svg#open"></use>
+                            </svg>
+                            Change Picture
+                        </li>
+                        <li class="flex items-center gap-2 py-1 px-2 font-normal text-base cursor-pointer text-nowrap">
+                            <svg class="w-5 h-5">
+                                <use xlink:href="/public/images/icons.svg#delete"></use>
+                            </svg>
+                            Remove Picture
+                        </li>
+                    </ul>
+                </div>
+                
+            
+                <div class="pl-10 pt-4">
+                    <p class="text-2xl font-semibold">Rachel Saket</p>
+                    <a href="#" class="font-normal text-base text-royal-blue">Rachelsaket@gmail.com</a>
+                </div>
+            </div>
+            <button class="flex items-center justify-center gap-6 absolute right-6 top-6 border border-royal-blue text-royal-blue py-1 px-4 rounded-lg w-28 " id="back-btn">
+                <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#backbtn"></use></svg> 
+                <span>Back</span>
+             </button>
+             <button class="absolute right-6 top-32 bg-royal-blue rounded-lg text-white px-4 py-2 flex items-center gap-2 usermgt-btn">
+                <svg class="w-5 h-5">
+                    <use xlink:href="/public/images/icons.svg#manage-accounts"></use>
+                </svg> 
+                <span class="whitespace-nowrap">User Management</span>
+                <svg class="w-4 h-4">
+                    <use xlink:href="/public/images/icons.svg#next-arrow"></use>
+                </svg> 
+            </button>
+               <!-- Form Container -->
+            <div class="relative pt-6 px-4 md:px-16">
+             
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                    
+                    <div class="space-y-4">
+                       
+                        <div>
+                            <label for="name" class="block font-normal text-base">Name</label>
+                            <input
+                                id="name"
+                                name="name"
+                                type="text"
+                                placeholder="Rachel Saket"
+                                class="mt-1 block w-full rounded-lg border border-transparent-dark-gray bg-transparent py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            />
+                        </div>
+            
+                    
+                        <div>
+                            <label for="email" class="block font-normal text-base">Email address</label>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                placeholder="rachelsaket@gmail.com"
+                                class="mt-1 block w-full rounded-lg border border-transparent-dark-gray bg-transparent py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            />
+                        </div>
+            
+                        
+                        <div>
+                            <label for="region" class="block font-normal text-base">Region</label>
+                            <input
+                                id="region"
+                                name="region"
+                                type="text"
+                                placeholder="India"
+                                class="mt-1 block w-full rounded-lg border border-transparent-dark-gray bg-transparent py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            />
+                        </div>
+                    </div>
+            
+                    
+                    <div class="space-y-4">
+                        
+                        <div>
+                            <label for="company" class="block font-normal text-base">Company</label>
+                            <input
+                                id="company"
+                                name="company"
+                                type="text"
+                                placeholder="Aibuzz"
+                                class="mt-1 block w-full rounded-lg border border-transparent-dark-gray bg-transparent py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            />
+                        </div>
+            
+                       
+                        <div>
+                            <label for="designation" class="block font-normal text-base">Designation</label>
+                            <input
+                                id="designation"
+                                name="designation"
+                                type="text"
+                                placeholder="UI/UX"
+                                class="mt-1 block w-full rounded-lg border border-transparent-dark-gray bg-transparent py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            />
+                        </div>
+                        <div>
+                            <button class="mt-9 w-full border border-red-orange text-red-orange py-2 px-6 rounded-lg flex text-nowrap justify-center gap-2 items-center">
+                                <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#logout"></use></svg>
+                                <span class="font-normal text-base"> Logout</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-span-2">
+                        <h2 class="text-xl font-semibold text-2xl mb-4">Change Password</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                       
+                            <div class="relative">
+                                <label for="old-password" class="block font-normal text-base">Old Password</label>
+                                <div class="relative">
+                                    <input
+                                       
+                                        name="old-password"
+                                        type="password"
+                                        placeholder="Rachel14.#we"
+                                        class="password mt-1 block w-full rounded-lg border border-transparent-dark-gray bg-transparent py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                    />
+                                    <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 h-6 w-6 cursor-pointer toggleIcon">
+                                        <use xlink:href="/public/images/icons.svg#Group"></use>
+                                    </svg>
+                                </div>
+                              <a href="#"><p class="text-end font-normal text-base">Forgot Password?</p></a>  
+                                 
+                            </div>
+                            
+            
+                           
+                            <div class="relative">
+                                <label for="old-password" class="block font-normal text-base">New Password</label>
+                                <div class="relative">
+                                    <input
+                                     
+                                        name="new-password"
+                                        type="password"
+                                        placeholder="Rachel14.#we"
+                                        class="password  mt-1 block w-full rounded-lg border border-transparent-dark-gray bg-transparent py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                    />
+                                    <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 h-6 w-6 cursor-pointer toggleIcon">
+                                        <use xlink:href="/public/images/icons.svg#Group"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+            
+                    
+                        <div class="mt-4">
+                            <button class="w-[32rem] bg-royal-blue text-white py-2 px-6 rounded-lg ">
+                                <span class="font-normal text-base">Save</span> 
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-span-2">
+                        <h2 class="text-xl font-semibold text-2xl mb-4">Contact Support</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                           
+                            <div>
+                                <label for="email" class="block font-normal text-base">Email address</label>
+                                <input
+                                    id="emailadd"
+                                    name="email"
+                                    type="text"
+                                    placeholder="rachelsaket@gmail.com"
+                                    class="mt-1 block w-full rounded-lg border border-transparent-dark-gray bg-transparent py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+                                
+                            </div>
+            
+                            
+                            <div>
+                                <label for="issuetype" class="block font-normal text-base">Issue Type</label>
+                                <input
+                                    id="Issue"
+                                    name="issue"
+                                    type="text"
+                                    placeholder="Login issue"
+                                    class="mt-1 block w-full rounded-lg border border-transparent-dark-gray bg-transparent py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </div>
+                        </div>
+            
+                        <div class="col-span-2 space-y-4 pt-4">
+                            
+                
+                           
+                            <div>
+                                <label for="description" class="block font-normal text-base">Write your description</label>
+                                <textarea
+                                    id="description"
+                                    name="description"
+                                    placeholder="When i tried to login with account it say’s “Due to unrecognized  face, your account has been blocked"
+                                    rows="4"
+                                    class="mt-1 block w-full rounded-lg border border-transparent-dark-gray bg-transparent py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                ></textarea>
+                            </div>
+                        </div>
+                       
+                        
+                    </div>
+                    <div class="mt-1 ">
+                        <button class="w-[32rem] bg-royal-blue text-white py-2 px-6 rounded-lg ">
+                          <span class="font-normal text-base">Submit</span> 
+                        </button>
+                       
+                    </div>
+                    <div class="mt-1 flex  flex-col items-end">
+                       <p class="font-normal text-base"> Join our family, follow us on socials for latest update </p>
+                       <div class="flex flex-row gap-1"><svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#instagram"></use></svg> 
+                        <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#X"></use></svg> 
+                        <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#facebook"></use></svg> 
+                        <svg class=" w-5 h-5"><use xlink:href="/public/images/icons.svg#web"></use></svg> </div>
+                       
+                    </div>
+                </form>
+            </div>
+            
+         
+            
+        </div>
+        
+      </div>
+      
+
+</main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/public/js/sidebar.js"></script>
+<script src="/public/js/users.js"></script>
+<script src="/public/js/dropdown.js"></script>
+<script src="/public/js/sidebar2.js"></script>
+<script src="/public/js/table-animation.js"></script>
+
+
+<script src="/public/js/custom-select.js"></script>
+<script src="/public/js/forms.js"></script>
+</body>
+</html>

@@ -1014,10 +1014,25 @@ input[type="checkbox"].c-checkbox:checked::after {
   height: 36px;
 }
 
+.profile-bg{
+  background-image: url('../public/images/Profile-bg.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;}
 
+.w-50{
+  width: 12.5rem;
+}
 
-
-
+.h-50{
+  height: 12.5rem;
+}
+.ml-16{
+  margin-left: 4rem;
+}
+.mt-9{
+  margin-top: 2.75rem;
+}
 
 
 

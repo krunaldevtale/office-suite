@@ -782,6 +782,13 @@ users.forEach((user) => {
     $(this).addClass("royal-blue text-white-smoke"); // Add style only to the clicked button
 });
 
+    $(".profile-button").click(function(){
+        window.location.href="profile-section.html"
+    })
+ 
+    $(".usermgt-btn").click(function(){
+        window.location.href="all-users.html"
+    })
 });
 
 

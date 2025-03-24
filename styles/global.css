@@ -830,9 +830,8 @@ input[type="checkbox"].c-checkbox:checked::after {
 }
 
 
-#upload-dropdown-menu {
-  margin-top: 11%; 
-  margin-left: 10%;   /* Adds 20px margin to the left */
+.pt-20{
+  padding-top: 5rem;
 }
 
 
@@ -988,7 +987,12 @@ input[type="checkbox"].c-checkbox:checked::after {
 }
 
 
-
+.filter-active{
+ color: royalblue;
+}
+.selected-filter{
+  color:var(--transparent-dark-gray)
+}
 
 .icon-filemanager{
   padding: 0.4rem;

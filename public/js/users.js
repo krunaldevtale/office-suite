@@ -156,7 +156,7 @@ users.forEach((user) => {
 
 //back button functionailty.
    $("#back-btn").click(function(){
-    window.location.href="../home-screen.html"
+    window.history.back();
    })
 
    
@@ -171,19 +171,39 @@ users.forEach((user) => {
         window.location.href="profile-section.html"
     })
  
+    $(".home-profile-btn").click(function(){
+      window.location.href="/src/profile-section.html"
+    })
     $(".usermgt-btn").click(function(){
         window.location.href="all-users.html"
     })
 
     $(".filter-btn").on("click", function () {
-      $(".filter-btn").removeClass("text-royal-blue");
-      $(this).addClass("text-royal-blue");
+      $(".filter-btn").removeClass("filter-active");
+      $(this).addClass("filter-active");
        $(".filter-content").addClass("hidden");
 
       
       let target = $(this).data("filter");
       $("#" + target).removeClass("hidden");
   });
+ 
+    $(".filter-content").removeClass("selected-filter");
+    $(this).addClass("selected-filter");
+    
+    
+   
+   
+    $("#type li:first-child").removeClass("text-transparent-dark-gray").addClass("text-dark-charcoal");
+
+  $(".filter-content li").click(function () {
+    // Remove highlight from all list items in the same parent UL
+    $(this).siblings().removeClass("text-dark-charcoal").addClass("text-transparent-dark-gray");
+
+    // Highlight only the clicked item
+    $(this).removeClass("text-transparent-dark-gray").addClass("text-dark-charcoal");
+  });
+    
 });
 
 

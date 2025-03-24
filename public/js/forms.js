@@ -84,6 +84,21 @@ $(document).ready(function () {
         icon.attr("xlink:href", "public/images/icons.svg#eyeicon");
     }
     });
+
+    $(".toggleNewPassword").click(function () {
+      let passwordInput = $(this).siblings(".newpassword"); // Get only the related password field
+      let icon = $(".toggleNewPassword"); // Select the correct icon inside SVG
+  
+      if (passwordInput.attr("type") === "password") {
+        passwordInput.attr("type", "text");
+        icon.attr("xlink:href", "public/images/icons.svg#eyeline"); // Eye open
+      } else {
+        passwordInput.attr("type", "password");
+        icon.attr("xlink:href", "public/images/icons.svg#eyeicon"); // Eye closed
+      }
+    });
+
+    
   
     // Initially Hide Unnecessary Sections
     $("#capture-image").hide();

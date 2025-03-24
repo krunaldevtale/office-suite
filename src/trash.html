@@ -43,14 +43,14 @@
       <div class="flex items-center gap-4">
           
         <!-- Notification Button -->
-        <button class="more-button md:flex items-center gap-2">
-          <svg class="icon-notification ">
+        <button class="group more-button hover:bg-royal-blue rounded-full">
+          <svg class="!h-10 !w-10 text-black group-hover:text-white">
             <use xlink:href="/public/images/icons.svg#notification"></use>
           </svg>
         </button>
       
         <!--Notification Dropdown Menu -->
-        <div class="moredropdown hidden absolute top-1/2 right-20 w-96 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-10">
+        <div class="moredropdown hidden absolute top-1/2 right-20 w-96 mx-auto mt-8 border border-dark-gray rounded-lg shadow-lg bg-white-smoke p-4 z-[9999]">
           <p class="font-semibold text-base">Notifications</p>
           <div class="flex bg-light-sky-blue h-8 gap-3 mt-2">
             <p class="font-medium text-base p-1">All</p>
@@ -84,7 +84,7 @@
       
       
       <!-- Profile button -->
-      <button class="drop-button">
+      <button class="drop-button profile-button">
         <img
           src="/public/images/user.png"
           alt="Profile"
@@ -195,6 +195,311 @@
                       <span>Back</span>
                   </div>
                   </a>
+                  <button
+                  id="filterBtn"
+                  class="more-button flex items-center justify-center gap-2 absolute right-6 top-[6.5rem] royal-blue text-white py-1 px-4 rounded-lg z-10"
+                >
+                  <svg class="w-5 h-5">
+                    <use xlink:href="/public/images/icons.svg#filter"></use>
+                  </svg>
+                  <span>Filter</span>
+                </button>
+                <div
+                id="dropdown"
+                class="moredropdown hidden absolute right-6 top-[8.5rem] h-80 bg-white border border-transparent-dark-gray rounded-2xl shadow-md w-80 z-[9999]"
+              >
+                <div class="grid grid-cols-2 gap-4">
+                  <!-- First Column: Filter Options -->
+                  <div
+                    class="bg-light-sky-blue rounded-tl-2xl h-80 rounded-bl-2xl"
+                  >
+                    <p class="py-3 pl-6 font-semibold">Filters</p>
+                    <hr />
+                    <ul class="pt-1">
+                      <li
+                        class="py-1 pl-6 cursor-pointer filter-btn font-normal text-base filter-active"
+                        data-filter="type"
+                      >
+                        Type
+                      </li>
+                      <li
+                        class="py-1 pl-6 cursor-pointer filter-btn font-normal text-base"
+                        data-filter="owner"
+                      >
+                        Owner
+                      </li>
+                      <li
+                        class="py-1 pl-6 cursor-pointer filter-btn font-normal text-base"
+                        data-filter="access-level"
+                      >
+                        Access Level
+                      </li>
+                      <li
+                        class="py-1 pl-6 cursor-pointer filter-btn flex text-nowrap font-normal text-base"
+                        data-filter="recent-activity"
+                      >
+                        Recent Activity
+                      </li>
+                      <li
+                      class="py-1 pl-6 cursor-pointer filter-btn flex text-nowrap font-normal text-base"
+                      data-filter="Last-Modified"
+                    >
+                      Last Modified
+                    </li>
+                    <li
+                    class="py-1 pl-6 cursor-pointer filter-btn flex text-nowrap font-normal text-base"
+                    data-filter="Shared"
+                  >
+                    Shared
+                  </li>
+                  <li
+                  class="py-1 pl-6 cursor-pointer filter-btn flex text-nowrap font-normal text-base"
+                  data-filter="Size"
+                >
+                 Size
+                </li>
+                    </ul>
+                  </div>
+
+                  <!-- Second Column: Filter Content (Dynamically Updated) -->
+
+                  <div class="flex flex-col gap-2">
+                    <ul class="flex items-center pt-1 justify-between">
+                      <li
+                        class="cursor-pointer text-royal-blue font-normal text-base"
+                        id="save-filters"
+                      >
+                        Save
+                      </li>
+                      <li
+                        class="cursor-pointer pr-2 text-red-orange font-normal text-base"
+                        id="clear-filters"
+                      >
+                        Clear All
+                      </li>
+                    </ul>
+                    <ul id="type" class="filter-content pt-4">
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base cursor-pointer  text-transparent-dark-gray"
+                      >
+                        Excel
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                        Word
+                        <svg class="w-4 h-4 flex-shrink-0 ">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 text-nowrap font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                       Powerpoint
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 text-nowrap font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                       PDF
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                    </ul>
+
+                    <ul id="owner" class="filter-content hidden pt-4">
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base cursor-pointer"
+                      >
+                       Me
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                        Organization
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 text-nowrap font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                        External
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                     
+                    </ul>
+
+                    <ul id="access-level" class="filter-content hidden pt-4">
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base cursor-pointer"
+                      >
+                       Can edit
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                       View only
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 text-nowrap font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                        Restricted
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                    </ul>
+
+                    <ul id="recent-activity" class="filter-content hidden pt-4">
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base cursor-pointer"
+                      >
+                        Downloaded
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                        Uploaded
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 text-nowrap font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                        Edited
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 text-nowrap font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                        Shared
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                    <ul id="Last-Modified" class="filter-content hidden pt-4">
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base cursor-pointer"
+                      >
+                       Today
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                       Last 7 Days
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 text-nowrap font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                        Last 30 Days
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 text-nowrap font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                        Older
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                    <ul id="Shared" class="filter-content hidden pt-4">
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base cursor-pointer"
+                      >
+                       Only me
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                      With me
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 text-nowrap font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                        Organization
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 text-nowrap font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                        Public
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                    <ul id="Size" class="filter-content hidden pt-4">
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base cursor-pointer"
+                      >
+                      Less &lt; 10MB
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                       10 MB -100 MB
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                      <li
+                        class="flex items-center justify-between px-3 py-2 text-nowrap font-normal text-base text-transparent-dark-gray cursor-pointer"
+                      >
+                        More &gt; 100 MB
+                        <svg class="w-4 h-4 flex-shrink-0">
+                          <use xlink:href="/public/images/icons.svg#tick"></use>
+                        </svg>
+                      </li>
+                     
+                    </ul>
+                  </div>
+                </div>
+              </div>
                 </div>
               </div>
       
@@ -205,396 +510,119 @@
 
                 
               
-                <div class="mt-6 ml-5 flex items-center gap-2">
-                    <input type="checkbox" id="bookmarks" name="bookmarks" class="custom-checkbox">
-                    <label for="bookmarks" class="text-base font-normal text-dark-charcoal ">Bookmarked</label>
-                </div>
                 
                 
 
             
             
-              <div class="w-full mt-4 overflow-x-auto">
-                <table class="w-full border-collapse  min-w-max">
-                <thead class="bg-light-sky-blue w-full text-base font-medium text-dark-charcoal">
-                    <tr>
-                      <th class="py-2 px-10 text-left">File Name</th>
-                       
-                        <th class="py-2 px-10 text-left relative">
-                          <!-- Dropdown Button for Type -->
-                          <button class="dropdown-button flex items-center gap-1 ">
-                              Type <svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
-                          </button>
-                          <!-- Dropdown Menu for Type -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-md bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
-                              <ul class="text-base text-dark-charcoal">
-                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal">Excel</a></li>
-                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal">PDF</a></li>
-                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal">Word</a></li>
-                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal">Powerpoint</a></li>
-                              </ul>
-                          </div>
-                      </th>
-                      
-                      
-                    
-                       
-
-                        <th class="py-2 px-10 text-left relative">
-                          <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1 ">
-                            Owner <svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
-                          </button>
-                          <!-- Dropdown Menu for Owner -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
-                              <ul class="text-base text-dark-charcoal">
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Owned by me</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Owned by organization</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">External owner</a></li>
-                              </ul>
-                          </div>
-                      </th>
-                        
-                        <th class="py-2 px-10 text-left relative">
-                          <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1">
-                            Collaborations<svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
-                          </button>
-                          <!-- Dropdown Menu for Owner -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
-                              <ul class="text-base text-dark-charcoal">
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Only me</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Shared with me</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Shared in organization</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Public files</a></li>
-                              </ul>
-                          </div>
-                      </th>
-                      
-
-                        <th class="py-2 px-10 text-left relative">
-                          <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1">
-                            Trashed Date<svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
-                          </button>
-                          <!-- Dropdown Menu for Owner -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
-                              <ul class="text-base text-dark-charcoal">
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Today</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Last 7 Days</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Last 30 days</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Older</a></li>
-                              </ul>
-                          </div>
-                      </th>
-                        
-                        <th class="py-2 px-10 text-left relative">
-                          <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1 ">
-                            Size<svg class=" w-6 h-6"><use xlink:href="/public/images/icons.svg#downarrow"></use></svg>
-                          </button>
-                          <!-- Dropdown Menu for Owner -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal ">
-                              <ul class="text-base text-dark-charcoal">
-                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Small (&lt; 10MB)</a></li>
-                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Medium (10MB - 100MB)</a></li>
-                                  <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap">Large (&gt; 100MB)</a></li>
-                                  
-                              </ul>
-                          </div>
-                      </th>
-                        
-                        <th class="py-2 px-10 text-left"></th>
-                        <th class="py-2 px-10 text-left"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="text-base font-normal text-dark-charcoal">
-                        
-                        <td class="py-2 px-10 text-left">
-                          <span class="">Accounts</span>
-                      </td>
-                      <td class="py-2 px-10 text-left ">
-                        <svg class=" icon-filemanager">
-                          <use xlink:href="/public/images/icons.svg#excel-dark"></use>
-                        </svg>
-                      </td>
-                        
-                        <td class="py-2 px-10 text-left">
-                          <span class="">Me</span>
-                      </td>
-                        
-                       
-                      <td class="py-2 px-10 text-left">
-                        <span class="">Sharad patel</span>
-                    </td>
-                      
-                       
-                        
-                      
-                       
-
-                        <td class="py-2 px-10 text-left">
-                          <span class="">Feb 11, 2025</span>
-                      </td>
-                      
-                      <td class="py-2 px-10 text-left">
-                        <span class="">1 kb</span>
-                    </td>
-
-                        <td class="py-2 px-10 text-left relative md:py-5">
-                          <!-- Dropdown Button for Owner -->
-                          <button class="dropdown-button flex items-center gap-1">
-                            <i class="ri-more-2-fill ri-lg md:ri-xl "></i>
-                          </button>
-                          <!-- Dropdown Menu for Owner -->
-                          <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
-                            <ul class="text-base text-dark-charcoal">
-                              <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                  <svg class="icon-three-dots">
-                                    <use xlink:href="/public/images/icons.svg#open"></use>
-                                  </svg> Open
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                  <svg class="icon-three-dots">
-                                    <use xlink:href="/public/images/icons.svg#edit"></use>
-                                  </svg>Edit
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                  <svg class="icon-three-dots">
-                                    <use xlink:href="/public/images/icons.svg#trash"></use>
-                                  </svg> Delete
-                                </a>
-                              </li>
-                            </ul>
-                            
-                          </div>
-                      </td>
-                      <td class="py-2 px-10 text-left">
-                        <i class="ri-star-line text-xl star3"></i> <!-- Star line icon with ID 'star' -->
-                      </td>
-                      
-
-                      
-
-                    </tr>
-                    <tr class="text-base font-normal text-dark-charcoal">
-                        
-
-                        <td class="py-2 px-10  text-left">
-                          <span class="">Hindi essay</span>
-                      </td>
-                      <td class="py-2 px-10 text-left">
-                        <svg class=" icon-filemanager">
-                          <use xlink:href="/public/images/icons.svg#word-dark"></use>
-                        </svg>
-                      </td>
-                       
-                       
-                       
-                        <td class="py-2 px-10 text-left">
-                          <span class="">Rohan</span>
-                      </td>
-                       
-                      
-                      <td class="py-2 px-10 text-left">
-                        <span class="">Kate randy</span>
-                    </td>
-                        
-
-                        <td class="py-2 px-10 text-left">
-                          <span class="">Feb 02, 2025</span>
-                      </td>
-
-                      <td class="py-2 px-10 text-left">
-                        <span class="">1 kb</span>
-                    </td>
-                      <td class="py-2 px-10 text-left relative md:py-5">
-                        <!-- Dropdown Button for Owner -->
-                        <button class="dropdown-button flex items-center gap-1">
-                          <i class="ri-more-2-fill ri-lg md:ri-xl "></i>
-                        </button>
-
-                       
-                        <!-- Dropdown Menu for Owner -->
-                        <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
-                          <ul class="text-base text-dark-charcoal">
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <svg class="icon-three-dots">
-                                  <use xlink:href="/public/images/icons.svg#open"></use>
-                                </svg> Open
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <svg class="icon-three-dots">
-                                  <use xlink:href="/public/images/icons.svg#edit"></use>
-                                </svg> Edit
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <svg class="icon-three-dots">
-                                  <use xlink:href="/public/images/icons.svg#trash"></use>
-                                </svg> Delete
-                              </a>
-                            </li>
-                          </ul>
+              <div class="w-full mt-4 overflow-x-auto pt-20">
+                <table class="w-full border-collapse min-w-max">
+                  <thead class="bg-light-sky-blue w-full text-base font-medium text-dark-charcoal">
+                      <tr>
+                        <th class="pl-6 text-left ">File Name</th>
+                        <th class="py-2 px-4 text-left relative">Type</th>
+                        <th class="py-2 px-4 text-left relative">Owner</th>
+                        <th class="py-2 px-4 text-left relative">Last Modified</th>
+                        <th class="py-2 px-4 text-left"></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr class="text-base font-normal text-dark-charcoal">
                           
-                        </div>
-                    </td>
-
-                    <td class="py-2 px-10 text-left">
-                      <i class="ri-star-line text-xl star4"></i> <!-- Star line icon with ID 'star' -->
-                    </td>
-                    </tr>
-
-                    <tr class="text-base font-normal text-dark-charcoal">
-                        
-                        <td class="py-2 px-10 text-left">
-                          <span class="">Science project</span>
-                      </td>
-                      <td class="py-2 px-10 text-left">
-                        <svg class=" icon-filemanager">
-                          <use xlink:href="/public/images/icons.svg#ppt-dark"></use>
-                        </svg>
-                      </td>
-                     
-                        
-                       
-                        <td class="py-2 px-10 text-left">
-                          <span class="">Kate</span>
-                      </td>
-                       
-                       
-                      <td class="py-2 px-10 text-left">
-                        <span class="">Jane rozella</span>
-                    </td>
-
-                        <td class="py-2 px-10 text-left">
-                          <span class="">Jan 19, 2025</span>
-                      </td>
-
-                      <td class="py-2 px-10 text-left">
-                        <span class="">1 kb</span>
-                    </td>
-                      <td class="py-2 px-10 text-left relative  md:py-5">
-                        <!-- Dropdown Button for Owner -->
-                        <button class="dropdown-button flex items-center gap-1 ">
-                          <i class="ri-more-2-fill ri-lg md:ri-xl "></i>
-                        </button>
-
-                       
-                        <!-- Dropdown Menu for Owner -->
-                        <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
-                          <ul class="text-base text-dark-charcoal">
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <svg class="icon-three-dots">
-                                  <use xlink:href="/public/images/icons.svg#open"></use>
-                                </svg> Open
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <svg class="icon-three-dots">
-                                  <use xlink:href="/public/images/icons.svg#edit"></use>
-                                </svg> Edit
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <svg class="icon-three-dots">
-                                  <use xlink:href="/public/images/icons.svg#trash"></use>
-                                </svg> Delete
-                              </a>
-                            </li>
-                          </ul>
+                          <td class="pl-6 text-left">
+                            <span class="">Accounts</span>
+                        </td>
+                          <td class="py-2 px-4 text-left">
+                            <svg class=" icon-filemanager">
+                              <use xlink:href="/public/images/icons.svg#excel-dark"></use>
+                            </svg>
+                          </td>
+                          <td class="py-2 px-4 text-left">
+                            <span class="">Me</span>
+                        </td>
+                         
+                          <td class="py-2 px-4 text-left">
+                            <span class="">Feb 11, 2025</span>
+                        </td>
+                        <td class="py-2 px-4 text-left">
+                          <i class="ri-star-line star2 text-xl "></i> <!-- Star line icon with class 'star' -->
+                        </td>  
+                         </tr>
+                      <tr class="text-base font-normal text-dark-charcoal">
                           
-                        </div>
-                    </td>
-
-                    <td class="py-2 px-10 text-left">
-                      <i class="ri-star-line text-xl star4"></i> <!-- Star line icon with ID 'star' -->
-                    </td>
-                    </tr>
-                    <tr class="text-base font-normal text-dark-charcoal">
-                        
-                        <td class="py-2 px-10 text-left">
-                          <span class="">Myresume.pdf</span>
+  
+                          <td class="pl-6 text-left">
+                            <span class="">Hindi essay</span>
+                        </td>
+                          <td class="py-2 px-4 text-left">
+                            <svg class=" icon-filemanager">
+                              <use xlink:href="/public/images/icons.svg#word-dark"></use>
+                            </svg>
+                          </td>
+                         
+                          <td class="py-2 px-4 text-left">
+                            <span class="">Rohan</span>
+                        </td>
+                         
+                          <td class="py-2 px-4 text-left">
+                            <span class="">Feb 02, 2025</span>
+                        </td>
+                      <td class="py-2 px-4 text-left">
+                        <i class="ri-star-line star2 text-xl "></i> <!-- Star line icon with class 'star' -->
                       </td>
-                      <td class="py-2 px-10 text-left">
-                        <svg class=" icon-filemanager">
-                          <use xlink:href="/public/images/icons.svg#pdf-dark"></use>
-                        </svg>
-                      </td>
-                        
-                       
-
-                        <td class="py-2 px-10 text-left">
-                          <span class="">Sahil</span>
-                      </td>
-                        
-                       
-                        
-
-                      <td class="py-2 px-10 text-left">
-                        <span class="">Shri Patil</span>
-                    </td>
-                        <td class="py-2 px-10 text-left">
-                          <span class="">Dec 08, 2024</span>
-                      </td>
-
-                      <td class="py-2 px-10 text-left">
-                        <span class="">1 kb</span>
-                    </td>
-                   
-                      <td class="py-2 px-10 relative text-left  md:py-5">
-                        <!-- Dropdown Button for Owner -->
-                        <button class="dropdown-button flex items-center gap-1">
-                          <i class="ri-more-2-fill ri-lg md:ri-xl "></i>
-                        </button>
-                        <!-- Dropdown Menu for Owner -->
-                        <div class="dropdown-menu hidden absolute mt-2 w-6xl bg-white shadow-md rounded-xl z-10 border border-dark-charcoal">
-                          <ul class="text-base text-dark-charcoal">
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <svg class="icon-three-dots">
-                                  <use xlink:href="/public/images/icons.svg#open"></use>
-                                </svg>Open
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <svg class="icon-three-dots">
-                                  <use xlink:href="/public/images/icons.svg#edit"></use>
-                                </svg>Edit
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" class="block px-4 py-2 hover:bg-gray-200 font-normal whitespace-nowrap flex items-center gap-2">
-                                <svg class="icon-three-dots">
-                                  <use xlink:href="/public/images/icons.svg#trash"></use>
-                                </svg>Delete
-                              </a>
-                            </li>
-                          </ul>
+                      
+                      </tr>
+                      <tr class="text-base font-normal text-dark-charcoal">
                           
-                        </div>
-                    </td>
-                 
-                    <td class="py-2 px-10 text-left">
-                      <i class="ri-star-line text-xl star3"></i> <!-- Star line icon with ID 'star' -->
-                    </td>
-                    </tr>
-                </tbody>
-            </table>
+                          <td class="pl-6 text-left">
+                            <span class="">Science project</span>
+                        </td>
+                          <td class="py-2 px-4 text-left">
+                            <svg class=" icon-filemanager">
+                              <use xlink:href="/public/images/icons.svg#ppt-dark"></use>
+                            </svg>
+                          </td>
+                         
+                          <td class="py-2 px-4 text-left">
+                            <span class="">Kate</span>
+                        </td>
+                         
+                          <td class="py-2 px-4 text-left">
+                            <span class="">Jan 19, 2025</span>
+                        </td>
+                      <td class="py-2 px-4 text-left">
+                        <i class="ri-star-line star2 text-xl "></i> <!-- Star line icon with class 'star' -->
+                      </td>
+                      </tr>
+                      <tr class="text-base font-normal text-dark-charcoal">
+                          
+                          <td class="pl-6 text-left">
+                            <span class="">Myresume.pdf</span>
+                        </td>
+                          <td class="py-2 px-4 text-left">
+                            <svg class=" icon-filemanager">
+                              <use xlink:href="/public/images/icons.svg#pdf-dark"></use>
+                            </svg>
+                          </td>
+                          
+                          <td class="py-2 px-4 text-left">
+                            <span class="">Sahil</span>
+                        </td>
+                          
+  
+                          <td class="py-2 px-4 text-left">
+                            <span class="">Dec 08, 2024</span>
+                        </td>
+                          
+                         
+                        
+                        
+                      <td class="py-2 px-4 text-left">
+                        <i class="ri-star-line text-xl star2"></i> <!-- Star line icon with class 'star' -->
+                      </td>
+                      </tr>
+                  </tbody>
+              </table>
            
         </div>
     

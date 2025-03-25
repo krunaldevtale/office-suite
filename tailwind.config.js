@@ -5,6 +5,7 @@ module.exports = {
     './index.html', // Include your HTML file
     './user-login.html', // Include your HTML file
     './register.html',
+    './pdf-home.html',
     './userMgmt.html',
     './src/*.html',
     './dist/**/*.html', // Add your distribution files if applicable
